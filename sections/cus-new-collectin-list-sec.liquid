@@ -1,0 +1,334 @@
+<style>
+.cus-col-lst--wrapper.cussec-{{section.id }}{
+  background: {{section.settings.cus-bg-color}};
+}
+.cus-col-lst--wrapper {
+  padding: 40px 20px;
+  background: #f8f9fb;
+}
+
+
+.cus-col-lst--heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.cus-col-lst--subheading {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.cus-col-lst--row {
+  display: flex;
+  overflow-x:scroll;
+  gap: 20px;
+  padding-bottom:10px;
+}
+
+.cus-col-lst--row::-webkit-scrollbar {
+   display: none;
+}
+
+.cus-col-lst--item {
+  flex: 1 1 calc(25% - 20px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  min-width: 300px;
+  max-width:450px;
+  aspect-ratio:1/.9;
+  border:1px solid rgba(0, 0, 0, 0.17);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.cus-col-lst--left {
+  flex: 0 0 40%;
+}
+.cus-col-lst--img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cus-col-lst--right {
+  flex: 1 1 60%;
+}
+.cus-col-lst--title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cus-col-lst--links {
+  margin-bottom: 8px;
+}
+.cus-col-lst--links .cus-col-lst--link-item:hover{
+  {% comment %} transform: translateX(20px); {% endcomment %}
+  transition: all 0.5s ease;
+  color:#7fc7cf;
+}
+.cus-col-lst--link-item a::after,
+.cus-col-lst--link-item a:hover::after {
+ display:none;
+}
+.cus-col-lst--link-item {
+  margin-bottom: 4px;
+  font-size: 14px;
+  cursor:pointer;
+}
+.cus-col-lst--link-item a {
+  color: #333;
+  text-decoration: none;
+}
+.cus-col-lst--link-item a:hover {
+  {% comment %} text-decoration: underline; {% endcomment %}
+  color: #7fc7cf;
+}
+.cus-col-lst--main-link {
+  color: #7fc7cf;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+.cus-col-lst--main-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .cus-col-lst--row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 10px;
+  }
+
+  .cus-col-lst--item {
+    flex: 0 0 50%;
+    min-width: 50%;
+    scroll-snap-align: start;
+  }
+}
+@media (max-width: 551px) {
+  .cus-col-lst--item {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+}
+
+</style>
+
+
+<section class="cus-col-lst--wrapper cussec-{{section.id }}">
+<div class="page-width">
+  <div class="cus-col-lst--container">
+    <h2 class="cus-col-lst--heading">{{ section.settings.heading }}</h2>
+    <p class="cus-col-lst--subheading">{{ section.settings.subheading }}</p>
+
+    <div class="cus-col-lst--row">
+      {% for block in section.blocks %}
+        <div class="cus-col-lst--item">
+          <div class="cus-col-lst--left">
+            {% if block.settings.image %}
+              <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.title }}" class="cus-col-lst--img">
+            {% endif %}
+          </div>
+          <div class="cus-col-lst--right">
+            {% if block.settings.title %}
+              <h3 class="cus-col-lst--title">{{ block.settings.title }}</h3>
+            {% endif %}
+
+            <div class="cus-col-lst--links">
+              {% if block.settings.item1_text != blank %}
+                <div class="cus-col-lst--link-item">
+                  {% if block.settings.item1_link != blank %}
+                    <a href="{{ block.settings.item1_link }}">{{ block.settings.item1_text }}</a>
+                  {% else %}
+                    {{ block.settings.item1_text }}
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if block.settings.item2_text != blank %}
+                <div class="cus-col-lst--link-item">
+                  {% if block.settings.item2_link != blank %}
+                    <a href="{{ block.settings.item2_link }}">{{ block.settings.item2_text }}</a>
+                  {% else %}
+                    {{ block.settings.item2_text }}
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if block.settings.item3_text != blank %}
+                <div class="cus-col-lst--link-item">
+                  {% if block.settings.item3_link != blank %}
+                    <a href="{{ block.settings.item3_link }}">{{ block.settings.item3_text }}</a>
+                  {% else %}
+                    {{ block.settings.item3_text }}
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if block.settings.item4_text != blank %}
+                <div class="cus-col-lst--link-item">
+                  {% if block.settings.item4_link != blank %}
+                    <a href="{{ block.settings.item4_link }}">{{ block.settings.item4_text }}</a>
+                  {% else %}
+                    {{ block.settings.item4_text }}
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if block.settings.item5_text != blank %}
+                <div class="cus-col-lst--link-item">
+                  {% if block.settings.item5_link != blank %}
+                    <a href="{{ block.settings.item5_link }}">{{ block.settings.item5_text }}</a>
+                  {% else %}
+                    {{ block.settings.item5_text }}
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+
+            {% if block.settings.main_link_text  != blank %}
+              <a href="{{ block.settings.main_link }}" class="cus-col-lst--main-link">
+                {{ block.settings.main_link_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Custom Collection List",
+  "settings": [
+    {
+        "type": "color",
+         "id": "cus-bg-color",
+         "label": "Background Color",
+         "default":"#f8f9fb"
+    }
+    ,
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Themenbereiche & Kategorien"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Section Subheading",
+      "default": "Wählen Sie aus den verschiedenen Themenbereichen!"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Collection Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Block Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Block Title",
+          "default": "Müllsäcke für?"
+        },
+
+        {
+          "type": "text",
+          "id": "item1_text",
+          "label": "Item 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "item1_link",
+          "label": "Item 1 Link"
+        },
+
+        {
+          "type": "text",
+          "id": "item2_text",
+          "label": "Item 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "item2_link",
+          "label": "Item 2 Link"
+        },
+
+        {
+          "type": "text",
+          "id": "item3_text",
+          "label": "Item 3 Text"
+        },
+        {
+          "type": "url",
+          "id": "item3_link",
+          "label": "Item 3 Link"
+        },
+
+        {
+          "type": "text",
+          "id": "item4_text",
+          "label": "Item 4 Text"
+        },
+        {
+          "type": "url",
+          "id": "item4_link",
+          "label": "Item 4 Link"
+        },
+
+        {
+          "type": "text",
+          "id": "item5_text",
+          "label": "Item 5 Text"
+        },
+        {
+          "type": "url",
+          "id": "item5_link",
+          "label": "Item 5 Link"
+        },
+
+        {
+          "type": "text",
+          "id": "main_link_text",
+          "label": "Main Link Text",
+          "default": "Mehr anzeigen »"
+        },
+        {
+          "type": "url",
+          "id": "main_link",
+          "label": "Main Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection List",
+      "category": "Collections"
+    }
+  ]
+}
+{% endschema %}
+

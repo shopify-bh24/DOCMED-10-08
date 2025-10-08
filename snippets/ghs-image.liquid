@@ -1,0 +1,45 @@
+<div class="ghs-image-list">
+  {% assign ischecked = false %}
+  {%- for ghs_image in ghs_image_list.ghs_image.value -%}
+    {%- if ghs_image.name == 'ghs01_explosiv_explodierende_bombe_'
+      and metafields.ghs01_explosiv_explodierende_bombe_
+    -%}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs02_entz_ndlich_flamme_' and metafields.ghs02_entz_ndlich_flamme_ %}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs03_brandf_rdernd_flamme_ber_einem_kreis_'
+      and metafields.ghs03_brandf_rdernd_flamme_ber_einem_kreis_
+    %}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs04_gase_unter_druck_gasflasche_' and metafields.ghs04_gase_unter_druck_gasflasche_ %}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs05_tzend_tzwirkung_auf_haut_metall_'
+      and metafields.ghs05_tzend_tzwirkung_auf_haut_metall_
+    %}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs06_giftig_totenkopf_mit_gekreuzten_knochen_'
+      and metafields.ghs06_giftig_totenkopf_mit_gekreuzten_knochen_
+    %}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs07_gesundheitsgefahr_ausrufezeichen_'
+      and metafields.ghs07_gesundheitsgefahr_ausrufezeichen_
+    %}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs08_gesundheitsgef_hrdend_mensch_mit_besch_digten_organen_'
+      and metafields.ghs08_gesundheitsgef_hrdend_mensch_mit_besch_digten_organen_
+    %}
+      {% assign ischecked = true %}
+    {% elsif ghs_image.name == 'ghs09_umweltgef_hrlich_baum_und_toter_fisch_'
+      and metafields.ghs09_umweltgef_hrlich_baum_und_toter_fisch_
+    %}
+      {% assign ischecked = true %}
+    {% else %}
+      {% assign ischecked = false %}
+    {%- endif -%}
+    {% if ischecked %}
+      <div class="ghs-image">
+        <img src="{{ ghs_image.image |  img_url: '30x' }}" width="30px" height="auto">
+      </div>
+    {% endif %}
+  {%- endfor -%}
+</div>

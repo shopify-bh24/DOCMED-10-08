@@ -1,0 +1,323 @@
+{% style %}
+  .timeline__wrapper .timeline-progress {
+  transition: height 0.3s ease-out;
+}
+
+.timeline__wrapper .timeline-dot {
+  transition: top 0.3s ease-out;
+}
+
+     .timeline__wrapper .hero {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 10px;
+      }
+      .timeline__wrapper .hero h1 {
+        font-size: 2.5rem;
+      }
+     .timeline__wrapper .hero p {
+        font-size: 1.1rem;
+        opacity: 0.8;
+      }
+    .timeline__wrapper  .timeline {
+        position: relative;
+        max-width: 960px;
+        margin: auto;
+        padding: 80px 20px;
+      }
+      /* Gray vertical line behind progress */
+     .timeline__wrapper .timeline::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-50%);
+        background-color: #555555;
+        z-index: 0;
+        border-radius: 2px;
+      }
+      /* Red progress bar */
+     .timeline__wrapper .timeline-progress {
+        position: absolute;
+        width: 4px;
+        left: 50%;
+        top: 0;
+        background-color: red;
+        transform: translateX(-50%);
+        z-index: 1;
+        border-radius: 2px;
+        height: 0%;
+      }
+      /* Moving red dot */
+    .timeline__wrapper  .timeline-dot {
+        position: absolute;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        background-color: red;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        top: 0;
+        transition: top 0.3s ease-out;
+      }
+     .timeline__wrapper .timeline-item {
+        padding: 20px 40px;
+        position: relative;
+        width: 50%;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+    .timeline__wrapper  .timeline-item.left {
+        left: 0;
+        transform: translateX(-40px) translateY(20px);
+      }
+    .timeline__wrapper  .timeline-item.right {
+        left: 50%;
+        transform: translateX(40px) translateY(20px);
+      }
+    .timeline__wrapper  .timeline-item.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    .timeline__wrapper  .timeline-item::before {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #00c853;
+        border-radius: 50%;
+        top: 20px;
+        z-index: 1;
+      }
+   .timeline__wrapper   .timeline-item.left::before {
+        right: -10px;
+      }
+    .timeline__wrapper  .timeline-item.right::before {
+        left: -10px;
+      }
+  .timeline__wrapper    .timeline-item .content {
+        padding: 25px;
+        background: #1e1e1e;
+        border-radius: 16px;
+        position: relative;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease-in-out;
+        border-bottom: 6px solid red;
+        border-right: 6px solid red;
+      }
+   .timeline__wrapper   .timeline-item .content:hover {
+        transform: translateY(-4px);
+      }
+  {% if section.settings.bg_color != blank %}
+    .timeline__wrapper {
+      background: {{section.settings.bg_color}};
+    }
+  {% endif %}
+  @media screen and (max-width: 760px) {
+    .timeline__wrapper .timeline-item {
+      padding: 10px 5px;
+    }
+    .timeline__wrapper  .timeline-item.right {
+       transform: translateX(20px) translateY(10px);
+      }
+  }
+  @media screen and (max-width: 550px) {
+    .timeline__wrapper .timeline-item.right {
+      left: 0;
+      
+    }
+    .timeline__wrapper .timeline-item {
+      width: 100%;
+    }
+    .timeline__wrapper .timeline-progress {
+      display: none;
+    }
+  .timeline__wrapper .timeline::after {
+     position: unset;
+   }
+    .timeline__wrapper .timeline-dot{
+      display: none;
+    }
+  }
+{% endstyle %}
+{%  if section.settings.border_color != blank %}
+  {% style %}
+    .timeline__wrapper  .timeline-item .content {
+        border-bottom: 6px solid {{ section.settings.border_color}};
+        border-right: 6px solid {{ section.settings.border_color}};
+      }
+  {% endstyle %}
+{% endif %}
+{%  if section.settings.progress_color != blank %}
+  {% style %}
+     .timeline__wrapper .timeline-progress ,
+    .timeline__wrapper  .timeline-dot  {
+        background-color: {{ section.settings.progress_color}};
+      }
+  {% endstyle %}
+{% endif %}
+
+<div class="timeline__wrapper">
+    <div class="hero">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.description }}</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-progress"></div>
+      <div class="timeline-dot"></div>
+
+      {% for block in section.blocks %}
+        {% if block.settings.show_left == true %}
+            <div class="timeline-item left" >
+              <div class="content" {% if block.settings.color_bg != blank %}style="background: {{ block.settings.color_bg }};"{% endif %}>
+                <p>{{ block.settings.text_content }}</p>
+              </div>
+            </div>
+        {% else %}
+          <div class="timeline-item right"  >
+            <div class="content" {% if block.settings.color_bg != blank %}style="background: {{ block.settings.color_bg }};"{% endif %}>
+              <p>{{ block.settings.text_content }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+      
+      
+    </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll(".timeline-item");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+    rootMargin: "0px 0px -100px 0px",
+  }
+);
+
+items.forEach((item) => observer.observe(item));
+
+const timeline = document.querySelector(".timeline");
+const timelineProgress = document.querySelector(".timeline-progress");
+const timelineDot = document.querySelector(".timeline-dot");
+
+window.addEventListener("scroll", () => {
+  const timelineTop = timeline.offsetTop;
+  const timelineHeight = timeline.offsetHeight;
+  const timelineBottom = timelineTop + timelineHeight;
+
+  // Stop filling early at 90% viewport height
+  const scrollY = window.scrollY + window.innerHeight * 0.9;
+
+  let rawProgress = (scrollY - timelineTop) / timelineHeight;
+
+  let clamped = Math.min(Math.max(rawProgress, 0), 1);
+
+  if (window.scrollY + window.innerHeight >= timelineBottom) {
+    clamped = 1;
+  }
+
+  timelineProgress.style.height = `${clamped * 100}%`;
+
+  // Offset so dot's center aligns with progress line
+  const dotOffset = timelineDot.offsetHeight / 2;
+  let dotTopPx = clamped * timelineHeight - dotOffset;
+
+  dotTopPx = Math.min(Math.max(dotTopPx, 0), timelineHeight - dotOffset);
+
+  timelineDot.style.top = `${dotTopPx}px`;
+});
+  })
+</script>
+{% schema %}
+    {
+        "name": "Our Story",
+        "class": "section",
+        "disabled_on": {
+            "groups": [
+            "header",
+            "footer",
+            "custom.overlay"
+            ]
+        },
+        "settings": [
+            {
+                "type": "text",
+                "label": "Heading",
+                "id": "heading"
+            },
+            {
+                "type": "richtext",
+                "label": "Description",
+                "id": "description"
+            },
+            {
+                "type": "color_background",
+                "label": "Background Color",
+                "id": "bg_color"
+            },
+            {
+                "type": "color",
+                "label": "Text Color",
+                "id": "text_color"
+            },
+            {
+              "type":"color",
+              "id": "border_color",
+              "label": "Box Border Color"
+            },
+            {
+              "type": "color",
+              "id":"progress_color",
+              "label": "Progress bar color"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "text-content",
+                "name": "Text Content",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id":"text_content",
+                        "label": "Text"
+                    },
+                    {
+                      "type": "color_background",
+                      "id": "color_bg",
+                      "label": "background color"
+                    },
+                    {
+                      "type": "checkbox",
+                      "label": "Show on Left",
+                      "id":"show_left",
+                      "info": "By Default it will show right if you check this it will show on left side"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Our Story"
+            }
+        ]
+    }
+{% endschema %}

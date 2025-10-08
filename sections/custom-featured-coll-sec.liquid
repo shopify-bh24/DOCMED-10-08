@@ -1,0 +1,299 @@
+
+<style>
+  .cus-feat-itm--wrapper.cussec-{{ section.id }} {
+    background: {{ section.settings.cus-bg-color }};
+  }
+  .cus-feat-itm--wrapper {
+    padding: 40px 0;
+  }
+
+  .cus-feat-itm--heading {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .cus-feat-itm--card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0
+    , rgba(27, 31, 35, 0.15) 0 0 0 1px;
+    padding: 16px;
+    margin: 0 10px;
+    min-width: 300px;
+    display: flex;
+    gap: 25px;
+    width: 32.37%;
+    max-width: 32.37%;
+    min-height: 98%;
+    z-index: 22;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+  }
+  .cus-feat-itm--image {
+    width: 30%;
+  }
+  .cus-feat-itm--content {
+    width: 70%;
+    word-break: break-all;
+  }
+  .cus-feat-itm--imageLhover img {
+    sale: 1.04;
+    transition: ease 0.5s all;
+  }
+  .cus-feat-itm--image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .cus-feat-itm--title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .cus-feat-itm--wrapper a {
+    color: #222;
+    text-decoration: none;
+  }
+  .cus-feat-itm--wrapper a:hover {
+    color: #7FC7CF;
+    text-decoration: none;
+  }
+
+  .cus-feat-itm--vendor {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .cus-feat-itm--desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .cus-feat-itm--reviews {
+    margin-bottom: 10px;
+  }
+
+  .cus-feat-itm--wrapper a::after,
+  .cus-col-lst--link-item:hover::after {
+    display: none;
+  }
+  .cus-feat-itm--price {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .cus-feat-itm--price .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 6px;
+  }
+  .cus-feat-itm--wrapper .stars {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-right: 6px;
+    color: transparent;
+    -webkit-text-stroke: 1px #FFD700;
+  }
+
+
+  .flickity-enabled:focus {
+    outline: none !important;
+    box-shadow: none;
+    border: none;
+  }
+  .flickity-button:focus {
+    box-shadow: none;
+    background-color: #7FC7CF;
+  }
+  .flickity-button {
+    border: none;
+    border-radius: 4px;
+    background-color: #1D2E40;
+  }
+
+  .cus-feat-itm--wrapper .flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+  }
+  .flickity-button:hover {
+    background-color: #1D2E40;
+  }
+  .cus-feat-itm--wrapper .flickity-button-icon {
+    /* width: 50%; */
+    /* height: 50%; */
+    fill: rgb(255 255 255);
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+  @media screen and (max-width: 550px) {
+
+    .cus-feat-itm--card {
+      width: 100%;
+      max-width: 100%;
+    }
+
+  }
+</style>
+
+
+<section class="cus-feat-itm--wrapper cussec-{{section.id }}">
+  <div class="page-width">
+    <div class="cus-feat-itm--container">
+      {% if section.settings.heading != blank %}
+        <h2 class="cus-feat-itm--heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      <div class="cus-feat-itm--slider js-flickity">
+        {% for product in collections[section.settings.collection].products limit: 9 %}
+          <div class="cus-feat-itm--card">
+            <div class="cus-feat-itm--image">
+              <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
+              </a>
+            </div>
+
+            <div class="cus-feat-itm--content">
+
+              <p class="cus-feat-itm--vendor">{{ product.vendor }}</p>
+
+              <h3 class="cus-feat-itm--title">
+                <a href="{{ product.url }}">{{ product.title | strip_html | truncate: 30 }}</a>
+              </h3>
+
+
+              <p class="cus-feat-itm--desc">
+                <a href="{{ product.url }}">{{ product.description | strip_html | truncate: 60 }}</a>
+              </p>
+
+
+              <div class="cus-feat-itm-rating">
+                {% if settings.review_app == 'default' and product.metafields.reviews.rating.value != blank %}
+                  {% liquid
+                    assign rating_decimal = 0
+                    assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+                    if decimal >= 0.3 and decimal <= 0.7
+                      assign rating_decimal = 0.5
+                    elsif decimal > 0.7
+                      assign rating_decimal = 1
+                    endif
+                  %}
+                  <div class="wbhrating cardhide_toggle">
+                    <div class="rating" role="img"
+                      aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
+                      <span aria-hidden="true"
+                        class="rating-star"
+                        style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }};
+                               --rating-max: {{ product.metafields.reviews.rating.value.scale_max }};
+                               --rating-decimal: {{ rating_decimal }};"></span>
+                    </div>
+                    <p class="rating-text caption">
+                      {{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}
+                    </p>
+                    <p class="rating-count caption">
+                      ({{ product.metafields.reviews.rating_count }})
+                    </p>
+                  </div>
+              
+                {% elsif settings.review_app == 'judgeme' %}
+                  <div class="wbhrating">
+                    <div class="rating">
+                      <div class="jdgm-widget jdgm-preview-badge" data-id="{{ product.id }}">
+                        {{ product.metafields.judgeme.badge }}
+                      </div>
+                    </div>
+                  </div>
+              
+                {% elsif settings.review_app == 'loox' %}
+                  <div class="wbhrating">
+                    <div class="rating">
+                      <div class="loox-rating"
+                        data-id="{{ product.id }}"
+                        data-rating="{{ product.metafields.loox.avg_rating }}"
+                        data-raters="{{ product.metafields.loox.num_reviews }}">
+                      </div>
+                    </div>
+                  </div>
+              
+                {% elsif settings.review_app == 'wisernotify' %}
+                  <div class="wbhrating">
+                    <div class="rating">
+                      {% render 'wnreview_widgets', widget_type: 'wnreview_star_rating', card_product: product %}
+                    </div>
+                  </div>
+              
+                {% elsif settings.review_app == 'okendo' %}
+                  <div class="wbhrating">
+                    <div class="rating">
+                      <div data-oke-star-rating data-oke-reviews-product-id="shopify-{{ product.id }}">
+                        {{ product.metafields.okendo.StarRatingSnippet }}
+                      </div>
+                    </div>
+                  </div>
+              
+                {% else %}
+                  <div class="star-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-count">0 reviews</span>
+                  </div>
+                {% endif %}
+              </div>
+              
+
+              <div class="cus-feat-itm--price">
+                {% if product.compare_at_price > product.price %}
+                  <span class="current-price">{{ product.price | money }}</span>
+                  <span class="old-price">{{ product.compare_at_price | money }}</span>
+                {% else %}
+                  <span class="current-price">{{ product.price | money }}</span>
+                {% endif %}
+              </div>
+
+
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Featured Coll",
+    "settings": [
+      {
+        "type": "color",
+        "id": "cus-bg-color",
+        "label": "Background Color",
+        "default": "#f8f9fb"
+      }, {
+        "type": "collection",
+        "id": "collection",
+        "label": "Select Collection"
+      }, {
+        "type": "text",
+        "id": "heading",
+        "label": "Section Heading",
+        "default": "Featured Products"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Featured Coll",
+        "category": "Collection"
+      }
+    ]
+  }
+{% endschema %}

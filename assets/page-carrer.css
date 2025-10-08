@@ -1,0 +1,139 @@
+.bls-carrer--title-job {
+  font-size: 2rem;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.bls-carrer--short-job {
+  gap: .5rem;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.bls-carrer--short-job ul {
+  display: inline-flex;
+}
+
+.bls-carrer--short-job ul li {
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.bls-carrer--short-job ul li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.bls-carrer--short-job ul li::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #999999;
+  border-radius: 50%;
+}
+
+.bls-carrer__item {
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 10px; 
+}
+
+.bls-carrer__item[data-hide="false"] {
+  display: block;
+}
+
+.bls-carrer__item[data-hide="true"] {
+  display: none;
+}
+.pagination-load-more {
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .bls-carrer--short-job ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 676px) {
+  .bls-carrer--button {
+    flex: 0 0 auto;
+    width: 25%;
+    text-align: end;
+  }
+}
+.load-carrer{
+   background-color: #fff;
+  padding: 1.36rem 5.5rem;
+  font-weight: 600;
+  text-transform: uppercase; 
+  border: 1px solid black;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 3rem;
+}
+.bls-carrer--button .btn-carrer {
+   
+  background-color: #fff;
+  padding: 1.36rem 5.5rem;
+  font-weight: 600;
+  text-transform: uppercase; 
+  border: 1px solid black;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.bls-carrer--button .btn-carrer:hover {
+  background-color:#000000;
+  border-color:#000000;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .carrer-action .load-carrer {
+    padding: 1.2rem 4.85rem;
+  }
+}
+
+@media (max-width: 675px) {
+  .bls-carrer--job {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.bls-carrer__item:nth-of-type(odd) {
+  background-color: #F5F5F5;
+}
+
+.custom-content-carrer {
+  position: relative;
+}
+
+.custom-content-carrer .bls__section-image {
+  position: absolute;
+  left: 60%;
+  top: -20%;
+}
+
+@media (max-width: 576px) {
+  .custom-content-carrer .bls__section-image {
+    left: 65%;
+  }
+}

@@ -1,0 +1,73 @@
+{% comment %}
+  Section: Single Image Block
+  Ermöglicht dem Händler, genau einen Bild-Block hinzuzufügen und anzuzeigen.
+  Platziere diese Datei im Ordner `/sections` deines Themes und binde sie in ein Template ein.
+{% endcomment %}
+
+<section id="{{ section.id }}" class="section single-image-block-section">
+  {% if section.blocks.size > 0 %}
+    {% assign block = section.blocks.first %}
+    <div class="single-image-container">
+      <img
+        src="{{ block.settings.image | img_url: 'master' }}"
+        {% if block.settings.alt_text != blank %}
+          alt="{{ block.settings.alt_text }}"
+        {% endif %}
+        {% if block.settings.width %}
+          width="{{ block.settings.width }}"
+        {% endif %}
+        {% if block.settings.height %}
+          height="{{ block.settings.height }}"
+        {% endif %}
+        loading="lazy"
+      >
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Einzelnes Bild (Block)",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Bild Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Bild hochladen"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alternativer Text (alt)",
+          "default": "Alternativtext"
+        },
+        {
+          "type": "number",
+          "id": "width",
+          "label": "Breite (px)",
+          "default": 600
+        },
+        {
+          "type": "number",
+          "id": "height",
+          "label": "Höhe (px)",
+          "default": 400
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Einzelnes Bild Block",
+      "blocks": [
+        {"type": "image_block"}
+      ]
+    }
+  ]
+}
+{% endschema %}

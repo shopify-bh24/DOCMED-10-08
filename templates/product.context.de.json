@@ -1,0 +1,13 @@
+
+{
+  "parent": "product.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}

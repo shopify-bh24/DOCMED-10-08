@@ -1,0 +1,301 @@
+{% schema %}
+{
+    "name": "SH Pills",
+    "presets": [
+        {
+            "name": "SH Pills",
+            "category": "Custom Sections",
+            "settings": {
+                "border_radius": 15,
+                "font_size": 16,
+                "pill_gap": 10,
+                "mobile_padding_left": 10,
+                "container_padding_top": 20,
+                "container_padding_bottom": 20,
+                "container_background_color": "#FFFFFF"
+            },
+            "blocks": [
+                {
+                    "type": "pill",
+                    "settings": {
+                        "pill_text": "Shop Now",
+                        "pill_color": "#2D2D2D",
+                        "pill_link": "/shop",
+                        "pill_text_color": "#FFFFFF",
+                        "pill_border_color": "#2D2D2D"
+                    }
+                },
+                {
+                    "type": "pill",
+                    "settings": {
+                        "pill_text": "Learn More",
+                        "pill_color": "#F2F2F2",
+                        "pill_link": "/learn",
+                        "pill_text_color": "#2D2D2D",
+                        "pill_border_color": "#F2F2F2"
+                    }
+                },
+                {
+                    "type": "pill",
+                    "settings": {
+                        "pill_text": "Contact Us",
+                        "pill_color": "#000000",
+                        "pill_link": "/contact",
+                        "pill_text_color": "#2D2D2D",
+                        "pill_border_color": "#2D2D2D"
+                    }
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": {
+              "en": "Section Settings",
+              "de": "Abschnittseinstellungen"
+            }
+        },
+        {
+            "type": "range",
+            "id": "pill_gap",
+            "label": {
+                "en": "Pill Gap (px)",
+                "de": "Abstand zwischen Pillen (px)"
+            },
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "default": 10
+        },
+        {
+            "type": "range",
+            "id": "mobile_padding_left",
+            "label": {
+                "en": "Mobile Padding Left",
+                "de": "Padding links (Mobilgeräte)"
+            },
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "default": 10
+        },
+        {
+            "type": "range",
+            "id": "container_padding_top",
+            "label": {
+                "en": "Container Padding Top (px)",
+                "de": "Padding oben (px)"
+            },
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "container_padding_bottom",
+            "label": {
+                "en": "Container Padding Bottom (px)",
+                "de": "Padding unten (px)"
+            },
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "default": 20
+        },
+        {
+            "type": "color",
+            "id": "container_background_color",
+            "label": {
+                "en": "Container Background Color",
+                "de": "Hintergrundfarbe der Box"
+            },
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "header",
+            "content": {
+                "en": "Pill Settings",
+                "de": "Pill Einstellungen"
+            }
+        },
+        {
+            "type": "range",
+            "id": "border_radius",
+            "label": {
+                "en": "Border Radius",
+                "de": "Border-Radius"
+            },
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "default": 10
+        },
+        {
+            "type": "range",
+            "id": "font_size",
+            "label": {
+                "en": "Font Size",
+                "de": "Schriftgröße"
+            },
+            "min": 10,
+            "max": 50,
+            "step": 1,
+            "default": 14
+        }
+    ],
+    "blocks": [
+        {
+            "type": "pill",
+            "name": "Pill",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "pill_text",
+                    "label": {
+                        "en": "Text",
+                        "de": "Text"
+                    },
+                    "default": "Pill"
+                },
+                {
+                    "type": "url",
+                    "id": "pill_link",
+                    "label": {
+                        "en": "Link URL",
+                        "de": "Link-URL"
+                    }
+                },
+                {
+                    "type": "color",
+                    "id": "pill_color",
+                    "label": {
+                        "en": "Pill Color",
+                        "de": "Farbe der Pill"
+                    },
+                    "default": "#000000"
+                },
+                {
+                    "type": "color",
+                    "id": "pill_text_color",
+                    "label": {
+                        "en": "Text Color",
+                        "de": "Schriftfarbe"
+                    },
+                    "default": "#FFFFFF"
+                },
+                {
+                    "type": "color",
+                    "id": "pill_border_color",
+                    "label": {
+                        "en": "Pill Border Color",
+                        "de": "Konturfarbe der Pill"
+                    },
+                    "default": "#000000"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+<section id="sh-pills-section-{{ section.id }}" class="sh-section-{{ section.id }}">
+  {% assign border_radius = section.settings.border_radius %}
+  {% assign font_size = section.settings.font_size %}
+  {% assign pill_gap = section.settings.pill_gap %}
+  {% assign mobile_padding_left = section.settings.mobile_padding_left %}
+  {% assign container_padding_top = section.settings.container_padding_top %}
+  {% assign container_padding_bottom = section.settings.container_padding_bottom %}
+  {% assign container_background_color = section.settings.container_background_color %}
+
+  <div
+    class="sh-pills-container-{{ section.id }}"
+    style="overflow-x: auto; white-space: nowrap; --pill-gap: {{ pill_gap }}px; padding-left: {{ mobile_padding_left }}px; padding-top: {{ container_padding_top }}px; padding-bottom: {{ container_padding_bottom }}px; background-color: {{ container_background_color }};"
+  >
+    {% for block in section.blocks %}
+      {% if block.type == 'pill' %}
+        <a
+          href="{{ block.settings.pill_link }}"
+          class="sh-pill-{{ section.id }}"
+          style="background-color: {{ block.settings.pill_color }}; border-radius: {{ border_radius }}px; padding: 10px 20px; color: {{ block.settings.pill_text_color }}; text-decoration: none; border-style: solid; display: inline-block; border-color: {{ block.settings.pill_border_color }}; font-size: {{ font_size }}px; margin-right: var(--pill-gap);"
+        >
+          {{ block.settings.pill_text }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .sh-pills-container-{{ section.id }} {
+      display: flex;
+      overflow-x: scroll;
+      white-space: nowrap;
+      justify-content: center;
+      padding-right: 20px;
+  }
+
+  @media (max-width: 749px) {
+      .sh-pills-container-{{ section.id }} {
+          justify-content: flex-start;
+          padding-bottom: 10px;
+      }
+  }
+
+  .sh-pill-{{ section.id }} {
+      margin-right: calc(var(--pill-gap) / 2);
+      text-align: center; /* Zentriere den Text innerhalb der Pillen */
+  }
+
+  .sh-pill-{{ section.id }}:last-child {
+      margin-right: 0;
+  }
+
+  .sh-pills-container-{{ section.id }}::-webkit-scrollbar {
+      width: 5px;
+      height: 2.5px;
+  }
+
+  .sh-pills-container-{{ section.id }}::-webkit-scrollbar-thumb {
+      background-color: #2D2D2D;
+      border-radius: 10px;
+  }
+
+  .sh-pills-container-{{ section.id }}::-webkit-scrollbar-track {
+      background-color: #F2F2F2;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    alignPillsContainer{{ section.id }}();
+
+    window.addEventListener('resize', function() {
+      alignPillsContainer{{ section.id }}();
+    });
+
+    function alignPillsContainer{{ section.id }}() {
+      var pillsContainer = document.querySelector('.sh-pills-container-{{ section.id }}');
+      if (pillsContainer) {
+        var containerWidth = pillsContainer.clientWidth;
+        var totalPillsWidth = 0;
+
+        // Summiere die Breite aller Pillen im Container
+        var pills = document.querySelectorAll('.sh-pill-{{ section.id }}');
+        pills.forEach(function(pill) {
+          totalPillsWidth += pill.clientWidth + parseInt(getComputedStyle(pill).marginRight);
+        });
+
+        // Überprüfe, ob die Gesamtbreite der Pillen die Breite des Containers überschreitet
+        if (totalPillsWidth > containerWidth) {
+          // Wenn die Gesamtbreite der Pillen größer als die Container-Breite ist, setze die Ausrichtung auf linksbündig
+          pillsContainer.style.justifyContent = 'flex-start';
+        } else {
+          // Ansonsten zentriere den Pills-Container
+          pillsContainer.style.justifyContent = 'center';
+        }
+      }
+    }
+  });
+</script>

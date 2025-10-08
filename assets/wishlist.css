@@ -1,0 +1,138 @@
+/* icon page wishlist */
+
+
+.bls__wishlist-remove {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--bls__product-icon-radius);
+    background-color: var(--color-white);
+    z-index: 11;
+    cursor: pointer;
+    transition: var(--bls-transition);
+    box-shadow: 0px 5px 30px rgb(0 0 0 / 5%);
+}
+
+.bls__wishlist-remove i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bls__wishlist-remove:hover {
+    background-color: var(--heading-color);
+    color: var(--color-white);
+}
+
+@media (min-width: 992px) {
+
+    .bls__wishlist-page-main.bls__product-style-5 .bls__product-item .bls__product-action-inner,
+    .bls__wishlist-page-main.bls__product-style-3 .bls__product-item .bls__product-action-inner {
+        opacity: 1 !important;
+        right: 1.5rem !important;
+        position: absolute;
+    }
+
+    .bls__wishlist-page-main.bls__product-style-5 .bls__product-item .bls__product-compare,
+    .bls__wishlist-page-main.bls__product-style-5 .bls__product-item .bls__product-quickview,
+    .bls__wishlist-page-main.bls__product-style-3 .bls__product-item .bls__product-compare,
+    .bls__wishlist-page-main.bls__product-style-3 .bls__product-item .bls__product-quickview {
+        transform: translateX(1.5rem);
+        transition: var(--bls__product-transition);
+        opacity: 0;
+
+    }
+
+    .bls__wishlist-page-main.bls__product-style-5 .bls__product-item:hover .bls__product-compare,
+    .bls__wishlist-page-main.bls__product-style-5 .bls__product-item:hover .bls__product-quickview,
+    .bls__wishlist-page-main.bls__product-style-3 .bls__product-item:hover .bls__product-compare,
+    .bls__wishlist-page-main.bls__product-style-3 .bls__product-item:hover .bls__product-quickview {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
+
+@media (max-width: 575px) {
+
+    .bls__wishlist-page-main.bls__product-style-5 .bls__product-item .bls__product-action-inner,
+    .bls__wishlist-page-main.bls__product-style-3 .bls__product-item .bls__product-action-inner {
+        right: 1rem !important;
+    }
+}
+
+.bls__wishlist-page-main .bls__product-wishlist .bls__product-icon.active svg {
+    display: none;
+}
+
+.bls__wishlist-page-main .bls__product-wishlist .bls__product-icon.active {
+    background-color: var(--color-white);
+    color: var(--heading-color);
+}
+
+.bls__wishlist-page-main .bls__product-wishlist .bls__product-icon.active:hover {
+    background-color: var(--heading-color);
+    color: var(--color-white);
+}
+
+.bls__wishlist-page-main .bls__product-wishlist .bls__product-icon.active::before {
+    content: "\ea29";
+    font-family: 'blueskytechco' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 991px) {
+    .bls__wishlist-page-main.bls__product-action {
+        display: block !important;
+    }
+
+    .bls__wishlist-page-main.bls__product-compare,
+    .bls__wishlist-page-main.bls__product-quickview,
+    .bls__wishlist-page-main.bls__product-addtocart {
+        display: none !important;
+    }
+
+    .container.bls__wishlist-page-main.bls__grid .bls__product-item .bls__product-action {
+        display: flex !important;
+    }
+
+    .container.bls__wishlist-page-main.bls__grid .bls__product-item .bls__product-action .bls__product-quickview {
+        display: none;
+    }
+}
+
+/* Product style 1 */
+.container.bls__wishlist-page-main.bls__grid.bls__product-style-1 .bls__product-action {
+    flex-direction: row;
+}
+
+/* Product style 4 */
+.bls__wishlist-page-main.bls__product-style-4 .bls__product-item {
+    position: relative;
+}
+
+.bls__wishlist-page-main.bls__product-style-4 .bls__product-item .bls__product-wishlist {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+}
+
+.bls__wishlist-page-main.bls__product-style-4 .bls__product-item .bls__product-wishlist .bls__product-icon {
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--bls__product-icon-radius, 50%);
+}

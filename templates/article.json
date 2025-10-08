@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_sidebar": true,
+        "sidebar_position": "left",
+        "heading_color_scheme": "scheme-abe3bc68-5409-41dd-abcf-8f9ac474947a",
+        "image_height": "medium",
+        "blog_show_date": true,
+        "show_tag": true,
+        "blog_show_author": true,
+        "image_corners": "circle",
+        "share_label": "Teilen",
+        "show_social": true,
+        "color_scheme": "background-1",
+        "blog_space": false,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "multirow_b8enAf": {
+      "type": "multirow",
+      "blocks": {
+        "row_VpBCMR": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/computer-with-covid19-illustration-screen-standing-desk-empty-office-room-global-pandemic-modern-hospital-room-equipped-with-professional-medical-instruments-virus-cell-image.jpg",
+            "caption": "Einsatzbereiche:",
+            "heading": "Passende Lösungen für Ihre Branche",
+            "text": "<p>Jede Branche hat spezielle Anforderungen an Hygiene, Sicherheit und Pflege. In unserer <strong>Rubrik Einsatzbereiche</strong> finden Sie maßgeschneiderte Produkte für Gastronomie, Bildungseinrichtungen, Krankenhäuser, Pflegedienste und viele weitere Bereiche. Ob Desinfektionsmittel, Erste-Hilfe-Ausstattung oder Hautpflegeprodukte – wir bieten Ihnen die passenden Lösungen. Finden Sie schnell, was Sie brauchen, unter <strong>Einsatzbereiche</strong> in unserem Menü.</p>",
+            "button_label": "Einsatzbereiche",
+            "button_link": "shopify://collections/einsatzbereiche-1",
+            "link_window": true,
+            "view_all_style": "link",
+            "row_color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_VpBCMR"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "row_gap": 20,
+        "section_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multirow_b8enAf"
+  ]
+}

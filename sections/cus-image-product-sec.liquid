@@ -1,0 +1,406 @@
+{% schema %}
+{
+  "name": "Custom Image + Products",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "left_heading",
+      "label": "Heading",
+      "default": "Bis zu -20% auf Bestseller"
+    },
+    {
+      "type": "text",
+      "id": "left_text",
+      "label": "Description",
+      "default": "Jetzt zum Newsletter anmelden und bis zu 20% Rabatt auf heiß begehrte Lieblingsprodukte sichern."
+    },
+    {
+      "type": "text",
+      "id": "left_button_label",
+      "label": "Button Label",
+      "default": "Jetzt entdecken und sparen!"
+    },
+    {
+      "type": "url",
+      "id": "left_button_link",
+      "label": "Button Link"
+    }
+    ,
+     {
+      "type": "select",
+      "id": "card_style",
+      "label": "Card style",
+      "options": [
+        { "value": "standard", "label": "Standard" },
+        { "value": "compact", "label": "Compact" }
+      ],
+      "default": "standard"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quantity",
+      "label": "Show quantity selector",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "adapt", "label": "Adapt" },
+        { "value": "square", "label": "Square" },
+        { "value": "portrait", "label": "Portrait" }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "select",
+      "id": "picker_type",
+      "label": "Variant picker type",
+      "options": [
+        { "value": "dropdown", "label": "Dropdown" },
+        { "value": "button", "label": "Button" }
+      ],
+      "default": "dropdown"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "label": "Show secondary image on hover",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show rating",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variants",
+      "label": "Show variant options",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_label",
+      "label": "Show variant label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_colorswatch",
+      "label": "Show color swatches",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_listdesc",
+      "label": "Enable list description",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "label": "Enable quick add",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "cardstock_bar",
+      "label": "Show stock bar",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_count_timer",
+      "label": "Show countdown timer",
+      "default": false
+    },
+    {
+      "type": "number",
+      "id": "max_stock",
+      "label": "Max stock threshold",
+      "default": 100
+    },
+    {
+      "type": "number",
+      "id": "limited_stock_cut_off",
+      "label": "Limited stock cutoff",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "limited_stock_message",
+      "label": "Limited stock message",
+      "default": "Only {amount} left in stock!"
+    },
+    {
+      "type": "text",
+      "id": "instock_message",
+      "label": "In-stock message",
+      "default": "In stock, ready to ship"
+    },
+    {
+      "type": "text",
+      "id": "continue_selling_message",
+      "label": "Continue selling message",
+      "default": "Available on backorder"
+    },
+    {
+      "type": "color",
+      "id": "limited_stock_color",
+      "label": "Limited stock color",
+      "default": "#FF0000"
+    },
+    {
+      "type": "color",
+      "id": "in_stock_color",
+      "label": "In stock color",
+      "default": "#00AA00"
+    },
+    {
+      "type": "color",
+      "id": "continue_selling_color",
+      "label": "Continue selling color",
+      "default": "#FFA500"
+    },
+    {
+      "type": "select",
+      "id": "quicklook_style",
+      "label": "Quicklook style",
+      "options": [
+        { "value": "popup", "label": "Popup" },
+        { "value": "drawer", "label": "Drawer" }
+      ],
+      "default": "popup"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_addtocart",
+      "label": "Enable add to cart button",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "color_swatchhover",
+      "label": "Enable color swatch hover effect",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "stock_inventory",
+      "label": "Show stock inventory number",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Block",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product_item",
+          "label": "Select Product"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge (e.g. Bestseller)",
+          "default": "BESTSELLER"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image + Products",
+       "category": "custom sections"
+    }
+  ]
+}
+{% endschema %}
+
+{% if collection.metafields.custom.image_with_products !=blank %}
+<div class="page-width">
+<div class="cust-img-prds--section">
+  <div class="cust-img-prds--wrapper">
+    <div class="cust-img-prds--left">
+      {% if section.settings.left_image %}
+        <img src="{{ section.settings.left_image | img_url: '800x' }}" alt="{{ section.settings.left_heading }}">
+      {% endif %}
+      <div class="cust-img-prds--left-content">
+        <h2>{{ section.settings.left_heading }}</h2>
+        <p>{{ section.settings.left_text }}</p>
+        {% if section.settings.left_button_label != blank %}
+          <a href="{{ section.settings.left_button_link }}" class="cust-img-prds--btn">
+            {{ section.settings.left_button_label }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="cust-img-prds--right">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product_item] %}
+        {% if product %}
+          {% comment %} <div class="cust-img-prds--product">
+            {% if block.settings.badge != blank %}
+              <span class="cust-img-prds--badge">{{ block.settings.badge }}</span>
+            {% endif %}
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
+            </a>
+            <h3>{{ product.title }}</h3>
+            {% if product.metafields.custom.short_description %}
+              <p>{{ product.metafields.custom.short_description }}</p>
+            {% endif %}
+            <p class="cust-img-prds--price">{{ product.price | money }}</p>
+          </div> {% endcomment %}
+            {% render 'card-product',
+                      card_product: product,
+                      card_style: section.settings.card_style,
+                      show_quantity: section.settings.show_quantity,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      picker_type: section.settings.picker_type,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      show_variants: section.settings.show_variants,
+                      show_variant_label: section.settings.show_variant_label,
+                      show_colorswatch: section.settings.show_colorswatch,
+                      enable_listdesc: section.settings.enable_listdesc,
+                      lazy_load: lazy_load,
+                      show_quick_add: section.settings.enable_quick_add,
+                      cardstock_bar: section.settings.cardstock_bar,
+                      show_count_timer: section.settings.show_count_timer,
+                      max_stock: section.settings.max_stock,
+                      limited_stock_cut_off: section.settings.limited_stock_cut_off,
+                      limited_stock_message: section.settings.limited_stock_message,
+                      instock_message: section.settings.instock_message,
+                      continue_selling_message: section.settings.continue_selling_message,
+                      limited_stock_color: section.settings.limited_stock_color,
+                      in_stock_color: section.settings.in_stock_color,
+                      continue_selling_color: section.settings.continue_selling_color,
+                      quicklook_style: section.settings.quicklook_style,
+                      enable_addtocart: section.settings.enable_addtocart,
+                      color_swatchhover: section.settings.color_swatchhover,
+                      stock_inventory: section.settings.stock_inventory,
+                      section_id: section.id
+                    %}
+
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+{% endif %}
+
+<style>
+.cust-img-prds--section {
+  display: flex;
+  gap: 20px;
+  margin: 5px 0 0;
+}
+.cust-img-prds--left {
+  width: 49.5%;
+  position: relative;
+}
+.cust-img-prds--wrapper{
+  width: 100%;
+  display: flex;
+  gap:20px;
+}
+.cust-img-prds--left img {
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+
+}
+.cust-img-prds--left-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+}
+.cust-img-prds--btn {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+.cust-img-prds--right {
+  width: 48.5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cust-img-prds--product {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+.cust-img-prds--badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  z-index:1;
+}
+.cust-img-prds--price {
+  font-weight: bold;
+  margin-top: 5px;
+}
+.cust-img-prds--right img{
+  max-width: 100%;
+  padding: 40px;
+
+}
+.cust-img-prds--right .cus-card-btn {
+  background:#1D2E40 !important;
+}
+
+.cust-img-prds--left-content :is(h1,h2,p,a){
+  color:#fff;
+}
+
+.cust-img-prds--left-content h2, .cust-img-prds--btn{
+  font-weight: 900;
+}
+
+@media screen and (max-width:768px){
+ .cust-img-prds--left ,.cust-img-prds--right {
+     width: 100%;
+   } 
+    .cust-img-prds--wrapper{
+     flex-direction: column;
+   }
+
+  .cust-img-prds--right img{
+    padding: 20px;
+  }
+
+}
+</style>

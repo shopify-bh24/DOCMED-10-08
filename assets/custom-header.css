@@ -1,0 +1,13 @@
+summary.header__icon.header__icon--search.header__icon--summary.link.focus-inset.modal__toggle.button {
+  display: none;
+}
+button.search-modal__close-button.modal__close-button.link.link--text.focus-inset.button.button--primary {
+  display: none;
+}
+details-modal.header__search {
+  width: 50%;
+  margin: auto;
+}
+details-modal.header__search details {
+  width: 100%;
+}

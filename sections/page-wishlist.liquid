@@ -1,0 +1,79 @@
+<script src="{{ 'wishlist.js' | asset_url }}" defer="defer"></script>
+{{ 'product.css' | asset_url | stylesheet_tag }}
+{{ 'wishlist.css' | asset_url | stylesheet_tag }}
+{{ 'skeleton.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign th_st = settings
+  assign product_style = th_st.product_style
+-%}
+
+<section
+  class="bls__section bls__product bls__wishlist-page-section"
+  data-section-type="page-wishlist"
+  data-section-id="{{ section.id }}"
+  data-view="{{ template.name }}"
+>
+  <skeleton-page></skeleton-page>
+  <div class="bls__wishlist-page-section-inner d-none">
+    <div class="{{ section.settings.container }} section-full bls__wishlist-page-main bls__grid {{ product_style }}">
+      {%- if search.results != blank -%}
+        {% paginate search.results by 50 %}
+          <div class="row">
+            {%- for item in search.results -%}
+              <div
+                class="col-6 col-md-4 col-lg-3 bls__product-load bls__wl-product-js bls__product-preload-js bls__wishlist-list"
+                data-product-handle="{{ item.handle }}"
+              >
+                {%- render 'product-item' | product: item | is_wishlist_page: true -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        {% endpaginate %}
+      {%- endif -%}
+      <div class="bls__wishlist-no-product-js d-none">
+        <h3 class="bls__wishlist-no-product-text">
+          {{ 'templates.wishlist.no_product' | t }}
+          <a class="bls__wishlist-no-product-url" href="{{ routes.all_products_collection_url }}">
+            {{- 'templates.wishlist.redirect' | t -}}
+          </a>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.page-wishlist.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.page-wishlist.content"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "t:sections.all.layout.label",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "t:sections.all.layout.options__1.label"
+        },
+        {
+          "value": "container-fluid",
+          "label": "t:sections.all.layout.options__2.label"
+        },
+        {
+          "value": "strecth-width",
+          "label": "t:sections.all.layout.options__3.label"
+        },
+        {
+          "value": "full-width",
+          "label": "t:sections.all.layout.options__4.label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

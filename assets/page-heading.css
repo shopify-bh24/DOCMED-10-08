@@ -1,0 +1,95 @@
+.page-heading .full-width {
+    --bs-gutter-x: 3rem;
+}
+
+.page-heading.show-banner .content-beside,
+.page-heading:not(.show-banner) .page-head {
+    padding-top: clamp(var(--page-tile-padding-mobile), 5vw, var(--page-tile-padding-desktop));
+    padding-bottom: clamp(var(--page-tile-padding-mobile), 5vw, var(--page-tile-padding-desktop));
+
+}
+
+.page-heading:not(.show-banner) .not-show-heading {
+    padding: 2.5rem 0;
+}
+
+.page-heading.not-info,
+.page-heading {
+    padding-bottom: clamp(var(--page-tile-padding-mobile), 5vw, var(--page-tile-padding-desktop));
+}
+
+.show-banner.show-beside,
+.not-bg:not(.show-banner) {
+    padding-bottom: 0;
+}
+
+.show-banner:not(.not-bg) .beside-image>*:last-child {
+    margin-bottom: 2.5rem;
+}
+
+.heading-title {
+    color: var(--heading-color);
+    font-size: clamp(3rem, 4vw, var(--text-fs, 3.6rem));
+    margin-bottom: .5rem;
+
+}
+
+.heading-description,
+.heading-description [data-view-more] {
+    color: var(--des-text-cl);
+    font-size: var(--des-text-fs);
+    margin: .5rem 0;
+}
+
+.heading-description * {
+    color: inherit;
+}
+
+.heading-banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: var(--background-image);
+    min-height: var(--min-height);
+    margin-top: -1px;
+}
+
+.show-overlay:before {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    opacity: var(--overlay-image);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bls-parallax {
+    background-attachment: fixed;
+}
+
+.heading-content {
+    z-index: 1;
+}
+
+.breadcrumbs {
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.breadcrumbs .bls__breadcrumb-separator,
+.breadcrumbs span.bls__breadcrumb-link,
+.breadcrumbs a:not(:hover) {
+    color: var(--breadcrumb-color);
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+    content: " /";
+    margin: 0 7px;
+}
+
+.not-bg span.bls__breadcrumb-link {
+    color: var(--grey-color);
+}

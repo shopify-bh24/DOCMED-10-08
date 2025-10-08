@@ -1,0 +1,230 @@
+{%- style -%} 
+  .section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+  @media screen and (max-width: 991px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+  }
+  {%- endstyle -%}
+{% liquid
+  assign st = section.settings
+  assign container = st.container
+%}
+
+<div class="{{ container }} section-full section-{{ section.id }}-padding" data-id="{{ section.id }}">
+  <div class="bls-carrer__content  {% if st.eb_loadmore %} load-more-page {% endif %}" data-limit="{{ st.limit }}">
+    {% for block in section.blocks %}
+      <div
+        {{ block.shopify_attributes }}
+        class="bls-carrer__item"
+        data-hide="false"
+      >
+        <div class="bls-carrer--job d-flex justify-content-between align-items-center">
+          <div class="bls-carrer--short-job d-flex flex-column">
+            {% if block.settings.title_job != blank %}
+              <h3 class="bls-carrer--title-job">{{ block.settings.title_job }}</h3>
+            {% endif %}
+            <ul class="list-unstyled">
+              {% if block.settings.loction_job != blank %}
+                <li>
+                  {{ 'carrer.location' | t }}
+                  {{ block.settings.loction_job }}
+                </li>
+              {% endif %}
+              {% if block.settings.type_job != blank %}
+                <li>
+                  {{ block.settings.type_job }}
+                </li>
+              {% endif %}
+              {% if block.settings.income_job != blank %}
+                <li>
+                  {{ 'carrer.income' | t }}
+                  {{ block.settings.income_job }}
+                </li>
+              {% endif %}
+              {% if block.settings.date_job != blank %}
+                <li>
+                  {{ 'carrer.date' | t }}
+                  {{ block.settings.date_job }}
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+          {% if block.settings.detail_job != blank or block.settings.detail_label_job != blank %}
+            <div class="bls-carrer--button">
+              {% if block.settings.detail_label_job %}
+                <a
+                  class="btn btn-carrer"
+                 target="_blank"
+                  {% if block.settings.detail_job == blank %}
+                    role="link"
+                    aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.detail_job }}"
+                    aria-label="{{ block.settings.detail_job }}"
+                  {% endif %}
+                >
+                  {{ block.settings.detail_label_job }}
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+    {% if st.eb_loadmore %}
+      <div class="carrer-action">
+        <div class="pagination-load-more mt-60">
+          <div class="pagination">
+            <div class="load-more-bar">
+              <span class="load-more-amount">
+                {{- 'carrer.showing' | t }}
+                <span class="limit-carrer">{{ st.limit }}</span>
+                {{ 'carrer.of' | t }}
+                <span class="tottal-carrer">{{ section.blocks.size }}</span>
+                {{ 'carrer.carrer' | t -}}
+              </span>
+              <div class="load-more-bar">
+                <span class="load-more-percent"></span>
+              </div>
+            </div>
+            <a href="#" class="btn load-carrer btn-primary">
+              <span class="hidden-loading">{{ 'carrer.loadmore' | t }}</span>
+              <span class="loader-icon absolute"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script src="{{ 'page.carrer.js' | asset_url }}" defer="defer"></script>
+  {{ 'page-carrer.css' | asset_url | stylesheet_tag }} 
+{% schema %}
+{
+  "name": "t:sections.page-carrer.name",
+  "class": "page-carrer",
+  "disabled_on": {
+    "groups": ["custom.template"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.page-carrer.settings.general.label"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "t:sections.page-carrer.layout.label",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "t:sections.page-carrer.layout.options__1.label"
+        },
+        {
+          "value": "container-fluid",
+          "label": "t:sections.page-carrer.layout.options__2.label"
+        },
+        {
+          "value": "strecth-width",
+          "label": "t:sections.page-carrer.layout.options__3.label"
+        },
+        {
+          "value": "full-width",
+          "label": "t:sections.page-carrer.layout.options__4.label"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "t:sections.page-carrer.settings.limit.label",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 9
+    },
+    {
+      "type": "checkbox",
+      "id": "eb_loadmore",
+      "label": "t:sections.page-carrer.settings.eb_loadmore.label",
+      "default": true
+    },
+     {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.page-carrer.blocks.item.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title_job",
+          "label": "t:sections.page-carrer.blocks.item.settings.title_job.label",
+          "default": "Job title"
+        },
+        {
+          "type": "text",
+          "id": "loction_job",
+          "label": "t:sections.page-carrer.blocks.item.settings.loction_job.label",
+          "default": "Work address"
+        },
+        {
+          "type": "text",
+          "id": "type_job",
+          "label": "t:sections.page-carrer.blocks.item.settings.type_job.label",
+          "default": "Full-time"
+        },
+        {
+          "type": "text",
+          "id": "income_job",
+          "label": "t:sections.page-carrer.blocks.item.settings.income_job.label",
+          "default": "$20.000 - $25.000"
+        },
+        {
+          "type": "text",
+          "id": "date_job",
+          "label": "t:sections.page-carrer.blocks.item.settings.date_job.label",
+          "default": "August 09 2023"
+        },
+        {
+          "type": "url",
+          "id": "detail_job",
+          "label": "t:sections.page-carrer.blocks.item.settings.detail_job.label"
+        },
+        {
+          "type": "text",
+          "id": "detail_label_job",
+          "label": "t:sections.page-carrer.blocks.item.settings.detail_label_job.label",
+          "default": "View Details"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

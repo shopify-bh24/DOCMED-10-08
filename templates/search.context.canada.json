@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "search.json",
+  "context": {
+    "market": "canada"
+  },
+  "sections": {
+    "main": {
+      "disabled": false,
+      "settings": {
+        "columns_desktop": 4,
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "picker_type": "button",
+        "enable_filtering": false,
+        "filter_type": "drawer",
+        "enable_sorting": true
+      },
+      "blocks": {}
+    }
+  }
+}
