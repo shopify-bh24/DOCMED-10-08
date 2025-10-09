@@ -306,7 +306,7 @@
       }
     },
     "cart": {
-      "title": "hr Warenkorb",
+      "title": "Warenkorb",
       "caption": "Artikel im Warenkorb",
       "remove_title": "{{ title }} entfernen",
       "subtotal": "Zwischensumme",
