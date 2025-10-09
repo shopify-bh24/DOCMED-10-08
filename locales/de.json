@@ -691,6 +691,9 @@
           "session_identifier_not_unique_error": "Bei Ihrer Bestellung ist etwas schiefgelaufen. Bitte versuchen Sie es später erneut."
         },
         "submit_for_review_notice_label": "Die Zahlung ist erst fällig, wenn Ihre Bestellung überprüft wurde."
+      },
+      "shipping_errors": {
+        "empty_state": "Bitte geben Sie ihre Lieferadresse ein, um Versandkosten anzuzeigen."
       }
     }
   },
