@@ -1,1 +1,827 @@
-{"sections":{"f4fc861e-a8e9-4733-8984-e73213d48588":{"type":"slideshow_custom","blocks":{"slide_HiqrFT":{"type":"slide","settings":{"enable_video_looping":false,"auto_play_video":false,"video_url":"","image":"shopify:\/\/shop_images\/Arzt_mit_Praxisutensilien_rotes_Stethoskop_und_wei_er_Kittel.jpg","mobile_image":"shopify:\/\/shop_images\/Arzt_mit_Praxisutensilien_rotes_Stethoskop_und_wei_er_Kittel.jpg","image_overlay_opacity":0,"text_caption":"Ob Arztpraxis, Klinik oder medizinisches Versorgungszentrum","outline_text":false,"heading":"","heading_size":"h1","font_color":"","subheading":"<p><strong>Entdecken Sie hochwertiges Praxiszubehör<\/strong><\/p><p><\/p>","description":"eine zuverlässige Ausstattung ist essenziell für eine optimale Patientenversorgung","text_style":"body","button_label":"Entdecken","link":"shopify:\/\/collections\/zubehor-praxisbedarf","link_window":false,"view_all_style":"solid","box_align":"middle-left","show_text_box":true,"text_alignment":"left","color_scheme":"scheme-77b2cfd5-6085-45ba-893c-34c1568058e1","text_alignment_mobile":"center"}}},"block_order":["slide_HiqrFT"],"settings":{"slide_heading_font":"open_sans_n4","default_font":false,"layout":"grid","slide_height":"medium","show_menu":true,"main_mega_menu":"top-10","slider_visual":"dots","pagenation_foreground":"#1d2e40","pagenation_background":"rgba(0,0,0,0)","pagenet_corner_radius":10,"slider_alignment":"center","auto_rotate":false,"change_slides_speed":3,"image_behavior":"none","accessibility_info":"Slideshow","color_scheme":"background-1","show_srolling_bar":false,"wb_marktext":"","mark_space":30,"mark_speed":6,"marq_diection":"right_left","seprater":"dots","text_padding_top":0,"text_padding_bottom":12,"show_text_below":false,"padding_top":20,"padding_bottom":20}},"3f381c47-733a-4027-b7cc-15a524815a39":{"type":"text-with-icons","blocks":{"template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-1":{"type":"image","settings":{"custom_image":"shopify:\/\/shop_images\/Schneller_Versand.png","icon1":"deal","title":"Schneller Versand","demotext":"oft innerhalb von 24 Stunden"}},"template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-2":{"type":"image","settings":{"custom_image":"shopify:\/\/shop_images\/Zertifikat.png","icon1":"return policy","title":"Zertifiziert","demotext":"beim Bundesministerium für Gesundheit"}},"template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-3":{"type":"image","settings":{"custom_image":"shopify:\/\/shop_images\/3.png","icon1":"payment","title":"12.000+","demotext":"Produkte"}},"template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-4":{"type":"image","settings":{"custom_image":"shopify:\/\/shop_images\/Freier_Versand.png","icon1":"none","title":"Gratisversand in DE","demotext":"ab nur 49€"}}},"block_order":["template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-1","template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-2","template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-3","template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-4"],"custom_css":["@media screen and (max-width: 767px);"],"name":"USP","settings":{"title":"","heading_size":"h1","head_align":"center","heading_color_scheme":"background-1","head_space":false,"iconwidth":65,"column_alignment":"center","flex_direction":"column","text_size":"medium","space_text":2,"color_scheme":"background-1","show_seprator":false,"swipe_mobile":true,"margin_top":24,"margin_bottom":0,"padding_top":0,"padding_bottom":0}},"ss_circle_menu_2_bHr33m":{"type":"ss-circle-menu-2","blocks":{"item_d6PdAA":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_design_22.png","title":"Mölnycke","tag":"","url":"shopify:\/\/collections\/molnlycke"}},"item_YXzhDi":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_design_24.png","title":"B. Braun","tag":"","url":"shopify:\/\/collections\/b-braun"}},"item_NiybVx":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_design_25.png","title":"Essity","tag":"","url":"shopify:\/\/collections\/essity"}},"item_kTmefk":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/nobamed-verbandsmaterial.png","title":"Nobamed","tag":"","url":"shopify:\/\/collections\/nobamed-1"}},"item_BPdDWB":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/3M.png","title":"3M","tag":"","url":"shopify:\/\/collections\/3m"}},"item_MaHUa8":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Hartmann.png","title":"Hartmann","tag":"","url":"shopify:\/\/collections\/hartmann"}},"item_EqwLDE":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Sch_lke.png","title":"Schülke","tag":"","url":"shopify:\/\/collections\/schulke"}},"item_zTUFqH":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_design_28.png","title":"Megro","tag":"","url":"shopify:\/\/collections\/megro"}},"item_yKLy6g":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/servoprax_medizintechnik.png","title":"Servoprax","tag":"","url":"shopify:\/\/collections\/servoprax"}},"item_VG3dzi":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/erler_zimmer_anatomische_modelle.png","title":"Erler-Zimmer ","tag":"","url":"shopify:\/\/collections\/erler-zimmer"}},"item_XJbVxe":{"type":"item","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Smith_Nephew_Medizintechnik.svg","title":"Smith & Nephew","tag":"","url":"shopify:\/\/collections\/smith-nephew"}},"item_q6BjaT":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_design_23.png","title":"Burnshield","tag":"","url":"shopify:\/\/collections\/burnshield"}},"item_Vn6XfM":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Cederroth.png","title":"Cederroth","tag":"","url":"shopify:\/\/collections\/cederroth"}},"item_z84V6q":{"type":"item","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/DocMed1.png","title":"DocMed","tag":"","url":""}},"item_8zz8UL":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/MaiMed.png","title":"MaiMed","tag":"","url":"shopify:\/\/collections\/maimed"}},"item_yNAhmQ":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/AMBU.png","title":"AMBU","tag":"","url":"shopify:\/\/collections\/ambu"}}},"block_order":["item_d6PdAA","item_YXzhDi","item_NiybVx","item_kTmefk","item_BPdDWB","item_MaHUa8","item_EqwLDE","item_zTUFqH","item_yKLy6g","item_VG3dzi","item_XJbVxe","item_q6BjaT","item_Vn6XfM","item_z84V6q","item_8zz8UL","item_yNAhmQ"],"custom_css":[],"name":"Brand Circles ","settings":{"slider_view":8,"slider_view_mobile":4,"slider_gap":20,"slider_gap_mobile":12,"item_border_thickness":1,"tag_custom":false,"tag_font":"poppins_n4","tag_size":6,"tag_size_mobile":0,"tag_height":150,"tag_padding_vertical":2,"tag_padding_vertical_mobile":4,"tag_padding_horizontal":12,"tag_padding_horizontal_mobile":8,"tag_border_radius":4,"tag_bottom":false,"title_custom":false,"title_font":"poppins_n4","title_size":0,"title_size_mobile":0,"title_height":140,"title_spacing":8,"title_spacing_mobile":4,"title_color":"#1d2e40","tag_color":"rgba(0,0,0,0)","item_border_color":"#1d2e40","tag_bg_color":"rgba(0,0,0,0)","tag_bg_gradient":"","background_color":"rgba(0,0,0,0)","background_gradient":"","border_color":"#1d2e40","full_width":true,"content_width":0,"border_thickness":0,"section_radius":0,"lazy":true,"margin_top":40,"margin_bottom":40,"margin_horizontal":0,"margin_horizontal_mobile":0,"padding_top":36,"padding_bottom":36,"padding_horizontal":5,"padding_horizontal_mobile":2}},"featured_collection_new_pzAqae":{"type":"featured-collection-new","blocks":{"heading_PNBg7h":{"type":"heading","disabled":true,"settings":{"icon1":"hotdeal","heading":"Heading","heading_size":"h2","subheading":""}},"date_V9pnYc":{"type":"date","disabled":true,"settings":{"wb_enddate":""}},"button_qRey69":{"type":"button","disabled":true,"settings":{"icon2":"flash","btntxt":"Shop the collection","link":"","view_all_style":"link"}}},"block_order":["heading_PNBg7h","date_V9pnYc","button_qRey69"],"name":"Bestseller","settings":{"color_scheme":"background-2","collection":"bestseller","title":"<strong>Gut. Besser. Bestseller.<\/strong>","heading_size":"h1","head_align":"left","heading_color_scheme":"","head_space":false,"description":"","show_description":false,"description_style":"body","products_to_show":9,"columns_desktop":5,"show_row_on_desktop":1,"full_width":false,"show_view_all":false,"view_all_style":"solid","view_button_pos":"top","enable_desktop_slider":true,"arrow_position":"top","card_style":"card","image_ratio":"square","show_secondary_image":false,"show_quantity":false,"show_vendor":true,"show_sku":true,"show_rating":true,"enable_quick_add":false,"quicklook_style":"link","show_count_timer":false,"color_swatchhover":false,"enable_addtocart":false,"show_variants":false,"show_variant_label":false,"picker_type":"button","show_colorswatch":true,"cardstock_bar":false,"stock_inventory":false,"max_stock":150,"limited_stock_cut_off":10,"limited_stock_message":"Only {stock_number} units left","instock_message":"{stock_number} in stock","continue_selling_message":"Re-stocking soon","limited_stock_color":"#ff0000","in_stock_color":"#008a00","continue_selling_color":"#ff0000","banner_position":"left","box_align":"top","text_alignment":"center","show_text_box":false,"imgcolor_scheme":"","show_banner_timer":false,"wb_bannerdate":"","text_caption":"Image text","outline_text":false,"heading":"Heading","bnrheading_size":"h1","sub_heading":"Sub Heading","button_label":"Button label","button_link":"","link_window":true,"button_style_secondary":"link","card_color_scheme":"","columns_mobile":"2","swipe_on_mobile":true,"padding_top":8,"padding_bottom":36}},"cus_new_collectin_list_sec_ftM88k":{"type":"cus-new-collectin-list-sec","blocks":{"collection_block_HtdNjC":{"type":"collection_block","name":"Einsatzbereiche","settings":{"image":"shopify:\/\/shop_images\/Design_ohne_Titel_5_7ab5e324-ea91-44de-b459-022400880e89.png","title":"Einsatzbereiche","item1_text":"Militär & Polizei","item1_link":"shopify:\/\/collections\/militar","item2_text":"Rettungsdienst & Sanitäter","item2_link":"shopify:\/\/collections\/rettungsdienst","item3_text":"Pflegedienste","item3_link":"shopify:\/\/collections\/pflegedienste","item4_text":"Apotheken","item4_link":"shopify:\/\/collections\/apotheken-sanitatshauser","item5_text":"Alten- & Pflegeheime","item5_link":"shopify:\/\/collections\/alten-pflegeheime","main_link_text":"","main_link":"#"}},"collection_block_FicKPW":{"type":"collection_block","name":"weitere Einsatzbereiche","settings":{"image":"shopify:\/\/shop_images\/Design_ohne_Titel.png","title":"weitere Einsatzbereiche","item1_text":"Physiotherapie","item1_link":"shopify:\/\/collections\/physiotherapie","item2_text":"Wellness & Spa","item2_link":"shopify:\/\/collections\/wellness-spa","item3_text":"Naturheilmittel","item3_link":"shopify:\/\/collections\/naturheilmittel","item4_text":"Kosmetik","item4_link":"shopify:\/\/collections\/kosmetik","item5_text":"Schmerz- & Sporttherapie","item5_link":"shopify:\/\/collections\/schmerz-und-sporttherapie","main_link_text":"","main_link":"#"}},"collection_block_ajnFGh":{"type":"collection_block","name":"Heimpflege","settings":{"image":"shopify:\/\/shop_images\/Design_ohne_Titel_4.png","title":"Heimpflege","item1_text":"Betten","item1_link":"shopify:\/\/collections\/betten","item2_text":"Toilette","item2_link":"shopify:\/\/collections\/toilette","item3_text":"Toilettenpapier","item3_link":"shopify:\/\/collections\/toilettenpapier","item4_text":"Toilettenrollenhalter","item4_link":"shopify:\/\/collections\/toilettenrollenhalter","item5_text":"Bad","item5_link":"shopify:\/\/collections\/bad","main_link_text":"","main_link":"#"}},"collection_block_hhmzmB":{"type":"collection_block","name":"Mobility","settings":{"image":"shopify:\/\/shop_images\/Design_ohne_Titel_7.png","title":"Mobilitätshilfen","item1_text":"Rollatoren","item1_link":"shopify:\/\/collections\/rollatoren","item2_text":"Gehhilfen","item2_link":"shopify:\/\/collections\/achselstutzen","item3_text":"Scooter","item3_link":"shopify:\/\/collections\/scooter","item4_text":"Rollstühle","item4_link":"shopify:\/\/collections\/rollstuhle","item5_text":"","item5_link":"","main_link_text":"","main_link":"#"}}},"block_order":["collection_block_HtdNjC","collection_block_FicKPW","collection_block_ajnFGh","collection_block_hhmzmB"],"name":"Kollektion Übersicht ","settings":{"cus-bg-color":"#ffffff","heading":"","subheading":""}},"custom_featured_coll_sec_hqKMU6":{"type":"custom-featured-coll-sec","name":"Push Produkte ","settings":{"cus-bg-color":"#ffffff","collection":"push-products","heading":""}},"multirow_Thm3Vt":{"type":"multirow","blocks":{"row_KhEAYk":{"type":"row","settings":{"image":"shopify:\/\/shop_images\/Untitled_design.jpg","caption":"","heading":"Sprechstundenbedarf","text":"<p><br\/>Sprechstundenbedarf sind die medizinischen Verbrauchsmaterialien (z. B. Pflaster, Spritzen, Handschuhe, Desinfektions- und Schnelltest-Reagenzien), die eine Praxis direkt für die Behandlung gesetzlich versicherter Patienten benötigt und quartalsweise gesondert über die KV abrechnet – Verbrauch dokumentieren, Rahmenempfehlungen beachten, und alles läuft reibungslos.<\/p>","button_label":"Jetzt bestellen","button_link":"shopify:\/\/pages\/sprechstundenbedarf","link_window":false,"view_all_style":"outline","row_color_scheme":"accent-2"}}},"block_order":["row_KhEAYk"],"disabled":true,"name":"SSB","settings":{"image_height":"medium","desktop_image_width":"medium","heading_size":"h1","text_style":"body","desktop_content_position":"middle","desktop_content_alignment":"left","image_layout":"align-left","row_gap":1,"section_color_scheme":"background-1","mobile_content_alignment":"left","padding_top":0,"padding_bottom":36}},"collapsible_content_7yExeM":{"type":"collapsible-content","blocks":{"collapsible_row_nNB3gV":{"type":"collapsible_row","settings":{"default_open":false,"heading":"Wie kann ich eine Bestellung aufgeben?","icon":"none","custom_image":"shopify:\/\/shop_images\/9.png","row_content":"<p>Sie können Ihre Bestellung einfach über unseren Online-Shop aufgeben. Legen Sie die gewünschten Produkte in den Warenkorb und folgen Sie dem Bestellprozess.<\/p>","page":""}},"collapsible_row_pMzWYg":{"type":"collapsible_row","settings":{"default_open":false,"heading":"Wie lange dauert der Versand?","icon":"none","custom_image":"shopify:\/\/shop_images\/Schneller_Versand.png","row_content":"<p>Die Lieferzeit variiert je nach Produktverfügbarkeit. In der Regel erfolgt der Versand innerhalb von <strong>1-3 Werktagen<\/strong>. Genauere Informationen finden Sie in der Produktbeschreibung oder im Checkout.<\/p>","page":""}},"collapsible_row_b9jDni":{"type":"collapsible_row","settings":{"default_open":false,"heading":"Wie hoch sind die Versandkosten?","icon":"none","custom_image":"shopify:\/\/shop_images\/8.png","row_content":"<p>Alle Informationen zu <strong>Versandkosten und Lieferung<\/strong> finden Sie unter folgendem Link: <a href=\"https:\/\/docmedraw.myshopify.com\/pages\/bestellung-lieferung\" title=\"https:\/\/docmedraw.myshopify.com\/pages\/bestellung-lieferung\"><em><strong>Bestellung & Lieferung <\/strong><\/em><\/a><\/p>","page":""}},"collapsible_row_aKQRid":{"type":"collapsible_row","settings":{"default_open":false,"heading":"Wie lange habe ich Zeit, um meine Bestellung zurückzusenden?","icon":"none","custom_image":"shopify:\/\/shop_images\/1.png","row_content":"<p><a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Rückgabepolitik<\/a> haben ein 14-tägiges Rückgaberecht. Innerhalb dieses Zeitraums können Sie Ihre Bestellung ohne Angabe von Gründen an uns zurücksenden. Weitere Informationen zum Rücksendeprozess finden Sie in unserer <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\"><em><strong>Rückgabepolitik<\/strong><\/em><\/a><em><strong>.<\/strong><\/em><\/p>","page":""}}},"block_order":["collapsible_row_nNB3gV","collapsible_row_pMzWYg","collapsible_row_b9jDni","collapsible_row_aKQRid"],"name":"FAQ","settings":{"heading":"FAQ","heading_size":"h0","head_align":"left","heading_color_scheme":"background-1","head_space":false,"description":"<p>Häufig gestellte Fragen<\/p>","description_style":"body","layout":"row","color_scheme":"","secondary_background":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":40,"padding_bottom":0}},"snocks_text_columns_dR44aD":{"type":"snocks-text-columns","blocks":{"column_ATNFNb":{"type":"column","settings":{"heading":"DocMed GmbH – Für Ihre Pflege. Für Ihr Leben.","text":"<p>Schon unsere Großeltern wussten: Gesundheit ist das höchste Gut. Was früher ein Apothekenbesuch mit Papierrezept erforderte, ist heute ein smarter Klick im digitalen Warenkorb. Willkommen bei DocMed – Ihrem starken Partner für medizinische Produkte, Pflegehilfsmittel und Gesundheitsbedarf.<\/p>"}},"column_gqzbqE":{"type":"column","settings":{"heading":"Digital, aber menschlich.","text":"<p>DocMed ist nicht nur ein Shop – wir sind ein Team. Aus Medizinexpert:innen, E-Commerce-Spezialist:innen und echten Problemlöser:innen. Wir verbinden Technik mit Menschlichkeit. So wird aus einem digitalen Klick echte Versorgung – egal, ob für Pflegebedürftige, Einrichtungen oder Angehörige<\/p>"}},"column_eMhMmT":{"type":"column","settings":{"heading":"Von Alltag bis Akutfall: Unsere Produkte machen den Unterschied.","text":"<p>Unsere Vision? Wir möchten nicht einfach nur verkaufen – wir möchten Sie begleiten. Deshalb finden Sie bei DocMed ein kuratiertes Sortiment, das hält, was es verspricht. Von hochwertigen Pflegehilfsmitteln über moderne Medizintechnik bis hin zu cleveren Alltagshelfern. Schnell verfügbar, fair kalkuliert und auf Ihre Bedürfnisse zugeschnitten.<\/p>"}},"column_ijGHGz":{"type":"column","settings":{"heading":"Ihre Versorgung. Unser Anspruch.","text":"<p>Warum wir das tun? Weil wir glauben, dass Gesundheit kein Luxus sein darf, sondern ein Grundrecht. Und weil wir jeden Tag aufs Neue erleben, wie viel einfacher Pflege sein kann – wenn die richtigen Produkte zur richtigen Zeit am richtigen Ort sind. Deshalb arbeiten wir mit renommierten Marken, entwickeln unsere Services kontinuierlich weiter und liefern nicht nur Pakete, sondern echte Unterstützung. Schnell, zuverlässig und mit einem hohen Anspruch an Qualität und Kundenservice.<\/p>"}},"column_Gq9qCW":{"type":"column","settings":{"heading":"Mehr als nur ein Online-Shop: Wir verstehen, was wirklich zählt.","text":"<p>Pflege ist persönlich. Deshalb denken wir bei DocMed nicht in Paletten und Paketnummern, sondern in Menschen. In Pflegedienste, die täglich alles geben. In Angehörige, die Verantwortung übernehmen. In Menschen wie Sie, die Unterstützung suchen – ohne Umwege, ohne Kompromisse.<\/p><p>Ob Sie Ihre Eltern zu Hause pflegen, in einer Klinik arbeiten oder einfach verlässlichen Gesundheitsbedarf suchen – bei uns erhalten Sie nicht nur Produkte, sondern Lösungen. Mit Herz, mit Know-how und mit einem Lächeln auf der Rechnung.<\/p>"}},"column_tPU3pc":{"type":"column","settings":{"heading":"Im Dienste Ihrer Gesundheit – mehr als nur ein Leitsatz.","text":"<p>Für uns bei DocMed ist „Im Dienste Ihrer Gesundheit“ kein Werbespruch. Es ist unsere Haltung. Unser täglicher Antrieb. Unsere Verantwortung. Ob Pflegehilfsmittel für Zuhause, medizinischer Bedarf für Praxen oder verlässliche Lösungen für Pflegedienste – wir stehen an Ihrer Seite.<\/p><p>Jeden Tag. Mit Fachwissen, mit Engagement und mit dem echten Wunsch, Ihre Versorgung einfacher, sicherer und menschlicher zu machen. Denn Gesundheit ist nicht nur unser Geschäft – sie ist unsere Mission.<\/p>"}}},"block_order":["column_ATNFNb","column_gqzbqE","column_eMhMmT","column_ijGHGz","column_Gq9qCW","column_tPU3pc"],"name":"About Us & Vision Text","settings":{"columns":"3","text_align":"justify","padding_top":40,"padding_bottom":40}},"contact_form_MtCmVQ":{"type":"contact-form","blocks":{"text_z4NE9n":{"type":"text","settings":{"field_label":"","label_placeholder":"Name","required_field":false}},"email_BBpV9b":{"type":"email","settings":{"field_label":"","label_placeholder":"Email","required_field":true}},"phone_crHPYU":{"type":"phone","settings":{"field_label":"","label_placeholder":"Telefon","required_field":true}},"message_YVhe7B":{"type":"message","settings":{"field_label":"","label_placeholder":"Ihre Nachricht...","required_field":false}}},"block_order":["text_z4NE9n","email_BBpV9b","phone_crHPYU","message_YVhe7B"],"settings":{"title":"Kontaktieren Sie uns!","heading_size":"h1","head_align":"left","heading_color_scheme":"scheme-77b2cfd5-6085-45ba-893c-34c1568058e1","head_space":true,"description":"","description_style":"body","enable_all":"text","contact_iframe_code":"","texttitle":"<strong>Sie benötigen Hilfe ?<\/strong>","demotext":"Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!","contacttitle":"<strong>Kontaktdaten<\/strong>","contsubtext":"<h2>DocMed Kundenservice<\/h2>","footer_contact_no":"<p><strong>0234 - 357 905 59<\/strong><\/p>","show_social":true,"contactfollow":"","color_scheme":"scheme-77b2cfd5-6085-45ba-893c-34c1568058e1","padding_top":60,"padding_bottom":60}}},"order":["f4fc861e-a8e9-4733-8984-e73213d48588","3f381c47-733a-4027-b7cc-15a524815a39","ss_circle_menu_2_bHr33m","featured_collection_new_pzAqae","cus_new_collectin_list_sec_ftM88k","custom_featured_coll_sec_hqKMU6","multirow_Thm3Vt","collapsible_content_7yExeM","snocks_text_columns_dR44aD","contact_form_MtCmVQ"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "f4fc861e-a8e9-4733-8984-e73213d48588": {
+      "type": "slideshow_custom",
+      "blocks": {
+        "slide_HiqrFT": {
+          "type": "slide",
+          "settings": {
+            "enable_video_looping": false,
+            "auto_play_video": false,
+            "video_url": "",
+            "image": "shopify://shop_images/Arzt_mit_Praxisutensilien_rotes_Stethoskop_und_wei_er_Kittel.jpg",
+            "mobile_image": "shopify://shop_images/Arzt_mit_Praxisutensilien_rotes_Stethoskop_und_wei_er_Kittel.jpg",
+            "image_overlay_opacity": 0,
+            "text_caption": "Ob Arztpraxis, Klinik oder medizinisches Versorgungszentrum",
+            "outline_text": false,
+            "heading": "",
+            "heading_size": "h1",
+            "font_color": "",
+            "subheading": "<p><strong>Entdecken Sie hochwertiges Praxiszubehör</strong></p><p></p>",
+            "description": "eine zuverlässige Ausstattung ist essenziell für eine optimale Patientenversorgung",
+            "text_style": "body",
+            "button_label": "Entdecken",
+            "link": "shopify://collections/zubehor-praxisbedarf",
+            "link_window": false,
+            "view_all_style": "solid",
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_HiqrFT"
+      ],
+      "settings": {
+        "slide_heading_font": "open_sans_n4",
+        "default_font": false,
+        "layout": "grid",
+        "slide_height": "medium",
+        "show_menu": true,
+        "main_mega_menu": "top-10",
+        "slider_visual": "dots",
+        "pagenation_foreground": "#1d2e40",
+        "pagenation_background": "rgba(0,0,0,0)",
+        "pagenet_corner_radius": 10,
+        "slider_alignment": "center",
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "image_behavior": "none",
+        "accessibility_info": "Slideshow",
+        "color_scheme": "background-1",
+        "show_srolling_bar": false,
+        "wb_marktext": "",
+        "mark_space": 30,
+        "mark_speed": 6,
+        "marq_diection": "right_left",
+        "seprater": "dots",
+        "text_padding_top": 0,
+        "text_padding_bottom": 12,
+        "show_text_below": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "3f381c47-733a-4027-b7cc-15a524815a39": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-1": {
+          "type": "image",
+          "settings": {
+            "custom_image": "shopify://shop_images/Schneller_Versand.png",
+            "icon1": "deal",
+            "title": "Schneller Versand",
+            "demotext": "oft innerhalb von 24 Stunden"
+          }
+        },
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-2": {
+          "type": "image",
+          "settings": {
+            "custom_image": "shopify://shop_images/Zertifikat.png",
+            "icon1": "return policy",
+            "title": "Zertifiziert",
+            "demotext": "beim Bundesministerium für Gesundheit"
+          }
+        },
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-3": {
+          "type": "image",
+          "settings": {
+            "custom_image": "shopify://shop_images/3.png",
+            "icon1": "payment",
+            "title": "12.000+",
+            "demotext": "Produkte"
+          }
+        },
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-4": {
+          "type": "image",
+          "settings": {
+            "custom_image": "shopify://shop_images/Freier_Versand.png",
+            "icon1": "none",
+            "title": "Gratisversand in DE",
+            "demotext": "ab nur 49€"
+          }
+        }
+      },
+      "block_order": [
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-1",
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-2",
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-3",
+        "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-4"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px);"
+      ],
+      "name": "USP",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "head_align": "center",
+        "heading_color_scheme": "background-1",
+        "head_space": false,
+        "iconwidth": 65,
+        "column_alignment": "center",
+        "flex_direction": "column",
+        "text_size": "medium",
+        "space_text": 2,
+        "color_scheme": "background-1",
+        "show_seprator": false,
+        "swipe_mobile": true,
+        "margin_top": 24,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ss_circle_menu_2_bHr33m": {
+      "type": "ss-circle-menu-2",
+      "blocks": {
+        "item_d6PdAA": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_22.png",
+            "title": "Mölnycke",
+            "tag": "",
+            "url": "shopify://collections/molnlycke"
+          }
+        },
+        "item_YXzhDi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_24.png",
+            "title": "B. Braun",
+            "tag": "",
+            "url": "shopify://collections/b-braun"
+          }
+        },
+        "item_NiybVx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_25.png",
+            "title": "Essity",
+            "tag": "",
+            "url": "shopify://collections/essity"
+          }
+        },
+        "item_kTmefk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/nobamed-verbandsmaterial.png",
+            "title": "Nobamed",
+            "tag": "",
+            "url": "shopify://collections/nobamed-1"
+          }
+        },
+        "item_BPdDWB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/3M.png",
+            "title": "3M",
+            "tag": "",
+            "url": "shopify://collections/3m"
+          }
+        },
+        "item_MaHUa8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Hartmann.png",
+            "title": "Hartmann",
+            "tag": "",
+            "url": "shopify://collections/hartmann"
+          }
+        },
+        "item_EqwLDE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Sch_lke.png",
+            "title": "Schülke",
+            "tag": "",
+            "url": "shopify://collections/schulke"
+          }
+        },
+        "item_zTUFqH": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_28.png",
+            "title": "Megro",
+            "tag": "",
+            "url": "shopify://collections/megro"
+          }
+        },
+        "item_yKLy6g": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/servoprax_medizintechnik.png",
+            "title": "Servoprax",
+            "tag": "",
+            "url": "shopify://collections/servoprax"
+          }
+        },
+        "item_VG3dzi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/erler_zimmer_anatomische_modelle.png",
+            "title": "Erler-Zimmer ",
+            "tag": "",
+            "url": "shopify://collections/erler-zimmer"
+          }
+        },
+        "item_XJbVxe": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Smith_Nephew_Medizintechnik.svg",
+            "title": "Smith & Nephew",
+            "tag": "",
+            "url": "shopify://collections/smith-nephew"
+          }
+        },
+        "item_q6BjaT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_23.png",
+            "title": "Burnshield",
+            "tag": "",
+            "url": "shopify://collections/burnshield"
+          }
+        },
+        "item_Vn6XfM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Cederroth.png",
+            "title": "Cederroth",
+            "tag": "",
+            "url": "shopify://collections/cederroth"
+          }
+        },
+        "item_z84V6q": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DocMed1.png",
+            "title": "DocMed",
+            "tag": "",
+            "url": ""
+          }
+        },
+        "item_8zz8UL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/MaiMed.png",
+            "title": "MaiMed",
+            "tag": "",
+            "url": "shopify://collections/maimed"
+          }
+        },
+        "item_yNAhmQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AMBU.png",
+            "title": "AMBU",
+            "tag": "",
+            "url": "shopify://collections/ambu"
+          }
+        }
+      },
+      "block_order": [
+        "item_d6PdAA",
+        "item_YXzhDi",
+        "item_NiybVx",
+        "item_kTmefk",
+        "item_BPdDWB",
+        "item_MaHUa8",
+        "item_EqwLDE",
+        "item_zTUFqH",
+        "item_yKLy6g",
+        "item_VG3dzi",
+        "item_XJbVxe",
+        "item_q6BjaT",
+        "item_Vn6XfM",
+        "item_z84V6q",
+        "item_8zz8UL",
+        "item_yNAhmQ"
+      ],
+      "custom_css": [],
+      "name": "Brand Circles ",
+      "settings": {
+        "slider_view": 8,
+        "slider_view_mobile": 4,
+        "slider_gap": 20,
+        "slider_gap_mobile": 12,
+        "item_border_thickness": 1,
+        "tag_custom": false,
+        "tag_font": "poppins_n4",
+        "tag_size": 6,
+        "tag_size_mobile": 0,
+        "tag_height": 150,
+        "tag_padding_vertical": 2,
+        "tag_padding_vertical_mobile": 4,
+        "tag_padding_horizontal": 12,
+        "tag_padding_horizontal_mobile": 8,
+        "tag_border_radius": 4,
+        "tag_bottom": false,
+        "title_custom": false,
+        "title_font": "poppins_n4",
+        "title_size": 0,
+        "title_size_mobile": 0,
+        "title_height": 140,
+        "title_spacing": 8,
+        "title_spacing_mobile": 4,
+        "title_color": "#1d2e40",
+        "tag_color": "rgba(0,0,0,0)",
+        "item_border_color": "#1d2e40",
+        "tag_bg_color": "rgba(0,0,0,0)",
+        "tag_bg_gradient": "",
+        "background_color": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "border_color": "#1d2e40",
+        "full_width": true,
+        "content_width": 0,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true,
+        "margin_top": 40,
+        "margin_bottom": 40,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 2
+      }
+    },
+    "featured_collection_new_pzAqae": {
+      "type": "featured-collection-new",
+      "blocks": {
+        "heading_PNBg7h": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "icon1": "hotdeal",
+            "heading": "Heading",
+            "heading_size": "h2",
+            "subheading": ""
+          }
+        },
+        "date_V9pnYc": {
+          "type": "date",
+          "disabled": true,
+          "settings": {
+            "wb_enddate": ""
+          }
+        },
+        "button_qRey69": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "icon2": "flash",
+            "btntxt": "Shop the collection",
+            "link": "",
+            "view_all_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PNBg7h",
+        "date_V9pnYc",
+        "button_qRey69"
+      ],
+      "name": "Bestseller",
+      "settings": {
+        "color_scheme": "background-2",
+        "collection": "bestseller",
+        "title": "<strong>Gut. Besser. Bestseller.</strong>",
+        "heading_size": "h1",
+        "head_align": "left",
+        "heading_color_scheme": "",
+        "head_space": false,
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "products_to_show": 9,
+        "columns_desktop": 5,
+        "show_row_on_desktop": 1,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "view_button_pos": "top",
+        "enable_desktop_slider": true,
+        "arrow_position": "top",
+        "card_style": "card",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_quantity": false,
+        "show_vendor": true,
+        "show_sku": true,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "quicklook_style": "link",
+        "show_count_timer": false,
+        "color_swatchhover": false,
+        "enable_addtocart": false,
+        "show_variants": false,
+        "show_variant_label": false,
+        "picker_type": "button",
+        "show_colorswatch": true,
+        "cardstock_bar": false,
+        "stock_inventory": false,
+        "max_stock": 150,
+        "limited_stock_cut_off": 10,
+        "limited_stock_message": "Only {stock_number} units left",
+        "instock_message": "{stock_number} in stock",
+        "continue_selling_message": "Re-stocking soon",
+        "limited_stock_color": "#ff0000",
+        "in_stock_color": "#008a00",
+        "continue_selling_color": "#ff0000",
+        "banner_position": "left",
+        "box_align": "top",
+        "text_alignment": "center",
+        "show_text_box": false,
+        "imgcolor_scheme": "",
+        "show_banner_timer": false,
+        "wb_bannerdate": "",
+        "text_caption": "Image text",
+        "outline_text": false,
+        "heading": "Heading",
+        "bnrheading_size": "h1",
+        "sub_heading": "Sub Heading",
+        "button_label": "Button label",
+        "button_link": "",
+        "link_window": true,
+        "button_style_secondary": "link",
+        "card_color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 8,
+        "padding_bottom": 36
+      }
+    },
+    "cus_new_collectin_list_sec_ftM88k": {
+      "type": "cus-new-collectin-list-sec",
+      "blocks": {
+        "collection_block_HtdNjC": {
+          "type": "collection_block",
+          "name": "Einsatzbereiche",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_5_7ab5e324-ea91-44de-b459-022400880e89.png",
+            "title": "Einsatzbereiche",
+            "item1_text": "Militär & Polizei",
+            "item1_link": "shopify://collections/militar",
+            "item2_text": "Rettungsdienst & Sanitäter",
+            "item2_link": "shopify://collections/rettungsdienst",
+            "item3_text": "Pflegedienste",
+            "item3_link": "shopify://collections/pflegedienste",
+            "item4_text": "Apotheken",
+            "item4_link": "shopify://collections/apotheken-sanitatshauser",
+            "item5_text": "Alten- & Pflegeheime",
+            "item5_link": "shopify://collections/alten-pflegeheime",
+            "main_link_text": "",
+            "main_link": "#"
+          }
+        },
+        "collection_block_FicKPW": {
+          "type": "collection_block",
+          "name": "weitere Einsatzbereiche",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel.png",
+            "title": "weitere Einsatzbereiche",
+            "item1_text": "Physiotherapie",
+            "item1_link": "shopify://collections/physiotherapie",
+            "item2_text": "Wellness & Spa",
+            "item2_link": "shopify://collections/wellness-spa",
+            "item3_text": "Naturheilmittel",
+            "item3_link": "shopify://collections/naturheilmittel",
+            "item4_text": "Kosmetik",
+            "item4_link": "shopify://collections/kosmetik",
+            "item5_text": "Schmerz- & Sporttherapie",
+            "item5_link": "shopify://collections/schmerz-und-sporttherapie",
+            "main_link_text": "",
+            "main_link": "#"
+          }
+        },
+        "collection_block_ajnFGh": {
+          "type": "collection_block",
+          "name": "Heimpflege",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_4.png",
+            "title": "Heimpflege",
+            "item1_text": "Betten",
+            "item1_link": "shopify://collections/betten",
+            "item2_text": "Toilette",
+            "item2_link": "shopify://collections/toilette",
+            "item3_text": "Toilettenpapier",
+            "item3_link": "shopify://collections/toilettenpapier",
+            "item4_text": "Toilettenrollenhalter",
+            "item4_link": "shopify://collections/toilettenrollenhalter",
+            "item5_text": "Bad",
+            "item5_link": "shopify://collections/bad",
+            "main_link_text": "",
+            "main_link": "#"
+          }
+        },
+        "collection_block_hhmzmB": {
+          "type": "collection_block",
+          "name": "Mobility",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_7.png",
+            "title": "Mobilitätshilfen",
+            "item1_text": "Rollatoren",
+            "item1_link": "shopify://collections/rollatoren",
+            "item2_text": "Gehhilfen",
+            "item2_link": "shopify://collections/achselstutzen",
+            "item3_text": "Scooter",
+            "item3_link": "shopify://collections/scooter",
+            "item4_text": "Rollstühle",
+            "item4_link": "shopify://collections/rollstuhle",
+            "item5_text": "",
+            "item5_link": "",
+            "main_link_text": "",
+            "main_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_HtdNjC",
+        "collection_block_FicKPW",
+        "collection_block_ajnFGh",
+        "collection_block_hhmzmB"
+      ],
+      "name": "Kollektion Übersicht ",
+      "settings": {
+        "cus-bg-color": "#ffffff",
+        "heading": "",
+        "subheading": ""
+      }
+    },
+    "custom_featured_coll_sec_hqKMU6": {
+      "type": "custom-featured-coll-sec",
+      "name": "Push Produkte ",
+      "settings": {
+        "cus-bg-color": "#ffffff",
+        "collection": "push-products",
+        "heading": ""
+      }
+    },
+    "multirow_Thm3Vt": {
+      "type": "multirow",
+      "blocks": {
+        "row_KhEAYk": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design.jpg",
+            "caption": "",
+            "heading": "Sprechstundenbedarf",
+            "text": "<p><br/>Sprechstundenbedarf sind die medizinischen Verbrauchsmaterialien (z. B. Pflaster, Spritzen, Handschuhe, Desinfektions- und Schnelltest-Reagenzien), die eine Praxis direkt für die Behandlung gesetzlich versicherter Patienten benötigt und quartalsweise gesondert über die KV abrechnet – Verbrauch dokumentieren, Rahmenempfehlungen beachten, und alles läuft reibungslos.</p>",
+            "button_label": "Jetzt bestellen",
+            "button_link": "shopify://pages/sprechstundenbedarf",
+            "link_window": false,
+            "view_all_style": "outline",
+            "row_color_scheme": "accent-2"
+          }
+        }
+      },
+      "block_order": [
+        "row_KhEAYk"
+      ],
+      "disabled": true,
+      "name": "SSB",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "align-left",
+        "row_gap": 1,
+        "section_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_7yExeM": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_nNB3gV": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wie kann ich eine Bestellung aufgeben?",
+            "icon": "none",
+            "custom_image": "shopify://shop_images/9.png",
+            "row_content": "<p>Sie können Ihre Bestellung einfach über unseren Online-Shop aufgeben. Legen Sie die gewünschten Produkte in den Warenkorb und folgen Sie dem Bestellprozess.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pMzWYg": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wie lange dauert der Versand?",
+            "icon": "none",
+            "custom_image": "shopify://shop_images/Schneller_Versand.png",
+            "row_content": "<p>Die Lieferzeit variiert je nach Produktverfügbarkeit. In der Regel erfolgt der Versand innerhalb von <strong>1-3 Werktagen</strong>. Genauere Informationen finden Sie in der Produktbeschreibung oder im Checkout.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_b9jDni": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wie hoch sind die Versandkosten?",
+            "icon": "none",
+            "custom_image": "shopify://shop_images/8.png",
+            "row_content": "<p>Alle Informationen zu <strong>Versandkosten und Lieferung</strong> finden Sie unter folgendem Link: <a href=\"https://docmedraw.myshopify.com/pages/bestellung-lieferung\" title=\"https://docmedraw.myshopify.com/pages/bestellung-lieferung\"><em><strong>Bestellung & Lieferung </strong></em></a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aKQRid": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wie lange habe ich Zeit, um meine Bestellung zurückzusenden?",
+            "icon": "none",
+            "custom_image": "shopify://shop_images/1.png",
+            "row_content": "<p><a href=\"/policies/refund-policy\" title=\"Refund Policy\">Rückgabepolitik</a> haben ein 14-tägiges Rückgaberecht. Innerhalb dieses Zeitraums können Sie Ihre Bestellung ohne Angabe von Gründen an uns zurücksenden. Weitere Informationen zum Rücksendeprozess finden Sie in unserer <a href=\"/policies/refund-policy\" title=\"Refund Policy\"><em><strong>Rückgabepolitik</strong></em></a><em><strong>.</strong></em></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_nNB3gV",
+        "collapsible_row_pMzWYg",
+        "collapsible_row_b9jDni",
+        "collapsible_row_aKQRid"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "heading": "FAQ",
+        "heading_size": "h0",
+        "head_align": "left",
+        "heading_color_scheme": "background-1",
+        "head_space": false,
+        "description": "<p>Häufig gestellte Fragen</p>",
+        "description_style": "body",
+        "layout": "row",
+        "color_scheme": "",
+        "secondary_background": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "snocks_text_columns_dR44aD": {
+      "type": "snocks-text-columns",
+      "blocks": {
+        "column_ATNFNb": {
+          "type": "column",
+          "settings": {
+            "heading": "DocMed GmbH – Für Ihre Pflege. Für Ihr Leben.",
+            "text": "<p>Schon unsere Großeltern wussten: Gesundheit ist das höchste Gut. Was früher ein Apothekenbesuch mit Papierrezept erforderte, ist heute ein smarter Klick im digitalen Warenkorb. Willkommen bei DocMed – Ihrem starken Partner für medizinische Produkte, Pflegehilfsmittel und Gesundheitsbedarf.</p>"
+          }
+        },
+        "column_gqzbqE": {
+          "type": "column",
+          "settings": {
+            "heading": "Digital, aber menschlich.",
+            "text": "<p>DocMed ist nicht nur ein Shop – wir sind ein Team. Aus Medizinexpert:innen, E-Commerce-Spezialist:innen und echten Problemlöser:innen. Wir verbinden Technik mit Menschlichkeit. So wird aus einem digitalen Klick echte Versorgung – egal, ob für Pflegebedürftige, Einrichtungen oder Angehörige</p>"
+          }
+        },
+        "column_eMhMmT": {
+          "type": "column",
+          "settings": {
+            "heading": "Von Alltag bis Akutfall: Unsere Produkte machen den Unterschied.",
+            "text": "<p>Unsere Vision? Wir möchten nicht einfach nur verkaufen – wir möchten Sie begleiten. Deshalb finden Sie bei DocMed ein kuratiertes Sortiment, das hält, was es verspricht. Von hochwertigen Pflegehilfsmitteln über moderne Medizintechnik bis hin zu cleveren Alltagshelfern. Schnell verfügbar, fair kalkuliert und auf Ihre Bedürfnisse zugeschnitten.</p>"
+          }
+        },
+        "column_ijGHGz": {
+          "type": "column",
+          "settings": {
+            "heading": "Ihre Versorgung. Unser Anspruch.",
+            "text": "<p>Warum wir das tun? Weil wir glauben, dass Gesundheit kein Luxus sein darf, sondern ein Grundrecht. Und weil wir jeden Tag aufs Neue erleben, wie viel einfacher Pflege sein kann – wenn die richtigen Produkte zur richtigen Zeit am richtigen Ort sind. Deshalb arbeiten wir mit renommierten Marken, entwickeln unsere Services kontinuierlich weiter und liefern nicht nur Pakete, sondern echte Unterstützung. Schnell, zuverlässig und mit einem hohen Anspruch an Qualität und Kundenservice.</p>"
+          }
+        },
+        "column_Gq9qCW": {
+          "type": "column",
+          "settings": {
+            "heading": "Mehr als nur ein Online-Shop: Wir verstehen, was wirklich zählt.",
+            "text": "<p>Pflege ist persönlich. Deshalb denken wir bei DocMed nicht in Paletten und Paketnummern, sondern in Menschen. In Pflegedienste, die täglich alles geben. In Angehörige, die Verantwortung übernehmen. In Menschen wie Sie, die Unterstützung suchen – ohne Umwege, ohne Kompromisse.</p><p>Ob Sie Ihre Eltern zu Hause pflegen, in einer Klinik arbeiten oder einfach verlässlichen Gesundheitsbedarf suchen – bei uns erhalten Sie nicht nur Produkte, sondern Lösungen. Mit Herz, mit Know-how und mit einem Lächeln auf der Rechnung.</p>"
+          }
+        },
+        "column_tPU3pc": {
+          "type": "column",
+          "settings": {
+            "heading": "Im Dienste Ihrer Gesundheit – mehr als nur ein Leitsatz.",
+            "text": "<p>Für uns bei DocMed ist „Im Dienste Ihrer Gesundheit“ kein Werbespruch. Es ist unsere Haltung. Unser täglicher Antrieb. Unsere Verantwortung. Ob Pflegehilfsmittel für Zuhause, medizinischer Bedarf für Praxen oder verlässliche Lösungen für Pflegedienste – wir stehen an Ihrer Seite.</p><p>Jeden Tag. Mit Fachwissen, mit Engagement und mit dem echten Wunsch, Ihre Versorgung einfacher, sicherer und menschlicher zu machen. Denn Gesundheit ist nicht nur unser Geschäft – sie ist unsere Mission.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_ATNFNb",
+        "column_gqzbqE",
+        "column_eMhMmT",
+        "column_ijGHGz",
+        "column_Gq9qCW",
+        "column_tPU3pc"
+      ],
+      "name": "About Us & Vision Text",
+      "settings": {
+        "columns": "3",
+        "text_align": "justify",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "contact_form_MtCmVQ": {
+      "type": "contact-form",
+      "blocks": {
+        "text_z4NE9n": {
+          "type": "text",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Name",
+            "required_field": false
+          }
+        },
+        "email_BBpV9b": {
+          "type": "email",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Email",
+            "required_field": true
+          }
+        },
+        "phone_crHPYU": {
+          "type": "phone",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Telefon",
+            "required_field": true
+          }
+        },
+        "message_YVhe7B": {
+          "type": "message",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Ihre Nachricht...",
+            "required_field": false
+          }
+        }
+      },
+      "block_order": [
+        "text_z4NE9n",
+        "email_BBpV9b",
+        "phone_crHPYU",
+        "message_YVhe7B"
+      ],
+      "settings": {
+        "title": "Kontaktieren Sie uns!",
+        "heading_size": "h1",
+        "head_align": "left",
+        "heading_color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+        "head_space": true,
+        "description": "",
+        "description_style": "body",
+        "enable_all": "text",
+        "contact_iframe_code": "",
+        "texttitle": "<strong>Sie benötigen Hilfe ?</strong>",
+        "demotext": "Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!",
+        "contacttitle": "<strong>Kontaktdaten</strong>",
+        "contsubtext": "<h2>DocMed Kundenservice</h2>",
+        "footer_contact_no": "<p><strong>0234 - 357 905 59</strong></p>",
+        "show_social": true,
+        "contactfollow": "",
+        "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "f4fc861e-a8e9-4733-8984-e73213d48588",
+    "3f381c47-733a-4027-b7cc-15a524815a39",
+    "ss_circle_menu_2_bHr33m",
+    "featured_collection_new_pzAqae",
+    "cus_new_collectin_list_sec_ftM88k",
+    "custom_featured_coll_sec_hqKMU6",
+    "multirow_Thm3Vt",
+    "collapsible_content_7yExeM",
+    "snocks_text_columns_dR44aD",
+    "contact_form_MtCmVQ"
+  ]
+}
