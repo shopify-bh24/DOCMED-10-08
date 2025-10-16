@@ -98,9 +98,9 @@
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "heading": "Wie kann ich den Status meiner Bestellung ansehen / Sendungsverfolgung?",
             "icon": "none",
-            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "row_content": "",
             "page": ""
           }
         },
@@ -108,9 +108,9 @@
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "heading": "Kann ich auch per Telefon bestellen?",
             "icon": "none",
-            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "row_content": "<p>Ja, Sie können uns gerne anrufen und Ihre Bestellung telefonisch aufgeben.</p>",
             "page": ""
           }
         },
