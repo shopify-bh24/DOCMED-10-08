@@ -153,6 +153,16 @@
             "row_content": "<p>Sie haben <strong>30 Tage </strong>Zeit, um Ihre Bestellung zurückzusenden.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_UrVjx4": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wann und wie erhalte ich mein Geld zurück?",
+            "icon": "none",
+            "row_content": "<p>Sie haben <strong>30 Tage </strong>Zeit, um Ihre Bestellung zurückzusenden.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -168,7 +178,8 @@
         "collapsible_row_Ghzbrt",
         "collapsible_row_rUN4U3",
         "collapsible_row_cq8QkD",
-        "collapsible_row_r3P8LD"
+        "collapsible_row_r3P8LD",
+        "collapsible_row_UrVjx4"
       ],
       "name": "FAQ Kundenkonto",
       "settings": {
