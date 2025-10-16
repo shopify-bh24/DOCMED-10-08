@@ -68,9 +68,9 @@
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "heading": "Wie kann ich meinen Account löschen?",
             "icon": "none",
-            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "row_content": "<p>Um Ihr Konto zu löschen, senden Sie bitte eine E-Mail an<a>shop@docmed.de</a>. Sie können dafür folgenden Text verwenden: <br/><br/>„Hiermit bitte ich Sie, die DocMed GmbH, mein Kundenkonto, das unter folgender E-Mail-Adresse geführt wird: [Ihre E-Mail-Adresse], sowie alle damit verbundenen Daten, einschließlich Lieferadressen und Zahlungsmethoden, vollständig zu löschen.“</p>",
             "page": ""
           }
         },
