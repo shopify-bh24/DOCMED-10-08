@@ -20,6 +20,12 @@
             "text": "Zertifiziert beim Bundesministerium für Gesundheit"
           }
         },
+        "announcement_X84wKK": {
+          "type": "announcement",
+          "settings": {
+            "text": "Versand innerhalb von 1-3 Tagen"
+          }
+        },
         "bb5e6f3d-a11a-4482-9e0f-7aba68edd82a": {
           "type": "announcement",
           "settings": {
@@ -35,6 +41,7 @@
       },
       "block_order": [
         "announcement_cwPNb9",
+        "announcement_X84wKK",
         "bb5e6f3d-a11a-4482-9e0f-7aba68edd82a",
         "announcement_gpkid8"
       ],
