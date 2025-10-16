@@ -498,7 +498,7 @@
       "guest_title": "Als Gast fortsetzen",
       "password": "Passwort",
       "title": "Anmelden",
-      "sign_in": "Anmelden / Registrieren ",
+      "sign_in": "Anmelden",
       "submit": "Senden",
       "or": "oder"
     },
@@ -595,7 +595,7 @@
     "wballtext": {
       "account_login": "Kundenkonto",
       "login_hello": " ",
-      "log__in": "Anmelden",
+      "log__in": "Anmelden / Registrieren ",
       "search_name": "Search",
       "account": "Account",
       "log_out": "Abmelden",
