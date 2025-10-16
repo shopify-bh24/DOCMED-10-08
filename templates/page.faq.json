@@ -170,7 +170,7 @@
             "default_open": false,
             "heading": "Retourenadresse (auf eigene Kosten)",
             "icon": "none",
-            "row_content": "<p>Wenn Sie Ihre Retoure <strong>eigenständig </strong>an uns zurückschicken, ohne sie zuvor über Ihr Kundenkonto oder unseren Service anzumelden, erhalten Sie <strong>kein kostenloses Rücksende-Label </strong>von uns. In diesem Fall müssen Sie die<strong>Versandkosten selbst tragen</strong>, diese Kosten werden nicht erstattet.</p>",
+            "row_content": "<p>Wenn Sie Ihre Retoure <strong>eigenständig </strong>an uns zurückschicken, ohne sie zuvor über Ihr Kundenkonto oder unseren Service anzumelden, erhalten Sie <strong>kein kostenloses Rücksende-Label </strong>von uns. In diesem Fall müssen Sie die<strong>Versandkosten selbst tragen</strong>, diese Kosten werden nicht erstattet.<br/><br/>Retourenadresse (auf eigene Kosten):<br/><br/>DocMed GmbH<br/>Lothringer Höhe 1<br/>44805 Bochum<br/>Deutschland<br/></p>",
             "page": ""
           }
         }
