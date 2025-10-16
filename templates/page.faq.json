@@ -60,7 +60,7 @@
             "default_open": false,
             "heading": "Kann ich mehrere Rechnungs- & Lieferadressen über einen Account haben?",
             "icon": "none",
-            "row_content": "<p>Ja, Sie können Ihre <strong>Rechnungs- und Lieferadressen</strong> bequem in Ihrem<strong> Kundenkonto </strong>unter dem Reiter<strong>„Profil“</strong>verwalten. Dort lassen sich bestehende Adressen bearbeiten oder neue hinzufügen.</p>",
+            "row_content": "<p>Ja, Sie können Ihre <strong>Rechnungs- und Lieferadressen</strong> bequem in Ihrem<strong> Kundenkonto </strong>unter dem Reiter<strong>„Profil“</strong>verwalten. <br/>Dort lassen sich bestehende Adressen bearbeiten oder neue hinzufügen.</p>",
             "page": ""
           }
         },
