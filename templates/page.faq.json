@@ -80,7 +80,7 @@
             "default_open": false,
             "heading": "Wie kann ich mich vom Newsletter abmelden?",
             "icon": "none",
-            "row_content": "<p>In unseren E-Mails finden Sie in der Regel unten einen Button <strong>„Abonnement kündigen“</strong>, über den Sie sich direkt abmelden können. Alternativ können Sie uns eine E-Mail an <a><strong>shop@docmed.de </strong></a>senden mit folgendem Text:<br/><br/>„Hiermit bitte ich Sie, mein Abonnement, das unter folgender E-Mail-Adresse geführt wird: [Ihre E-Mail-Adresse], für den Newsletter abzumelden.“</p>",
+            "row_content": "<p>In unseren E-Mails finden Sie in der Regel unten einen Button <strong>„Abonnement kündigen“</strong>, über den Sie sich direkt abmelden können. Alternativ können Sie uns eine E-Mail an <a><span style=\"text-decoration:underline\"><strong>shop@docmed.de</strong></span><strong> </strong></a>senden mit folgendem Text:<br/><br/>„Hiermit bitte ich Sie, mein Abonnement, das unter folgender E-Mail-Adresse geführt wird: [Ihre E-Mail-Adresse], für den Newsletter abzumelden.“</p>",
             "page": ""
           }
         },
