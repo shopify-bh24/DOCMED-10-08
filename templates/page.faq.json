@@ -163,6 +163,16 @@
             "row_content": "<p>Sobald Ihr Artikel bei uns eingegangen ist, bearbeiten und prüfen wir ihn in der Regel noch am selben Tag. Danach prüfen wir, ob der Artikel für eine Rückerstattung geeignet ist. Sie können wählen, ob Sie Ihr Geld <strong>als Guthaben für unseren Online-Shop</strong>oder auf Ihre ursprüngliche <strong>Zahlungsmethode </strong>zurückerstattet bekommen möchten.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_jFzfyw": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Retourenadresse (auf eigene Kosten)",
+            "icon": "none",
+            "row_content": "<p>Wenn Sie Ihre Retoure <strong>eigenständig </strong>an uns zurückschicken, ohne sie zuvor über Ihr Kundenkonto oder unseren Service anzumelden, erhalten Sie <strong>kein kostenloses Rücksende-Label </strong>von uns. In diesem Fall müssen Sie die<strong>Versandkosten selbst tragen</strong>, diese Kosten werden nicht erstattet.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -179,7 +189,8 @@
         "collapsible_row_rUN4U3",
         "collapsible_row_cq8QkD",
         "collapsible_row_r3P8LD",
-        "collapsible_row_UrVjx4"
+        "collapsible_row_UrVjx4",
+        "collapsible_row_jFzfyw"
       ],
       "name": "FAQ Kundenkonto",
       "settings": {
