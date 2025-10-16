@@ -150,7 +150,7 @@
             "default_open": false,
             "heading": "Wie lange habe ich Zeit, etwas zurückzuschicken?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Sie haben <strong>30 Tage </strong>Zeit, um Ihre Bestellung zurückzusenden.</p>",
             "page": ""
           }
         }
