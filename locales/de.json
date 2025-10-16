@@ -683,7 +683,7 @@
         }
       },
       "thank_you": {
-        "login": "Anmelden / Registrieren "
+        "login": "Anmelden "
       },
       "general": {
         "contact_us_html": "Kontaktieren Sie uns für weitere Information",
@@ -697,6 +697,9 @@
       },
       "shop_policies": {
         "cookie_preferences": "Cookies"
+      },
+      "customer_account": {
+        "sign_in_link_label": "Anmelden / Registrieren "
       }
     }
   },
