@@ -694,6 +694,9 @@
       },
       "shipping_errors": {
         "empty_state": "Bitte geben Sie ihre Lieferadresse ein, um Versandkosten anzuzeigen."
+      },
+      "shop_policies": {
+        "cookie_preferences": "Cookies"
       }
     }
   },
