@@ -70,7 +70,7 @@
             "default_open": false,
             "heading": "Wie kann ich meinen Account löschen?",
             "icon": "none",
-            "row_content": "<p>Um Ihr Konto zu löschen, senden Sie bitte eine E-Mail an<a>shop@docmed.de</a>. Sie können dafür folgenden Text verwenden: <br/><br/>„Hiermit bitte ich Sie, die DocMed GmbH, mein Kundenkonto, das unter folgender E-Mail-Adresse geführt wird: [Ihre E-Mail-Adresse], sowie alle damit verbundenen Daten, einschließlich Lieferadressen und Zahlungsmethoden, vollständig zu löschen.“</p>",
+            "row_content": "<p>Um Ihr Konto zu löschen, senden Sie bitte eine E-Mail an <a><span style=\"text-decoration:underline\">shop@docmed.de</span></a>. Sie können dafür folgenden Text verwenden: <br/><br/>„Hiermit bitte ich Sie, die DocMed GmbH, mein Kundenkonto, das unter folgender E-Mail-Adresse geführt wird: [Ihre E-Mail-Adresse], sowie alle damit verbundenen Daten, einschließlich Lieferadressen und Zahlungsmethoden, vollständig zu löschen.“</p>",
             "page": ""
           }
         },
