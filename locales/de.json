@@ -699,7 +699,7 @@
         "cookie_preferences": "Cookies"
       },
       "customer_account": {
-        "sign_in_link_label": "Anmelden / Registrieren "
+        "sign_in_link_label": "Anmelden "
       }
     }
   },
@@ -708,7 +708,8 @@
       "discount": "Rabatt",
       "login_card": {
         "log_in": "Anmelden"
-      }
+      },
+      "log_in": "Anmelden / Registrieren "
     },
     "account_information": {
       "verify_new_email_modal": {
