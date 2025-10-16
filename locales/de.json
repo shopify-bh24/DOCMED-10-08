@@ -498,7 +498,7 @@
       "guest_title": "Als Gast fortsetzen",
       "password": "Passwort",
       "title": "Anmelden",
-      "sign_in": "Anmelden",
+      "sign_in": "Anmelden / Registrieren ",
       "submit": "Senden",
       "or": "oder"
     },
@@ -709,7 +709,7 @@
       "login_card": {
         "log_in": "Anmelden"
       },
-      "log_in": "Anmelden / Registrieren "
+      "log_in": "Anmelden"
     },
     "account_information": {
       "verify_new_email_modal": {
