@@ -118,9 +118,9 @@
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "heading": "Warum wurde meine Bestellung storniert?",
             "icon": "none",
-            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "row_content": "<p>Dafür kann es mehrere Gründe geben. Am besten kontaktieren Sie uns per E-Mail, damit wir den genauen Grund prüfen und Ihnen weiterhelfen können.</p>",
             "page": ""
           }
         },
@@ -128,9 +128,9 @@
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "heading": "Wie kann ich eine Rezension verfassen?",
             "icon": "none",
-            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "row_content": "<p>Sie können eine Rezension in Ihrem <strong>Kundenkonto</strong> ür jede einzelne Bestellung oder jeden Artikel verfassen. Gehen Sie dazu in Ihrem Kundenkonto auf<strong>„Bestellungen“</strong>und wählen Sie dort<strong>„Rezension verfassen“</strong> aus.</p>",
             "page": ""
           }
         }
