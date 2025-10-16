@@ -143,6 +143,16 @@
             "row_content": "<p>In Ihrem <strong>Kundenkonto </strong>können Sie Retouren für Ihre Bestellungen anfragen – entweder für die gesamte Bestellung oder nur für einzelne Artikel.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_r3P8LD": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wie lange habe ich Zeit, etwas zurückzuschicken?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -157,7 +167,8 @@
         "collapsible_row_7LzrXW",
         "collapsible_row_Ghzbrt",
         "collapsible_row_rUN4U3",
-        "collapsible_row_cq8QkD"
+        "collapsible_row_cq8QkD",
+        "collapsible_row_r3P8LD"
       ],
       "name": "FAQ Kundenkonto",
       "settings": {
