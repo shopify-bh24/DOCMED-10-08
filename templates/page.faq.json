@@ -44,33 +44,93 @@
             "page": ""
           }
         },
-        "collapsible_row_zgQx46": {
+        "collapsible_row_7DJK8V": {
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Frequently asked question",
+            "heading": "Wie kann ich mich registrieren?",
             "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "row_content": "<p>Die Registrierung erfolgt über das <strong>Profil-Icon</strong> (Symbol mit einer Person).</p><ol><li>Klicken Sie auf das Icon – es öffnet sich ein Menü mit den Optionen <strong>„Anmelden“</strong> und <strong>„Registrieren“</strong>.</li><li>Wählen Sie <strong>„Registrieren“</strong> aus.</li><li>Geben Sie anschließend Ihre <strong>E-Mail-Adresse</strong> ein.</li><li>Sie erhalten daraufhin einen <strong>6-stelligen Einmalcode</strong> per E-Mail.</li></ol><p>Ein festes Passwort ist nicht erforderlich. Bei jedem zukünftigen Login erhalten Sie einen neuen Einmalcode, mit dem Sie sich sicher anmelden können.</p>",
             "page": ""
           }
         },
-        "collapsible_row_zwCcxX": {
+        "collapsible_row_QWBeAd": {
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Frequently asked question",
+            "heading": "Kann ich mehrere Rechnungs- & Lieferadressen über einen Account haben?",
             "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
             "page": ""
           }
         },
-        "collapsible_row_iyaA6R": {
+        "collapsible_row_iUjALr": {
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Frequently asked question",
+            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
             "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nLVNyq": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "icon": "none",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6BbhtQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "icon": "none",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HfPfpi": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "icon": "none",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7LzrXW": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "icon": "none",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Ghzbrt": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "icon": "none",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rUN4U3": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": false,
+            "heading": "Wo finde ich Informationen zur Barrierefreiheit?",
+            "icon": "none",
+            "row_content": "<p>Informationen zur Barrierefreiheit finden Sie auf unserer Seite <a href=\"/pages/barrierefreiheit\" target=\"_blank\" title=\"Barrierefreiheit\"><span style=\"text-decoration:underline\"><strong>Barrierefreiheit</strong></span></a> unter dem folgenden Link. Alternativ können Sie diese auch im Bereich <strong>Allgemeine Infos</strong> im unteren Teil unserer Website aufrufen.</p>",
             "page": ""
           }
         }
@@ -78,9 +138,15 @@
       "block_order": [
         "collapsible_row_A8VkHH",
         "collapsible_row_jqmHx7",
-        "collapsible_row_zgQx46",
-        "collapsible_row_zwCcxX",
-        "collapsible_row_iyaA6R"
+        "collapsible_row_7DJK8V",
+        "collapsible_row_QWBeAd",
+        "collapsible_row_iUjALr",
+        "collapsible_row_nLVNyq",
+        "collapsible_row_6BbhtQ",
+        "collapsible_row_HfPfpi",
+        "collapsible_row_7LzrXW",
+        "collapsible_row_Ghzbrt",
+        "collapsible_row_rUN4U3"
       ],
       "name": "FAQ Kundenkonto",
       "settings": {
@@ -99,90 +165,10 @@
         "padding_top": 40,
         "padding_bottom": 0
       }
-    },
-    "collapsible_content_zXywRk": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_eNJkJU": {
-          "type": "collapsible_row",
-          "settings": {
-            "default_open": false,
-            "heading": "Frequently asked question",
-            "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_4eeNPE": {
-          "type": "collapsible_row",
-          "settings": {
-            "default_open": false,
-            "heading": "Frequently asked question",
-            "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_f4AaXF": {
-          "type": "collapsible_row",
-          "settings": {
-            "default_open": false,
-            "heading": "Frequently asked question",
-            "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_WFDpNB": {
-          "type": "collapsible_row",
-          "settings": {
-            "default_open": false,
-            "heading": "Frequently asked question",
-            "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_eUhU7h": {
-          "type": "collapsible_row",
-          "settings": {
-            "default_open": false,
-            "heading": "Frequently asked question",
-            "icon": "none",
-            "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_eNJkJU",
-        "collapsible_row_4eeNPE",
-        "collapsible_row_f4AaXF",
-        "collapsible_row_WFDpNB",
-        "collapsible_row_eUhU7h"
-      ],
-      "name": "FAQ Bestellung",
-      "settings": {
-        "heading": "",
-        "heading_size": "h0",
-        "head_align": "left",
-        "heading_color_scheme": "background-1",
-        "head_space": false,
-        "description": "<p>Häufig gestellte Fragen zum Bestellprozess</p>",
-        "description_style": "body",
-        "layout": "row",
-        "color_scheme": "",
-        "secondary_background": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "main",
-    "collapsible_content_aGzpqD",
-    "collapsible_content_zXywRk"
+    "collapsible_content_aGzpqD"
   ]
 }
