@@ -28,7 +28,7 @@
           "type": "collapsible_row",
           "settings": {
             "default_open": false,
-            "heading": "Frequently asked question",
+            "heading": "Wie kann ich Sie kontaktieren?",
             "icon": "none",
             "row_content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "page": ""
