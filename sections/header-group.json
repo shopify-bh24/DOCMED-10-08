@@ -14,10 +14,10 @@
     "cca77815-1089-4a83-a9c7-cb60f7be82d2": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_gpkid8": {
+        "announcement_cwPNb9": {
           "type": "announcement",
           "settings": {
-            "text": "Über 80.000 Zufriedene Kunden"
+            "text": "Zertifiziert beim Bundesministerium für Gesundheit"
           }
         },
         "bb5e6f3d-a11a-4482-9e0f-7aba68edd82a": {
@@ -25,11 +25,18 @@
           "settings": {
             "text": "Kostenfreier Versand ab 49€"
           }
+        },
+        "announcement_gpkid8": {
+          "type": "announcement",
+          "settings": {
+            "text": "Über 80.000 Zufriedene Kunden"
+          }
         }
       },
       "block_order": [
-        "announcement_gpkid8",
-        "bb5e6f3d-a11a-4482-9e0f-7aba68edd82a"
+        "announcement_cwPNb9",
+        "bb5e6f3d-a11a-4482-9e0f-7aba68edd82a",
+        "announcement_gpkid8"
       ],
       "settings": {
         "show_line_separator": true,
