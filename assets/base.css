@@ -5102,6 +5102,19 @@ html body .wbprofpay .wbprofpayinr .list-payment{
     line-height: 1.2 !important;
 }
 
+.jdgm-widget.jdgm-preview-badge{
+    font-size: 14px;
+}
+
+.jdgm-prev-badge{
+    flex-wrap: wrap;
+}
+
+.star-rating{
+    font-size: 14px !important;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* ---------------------------search input ios ------------------- */
 
