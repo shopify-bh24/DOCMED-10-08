@@ -574,7 +574,7 @@
       "type": "custom-featured-coll-sec",
       "name": "Push Produkte ",
       "settings": {
-        "cus-bg-color": "#ffffff",
+        "cus-bg-color": "#f5f5f7",
         "collection": "push-products",
         "heading": ""
       }
