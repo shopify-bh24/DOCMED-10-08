@@ -58,6 +58,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/DocMed_icon_f2c5bf47-b76a-424b-b589-d1f76240e0fb.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
