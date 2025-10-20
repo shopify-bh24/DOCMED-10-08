@@ -21,6 +21,55 @@
         "padding_bottom": 60
       }
     },
+    "image_with_text_4U6jtF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pXftCK": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_dPWWk6": {
+          "type": "text",
+          "settings": {
+            "show_icon": "present-icon",
+            "content_icon": "none",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_JGkMU9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Google Bewe",
+            "button_link": "",
+            "link_window": true,
+            "view_all_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pXftCK",
+        "text_dPWWk6",
+        "button_JGkMU9"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "17609580032b566629": {
       "type": "apps",
       "blocks": {
@@ -31,15 +80,10 @@
             "review_data": "real_data",
             "max_width": 1200
           }
-        },
-        "judge_me_reviews_verified_badge_TMiy8a": {
-          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_homepage_TzBbBq",
-        "judge_me_reviews_verified_badge_TMiy8a"
+        "judge_me_reviews_review_widget_homepage_TzBbBq"
       ],
       "settings": {
         "include_margins": true,
@@ -115,6 +159,7 @@
   },
   "order": [
     "main",
+    "image_with_text_4U6jtF",
     "17609580032b566629",
     "contact_form_jqGVW4"
   ]
