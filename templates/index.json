@@ -79,6 +79,7 @@
       "blocks": {
         "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-1": {
           "type": "image",
+          "name": "Schneller Versand",
           "settings": {
             "custom_image": "shopify://shop_images/Schneller_Versand.png",
             "icon1": "deal",
@@ -88,6 +89,7 @@
         },
         "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-2": {
           "type": "image",
+          "name": "Zertifiziert",
           "settings": {
             "custom_image": "shopify://shop_images/Zertifikat.png",
             "icon1": "return policy",
@@ -97,6 +99,7 @@
         },
         "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-3": {
           "type": "image",
+          "name": "Produkte",
           "settings": {
             "custom_image": "shopify://shop_images/Lagerboxen.png",
             "icon1": "payment",
@@ -106,6 +109,7 @@
         },
         "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-4": {
           "type": "image",
+          "name": "Gratisversand",
           "settings": {
             "custom_image": "shopify://shop_images/Freier_Versand.png",
             "icon1": "none",
