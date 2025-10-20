@@ -44,10 +44,10 @@
         "button_JGkMU9": {
           "type": "button",
           "settings": {
-            "button_label": "Google Bewe",
-            "button_link": "",
+            "button_label": "Bewertung schreiben",
+            "button_link": "https://g.page/r/CaI85F6XJ6TxEBM/review",
             "link_window": true,
-            "view_all_style": "link"
+            "view_all_style": "outline"
           }
         }
       },
