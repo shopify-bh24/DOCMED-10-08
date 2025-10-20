@@ -98,7 +98,7 @@
         "template--16209783881785__3f381c47-733a-4027-b7cc-15a524815a39-image-3": {
           "type": "image",
           "settings": {
-            "custom_image": "shopify://shop_images/3.png",
+            "custom_image": "shopify://shop_images/Lagerboxen.png",
             "icon1": "payment",
             "title": "12.000+",
             "demotext": "Produkte"
@@ -204,7 +204,7 @@
         "item_EqwLDE": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Sch_lke.png",
+            "image": "shopify://shop_images/Schuelke.png",
             "title": "Schülke",
             "tag": "",
             "url": "shopify://collections/schulke"
