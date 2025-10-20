@@ -166,7 +166,7 @@
 
             <div class="cus-feat-itm--content">
 
-              <p class="cus-feat-itm--vendor">{{ product.vendor }}</p>
+              <p class="cus-feat-itm--vendor">{{ product.vendor | strip_html | truncate: 10 }}</p>
 
               <h3 class="cus-feat-itm--title">
                 <a href="{{ product.url }}">{{ product.title | strip_html | truncate: 30 }}</a>
@@ -174,7 +174,7 @@
 
 
               <p class="cus-feat-itm--desc">
-                <a href="{{ product.url }}">{{ product.description | strip_html | truncate: 60 }}</a>
+                <a href="{{ product.url }}">{{ product.description | strip_html | truncate: 60 }}</a> 
               </p>
 
 
@@ -245,7 +245,7 @@
                 {% else %}
                   <div class="star-rating">
                     <span class="stars">★★★★★</span>
-                    <span class="review-count">0 reviews</span>
+                    <span class="review-count">0 Bewertungen</span>
                   </div>
                 {% endif %}
               </div>
