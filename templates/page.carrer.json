@@ -109,7 +109,7 @@
             "type_job": "Initiativbewerbung",
             "income_job": "Praktikum",
             "date_job": "Ab sofort",
-            "detail_job": "mailto:shop@docmed.de",
+            "detail_job": "shopify://pages/shopify-developer-position",
             "detail_label_job": "Bewerben"
           }
         },
