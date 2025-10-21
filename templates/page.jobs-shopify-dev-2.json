@@ -28,43 +28,109 @@
         "task_hVHGtW": {
           "type": "task",
           "settings": {
-            "task_item": "Here you can input"
+            "task_item": "Unterstützung bei der Gestaltung, Pflege und Optimierung unseres Shopify-Onlineshops"
           }
         },
         "task_NpK3yh": {
           "type": "task",
           "settings": {
-            "task_item": "asdadsasdsadasdads"
+            "task_item": "Erfassung, Pflege und Kontrolle von Produkt- und Stammdaten"
           }
         },
         "task_DifMxb": {
           "type": "task",
           "settings": {
-            "task_item": ""
+            "task_item": "Erstellung von SEO-optimierten Produktbeschreibungen und ansprechenden Texten"
+          }
+        },
+        "task_R7Jm7j": {
+          "type": "task",
+          "settings": {
+            "task_item": "Pflege von USPs und Produktinformationen als Metafelder in Shopify"
+          }
+        },
+        "task_ApQzAW": {
+          "type": "task",
+          "settings": {
+            "task_item": "Erstellung von Alt-Texten für Produktbilder zur Verbesserung von SEO und Barrierefreiheit"
+          }
+        },
+        "task_94XWJw": {
+          "type": "task",
+          "settings": {
+            "task_item": "Unterstützung bei Marketing- und Vertriebskampagnen sowie deren Auswertung"
+          }
+        },
+        "task_pdCRfW": {
+          "type": "task",
+          "settings": {
+            "task_item": "Durchführung von Recherchen und Übernahme kleinerer Aufgaben im Bereich E-Commerce und Online-Marketing"
           }
         },
         "qual_7biqFx": {
           "type": "qual",
           "settings": {
-            "qual_item": "adsasdasddqwdqwe"
+            "qual_item": "Eingeschriebene:r Student:in (z. B. BWL, Marketing, Medien, Kommunikation oder ein vergleichbarer Studiengang)"
           }
         },
         "qual_ahFKcR": {
           "type": "qual",
           "settings": {
-            "qual_item": "qwex wdsq"
+            "qual_item": "Kommunikative, engagierte und hands-on Mentalität"
+          }
+        },
+        "qual_7M3nVx": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "Sehr gute Deutschkenntnisse in Wort und Schrift, Englischkenntnisse von Vorteil"
+          }
+        },
+        "qual_Vq6PJg": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "Zuverlässige, selbstständige und verantwortungsbewusste Arbeitsweise"
+          }
+        },
+        "qual_8H3eKW": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "Sicherer Umgang mit MS Office"
           }
         },
         "benefit_XbyVVE": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "qwxeqweqweqw"
+            "benefit_item": "Flexible Arbeitszeiten für eine gute Vereinbarkeit mit dem Studium"
+          }
+        },
+        "benefit_EWKpye": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Ein strukturiertes Mentoring-Programm mit persönlicher Betreuung"
           }
         },
         "benefit_zH6TdD": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "asdsadasda"
+            "benefit_item": "Einblicke in ein international agierendes, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor"
+          }
+        },
+        "benefit_Ba4xdK": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Raum für eigene Ideen und aktive Mitgestaltung digitaler Prozesse"
+          }
+        },
+        "benefit_CEEwC8": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Möglichkeit zur Weiterbeschäftigung nach Studienende"
+          }
+        },
+        "benefit_9jk6VP": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Ein motiviertes, offenes Team und ein modernes Arbeitsumfeld in Bochum"
           }
         }
       },
@@ -72,21 +138,32 @@
         "task_hVHGtW",
         "task_NpK3yh",
         "task_DifMxb",
+        "task_R7Jm7j",
+        "task_ApQzAW",
+        "task_94XWJw",
+        "task_pdCRfW",
         "qual_7biqFx",
         "qual_ahFKcR",
+        "qual_7M3nVx",
+        "qual_Vq6PJg",
+        "qual_8H3eKW",
         "benefit_XbyVVE",
-        "benefit_zH6TdD"
+        "benefit_EWKpye",
+        "benefit_zH6TdD",
+        "benefit_Ba4xdK",
+        "benefit_CEEwC8",
+        "benefit_9jk6VP"
       ],
       "name": "Job Detail",
       "settings": {
         "company_logo": "shopify://shop_images/DocMed_logo_4feb433d-8567-452a-8556-080ee222d917.png",
         "company_name": "",
-        "job_title": "Account Manager ",
+        "job_title": "Praktikum / Werkstudent (m/w/d) im E-Commerce & Shopify",
         "job_location": "Bochum, Deutschland (hybrid)",
-        "job_type": "Angestellte/r",
-        "job_category": "Verkauf (Handel)",
-        "intro_heading": "",
-        "intro_paragraph_1": "",
+        "job_type": "Praktikum / Werkstuden",
+        "job_category": "Homeoffice",
+        "intro_heading": "Starte dein Praktikum oder deine Werkstudententätigkeit im E-Commerce bei einem international tätigen, schnell wachsenden Unternehmen im Gesundheitssektor!",
+        "intro_paragraph_1": "Bei uns arbeitest du mit modernen Tools wie Shopify, erhältst wertvolle Einblicke in den Onlinehandel mit medizinischen Produkten und hast die Chance, eigene Ideen aktiv einzubringen und umzusetzen.",
         "intro_paragraph_2": "",
         "intro_paragraph_3": "",
         "intro_paragraph_4": "",
