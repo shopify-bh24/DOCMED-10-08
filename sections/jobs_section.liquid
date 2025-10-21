@@ -1,0 +1,294 @@
+<style>
+  .job-detail-section {
+    background: #ffffff;
+    color: #333;
+    padding: 60px 20px;
+    font-family: Arial
+    , sans-serif;
+  }
+
+  .job-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .job-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* margin-bottom: 20px; */
+  }
+
+  .company-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .company-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .job-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .job-meta-cell {
+    background: #4b6179;
+    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 14px;
+    width: fit-content;
+  }
+
+  .section-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .section-subheading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .job-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .job-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .highlight {
+    font-weight: 600;
+    color: #111;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 40px 0;
+  }
+
+  @media (max-width: 600px) {
+    .job-title {
+      font-size: 26px;
+    }
+    .job-meta {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>
+
+
+<section class="job-detail-section">
+  <div class="job-container">
+
+    <!-- Logo & Company -->
+    <div class="job-header">
+      {% if section.settings.company_logo != blank %}
+        <img
+          src="{{ section.settings.company_logo | img_url: '100x100' }}"
+          alt="{{ section.settings.company_name }}"
+          class="company-logo">
+      {% endif %}
+      <h3 class="company-name">{{ section.settings.company_name }}</h3>
+    </div>
+
+    <!-- Job Title -->
+    <h2 class="job-title">{{ section.settings.job_title }}</h2>
+
+    <!-- Job Info -->
+    <div class="job-meta">
+      {% if section.settings.job_location != blank %}
+        <div class="job-meta-cell">{{ section.settings.job_location }}</div>
+      {% endif %}
+      {% if section.settings.job_type != blank %}
+        <div class="job-meta-cell">{{ section.settings.job_type }}</div>
+      {% endif %}
+      {% if section.settings.job_category != blank %}
+        <div class="job-meta-cell">{{ section.settings.job_category }}</div>
+      {% endif %}
+    </div>
+
+    <!-- Intro -->
+    <h3 class="section-heading">{{ section.settings.intro_heading }}</h3>
+    <p>{{ section.settings.intro_paragraph_1 }}</p>
+    <p>{{ section.settings.intro_paragraph_2 }}</p>
+    <p class="highlight">{{ section.settings.intro_paragraph_3 }}</p>
+
+    <hr>
+
+    <!-- Aufgaben -->
+    <h4 class="section-subheading">{{ section.settings.tasks_title }}</h4>
+    <ul class="job-list">
+      {% for block in section.blocks %}
+        {% if block.type == 'task' %}
+          <li>{{ block.settings.task_item }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <!-- Qualifikation -->
+    <h4 class="section-subheading">{{ section.settings.qual_title }}</h4>
+    <ul class="job-list">
+      {% for block in section.blocks %}
+        {% if block.type == 'qual' %}
+          <li>{{ block.settings.qual_item }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <h4 class="section-subheading">{{ section.settings.benefit_title }}</h4>
+    <ul class="job-list">
+      {% for block in section.blocks %}
+        {% if block.type == 'benefit' %}
+          <li>{{ block.settings.benefit_item }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <div>{{ section.settings.intro_paragraph_4 }}</div>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Job Detail Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "company_logo",
+        "label": "Company Logo"
+      },
+      {
+        "type": "text",
+        "id": "company_name",
+        "label": "Company Name",
+        "default": "Altruan GmbH"
+      },
+      {
+        "type": "text",
+        "id": "job_title",
+        "label": "Job Title",
+        "default": "Account Manager / Vertriebsinnendienst (m/w/d)"
+      },
+      {
+        "type": "text",
+        "id": "job_location",
+        "label": "Location",
+        "default": "Massing, Deutschland (Hybrid)"
+      }, {
+        "type": "text",
+        "id": "job_type",
+        "label": "Job Type",
+        "default": "Angestellte/r"
+      }, {
+        "type": "text",
+        "id": "job_category",
+        "label": "Category",
+        "default": "Verkauf (Handel)"
+      }, {
+        "type": "text",
+        "id": "intro_heading",
+        "label": "Intro Heading",
+        "default": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?"
+      }, {
+        "type": "textarea",
+        "id": "intro_paragraph_1",
+        "label": "Intro Paragraph 1",
+        "default": "Die Altruan GmbH, ein dynamisches und stark wachsendes Unternehmen in der Gesundheitsbranche mit rund 100 Mitarbeitenden sucht dich als Account Manager für unseren stark wachsenden Kundenstamm."
+      }, {
+        "type": "textarea",
+        "id": "intro_paragraph_2",
+        "label": "Intro Paragraph 2",
+        "default": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen."
+      }, {
+        "type": "textarea",
+        "id": "intro_paragraph_3",
+        "label": "Intro Paragraph 3",
+        "default": "Werde Teil unserer Altruan-Familie und gestalte die Zukunft aktiv mit!"
+      }, {
+        "type": "richtext",
+        "id": "intro_paragraph_4",
+        "label": "Intro Paragraph 4",
+        "default": "<p>Werde Teil unserer Altruan-Familie und gestalte die Zukunft aktiv mit!</p>"
+      }, {
+        "type": "text",
+        "id": "tasks_title",
+        "label": "Tasks Heading",
+        "default": "Aufgaben"
+      }, {
+        "type": "text",
+        "id": "qual_title",
+        "label": "Qualification Heading",
+        "default": "Qualifikation"
+      }, {
+        "type": "text",
+        "id": "benefit_title",
+        "label": "Benefits Heading",
+        "default": "Benefits"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "task",
+        "name": "Task Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "task_item",
+            "label": "Task Description"
+          }
+        ]
+      }, {
+        "type": "qual",
+        "name": "Qualification Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "qual_item",
+            "label": "Qualification Description"
+          }
+        ]
+      }, {
+        "type": "benefit",
+        "name": "Benefits Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "benefit_item",
+            "label": "Benefits Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Job Detail"
+      }
+    ]
+  }
+{% endschema %}

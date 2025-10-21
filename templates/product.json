@@ -70,12 +70,6 @@
             "show_colorswatch": true
           }
         },
-        "seal_subscriptions_subscription_widget_LnjCmL": {
-          "type": "shopify://apps/seal-subscriptions/blocks/subscription-widget/13b25004-a140-4ab7-b5fe-29918f759699",
-          "settings": {
-            "product": "{{ product }}"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -109,7 +103,6 @@
         "price",
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
-        "seal_subscriptions_subscription_widget_LnjCmL",
         "buy_buttons",
         "icon_with_text_wMJqx6"
       ],
