@@ -26,7 +26,6 @@
         },
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "title_job": "Lagerhelfer/innen (m/w/d)",
             "loction_job": "Bochum",
@@ -39,7 +38,6 @@
         },
         "cda9a518-c652-4d9e-b5a8-42ad82158849": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "title_job": "Helfer/in Reinigung (m/w/d",
             "loction_job": "Bochum",
