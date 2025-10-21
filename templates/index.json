@@ -298,6 +298,15 @@
             "tag": "",
             "url": "shopify://collections/ambu"
           }
+        },
+        "item_CeKptW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_e06dc6fd-65e9-46d4-bce7-bbb1d783bc16.png",
+            "title": "KreuterhoF",
+            "tag": "",
+            "url": "shopify://collections/kreuterhof"
+          }
         }
       },
       "block_order": [
@@ -316,7 +325,8 @@
         "item_Vn6XfM",
         "item_z84V6q",
         "item_8zz8UL",
-        "item_yNAhmQ"
+        "item_yNAhmQ",
+        "item_CeKptW"
       ],
       "custom_css": [],
       "name": "Brand Circles ",
