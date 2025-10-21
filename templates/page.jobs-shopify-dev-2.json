@@ -28,13 +28,19 @@
         "task_hVHGtW": {
           "type": "task",
           "settings": {
-            "task_item": "asddsasadasd"
+            "task_item": "Here you can input"
           }
         },
         "task_NpK3yh": {
           "type": "task",
           "settings": {
             "task_item": "asdadsasdsadasdads"
+          }
+        },
+        "task_DifMxb": {
+          "type": "task",
+          "settings": {
+            "task_item": ""
           }
         },
         "qual_7biqFx": {
@@ -65,6 +71,7 @@
       "block_order": [
         "task_hVHGtW",
         "task_NpK3yh",
+        "task_DifMxb",
         "qual_7biqFx",
         "qual_ahFKcR",
         "benefit_XbyVVE",
@@ -74,7 +81,7 @@
       "settings": {
         "company_logo": "shopify://shop_images/DocMed_logo_4feb433d-8567-452a-8556-080ee222d917.png",
         "company_name": "",
-        "job_title": "Account Manager / Vertriebsinnendienst (m/w/d)",
+        "job_title": "Shopify Developer",
         "job_location": "Massing, Deutschland (hybrid)",
         "job_type": "Angestellte/r",
         "job_category": "Verkauf (Handel)",
