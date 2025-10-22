@@ -225,6 +225,20 @@
             "icon_html": "<i class=\"fa-solid fa-laptop\"></i>",
             "label": "Moderne technische Ausstattung"
           }
+        },
+        "benefit_VXDiaK": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-bus\"></i>",
+            "label": "ÖPNV-Ticket / Job-Ticket"
+          }
+        },
+        "benefit_RXK8pd": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-square-parking\"></i>",
+            "label": "Parkmöglichkeiten"
+          }
         }
       },
       "block_order": [
@@ -233,7 +247,9 @@
         "benefit_VNRTf4",
         "benefit_KfTbWh",
         "benefit_rgfRf6",
-        "benefit_mr3yjE"
+        "benefit_mr3yjE",
+        "benefit_VXDiaK",
+        "benefit_RXK8pd"
       ],
       "name": "Benefits list",
       "settings": {
