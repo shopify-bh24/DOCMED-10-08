@@ -43,12 +43,6 @@
             "task_item": "Ordnung und Sauberkeit im Lagerbereich"
           }
         },
-        "task_ECGFCR": {
-          "type": "task",
-          "settings": {
-            "task_item": ""
-          }
-        },
         "qual_7biqFx": {
           "type": "qual",
           "settings": {
@@ -64,7 +58,7 @@
         "benefit_XbyVVE": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "qwxeqweqweqw"
+            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
           }
         },
         "benefit_zH6TdD": {
@@ -78,7 +72,6 @@
         "task_hVHGtW",
         "task_NpK3yh",
         "task_4RitXC",
-        "task_ECGFCR",
         "qual_7biqFx",
         "qual_ahFKcR",
         "benefit_XbyVVE",
