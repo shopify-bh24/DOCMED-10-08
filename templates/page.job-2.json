@@ -211,13 +211,29 @@
             "icon_html": "<i class=\"fa-solid fa-coins\"></i>",
             "label": "Sonderzahlungen"
           }
+        },
+        "benefit_rgfRf6": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-person\"></i>",
+            "label": "Mitgestaltungsmöglichkeiten"
+          }
+        },
+        "benefit_mr3yjE": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-laptop\"></i>",
+            "label": "Moderne technische Ausstattung"
+          }
         }
       },
       "block_order": [
         "benefit_Bhh8bD",
         "benefit_hPKAw3",
         "benefit_VNRTf4",
-        "benefit_KfTbWh"
+        "benefit_KfTbWh",
+        "benefit_rgfRf6",
+        "benefit_mr3yjE"
       ],
       "name": "Benefits list",
       "settings": {
