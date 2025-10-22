@@ -78,6 +78,7 @@
         },
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title_job": "Lagerhelfer/innen (m/w/d)",
             "loction_job": "Bochum",
