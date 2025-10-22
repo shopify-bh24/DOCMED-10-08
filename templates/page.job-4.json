@@ -21,20 +21,20 @@
         "padding_bottom": 60
       }
     },
-    "jobs_section_3nTHtU": {
+    "jobs_section_Nf99EF": {
       "type": "jobs_section",
       "name": "Job Detail",
       "settings": {
-        "company_name": "Altruan GmbH",
-        "job_title": "Account Manager / Vertriebsinnendienst (m/w/d)",
-        "job_location": "Massing, Deutschland (Hybrid)",
-        "job_type": "Angestellte/r",
-        "job_category": "Verkauf (Handel)",
+        "company_name": "DocMed GmbH",
+        "job_title": "Berufsbezeichnung / Stelle (m/w/d)",
+        "job_location": "Bochum, Deutschland (Hybrid)",
+        "job_type": "Art der Anstellung",
+        "job_category": "Katgeorie / Position",
         "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
-        "intro_paragraph_1": "Die Altruan GmbH, ein dynamisches und stark wachsendes Unternehmen in der Gesundheitsbranche mit rund 100 Mitarbeitenden sucht dich als Account Manager für unseren stark wachsenden Kundenstamm.",
+        "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte. Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen. Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
         "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
-        "intro_paragraph_3": "Werde Teil unserer Altruan-Familie und gestalte die Zukunft aktiv mit!",
-        "intro_paragraph_4": "<p>Werde Teil unserer Altruan-Familie und gestalte die Zukunft aktiv mit!</p>",
+        "intro_paragraph_3": "Werde Teil unserer DocMed-Familie und gestalte die Zukunft aktiv mit!",
+        "intro_paragraph_4": "<p>Werde Teil unserer DocMed-Familie und gestalte die Zukunft aktiv mit!</p>",
         "tasks_title": "Aufgaben",
         "qual_title": "Qualifikation",
         "benefit_title": "Benefits"
@@ -107,7 +107,7 @@
   },
   "order": [
     "main",
-    "jobs_section_3nTHtU",
+    "jobs_section_Nf99EF",
     "contact_form_jqGVW4"
   ]
 }
