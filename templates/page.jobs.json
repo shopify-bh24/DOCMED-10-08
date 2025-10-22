@@ -55,16 +55,28 @@
             "qual_item": "qwex wdsq"
           }
         },
-        "benefit_XbyVVE": {
+        "benefit_4wekqA": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
+            "benefit_item": "Flexible Arbeitszeiten"
           }
         },
         "benefit_zH6TdD": {
           "type": "benefit",
           "settings": {
             "benefit_item": "Bezahlung je nach Qualifikation"
+          }
+        },
+        "benefit_XbyVVE": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
+          }
+        },
+        "benefit_6zLnEf": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine angenehme Arbeitsatmosphäre in einem motivierten Team"
           }
         }
       },
@@ -74,8 +86,10 @@
         "task_4RitXC",
         "qual_7biqFx",
         "qual_ahFKcR",
+        "benefit_4wekqA",
+        "benefit_zH6TdD",
         "benefit_XbyVVE",
-        "benefit_zH6TdD"
+        "benefit_6zLnEf"
       ],
       "name": "Job Detail",
       "settings": {
