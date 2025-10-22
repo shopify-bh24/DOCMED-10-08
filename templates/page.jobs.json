@@ -25,12 +25,6 @@
     "jobs_section_p77A4z": {
       "type": "jobs_section",
       "blocks": {
-        "task_hVHGtW": {
-          "type": "task",
-          "settings": {
-            "task_item": "Reinigung der Büroräume, Küche und Sanitäranlagen"
-          }
-        },
         "task_NpK3yh": {
           "type": "task",
           "settings": {
@@ -43,16 +37,22 @@
             "task_item": "Ordnung und Sauberkeit im Lagerbereich"
           }
         },
-        "qual_7biqFx": {
-          "type": "qual",
+        "task_hVHGtW": {
+          "type": "task",
           "settings": {
-            "qual_item": "Keine besonderen Vorkenntnisse erforderlich"
+            "task_item": "Reinigung der Büroräume, Küche und Sanitäranlagen"
           }
         },
         "qual_ahFKcR": {
           "type": "qual",
           "settings": {
             "qual_item": "Zuverlässigkeit und Teamfähigkeit"
+          }
+        },
+        "qual_7biqFx": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "Keine besonderen Vorkenntnisse erforderlich"
           }
         },
         "benefit_4wekqA": {
@@ -81,11 +81,11 @@
         }
       },
       "block_order": [
-        "task_hVHGtW",
         "task_NpK3yh",
         "task_4RitXC",
-        "qual_7biqFx",
+        "task_hVHGtW",
         "qual_ahFKcR",
+        "qual_7biqFx",
         "benefit_4wekqA",
         "benefit_zH6TdD",
         "benefit_XbyVVE",
