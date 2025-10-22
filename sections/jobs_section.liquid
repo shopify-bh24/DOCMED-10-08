@@ -77,7 +77,7 @@
   .job-list li {
     margin-bottom: 10px;
     line-height: 1.6;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 
   .highlight {
@@ -139,6 +139,14 @@
       {% endif %}
       {% if section.settings.job_category != blank %}
         <div class="job-meta-cell">{{ section.settings.job_category }}</div>
+      {% endif %}
+
+      {% if section.settings.variant1 != blank %}
+        <div class="job-meta-cell">{{ section.settings.variant1 }}</div>
+      {% endif %}
+
+      {% if section.settings.variant2 != blank %}
+        <div class="job-meta-cell">{{ section.settings.variant2 }}</div>
       {% endif %}
     </div>
 
@@ -222,6 +230,14 @@
         "default": "Katgeorie / Position"
       }, {
         "type": "text",
+        "id": "variant1",
+        "label": "Variant"
+      }, {
+        "type": "text",
+        "id": "variant2",
+        "label": "Variant"
+      },{
+        "type": "text",
         "id": "intro_heading",
         "label": "Intro Heading",
         "default": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?"
@@ -268,7 +284,7 @@
         "name": "Task Item",
         "settings": [
           {
-            "type": "text",
+            "type": "richtext",
             "id": "task_item",
             "label": "Task Description"
           }
@@ -278,7 +294,7 @@
         "name": "Qualification Item",
         "settings": [
           {
-            "type": "text",
+            "type": "richtext",
             "id": "qual_item",
             "label": "Qualification Description"
           }
