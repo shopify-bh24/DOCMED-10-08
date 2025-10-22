@@ -129,10 +129,10 @@
         "benefit_title": "Benefits"
       }
     },
-    "contact_form_jqGVW4": {
+    "contact_form_JcMcDn": {
       "type": "contact-form",
       "blocks": {
-        "text_bAFdFL": {
+        "text_jHgGGN": {
           "type": "text",
           "settings": {
             "field_label": "",
@@ -140,7 +140,7 @@
             "required_field": false
           }
         },
-        "email_ggFBBi": {
+        "email_VN8Fdh": {
           "type": "email",
           "settings": {
             "field_label": "",
@@ -148,7 +148,7 @@
             "required_field": true
           }
         },
-        "phone_rwJbEd": {
+        "phone_YM8bG6": {
           "type": "phone",
           "settings": {
             "field_label": "",
@@ -156,7 +156,7 @@
             "required_field": true
           }
         },
-        "message_yED6GK": {
+        "message_brxBdr": {
           "type": "message",
           "settings": {
             "field_label": "",
@@ -166,15 +166,14 @@
         }
       },
       "block_order": [
-        "text_bAFdFL",
-        "email_ggFBBi",
-        "phone_rwJbEd",
-        "message_yED6GK"
+        "text_jHgGGN",
+        "email_VN8Fdh",
+        "phone_YM8bG6",
+        "message_brxBdr"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
-        "heading_size": "h2",
+        "heading_size": "h0",
         "head_align": "left",
         "heading_color_scheme": "",
         "head_space": true,
@@ -182,11 +181,11 @@
         "description_style": "body",
         "enable_all": "text",
         "contact_iframe_code": "",
-        "texttitle": "<strong>Sie benötigen Hilfe ?</strong>",
-        "demotext": "Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!",
-        "contacttitle": "<strong>Kontaktdaten</strong>",
-        "contsubtext": "<h2>DocMed Kundenservice</h2>",
-        "footer_contact_no": "<p><strong>0234 - 357 905 59</strong></p>",
+        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
+        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
+        "contacttitle": "",
+        "contsubtext": "",
+        "footer_contact_no": "",
         "show_social": true,
         "contactfollow": "",
         "color_scheme": "",
@@ -198,6 +197,6 @@
   "order": [
     "main",
     "jobs_section_p77A4z",
-    "contact_form_jqGVW4"
+    "contact_form_JcMcDn"
   ]
 }
