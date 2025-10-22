@@ -1,0 +1,91 @@
+<!-- About Company Section -->
+<style>
+  .about-company {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter'
+    , sans-serif;
+    line-height: 1.6;
+    color: #1D2E40;
+  }
+
+  .about_company_container{
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .about-company h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background-color: rgba(29, 46, 64, 0.1);
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .about-company p {
+    font-size: 1.6rem;
+    color: #1D2E40;
+    margin-bottom: 12px;
+  }
+
+  .about-company strong {
+    font-weight: 700;
+  }
+
+  .about-company em {
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .about-company p {
+      font-size: 1.4rem;
+    }
+
+  .about-company h2 {
+    font-size: 1.8rem;
+  }
+  }
+</style>
+
+<section class="about-company">
+  <div class="about_company_container">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.paragraph_1 }}</p>
+    <p>{{ section.settings.paragraph_2 }}</p>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "About Company Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section title",
+        "default": "Über das Unternehmen"
+      }, {
+        "type": "richtext",
+        "id": "paragraph_1",
+        "label": "Paragraph 1",
+        "default": "<p>DocMed ist ein <strong>mittelständisches E-Commerce-Unternehmen</strong> mit Sitz in <strong>Bochum</strong> und gehören zu den <strong>schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte</strong>.</p>"
+      }, {
+        "type": "richtext",
+        "id": "paragraph_2",
+        "label": "Paragraph 2",
+        "default": "<p>Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für <strong>B2B- und B2C-Kunden in über 50 Ländern</strong> weltweit einfach und zuverlässig zugänglich zu machen. Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.</p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Company",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

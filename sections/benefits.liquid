@@ -1,0 +1,182 @@
+<!-- Benefits Section (2-column layout, manual icon input) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  .benefits-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .benefits-section h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #111827;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .benefits_container{
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 40px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: #e8efff;
+  }
+
+  .benefit-icon i {
+    font-size: 1.6rem;
+    color: #0c2340;
+  }
+
+  .benefit-item span {
+    font-size: 1.4rem;
+    color: #111827;
+  }
+
+  .benefits-note {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .benefits-section h2{
+      font-size: 1.8rem;
+    }
+    .benefit-item span {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<section class="benefits-section">
+  <div class="benefits_container">
+    <h2>{{ section.settings.section_title }}</h2>
+    <div class="benefits-grid">
+      {% for block in section.blocks %}
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <!-- manually paste icon like: <i class="fa-solid fa-clock"></i> -->
+            {{ block.settings.icon_html }}
+          </div>
+          <span>{{ block.settings.label }}</span>
+        </div>
+      {% endfor %}
+    </div>
+    {% if section.settings.note_text != blank %}
+      <p class="benefits-note">{{ section.settings.note_text }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Benefits section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "Vorteile für Mitarbeitende"
+    },
+    {
+      "type": "text",
+      "id": "note_text",
+      "label": "Note text",
+      "default": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit item",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon_html",
+          "label": "Icon HTML (e.g. <i class='fa-solid fa-clock'></i>)",
+          "default": "<i class='fa-solid fa-clock'></i>"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Benefit text",
+          "default": "Flexible Arbeitszeiten"
+        }
+        /* 
+        -- Hidden Select Example (for reference only) --
+        {
+          "type": "select",
+          "id": "icon_class",
+          "label": "Choose an icon",
+          "options": [
+            { "value": "fa-solid fa-clock", "label": "Clock" },
+            { "value": "fa-solid fa-champagne-glasses", "label": "Firmenevents" },
+            { "value": "fa-solid fa-heart-pulse", "label": "Sport & Gesundheit" },
+            { "value": "fa-solid fa-bus", "label": "ÖPNV-Ticket" }
+          ]
+        }
+        */
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits list",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class='fa-solid fa-clock'></i>",
+            "label": "Flexible Arbeitszeiten"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class='fa-solid fa-champagne-glasses'></i>",
+            "label": "Firmenevents"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class='fa-solid fa-heart-pulse'></i>",
+            "label": "Sport- und Gesundheitsangebote"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class='fa-solid fa-coins'></i>",
+            "label": "Sonderzahlungen"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}  

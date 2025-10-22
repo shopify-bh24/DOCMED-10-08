@@ -88,75 +88,88 @@
         "benefit_title": "Benefits"
       }
     },
-    "contact_form_jqGVW4": {
-      "type": "contact-form",
+    "about_comapny_xEW8Uc": {
+      "type": "about_comapny",
+      "name": "About Company",
+      "settings": {
+        "title": "Über das Unternehmen",
+        "paragraph_1": "<p>DocMed ist ein <strong>mittelständisches E-Commerce-Unternehmen</strong> mit Sitz in <strong>Bochum</strong> und gehören zu den <strong>schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte</strong>.</p>",
+        "paragraph_2": "<p>Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für <strong>B2B- und B2C-Kunden in über 50 Ländern</strong> weltweit einfach und zuverlässig zugänglich zu machen. Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.</p>"
+      }
+    },
+    "benefits_B4myEb": {
+      "type": "benefits",
       "blocks": {
-        "text_bAFdFL": {
-          "type": "text",
+        "benefit_pXwmYU": {
+          "type": "benefit",
           "settings": {
-            "field_label": "",
-            "label_placeholder": "Name",
-            "required_field": false
+            "icon_html": "<i class=\"fa-solid fa-truck\"></i>",
+            "label": "Flexible Arbeitszeiten"
           }
         },
-        "email_ggFBBi": {
-          "type": "email",
+        "benefit_r83iYx": {
+          "type": "benefit",
           "settings": {
-            "field_label": "",
-            "label_placeholder": "Email",
-            "required_field": true
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
           }
         },
-        "phone_rwJbEd": {
-          "type": "phone",
+        "benefit_8X6rkz": {
+          "type": "benefit",
           "settings": {
-            "field_label": "",
-            "label_placeholder": "Telefon",
-            "required_field": true
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
           }
         },
-        "message_yED6GK": {
-          "type": "message",
+        "benefit_PAAWrE": {
+          "type": "benefit",
           "settings": {
-            "field_label": "",
-            "label_placeholder": "Ihre Nachricht...",
-            "required_field": false
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
+          }
+        },
+        "benefit_X8KUj7": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
+          }
+        },
+        "benefit_bmWH8x": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
+          }
+        },
+        "benefit_FipCgz": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
           }
         }
       },
       "block_order": [
-        "text_bAFdFL",
-        "email_ggFBBi",
-        "phone_rwJbEd",
-        "message_yED6GK"
+        "benefit_pXwmYU",
+        "benefit_r83iYx",
+        "benefit_8X6rkz",
+        "benefit_PAAWrE",
+        "benefit_X8KUj7",
+        "benefit_bmWH8x",
+        "benefit_FipCgz"
       ],
-      "disabled": true,
+      "name": "Benefits list",
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "head_align": "left",
-        "heading_color_scheme": "",
-        "head_space": true,
-        "description": "",
-        "description_style": "body",
-        "enable_all": "text",
-        "contact_iframe_code": "",
-        "texttitle": "<strong>Sie benötigen Hilfe ?</strong>",
-        "demotext": "Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!",
-        "contacttitle": "<strong>Kontaktdaten</strong>",
-        "contsubtext": "<h2>DocMed Kundenservice</h2>",
-        "footer_contact_no": "<p><strong>0234 - 357 905 59</strong></p>",
-        "show_social": true,
-        "contactfollow": "",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "section_title": "Vorteile für Mitarbeitende",
+        "note_text": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
       }
     }
   },
   "order": [
     "main",
     "jobs_section_p77A4z",
-    "contact_form_jqGVW4"
+    "about_comapny_xEW8Uc",
+    "benefits_B4myEb"
   ]
 }
