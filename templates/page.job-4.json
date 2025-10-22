@@ -1,0 +1,113 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "h0",
+        "head_align": "left",
+        "heading_color_scheme": "",
+        "head_space": false,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "jobs_section_Nf99EF": {
+      "type": "jobs_section",
+      "name": "Job Detail",
+      "settings": {
+        "company_name": "DocMed GmbH",
+        "job_title": "Berufsbezeichnung / Stelle (m/w/d)",
+        "job_location": "Bochum, Deutschland (Hybrid)",
+        "job_type": "Art der Anstellung",
+        "job_category": "Katgeorie / Position",
+        "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
+        "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte. Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen. Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
+        "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
+        "intro_paragraph_3": "Werde Teil unserer DocMed-Familie und gestalte die Zukunft aktiv mit!",
+        "intro_paragraph_4": "<p>Werde Teil unserer DocMed-Familie und gestalte die Zukunft aktiv mit!</p>",
+        "tasks_title": "Aufgaben",
+        "qual_title": "Qualifikation",
+        "benefit_title": "Benefits"
+      }
+    },
+    "contact_form_WXXByi": {
+      "type": "contact-form",
+      "blocks": {
+        "text_UxyB6D": {
+          "type": "text",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Name",
+            "required_field": false
+          }
+        },
+        "email_3Uqwyh": {
+          "type": "email",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Email",
+            "required_field": true
+          }
+        },
+        "phone_XxQcyQ": {
+          "type": "phone",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Telefon",
+            "required_field": true
+          }
+        },
+        "message_agDLQM": {
+          "type": "message",
+          "settings": {
+            "field_label": "",
+            "label_placeholder": "Ihre Nachricht...",
+            "required_field": false
+          }
+        }
+      },
+      "block_order": [
+        "text_UxyB6D",
+        "email_3Uqwyh",
+        "phone_XxQcyQ",
+        "message_agDLQM"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "head_align": "left",
+        "heading_color_scheme": "",
+        "head_space": true,
+        "description": "",
+        "description_style": "body",
+        "enable_all": "text",
+        "contact_iframe_code": "",
+        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
+        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
+        "contacttitle": "",
+        "contsubtext": "",
+        "footer_contact_no": "",
+        "show_social": true,
+        "contactfollow": "",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "jobs_section_Nf99EF",
+    "contact_form_WXXByi"
+  ]
+}

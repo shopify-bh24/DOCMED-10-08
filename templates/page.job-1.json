@@ -28,70 +28,111 @@
         "task_hVHGtW": {
           "type": "task",
           "settings": {
-            "task_item": "asddsasadasd"
+            "task_item": " Verpacken von Waren"
           }
         },
         "task_NpK3yh": {
           "type": "task",
           "settings": {
-            "task_item": "asdadsasdsadasdads"
+            "task_item": "Etikettieren von Waren"
+          }
+        },
+        "task_nVjttr": {
+          "type": "task",
+          "settings": {
+            "task_item": "Bearbeitung von Retouren"
+          }
+        },
+        "task_DW4EJr": {
+          "type": "task",
+          "settings": {
+            "task_item": "Allgemeine Lagerarbeiten"
+          }
+        },
+        "task_8X6jfx": {
+          "type": "task",
+          "settings": {
+            "task_item": "Ordnung und Sauberkeit im Lagerbereich"
           }
         },
         "qual_7biqFx": {
           "type": "qual",
           "settings": {
-            "qual_item": "adsasdasddqwdqwe"
+            "qual_item": "Zuverlässigkeit und Teamfähigkeit"
+          }
+        },
+        "qual_bcHK4D": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "Deutsche Sprachkenntnisse (ab B2)"
           }
         },
         "qual_ahFKcR": {
           "type": "qual",
           "settings": {
-            "qual_item": "qwex wdsq"
+            "qual_item": "Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme"
           }
         },
         "benefit_XbyVVE": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "qwxeqweqweqw"
+            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
+          }
+        },
+        "benefit_Jm7J7h": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Bezahlung je nach Qualifikation"
           }
         },
         "benefit_zH6TdD": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "asdsadasda"
+            "benefit_item": "Eine angenehme Arbeitsatmosphäre in einem motivierten Team"
+          }
+        },
+        "benefit_XmNU3N": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Flexible Arbeitszeiten"
           }
         }
       },
       "block_order": [
         "task_hVHGtW",
         "task_NpK3yh",
+        "task_nVjttr",
+        "task_DW4EJr",
+        "task_8X6jfx",
         "qual_7biqFx",
+        "qual_bcHK4D",
         "qual_ahFKcR",
         "benefit_XbyVVE",
-        "benefit_zH6TdD"
+        "benefit_Jm7J7h",
+        "benefit_zH6TdD",
+        "benefit_XmNU3N"
       ],
       "name": "Job Detail",
       "settings": {
-        "company_logo": "shopify://shop_images/DocMed_logo_4feb433d-8567-452a-8556-080ee222d917.png",
         "company_name": "",
-        "job_title": "Shopify Developer(m/w/d)",
-        "job_location": "Massing, Deutschland (hybrid)",
-        "job_type": "Angestellte/r",
-        "job_category": "Verkauf (Handel)",
+        "job_title": "Lagerhelfer/in (m/w/d)",
+        "job_location": "Bochum, Deutschland",
+        "job_type": "Vollzeit/Teilzeit",
+        "job_category": "Lager- und Transportarbeiter/inFachlagerist/in",
         "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
-        "intro_paragraph_1": "Die Altruan GmbH, ein dynamisches und stark wachsendes Unternehmen in der Gesundheitsbranche mit rund 100 Mitarbeitenden sucht dich als Account Manager für unseren stark wachsenden Kundenstamm.",
+        "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte. Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen.\n\nMit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
         "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
-        "intro_paragraph_3": "Werde Teil unserer Altruan-Familie und gestalte die Zukunft aktiv mit!",
-        "intro_paragraph_4": "<p>Wenn Sie sich genau das für Sie vorstellen, dann bewerben Sie sich jetzt! Wir freuen uns auf Ihre Online-Bewerbung mit Anschreiben, Lebenslauf und Zeugnissen.</p><p>Unsere Stellenausschreibungen sind keine <strong>klassischen \"offene Stellen\"</strong>, die wir besetzen wollen. Die Ausschreibungen sind unterschiedliche Verantwortungsbereiche, die wir früher oder später personell ausbauen werden.</p><p>Wir <strong>schneiden keine Mitarbeiter auf eine Stelle zu</strong>, sondern wollen auf <strong>jeden Mitarbeiter eine Stelle zuschneiden</strong>. Wenn Sie sich bei uns bewerben, führen wir Sie in der entsprechenden Abteilung als <strong>Interessent</strong> und würden Sie kontaktieren, wenn wir für Ihre Persona einen für Sie <strong>angepassten Verantwortungsbereich sehen</strong>. Deshalb bitte nicht enttäuscht sein, wenn Sie nichts von uns hören.</p><p>Unser Marktumfeld und unsere Unternehmenssituation <strong>ändert</strong> sich ständig. Deshalb erhalten Sie von uns <strong>keine pauschale Absage</strong> oder eine Einladung zum Vorstellungsgespräch, sondern Sie hören von uns, wenn wir Ihnen zu diesem Zeitpunkt eine für Sie passende Stelle anbieten können.</p><p>Wir freuen uns auf Bewerber jeden Geschlechts und Alters, jeder ethnischen Herkunft, jeder Religion und Weltanschauung, jeder sexuellen Orientierung und egal ob mit oder ohne Behinderung.</p>",
+        "intro_paragraph_3": "Wir suchen Mitarbeiter/innen (m/w/d) für Lagertätigkeiten.",
+        "intro_paragraph_4": "",
         "tasks_title": "Aufgaben",
         "qual_title": "Qualifikation",
         "benefit_title": "Benefits"
       }
     },
-    "contact_form_jqGVW4": {
+    "contact_form_JcMcDn": {
       "type": "contact-form",
       "blocks": {
-        "text_bAFdFL": {
+        "text_jHgGGN": {
           "type": "text",
           "settings": {
             "field_label": "",
@@ -99,7 +140,7 @@
             "required_field": false
           }
         },
-        "email_ggFBBi": {
+        "email_VN8Fdh": {
           "type": "email",
           "settings": {
             "field_label": "",
@@ -107,7 +148,7 @@
             "required_field": true
           }
         },
-        "phone_rwJbEd": {
+        "phone_YM8bG6": {
           "type": "phone",
           "settings": {
             "field_label": "",
@@ -115,7 +156,7 @@
             "required_field": true
           }
         },
-        "message_yED6GK": {
+        "message_brxBdr": {
           "type": "message",
           "settings": {
             "field_label": "",
@@ -125,15 +166,14 @@
         }
       },
       "block_order": [
-        "text_bAFdFL",
-        "email_ggFBBi",
-        "phone_rwJbEd",
-        "message_yED6GK"
+        "text_jHgGGN",
+        "email_VN8Fdh",
+        "phone_YM8bG6",
+        "message_brxBdr"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
-        "heading_size": "h2",
+        "heading_size": "h0",
         "head_align": "left",
         "heading_color_scheme": "",
         "head_space": true,
@@ -141,11 +181,11 @@
         "description_style": "body",
         "enable_all": "text",
         "contact_iframe_code": "",
-        "texttitle": "<strong>Sie benötigen Hilfe ?</strong>",
-        "demotext": "Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!",
-        "contacttitle": "<strong>Kontaktdaten</strong>",
-        "contsubtext": "<h2>DocMed Kundenservice</h2>",
-        "footer_contact_no": "<p><strong>0234 - 357 905 59</strong></p>",
+        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
+        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
+        "contacttitle": "",
+        "contsubtext": "",
+        "footer_contact_no": "",
         "show_social": true,
         "contactfollow": "",
         "color_scheme": "",
@@ -157,6 +197,6 @@
   "order": [
     "main",
     "jobs_section_p77A4z",
-    "contact_form_jqGVW4"
+    "contact_form_JcMcDn"
   ]
 }

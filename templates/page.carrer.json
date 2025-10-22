@@ -65,6 +65,7 @@
       "blocks": {
         "item_M69gRb": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title_job": "Koch/Köchin",
             "loction_job": "Bochum",
@@ -84,53 +85,26 @@
             "type_job": "Vollzeit",
             "income_job": "",
             "date_job": "Ab sofort",
-            "detail_job": "https://web.arbeitsagentur.de/vermittlung/ag-darstellung-ui/anzeigen/5_Nd6nzyBuO-00ShUJpMJYmvkktwIbzTEtEIE0MoKMY%3D",
+            "detail_job": "https://www.docmed.de/pages/jobs-lagermitarbeiter",
             "detail_label_job": "Details"
-          }
-        },
-        "cda9a518-c652-4d9e-b5a8-42ad82158849": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "title_job": "Helfer/in Reinigung (m/w/d",
-            "loction_job": "Bochum",
-            "type_job": "Vollzeit/Teilzeit",
-            "income_job": "",
-            "date_job": "Ab sofort",
-            "detail_job": "#https://web.arbeitsagentur.de/vermittlung/ag-darstellung-ui/anzeigen/5_Nd6nzyBuO-00ShUJpMJYmvkktwIbzTEtEIE0MoKMY%3D",
-            "detail_label_job": "Details"
-          }
-        },
-        "item_kGKr3x": {
-          "type": "item",
-          "settings": {
-            "title_job": "Shopify Developer",
-            "loction_job": "Bochum",
-            "type_job": "Initiativbewerbung",
-            "income_job": "Praktikum",
-            "date_job": "Ab sofort",
-            "detail_job": "shopify://pages/jobs-werkstudent-praktikum",
-            "detail_label_job": "Bewerben"
           }
         },
         "item_PtmeWH": {
           "type": "item",
           "settings": {
-            "title_job": "Werkstudent:in Ecommerce",
+            "title_job": "Praktikum / Werkstudententätigkeit (m/w/d)",
             "loction_job": "Bochum",
-            "type_job": "Initiativbewerbung",
-            "income_job": "Werkstudent/in",
-            "date_job": "Ab sofort",
-            "detail_job": "shopify://policies/contact-information",
-            "detail_label_job": "Bewerben"
+            "type_job": "Beginn: ab sofort / nach Absprache",
+            "income_job": "",
+            "date_job": "",
+            "detail_job": "https://www.docmed.de/pages/werkstudent-praktikum",
+            "detail_label_job": "Anzeigen"
           }
         }
       },
       "block_order": [
         "item_M69gRb",
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
-        "cda9a518-c652-4d9e-b5a8-42ad82158849",
-        "item_kGKr3x",
         "item_PtmeWH"
       ],
       "settings": {
@@ -176,6 +150,7 @@
         "text_7ag8rp",
         "author_text_cWNTgQ"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "height": "large",
@@ -356,6 +331,7 @@
         "banner_with_text_Uhrhpn",
         "banner_with_text_RBaPYr"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "full_width": false,
@@ -429,11 +405,11 @@
         "description_style": "body",
         "enable_all": "text",
         "contact_iframe_code": "",
-        "texttitle": "<strong>Sie benötigen Hilfe ?</strong>",
-        "demotext": "Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!",
-        "contacttitle": "<strong>Kontaktdaten</strong>",
-        "contsubtext": "<h2>DocMed Kundenservice</h2>",
-        "footer_contact_no": "<p><strong>0234 - 357 905 59</strong></p>",
+        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
+        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
+        "contacttitle": "",
+        "contsubtext": "",
+        "footer_contact_no": "",
         "show_social": true,
         "contactfollow": "",
         "color_scheme": "",

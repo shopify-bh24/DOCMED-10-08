@@ -153,12 +153,23 @@
         },
         "collapsible_row_MwY4Pq": {
           "type": "collapsible_row",
-          "name": " 5. Einschränkungen ",
+          "name": "8. Geplante Updates zur Barrierefreiheit",
           "settings": {
-            "default_open": false,
+            "default_open": true,
             "heading": "8. Geplante Updates zur Barrierefreiheit",
             "icon": "none",
             "row_content": "<p><strong>- Neue Bilder, Icons & Medien</strong>: Alle visuellen Inhalte werden mit aussagekräftigen <strong>Alt-Texten</strong> versehen.</p><p><strong>- Tastaturbedienbarkeit</strong>: Navigation und Interaktion der Website werden vollständig per Tastatur möglich gemacht.</p><p><strong>- Verbesserung des responsiven Designs</strong>: Optimierung der Darstellung und Bedienbarkeit auf allen Endgeräten (Desktop, Tablet, Mobile).</p><p><strong>- Neue Buttons</strong>: Alle neu eingeführten Buttons erhalten eindeutige <strong>ARIA-Labels</strong>, damit Screenreader die Funktion klar wiedergeben können.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rVVcen": {
+          "type": "collapsible_row",
+          "name": "9. Geplante Updates zur Barrierefreiheit",
+          "settings": {
+            "default_open": true,
+            "heading": "9. Neuste Verbesserungen zur Barrierefreiheit",
+            "icon": "none",
+            "row_content": "<p><strong>- Tastaturbedienbarkeit</strong>: Navigation und Interaktion der Website wurden per Tastatur möglich gemacht.</p>",
             "page": ""
           }
         }
@@ -171,7 +182,8 @@
         "collapsible_row_heU99U",
         "collapsible_row_4VgqKY",
         "collapsible_row_mc3JDe",
-        "collapsible_row_MwY4Pq"
+        "collapsible_row_MwY4Pq",
+        "collapsible_row_rVVcen"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {

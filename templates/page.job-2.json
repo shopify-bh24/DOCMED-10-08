@@ -158,24 +158,24 @@
       "settings": {
         "company_logo": "shopify://shop_images/DocMed_logo_4feb433d-8567-452a-8556-080ee222d917.png",
         "company_name": "",
-        "job_title": "Praktikum / Werkstudent (m/w/d) im E-Commerce & Shopify",
-        "job_location": "Bochum, Deutschland (hybrid)",
-        "job_type": "Praktikum / Werkstuden",
-        "job_category": "Homeoffice",
-        "intro_heading": "Starte dein Praktikum oder deine Werkstudententätigkeit im E-Commerce bei einem international tätigen, schnell wachsenden Unternehmen im Gesundheitssektor!",
-        "intro_paragraph_1": "Bei uns arbeitest du mit modernen Tools wie Shopify, erhältst wertvolle Einblicke in den Onlinehandel mit medizinischen Produkten und hast die Chance, eigene Ideen aktiv einzubringen und umzusetzen.",
+        "job_title": "Praktikum / Werkstudententätigkeit (m/w/d) im E-Commerce bei Pharmaunternehmen",
+        "job_location": "Bochum, Deutschland",
+        "job_type": "Beginn: flexibe / nach Absprache",
+        "job_category": "Praktikum (Vollzeit bis zu 6 Monate)  / (Werkstudent Teilzeit bis zu 12 Monate)",
+        "intro_heading": "Du möchtest praktische Erfahrungen im E-Commerce sammeln und tief in die Welt von Shopify eintauchen?",
+        "intro_paragraph_1": "Dann bist du bei uns genau richtig! Wir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum und suchen eine:n engagierte:n Praktikant:in oder Werkstudent:in (m/w/d) im Bereich E-Commerce & Shopify.",
         "intro_paragraph_2": "",
         "intro_paragraph_3": "",
         "intro_paragraph_4": "",
-        "tasks_title": "Aufgaben",
-        "qual_title": "Qualifikation",
-        "benefit_title": "Benefits"
+        "tasks_title": "Deine Aufgaben:",
+        "qual_title": "Dein Profil:",
+        "benefit_title": "Wir bieten:"
       }
     },
-    "contact_form_jqGVW4": {
+    "contact_form_r4KRCE": {
       "type": "contact-form",
       "blocks": {
-        "text_bAFdFL": {
+        "text_8NdNTt": {
           "type": "text",
           "settings": {
             "field_label": "",
@@ -183,7 +183,7 @@
             "required_field": false
           }
         },
-        "email_ggFBBi": {
+        "email_TFUAAq": {
           "type": "email",
           "settings": {
             "field_label": "",
@@ -191,7 +191,7 @@
             "required_field": true
           }
         },
-        "phone_rwJbEd": {
+        "phone_gpLVXU": {
           "type": "phone",
           "settings": {
             "field_label": "",
@@ -199,7 +199,7 @@
             "required_field": true
           }
         },
-        "message_yED6GK": {
+        "message_3zKzpV": {
           "type": "message",
           "settings": {
             "field_label": "",
@@ -209,15 +209,14 @@
         }
       },
       "block_order": [
-        "text_bAFdFL",
-        "email_ggFBBi",
-        "phone_rwJbEd",
-        "message_yED6GK"
+        "text_8NdNTt",
+        "email_TFUAAq",
+        "phone_gpLVXU",
+        "message_3zKzpV"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
-        "heading_size": "h2",
+        "heading_size": "h0",
         "head_align": "left",
         "heading_color_scheme": "",
         "head_space": true,
@@ -225,11 +224,11 @@
         "description_style": "body",
         "enable_all": "text",
         "contact_iframe_code": "",
-        "texttitle": "<strong>Sie benötigen Hilfe ?</strong>",
-        "demotext": "Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!",
-        "contacttitle": "<strong>Kontaktdaten</strong>",
-        "contsubtext": "<h2>DocMed Kundenservice</h2>",
-        "footer_contact_no": "<p><strong>0234 - 357 905 59</strong></p>",
+        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
+        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
+        "contacttitle": "",
+        "contsubtext": "",
+        "footer_contact_no": "",
         "show_social": true,
         "contactfollow": "",
         "color_scheme": "",
@@ -241,6 +240,6 @@
   "order": [
     "main",
     "jobs_section_p77A4z",
-    "contact_form_jqGVW4"
+    "contact_form_r4KRCE"
   ]
 }
