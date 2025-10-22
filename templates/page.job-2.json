@@ -31,12 +31,6 @@
             "task_item": "Unterstützung bei der Gestaltung, Pflege und Optimierung unseres Shopify-Onlineshops"
           }
         },
-        "task_NpK3yh": {
-          "type": "task",
-          "settings": {
-            "task_item": "Erfassung, Pflege und Kontrolle von Produkt- und Stammdaten"
-          }
-        },
         "task_DifMxb": {
           "type": "task",
           "settings": {
@@ -53,12 +47,6 @@
           "type": "task",
           "settings": {
             "task_item": "Erstellung von Alt-Texten für Produktbilder zur Verbesserung von SEO und Barrierefreiheit"
-          }
-        },
-        "task_94XWJw": {
-          "type": "task",
-          "settings": {
-            "task_item": "Unterstützung bei Marketing- und Vertriebskampagnen sowie deren Auswertung"
           }
         },
         "task_pdCRfW": {
@@ -136,11 +124,9 @@
       },
       "block_order": [
         "task_hVHGtW",
-        "task_NpK3yh",
         "task_DifMxb",
         "task_R7Jm7j",
         "task_ApQzAW",
-        "task_94XWJw",
         "task_pdCRfW",
         "qual_7biqFx",
         "qual_ahFKcR",
