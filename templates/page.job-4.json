@@ -21,6 +21,25 @@
         "padding_bottom": 60
       }
     },
+    "jobs_section_3nTHtU": {
+      "type": "jobs_section",
+      "name": "Job Detail",
+      "settings": {
+        "company_name": "Altruan GmbH",
+        "job_title": "Account Manager / Vertriebsinnendienst (m/w/d)",
+        "job_location": "Massing, Deutschland (Hybrid)",
+        "job_type": "Angestellte/r",
+        "job_category": "Verkauf (Handel)",
+        "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
+        "intro_paragraph_1": "Die Altruan GmbH, ein dynamisches und stark wachsendes Unternehmen in der Gesundheitsbranche mit rund 100 Mitarbeitenden sucht dich als Account Manager für unseren stark wachsenden Kundenstamm.",
+        "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
+        "intro_paragraph_3": "Werde Teil unserer Altruan-Familie und gestalte die Zukunft aktiv mit!",
+        "intro_paragraph_4": "<p>Werde Teil unserer Altruan-Familie und gestalte die Zukunft aktiv mit!</p>",
+        "tasks_title": "Aufgaben",
+        "qual_title": "Qualifikation",
+        "benefit_title": "Benefits"
+      }
+    },
     "contact_form_jqGVW4": {
       "type": "contact-form",
       "blocks": {
@@ -88,6 +107,7 @@
   },
   "order": [
     "main",
+    "jobs_section_3nTHtU",
     "contact_form_jqGVW4"
   ]
 }
