@@ -121,6 +121,7 @@
         "item_B64NHp",
         "item_PtmeWH"
       ],
+      "name": "Open Positions",
       "settings": {
         "container": "container",
         "limit": 2,
