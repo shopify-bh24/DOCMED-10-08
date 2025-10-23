@@ -15,7 +15,18 @@
   assign container = st.container
 %}
 
-<div class="{{ container }} section-full section-{{ section.id }}-padding" data-id="{{ section.id }}">
+<style>
+  .career_container{
+    max-width: 1440px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<div class="career_container {{ container }} section-full section-{{ section.id }}-padding" data-id="{{ section.id }}">
   <div class="bls-carrer__content  {% if st.eb_loadmore %} load-more-page {% endif %}" data-limit="{{ st.limit }}">
     {% for block in section.blocks %}
       <div
