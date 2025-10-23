@@ -18,6 +18,66 @@
         "paragraph_2": "<p>Unsere Teams zeichnen sich durch Offenheit, Motivation und den Willen aus, wirklich etwas zu bewegen. Ob im Marketing, in der Logistik, im Kundenservice oder im Finanzwesen – wir schätzen Eigeninitiative, Zusammenarbeit und gemeinsame Erfolge.</p><p>Wenn Sie auf der Suche nach einer sinnvollen Aufgabe, Verantwortung und Entwicklungsmöglichkeiten sind, sind Sie bei uns genau richtig.</p>"
       }
     },
+    "benefits_cqda3C": {
+      "type": "benefits",
+      "blocks": {
+        "benefit_bF9kic": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
+          }
+        },
+        "benefit_pCggn8": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-champagne-glasses\"></i>",
+            "label": "Firmenevents"
+          }
+        },
+        "benefit_6XFYHM": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-heart-pulse\"></i>",
+            "label": "Sport- und Gesundheitsangebote"
+          }
+        },
+        "benefit_MMawqn": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-coins\"></i>",
+            "label": "Sonderzahlungen"
+          }
+        },
+        "benefit_66aaPw": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-person\"></i>",
+            "label": "Mitgestaltungsmöglichkeiten"
+          }
+        },
+        "benefit_k8Pccj": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-laptop\"></i>",
+            "label": "Moderne technische Ausstattung"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_bF9kic",
+        "benefit_pCggn8",
+        "benefit_6XFYHM",
+        "benefit_MMawqn",
+        "benefit_66aaPw",
+        "benefit_k8Pccj"
+      ],
+      "name": "Benefits list",
+      "settings": {
+        "section_title": "Vorteile für Mitarbeitende",
+        "note_text": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
+      }
+    },
     "main": {
       "type": "page-carrer",
       "blocks": {
@@ -85,118 +145,6 @@
         "eb_loadmore": false,
         "padding_top": 100,
         "padding_bottom": 24
-      }
-    },
-    "image_with_text_APWgt8": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_pBPdND": {
-          "type": "heading",
-          "settings": {
-            "subheading": "",
-            "heading": "Kontaktinformationen",
-            "heading_size": "h2"
-          }
-        },
-        "text_7ag8rp": {
-          "type": "text",
-          "settings": {
-            "show_icon": "hide",
-            "content_icon": "none",
-            "text": "<p><a href=\"mailto:Bewerbung@docmed.de\" target=\"_blank\">bewerbung@docmed.de</a></p><p>DocMed GmbH</p><p>Lothringer Höhe 1</p><p>44805 Bochum</p>",
-            "text_style": "body"
-          }
-        },
-        "author_text_cWNTgQ": {
-          "type": "author-text",
-          "settings": {
-            "authorimage": "shopify://shop_images/DocMed1.png",
-            "image_corners": "rounded",
-            "authorname": "Angelika Wenzel-Czech",
-            "authorpos": "DocMed GmbH"
-          }
-        }
-      },
-      "block_order": [
-        "heading_pBPdND",
-        "text_7ag8rp",
-        "author_text_cWNTgQ"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 28,
-        "padding_bottom": 0
-      }
-    },
-    "our_story_KF3ULT": {
-      "type": "our-story",
-      "blocks": {
-        "text_content_Yc3Xft": {
-          "type": "text-content",
-          "settings": {
-            "text_content": "<p><strong>Online bewerben</strong> – Sende uns deine Unterlagen ganz bequem über unser Bewerbungsformular oder per E-Mail.</p>",
-            "color_bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
-            "show_left": false
-          }
-        },
-        "text_content_rH8Egh": {
-          "type": "text-content",
-          "settings": {
-            "text_content": "<p><strong>Erstes Kennenlernen</strong> – In einem lockeren Gespräch (digital oder vor Ort) möchten wir dich besser kennenlernen und mehr über deine Motivation erfahren.<br/><br/>DocMed GmbH <br/>Lothringer Höhe 1 <br/>44805 Bochum</p>",
-            "color_bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
-            "show_left": true
-          }
-        },
-        "text_content_GaVqGQ": {
-          "type": "text-content",
-          "settings": {
-            "text_content": "<p><strong>Zweites Gespräch & Aufgabenstellung</strong> – Je nach Position bekommst du eine kleine Aufgabe oder einen Probetag zur besseren Einschätzung.</p>",
-            "color_bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
-            "show_left": false
-          }
-        },
-        "text_content_A7bQG7": {
-          "type": "text-content",
-          "settings": {
-            "text_content": "<p><strong>Probearbeiten (optional)</strong> – In vielen Bereichen bieten wir einen kurzen Probearbeitstag an. So bekommst du einen authentischen Eindruck von deinem potenziellen Arbeitsplatz, dem Team und deinen Aufgaben.</p>",
-            "color_bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
-            "show_left": true
-          }
-        },
-        "text_content_LXwRyn": {
-          "type": "text-content",
-          "settings": {
-            "text_content": "<p><strong>Finale Entscheidung</strong> – Nach deinem Probetag melden wir uns zeitnah mit einer Rückmeldung und einem konkreten Angebot.</p>",
-            "color_bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
-            "show_left": false
-          }
-        }
-      },
-      "block_order": [
-        "text_content_Yc3Xft",
-        "text_content_rH8Egh",
-        "text_content_GaVqGQ",
-        "text_content_A7bQG7",
-        "text_content_LXwRyn"
-      ],
-      "disabled": true,
-      "name": "Bewerbungsprozess",
-      "settings": {
-        "heading": "",
-        "description": "",
-        "bg_color": "linear-gradient(180deg, rgba(1, 31, 45, 1) 100%, rgba(221, 39, 57, 1) 100%)",
-        "text_color": "#ffffff",
-        "border_color": "#7fc7cf",
-        "progress_color": "#7fc7cf"
       }
     },
     "image_banner_bGdbLe": {
@@ -304,6 +252,7 @@
         "banner_with_text_Uhrhpn",
         "banner_with_text_RBaPYr"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "full_width": false,
@@ -392,9 +341,8 @@
   },
   "order": [
     "about_comapny_pWGYPA",
+    "benefits_cqda3C",
     "main",
-    "image_with_text_APWgt8",
-    "our_story_KF3ULT",
     "image_banner_bGdbLe",
     "contact_form_jLG7qh"
   ]
