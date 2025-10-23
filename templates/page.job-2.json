@@ -159,81 +159,10 @@
         "qual_title": "Dein Profil:",
         "benefit_title": "Wir bieten:"
       }
-    },
-    "about_comapny_embayh": {
-      "type": "about_comapny",
-      "name": "About Company",
-      "settings": {
-        "title": "Über das Unternehmen",
-        "paragraph_1": "<p>DocMed ist ein <strong>mittelständisches E-Commerce-Unternehmen</strong> mit Sitz in <strong>Bochum</strong> und gehören zu den <strong>schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte</strong>.</p>",
-        "paragraph_2": "<p>Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für <strong>B2B- und B2C-Kunden in über 50 Ländern</strong> weltweit einfach und zuverlässig zugänglich zu machen. Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.</p>"
-      }
-    },
-    "benefits_Efz9dQ": {
-      "type": "benefits",
-      "blocks": {
-        "benefit_Bhh8bD": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
-            "label": "Flexible Arbeitszeiten"
-          }
-        },
-        "benefit_hPKAw3": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-champagne-glasses\"></i>",
-            "label": "Firmenevents"
-          }
-        },
-        "benefit_VNRTf4": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-heart-pulse\"></i>",
-            "label": "Sport- und Gesundheitsangebote"
-          }
-        },
-        "benefit_KfTbWh": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-coins\"></i>",
-            "label": "Sonderzahlungen"
-          }
-        },
-        "benefit_rgfRf6": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-person\"></i>",
-            "label": "Mitgestaltungsmöglichkeiten"
-          }
-        },
-        "benefit_mr3yjE": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-laptop\"></i>",
-            "label": "Moderne technische Ausstattung"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_Bhh8bD",
-        "benefit_hPKAw3",
-        "benefit_VNRTf4",
-        "benefit_KfTbWh",
-        "benefit_rgfRf6",
-        "benefit_mr3yjE"
-      ],
-      "name": "Benefits list",
-      "settings": {
-        "section_title": "Vorteile für Mitarbeitende",
-        "note_text": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
-      }
     }
   },
   "order": [
     "main",
-    "jobs_section_p77A4z",
-    "about_comapny_embayh",
-    "benefits_Efz9dQ"
+    "jobs_section_p77A4z"
   ]
 }
