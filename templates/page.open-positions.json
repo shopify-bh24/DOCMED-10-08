@@ -130,26 +130,13 @@
             "detail_job": "https://www.docmed.de/pages/werkstudent-praktikum",
             "detail_label_job": "Anzeigen"
           }
-        },
-        "item_MRUYMw": {
-          "type": "item",
-          "settings": {
-            "title_job": "Initiativbewerbung",
-            "loction_job": "Bochum",
-            "type_job": "bewerbung@docmed.de.",
-            "income_job": "Lebenslauf",
-            "date_job": "",
-            "detail_job": "",
-            "detail_label_job": "Details"
-          }
         }
       },
       "block_order": [
         "item_M69gRb",
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
         "item_B64NHp",
-        "item_PtmeWH",
-        "item_MRUYMw"
+        "item_PtmeWH"
       ],
       "name": "Open Positions",
       "settings": {
