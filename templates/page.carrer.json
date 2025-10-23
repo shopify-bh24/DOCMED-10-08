@@ -125,8 +125,8 @@
         "container": "container",
         "limit": 2,
         "eb_loadmore": false,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 100,
+        "padding_bottom": 24
       }
     },
     "image_with_text_APWgt8": {
