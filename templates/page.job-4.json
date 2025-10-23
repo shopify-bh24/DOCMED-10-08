@@ -23,6 +23,108 @@
     },
     "jobs_section_Nf99EF": {
       "type": "jobs_section",
+      "blocks": {
+        "task_6TgTxJ": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Eigenverantwortliche Führung und Organisation der Finanzbuchhaltung</p>"
+          }
+        },
+        "task_rAcD88": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Vorbereitung von Jahresabschlüssen nach HGB</p>"
+          }
+        },
+        "task_g73nnk": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Liquiditätsplanung und Cashflow-Management</p>"
+          }
+        },
+        "task_h7pK8D": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Aufbau, Optimierung und Weiterentwicklung von internen Prozessen und Abläufen</p>"
+          }
+        },
+        "task_KFH7LJ": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Enge Zusammenarbeit mit der Geschäftsführung und externen Steuerberatern</p>"
+          }
+        },
+        "qual_B4j7B6": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Buchhaltung: 5 Jahre (Wünschenswert)</p>"
+          }
+        },
+        "qual_rGVaTa": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Abgeschlossene Ausbildung als <strong>Steuerfachangestellte/r</strong> mit Weiterbildung zum/zur <strong>Steuerfachwirt/in</strong> oder <strong>Bilanzbuchhalter/in</strong></p>"
+          }
+        },
+        "qual_AWUxhG": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Mehrjährige Berufserfahrung in der Finanzbuchhaltung, idealerweise bereit Erfahrung im internationalem (Online-)Handel.</p>"
+          }
+        },
+        "qual_zfiiz7": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Ausgeprägte analytische Fähigkeiten und ein hohes Maß an Eigeninitiative</p>"
+          }
+        },
+        "qual_Jrda6h": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p><strong>Hands-on-Mentalität</strong> und lösungsorientierte Arbeitsweise</p>"
+          }
+        },
+        "qual_rCDf8d": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Freude an digitalem Arbeiten und Prozessoptimierung</p>"
+          }
+        },
+        "benefit_xUDBM4": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Ein stabiles, langfristiges Arbeitsverhältnis mit attraktiver Vergütung"
+          }
+        },
+        "benefit_RgFXmF": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Kurze Entscheidungswege und direkte Kommunikation mit dem Management"
+          }
+        },
+        "benefit_QCTRjU": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine moderne Arbeitsumgebung und digitalisierte Prozesse in der Buchhaltung"
+          }
+        }
+      },
+      "block_order": [
+        "task_6TgTxJ",
+        "task_rAcD88",
+        "task_g73nnk",
+        "task_h7pK8D",
+        "task_KFH7LJ",
+        "qual_B4j7B6",
+        "qual_rGVaTa",
+        "qual_AWUxhG",
+        "qual_zfiiz7",
+        "qual_Jrda6h",
+        "qual_rCDf8d",
+        "benefit_xUDBM4",
+        "benefit_RgFXmF",
+        "benefit_QCTRjU"
+      ],
       "name": "Job Detail",
       "settings": {
         "company_name": "DocMed GmbH",
