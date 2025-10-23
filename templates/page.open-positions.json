@@ -15,7 +15,7 @@
       "settings": {
         "title": "Karriere bei DocMed - Gestalten Sie die Zukunft des E-Commerce im Gesundheitswesen",
         "paragraph_1": "<p>Wir wachsen und suchen Menschen, die gemeinsam mit uns wachsen möchten.<br/>Als schnell wachsendes E-Commerce-Unternehmen im Bereich Medizin und Pharma bieten wir engagierten Talenten die Möglichkeit, Verantwortung zu übernehmen, Ideen einzubringen und sich fachlich wie persönlich weiterzuentwickeln.</p>",
-        "paragraph_2": "<p>Unsere Teams zeichnen sich durch Offenheit, Motivation und den Willen aus, wirklich etwas zu bewegen. Ob im Marketing, in der Logistik, im Kundenservice oder im Finanzwesen – wir schätzen Eigeninitiative, Zusammenarbeit und gemeinsame Erfolge.</p><p>Wenn Sie auf der Suche nach einer sinnvollen Aufgabe, Verantwortung und Entwicklungsmöglichkeiten sind, sind Sie bei uns genau richtig.</p>"
+        "paragraph_2": "<p>Unsere Teams zeichnen sich durch <strong>Offenheit</strong>, <strong>Motivation</strong> und den <strong>Willen</strong> aus, wirklich etwas zu bewegen. Ob im Marketing, in der Logistik, im Kundenservice oder im Finanzwesen – wir schätzen Eigeninitiative, Zusammenarbeit und gemeinsame Erfolge.</p><p>Wenn Sie auf der Suche nach einer sinnvollen <strong>Aufgabe</strong>, <strong>Verantwortung</strong> und <strong>Entwicklungsmöglichkeiten</strong> sind, sind Sie bei uns genau richtig.</p>"
       }
     },
     "benefits_cqda3C": {
@@ -115,7 +115,7 @@
             "type_job": "Vollzeit",
             "income_job": "",
             "date_job": "Ab sofort",
-            "detail_job": "",
+            "detail_job": "https://www.docmed.de/pages/jobs-steuerfachangestellter-steuerfachwirt-bilanzbuchhalter",
             "detail_label_job": "Anzeigen"
           }
         },
