@@ -9,58 +9,6 @@
  */
 {
   "sections": {
-    "image_with_text_wYhPj4": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_a8ycVx": {
-          "type": "heading",
-          "settings": {
-            "subheading": "",
-            "heading": "<strong>Über uns </strong>",
-            "heading_size": "h2"
-          }
-        },
-        "text_fQxkkx": {
-          "type": "text",
-          "settings": {
-            "show_icon": "hide",
-            "content_icon": "none",
-            "text": "<p>DocMed ist ein international agierendes Unternehmen, das sich auf ein umfassendes Sortiment an hochwertigen medizinischen Produkten spezialisiert hat. Unser Ziel ist es, medizinische Versorgung einfacher, zugänglicher und effizienter zu gestalten – sowohl für professionelle Einrichtungen wie Pflegeheime, Arztpraxen und Kliniken als auch für Privatpersonen, die auf eine zuverlässige und schnelle Versorgung angewiesen sind.</p><p>Durch unser dynamisches Geschäftsmodell und die konsequente Ausrichtung auf digitale Lösungen vertreiben wir unsere Produkte unter anderem über unseren eigenen, benutzerfreundlichen Online-Shop. So stellen wir sicher, dass unsere Kunden jederzeit und ortsunabhängig Zugriff auf wichtige medizinische Artikel haben – bequem, transparent und zuverlässig.</p><p>Innovation, Kundenorientierung und Qualität stehen bei uns an erster Stelle. Mit einem engagierten Team aus Fachleuten und E-Commerce-Experten arbeiten wir täglich daran, unsere Prozesse zu optimieren, neue Märkte zu erschließen und unser Produktsortiment kontinuierlich weiterzuentwickeln.</p><p>Werden Sie Teil unseres wachsenden und zukunftsorientierten Unternehmens. Bringen Sie Ihre Ideen ein, gestalten Sie mit uns die digitale Transformation im Gesundheitswesen und setzen Sie gemeinsam mit uns neue Maßstäbe im Bereich des medizinischen Online-Handels.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_7V4Fqr": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "link_window": true,
-            "view_all_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "heading_a8ycVx",
-        "text_fQxkkx",
-        "button_7V4Fqr"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/8c675cad-d8da-4431-a7de-b41b445cbcc9.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "main": {
       "type": "page-carrer",
       "blocks": {
@@ -435,7 +383,6 @@
     }
   },
   "order": [
-    "image_with_text_wYhPj4",
     "main",
     "image_with_text_APWgt8",
     "our_story_KF3ULT",
