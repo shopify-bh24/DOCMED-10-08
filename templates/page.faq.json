@@ -76,7 +76,6 @@
         },
         "collapsible_row_nLVNyq": {
           "type": "collapsible_row",
-          "disabled": true,
           "settings": {
             "default_open": false,
             "heading": "Wie kann ich mich vom Newsletter abmelden?",
@@ -98,6 +97,7 @@
         },
         "collapsible_row_HfPfpi": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "default_open": false,
             "heading": "Wie kann ich den Status meiner Bestellung ansehen / Sendungsverfolgung?",
