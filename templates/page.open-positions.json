@@ -46,7 +46,7 @@
             "type_job": "Vollzeit",
             "income_job": "",
             "date_job": "Ab sofort",
-            "detail_job": "https://www.docmed.de/pages/steuerfachangstellte/r",
+            "detail_job": "",
             "detail_label_job": "Anzeigen"
           }
         },
@@ -295,7 +295,6 @@
         "banner_with_text_Uhrhpn",
         "banner_with_text_RBaPYr"
       ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "full_width": false,
