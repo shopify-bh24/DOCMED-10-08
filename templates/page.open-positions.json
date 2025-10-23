@@ -14,7 +14,7 @@
       "name": "About Company",
       "settings": {
         "title": "Karriere bei DocMed - Gestalten Sie die Zukunft des E-Commerce im Gesundheitswesen",
-        "paragraph_1": "<p>Wir wachsen und suchen Menschen, die gemeinsam mit uns wachsen möchten.<br/>Als schnell wachsendes E-Commerce-Unternehmen im Bereich Medizin und Pharma bieten wir engagierten Talenten die Möglichkeit, Verantwortung zu übernehmen, Ideen einzubringen und sich fachlich wie persönlich weiterzuentwickeln.</p>",
+        "paragraph_1": "<p>Wir wachsen und suchen Menschen, die gemeinsam mit uns wachsen möchten.<br/>Als schnell wachsendes <strong>E-Commerce-Unternehmen</strong> im Bereich <strong>Medizin</strong> und <strong>Pharma</strong> bieten wir engagierten Talenten die Möglichkeit, <strong>Verantwortung</strong> zu übernehmen, <strong>Ideen</strong> einzubringen und sich fachlich wie persönlich <strong>weiterzuentwickeln</strong>.</p>",
         "paragraph_2": "<p>Unsere Teams zeichnen sich durch <strong>Offenheit</strong>, <strong>Motivation</strong> und den <strong>Willen</strong> aus, wirklich etwas zu bewegen. Ob im <strong>Marketing</strong>, in der <strong>Logistik</strong>, im <strong>Kundenservice</strong> oder im Finanzwesen – wir schätzen <strong>Eigeninitiative</strong>, <strong>Zusammenarbeit</strong> und gemeinsame Erfolge.</p><p>Wenn Sie auf der Suche nach einer sinnvollen <strong>Aufgabe</strong>, <strong>Verantwortung</strong> und <strong>Entwicklungsmöglichkeiten</strong> sind, sind Sie bei uns genau richtig.</p>"
       }
     },
@@ -143,7 +143,7 @@
         "container": "container",
         "limit": 2,
         "eb_loadmore": false,
-        "padding_top": 100,
+        "padding_top": 48,
         "padding_bottom": 24
       }
     },
