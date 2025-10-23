@@ -28,61 +28,61 @@
         "task_hVHGtW": {
           "type": "task",
           "settings": {
-            "task_item": "Unterstützung bei der Gestaltung, Pflege und Optimierung unseres Shopify-Onlineshops"
+            "task_item": "<p>Unterstützung bei der Gestaltung, Pflege und Optimierung unseres Shopify-Onlineshops</p>"
           }
         },
         "task_DifMxb": {
           "type": "task",
           "settings": {
-            "task_item": "Erstellung von SEO-optimierten Produktbeschreibungen und ansprechenden Texten"
+            "task_item": "<p>Erstellung von SEO-optimierten Produktbeschreibungen und ansprechenden Texten</p>"
           }
         },
         "task_R7Jm7j": {
           "type": "task",
           "settings": {
-            "task_item": "Pflege von USPs und Produktinformationen als Metafelder in Shopify"
+            "task_item": "<p>Pflege von USPs und Produktinformationen als Metafelder in Shopify</p>"
           }
         },
         "task_ApQzAW": {
           "type": "task",
           "settings": {
-            "task_item": "Erstellung von Alt-Texten für Produktbilder zur Verbesserung von SEO und Barrierefreiheit"
+            "task_item": "<p>Erstellung von Alt-Texten für Produktbilder zur Verbesserung von SEO und Barrierefreiheit</p>"
           }
         },
         "task_pdCRfW": {
           "type": "task",
           "settings": {
-            "task_item": "Durchführung von Recherchen und Übernahme kleinerer Aufgaben im Bereich E-Commerce und Online-Marketing"
+            "task_item": "<p>Durchführung von Recherchen und Übernahme kleinerer Aufgaben im Bereich E-Commerce und Online-Marketing</p>"
           }
         },
         "qual_7biqFx": {
           "type": "qual",
           "settings": {
-            "qual_item": "Eingeschriebene:r Student:in (z. B. BWL, Marketing, Medien, Kommunikation oder ein vergleichbarer Studiengang)"
+            "qual_item": "<p>Eingeschriebene:r Student:in (z. B. BWL, Marketing, Medien, Kommunikation oder ein vergleichbarer Studiengang)</p>"
           }
         },
         "qual_ahFKcR": {
           "type": "qual",
           "settings": {
-            "qual_item": "Kommunikative, engagierte und hands-on Mentalität"
+            "qual_item": "<p>Kommunikative, engagierte und hands-on Mentalität</p>"
           }
         },
         "qual_7M3nVx": {
           "type": "qual",
           "settings": {
-            "qual_item": "Sehr gute Deutschkenntnisse in Wort und Schrift, Englischkenntnisse von Vorteil"
+            "qual_item": "<p>Sehr gute Deutschkenntnisse in Wort und Schrift, Englischkenntnisse von Vorteil</p>"
           }
         },
         "qual_Vq6PJg": {
           "type": "qual",
           "settings": {
-            "qual_item": "Zuverlässige, selbstständige und verantwortungsbewusste Arbeitsweise"
+            "qual_item": "<p>Zuverlässige, selbstständige und verantwortungsbewusste Arbeitsweise</p>"
           }
         },
         "qual_8H3eKW": {
           "type": "qual",
           "settings": {
-            "qual_item": "Sicherer Umgang mit MS Office"
+            "qual_item": "<p>Sicherer Umgang mit MS Office</p>"
           }
         },
         "benefit_XbyVVE": {
@@ -148,6 +148,8 @@
         "job_location": "Bochum, Deutschland",
         "job_type": "Beginn: flexibe / nach Absprache",
         "job_category": "Praktikum (Vollzeit bis zu 6 Monate)  / (Werkstudent Teilzeit bis zu 12 Monate)",
+        "variant1": "",
+        "variant2": "",
         "intro_heading": "Du möchtest praktische Erfahrungen im E-Commerce sammeln und tief in die Welt von Shopify eintauchen?",
         "intro_paragraph_1": "Dann bist du bei uns genau richtig! Wir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum und suchen eine:n engagierte:n Praktikant:in oder Werkstudent:in (m/w/d) im Bereich E-Commerce & Shopify.",
         "intro_paragraph_2": "",
@@ -226,77 +228,12 @@
         "section_title": "Vorteile für Mitarbeitende",
         "note_text": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
       }
-    },
-    "contact_form_r4KRCE": {
-      "type": "contact-form",
-      "blocks": {
-        "text_8NdNTt": {
-          "type": "text",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Name",
-            "required_field": false
-          }
-        },
-        "email_TFUAAq": {
-          "type": "email",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Email",
-            "required_field": true
-          }
-        },
-        "phone_gpLVXU": {
-          "type": "phone",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Telefon",
-            "required_field": true
-          }
-        },
-        "message_3zKzpV": {
-          "type": "message",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Ihre Nachricht...",
-            "required_field": false
-          }
-        }
-      },
-      "block_order": [
-        "text_8NdNTt",
-        "email_TFUAAq",
-        "phone_gpLVXU",
-        "message_3zKzpV"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "head_align": "left",
-        "heading_color_scheme": "",
-        "head_space": true,
-        "description": "",
-        "description_style": "body",
-        "enable_all": "text",
-        "contact_iframe_code": "",
-        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
-        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
-        "contacttitle": "",
-        "contsubtext": "",
-        "footer_contact_no": "",
-        "show_social": true,
-        "contactfollow": "",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
     }
   },
   "order": [
     "main",
     "jobs_section_p77A4z",
     "about_comapny_embayh",
-    "benefits_Efz9dQ",
-    "contact_form_r4KRCE"
+    "benefits_Efz9dQ"
   ]
 }
