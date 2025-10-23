@@ -92,15 +92,15 @@
   padding: 1.36rem 5.5rem;
   font-weight: 600;
   text-transform: uppercase; 
-  border: 1px solid black;
+  border: 1px solid #1D2E40;
   border-radius: 30px;
   display: inline-block;
   font-size: 12px;
 }
 
 .bls-carrer--button .btn-carrer:hover {
-  background-color:#000000;
-  border-color:#000000;
+  background-color:#1D2E40;
+  border-color:#1D2E40;
   color: #ffffff;
 }
 
