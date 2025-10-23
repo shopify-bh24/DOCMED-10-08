@@ -89,6 +89,18 @@
             "detail_label_job": "Details"
           }
         },
+        "item_B64NHp": {
+          "type": "item",
+          "settings": {
+            "title_job": "Steuerfachangestellter / Steuerfachwirt / Bilanzbuchhalter (m/w/d)",
+            "loction_job": "Bochum",
+            "type_job": "Vollzeit",
+            "income_job": "",
+            "date_job": "Ab sofort",
+            "detail_job": "https://www.docmed.de/pages/steuerfachangstellte/r",
+            "detail_label_job": "Anzeigen"
+          }
+        },
         "item_PtmeWH": {
           "type": "item",
           "settings": {
@@ -105,6 +117,7 @@
       "block_order": [
         "item_M69gRb",
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
+        "item_B64NHp",
         "item_PtmeWH"
       ],
       "settings": {
