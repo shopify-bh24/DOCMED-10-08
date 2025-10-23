@@ -86,6 +86,7 @@
         },
         "collapsible_row_6BbhtQ": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "default_open": false,
             "heading": "Wo kann ich meine Bestellung ansehen?",
