@@ -213,77 +213,12 @@
         "section_title": "Vorteile für Mitarbeitende",
         "note_text": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
       }
-    },
-    "contact_form_WXXByi": {
-      "type": "contact-form",
-      "blocks": {
-        "text_UxyB6D": {
-          "type": "text",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Name",
-            "required_field": false
-          }
-        },
-        "email_3Uqwyh": {
-          "type": "email",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Email",
-            "required_field": true
-          }
-        },
-        "phone_XxQcyQ": {
-          "type": "phone",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Telefon",
-            "required_field": true
-          }
-        },
-        "message_agDLQM": {
-          "type": "message",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Ihre Nachricht...",
-            "required_field": false
-          }
-        }
-      },
-      "block_order": [
-        "text_UxyB6D",
-        "email_3Uqwyh",
-        "phone_XxQcyQ",
-        "message_agDLQM"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "head_align": "left",
-        "heading_color_scheme": "",
-        "head_space": true,
-        "description": "",
-        "description_style": "body",
-        "enable_all": "text",
-        "contact_iframe_code": "",
-        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
-        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
-        "contacttitle": "",
-        "contsubtext": "",
-        "footer_contact_no": "",
-        "show_social": true,
-        "contactfollow": "",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
     }
   },
   "order": [
     "main",
     "jobs_section_Nf99EF",
     "about_comapny_FzjP7m",
-    "benefits_iyhmPc",
-    "contact_form_WXXByi"
+    "benefits_iyhmPc"
   ]
 }
