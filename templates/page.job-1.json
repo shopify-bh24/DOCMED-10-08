@@ -28,49 +28,49 @@
         "task_hVHGtW": {
           "type": "task",
           "settings": {
-            "task_item": " Verpacken von Waren"
+            "task_item": "<p> Verpacken von Waren</p>"
           }
         },
         "task_NpK3yh": {
           "type": "task",
           "settings": {
-            "task_item": "Etikettieren von Waren"
+            "task_item": "<p>Etikettieren von Waren</p>"
           }
         },
         "task_nVjttr": {
           "type": "task",
           "settings": {
-            "task_item": "Bearbeitung von Retouren"
+            "task_item": "<p>Bearbeitung von Retouren</p>"
           }
         },
         "task_DW4EJr": {
           "type": "task",
           "settings": {
-            "task_item": "Allgemeine Lagerarbeiten"
+            "task_item": "<p>Allgemeine Lagerarbeiten</p>"
           }
         },
         "task_8X6jfx": {
           "type": "task",
           "settings": {
-            "task_item": "Ordnung und Sauberkeit im Lagerbereich"
+            "task_item": "<p>Ordnung und Sauberkeit im Lagerbereich</p>"
           }
         },
         "qual_7biqFx": {
           "type": "qual",
           "settings": {
-            "qual_item": "Zuverlässigkeit und Teamfähigkeit"
+            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
           }
         },
         "qual_bcHK4D": {
           "type": "qual",
           "settings": {
-            "qual_item": "Deutsche Sprachkenntnisse (ab B2)"
+            "qual_item": "<p>Deutsche Sprachkenntnisse (ab B2)</p>"
           }
         },
         "qual_ahFKcR": {
           "type": "qual",
           "settings": {
-            "qual_item": "Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme"
+            "qual_item": "<p>Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme</p>"
           }
         },
         "benefit_XbyVVE": {
@@ -116,9 +116,11 @@
       "settings": {
         "company_name": "",
         "job_title": "Lagerhelfer/in (m/w/d)",
-        "job_location": "Bochum, Deutschland",
-        "job_type": "Vollzeit/Teilzeit",
-        "job_category": "Lager- und Transportarbeiter/inFachlagerist/in",
+        "job_location": "Vollzeit/Teilzeit",
+        "job_type": "Lager- und Transportarbeiter/inFachlagerist/in",
+        "job_category": "",
+        "variant1": "",
+        "variant2": "",
         "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
         "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte. Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen.\n\nMit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
         "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
