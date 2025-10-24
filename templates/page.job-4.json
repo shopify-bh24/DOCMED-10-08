@@ -144,10 +144,20 @@
         "qual_title": "Qualifikation",
         "benefit_title": "Benefits"
       }
+    },
+    "about_comapny_8hi4L9": {
+      "type": "about_comapny",
+      "name": "About Company",
+      "settings": {
+        "title": "Über das Unternehmen",
+        "paragraph_1": "<p>DocMed ist ein <strong>mittelständisches E-Commerce-Unternehmen</strong> mit Sitz in <strong>Bochum</strong> und gehören zu den <strong>schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte</strong>.</p>",
+        "paragraph_2": "<p>Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für <strong>B2B- und B2C-Kunden in über 50 Ländern</strong> weltweit einfach und zuverlässig zugänglich zu machen. Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.</p>"
+      }
     }
   },
   "order": [
     "main",
-    "jobs_section_Nf99EF"
+    "jobs_section_Nf99EF",
+    "about_comapny_8hi4L9"
   ]
 }
