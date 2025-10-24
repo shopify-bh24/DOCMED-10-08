@@ -71,10 +71,71 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "image_banner_m6XTMX": {
+      "type": "image-banner",
+      "blocks": {
+        "banner_with_text_T6hhzK": {
+          "type": "banner_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg",
+            "image_overlay_opacity": 0,
+            "banner_width": 100,
+            "text_caption": "",
+            "outline_text": false,
+            "heading": "",
+            "heading_size": "h0",
+            "subheading": "",
+            "text": "",
+            "text_style": "body",
+            "show_banner_timer": false,
+            "wb_bannerdate": "",
+            "button_label_1": "",
+            "button_link_1": "",
+            "link_window": true,
+            "view_all_style": "link",
+            "button_label_11": "",
+            "button_link_11": "",
+            "link_window1": true,
+            "view_all_style1": "link",
+            "show_text_box": false,
+            "space_around": 10,
+            "container_overlay_opacity": 40,
+            "desktop_content_position": "middle-left",
+            "desktop_content_alignment": "left",
+            "color_scheme": "",
+            "image_behavior": "none"
+          }
+        }
+      },
+      "block_order": [
+        "banner_with_text_T6hhzK"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "full_width": false,
+        "title": "",
+        "heading_size": "h1",
+        "head_align": "center",
+        "heading_color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+        "head_space": true,
+        "description": "",
+        "description_style": "body",
+        "button_label": "",
+        "button_link": "",
+        "view_all_style": "link",
+        "show_view_all": true,
+        "image_height": "large",
+        "show_gap": true,
+        "section_color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "image_with_text_b79KA3"
+    "image_with_text_b79KA3",
+    "image_banner_m6XTMX"
   ]
 }
