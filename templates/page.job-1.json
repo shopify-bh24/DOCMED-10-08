@@ -131,74 +131,19 @@
         "benefit_title": "Benefits"
       }
     },
-    "contact_form_JcMcDn": {
-      "type": "contact-form",
-      "blocks": {
-        "text_jHgGGN": {
-          "type": "text",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Name",
-            "required_field": false
-          }
-        },
-        "email_VN8Fdh": {
-          "type": "email",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Email",
-            "required_field": true
-          }
-        },
-        "phone_YM8bG6": {
-          "type": "phone",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Telefon",
-            "required_field": true
-          }
-        },
-        "message_brxBdr": {
-          "type": "message",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Ihre Nachricht...",
-            "required_field": false
-          }
-        }
-      },
-      "block_order": [
-        "text_jHgGGN",
-        "email_VN8Fdh",
-        "phone_YM8bG6",
-        "message_brxBdr"
-      ],
+    "about_comapny_Gxgzmf": {
+      "type": "about_comapny",
+      "name": "About Company",
       "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "head_align": "left",
-        "heading_color_scheme": "",
-        "head_space": true,
-        "description": "",
-        "description_style": "body",
-        "enable_all": "text",
-        "contact_iframe_code": "",
-        "texttitle": "<strong>Sie haben Fragen zu Ihrer Bewerbung oder zum Bewerbungsverfahren?</strong>",
-        "demotext": "Unser Team steht Ihnen gerne für alle Rückfragen zur Verfügung. Kontaktieren Sie uns telefonisch oder per E-Mail – wir helfen Ihnen weiter.",
-        "contacttitle": "",
-        "contsubtext": "",
-        "footer_contact_no": "",
-        "show_social": true,
-        "contactfollow": "",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "title": "Über das Unternehmen",
+        "paragraph_1": "<p>DocMed ist ein <strong>mittelständisches E-Commerce-Unternehmen</strong> mit Sitz in <strong>Bochum</strong> und gehören zu den <strong>schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte</strong>.</p>",
+        "paragraph_2": "<p>Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für <strong>B2B- und B2C-Kunden </strong>weltweit einfach und zuverlässig zugänglich zu machen. Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.</p>"
       }
     }
   },
   "order": [
     "main",
     "jobs_section_p77A4z",
-    "contact_form_JcMcDn"
+    "about_comapny_Gxgzmf"
   ]
 }
