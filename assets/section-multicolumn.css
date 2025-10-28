@@ -197,9 +197,9 @@
   margin-top: 2rem;
 }
 @media (max-width: 991px) {
-  .deliveryinfo.multicolumn-list {
+  /* .deliveryinfo.multicolumn-list {
     row-gap: max(calc(var(--grid-mobile-vertical-spacing) + 10px), 0px);
-  }
+  } */
   .deliveryinfo.multicolumn-list.swipe_mobile{
     padding-bottom: 10px;
     scrollbar-width: thin;
