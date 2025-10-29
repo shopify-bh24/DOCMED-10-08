@@ -384,8 +384,8 @@
     },
     "featured_blog": {
       "view_all": "Alle anzeigen",
-      "read_more": "Read more",
-      "read_more_text": "Read more...",
+      "read_more": "mehr Anzeigen",
+      "read_more_text": "mehr Anzeigen",
       "onboarding_title": "Blog-Beitrag",
       "onboarding_content": "Verschaffen Sie Ihren Kunden eine Übersicht über Ihren Blog-Beitrag."
     },
