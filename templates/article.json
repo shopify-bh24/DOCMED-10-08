@@ -18,7 +18,7 @@
         "image_height": "medium",
         "blog_show_date": true,
         "show_tag": true,
-        "blog_show_author": true,
+        "blog_show_author": false,
         "image_corners": "circle",
         "share_label": "Teilen",
         "show_social": true,
