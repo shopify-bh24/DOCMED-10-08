@@ -9,66 +9,45 @@
  */
 {
   "sections": {
-    "slideshow_NwU3wK": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_Th74xY": {
-          "type": "slide",
-          "settings": {
-            "enable_video_looping": false,
-            "auto_play_video": false,
-            "video_url": "",
-            "image": "shopify://shop_images/medizinratgeber_blog.jpg",
-            "image_overlay_opacity": 0,
-            "text_caption": "Blog der Woche",
-            "outline_text": false,
-            "heading": "",
-            "heading_size": "h2",
-            "font_color": "",
-            "subheading": "<h6>{{ blog.title }}<strong> </strong></h6>",
-            "description": "<p> Reinschauen, inspirieren lassen, up to date bleiben</p><p></p>",
-            "text_style": "body",
-            "button_label": "Jetzt lesen",
-            "link": "shopify://blogs/news/effiziente-materialwirtschaft-in-kliniken",
-            "link_window": true,
-            "view_all_style": "solid",
-            "box_align": "bottom-left",
-            "show_text_box": true,
-            "text_alignment": "left",
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_Th74xY"
-      ],
+    "featured_blog_kdchjK": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "slide_heading_font": "inter_n4",
-        "default_font": true,
-        "layout": "grid",
-        "slide_height": "medium",
-        "slider_visual": "dots",
-        "pagenation_foreground": "#000000",
-        "pagenation_background": "#ffffff",
-        "pagenet_corner_radius": 10,
-        "slider_alignment": "center",
-        "auto_rotate": false,
-        "change_slides_speed": 3,
-        "image_behavior": "none",
-        "accessibility_info": "",
+        "heading": "Neuigkeiten aus der Branche",
+        "heading_size": "h2",
+        "head_align": "left",
+        "heading_color_scheme": "",
+        "head_space": true,
+        "description": "",
+        "description_style": "body",
+        "view_all_label": "View all blog",
+        "show_view_all": true,
+        "view_button_pos": "bottom",
+        "view_all_style": "link",
+        "arrow_position": "inline",
+        "blog": "news",
+        "flex_direction": "column",
+        "image_height": "adapt",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "show_image": true,
+        "date_position": "below",
+        "show_date": true,
+        "show_author": true,
+        "show_comment": false,
+        "show_tag": true,
+        "tag_layout": "default",
+        "show_seprator": true,
+        "secerpt": "truncate",
+        "show_read_more_button": true,
+        "read_more_uppercase": true,
+        "read_more_style": "link",
+        "blog_card_style": "card",
         "color_scheme": "",
-        "show_srolling_bar": false,
-        "wb_marktext": "Add promotional text here",
-        "mark_space": 30,
-        "mark_speed": 2,
-        "marq_diection": "left_right",
-        "seprater": "dots",
-        "text_padding_top": 0,
-        "text_padding_bottom": 8,
-        "show_text_below": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "newsletter_6PAWGf": {
@@ -105,7 +84,7 @@
     }
   },
   "order": [
-    "slideshow_NwU3wK",
+    "featured_blog_kdchjK",
     "newsletter_6PAWGf"
   ]
 }
