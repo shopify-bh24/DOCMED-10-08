@@ -27,7 +27,7 @@
         "arrow_position": "inline",
         "blog": "news",
         "flex_direction": "column",
-        "image_height": "adapt",
+        "image_height": "medium",
         "post_limit": 3,
         "columns_desktop": 3,
         "enable_desktop_slider": false,
