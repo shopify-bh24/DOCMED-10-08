@@ -16,7 +16,7 @@
         "heading": "Neuigkeiten aus der Branche",
         "heading_size": "h2",
         "head_align": "left",
-        "heading_color_scheme": "",
+        "heading_color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
         "head_space": true,
         "description": "",
         "description_style": "body",
@@ -44,7 +44,7 @@
         "read_more_uppercase": true,
         "read_more_style": "link",
         "blog_card_style": "card",
-        "color_scheme": "",
+        "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
         "swipe_on_mobile": false,
         "padding_top": 60,
         "padding_bottom": 60

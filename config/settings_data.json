@@ -81,7 +81,7 @@
     "flex_direction": "column",
     "blog_card_image_padding": 10,
     "blog_card_text_alignment": "left",
-    "blog_card_color_scheme": "inverse",
+    "blog_card_color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
     "blog_card_border_thickness": 0,
     "blog_card_border_opacity": 0,
     "blog_card_corner_radius": 10,
