@@ -1344,8 +1344,10 @@ summary::-webkit-details-marker {
         max-width: calc(20% - var(--grid-desktop-horizontal-spacing) * 4 / 5);
       }
     .grid--2-col-tablet .grid__item {
-      width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
-      max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+      /* width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2); */
+      /* max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2); */
+      width: 100%;
+      max-width: 100%;
     }
 }
 @media screen and (min-width: 992px) {
@@ -5091,7 +5093,7 @@ html body .wbprofpay .wbprofpayinr .list-payment{
 
 @media screen and (min-width:769px){
 .cus-tabs-blc-wrp{
- max-width: 47%;
+ max-width: 100%;
 }
 .cus-product-title-wrp .cus-vendor{
   font-size:24px;
