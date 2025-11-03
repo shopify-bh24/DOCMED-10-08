@@ -69,18 +69,20 @@
 
   .product_main{
     display: grid;
+    /* flex-direction: row; */
     grid-template-columns: 1fr 1fr; 
   }
 
-  .product_main-left,.product_main-right{
-    display: contents;
-  }
-
-  .product_main-group1{ order: 1;}
-  .product_main-group2{ order: 2;}
-  .product_main-group3{ order: 3;}
-
+  
   @media screen and (max-width: 600px) {
+    .product_main-left,.product_main-right{
+      display: contents;
+    }
+  
+    .product_main-group1{ order: 1;}
+    .product_main-group2{ order: 2;}
+    .product_main-group3{ order: 3;}
+
     .product_main{
       display: flex;
       flex-direction: column;
