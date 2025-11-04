@@ -1435,7 +1435,7 @@ product-recommendations .wbvariantbadges{
 }
 
 .product__sku{
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 /* Product-thumbnail snippet */
 .product-media-container {
