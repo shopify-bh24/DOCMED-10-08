@@ -22,13 +22,9 @@
             "text_style": "body"
           }
         },
-        "text_VTxHxE": {
-          "type": "text",
-          "name": "PZN",
-          "settings": {
-            "text": "{{ product.metafields.custom.pzn.value }}",
-            "text_style": "body"
-          }
+        "pzn_xKqefU": {
+          "type": "pzn",
+          "settings": {}
         },
         "title_jnyBi3": {
           "type": "title",
@@ -96,7 +92,7 @@
       "block_order": [
         "judge_me_reviews_preview_badge_Eg7qAP",
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
-        "text_VTxHxE",
+        "pzn_xKqefU",
         "title_jnyBi3",
         "inventory_dEQL6L",
         "custom_liquid_CU3fQx",
