@@ -1433,6 +1433,10 @@ product-recommendations .wbvariantbadges{
 .product__sku.visibility-hidden::after {
   content: "#";
 }
+
+.product__sku{
+  font-size: 14px;
+}
 /* Product-thumbnail snippet */
 .product-media-container {
   --aspect-ratio: var(--preview-ratio);

@@ -327,7 +327,7 @@
                   {{ block.shopify_attributes }}
                 >
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
-                  {{- product.selected_or_first_available_variant.sku -}}
+                  <b>SKU</b>:&nbsp; {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'title' -%}
                 {%- assign downcase_vendor = product.vendor | downcase -%}
