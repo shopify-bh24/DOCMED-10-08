@@ -26,7 +26,7 @@
           "type": "text",
           "name": "PZN",
           "settings": {
-            "text": "{{ product.metafields.custom.pzn.value }}",
+            "text": "<strong>PZN: </strong>{{ product.metafields.custom.pzn.value }}",
             "text_style": "body"
           }
         },
