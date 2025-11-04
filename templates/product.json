@@ -34,12 +34,6 @@
             "text_style": "body"
           }
         },
-        "custom_liquid_RtUUYb": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"sh-fomo-wrapper\">\n    <div class=\"sh-fomo-container\">\n      <div class=\"sh-fomo-icon-wrapper\">\n        <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' class='sh-fomo-svg'><svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path d='M16 2v4 M4 6l3 3 M28 6l-3 3 M31 18c0 0-6-9-15-9S1 18 1 18s6 9 15 9 15-9 15-9z M16 15a3 3 0 1 0 0 6 3 3 0 1 0 0-6z' fill='none' stroke='#008000' stroke-width='2' stroke-linejoin='round' stroke-miterlimit='10'/></svg></svg>\n      </div>\n      <p class=\"sh-fomo\">Wird gerade von <span id=\"fomoCount\"></span> Usern beobachtet</p>\n    </div>\n</div>\n<style>\n.sh-fomo-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  width: 100%;\n}\n.sh-fomo-container {\n  display: flex;\n  align-items: center;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  background: #99999;\n  width: fit-content;\n  padding: 0px 0px;\n  border-radius: 10px;\n}\n.sh-fomo-icon-wrapper {\n    display: flex;\n    align-items: end;\n    justify-content: center;\n}\n.sh-fomo-svg { margin-right: 5px; width: 20px; }\np.sh-fomo {\n  color: #4A5A6A;\n  line-height: 0.8;\n  margin: 0;\n}\n</style>\n\n<script>\ndocument.addEventListener('DOMContentLoaded', function () {\n  var fomoCountElement = document.getElementById('fomoCount');\n  var currentUrl = window.location.pathname + window.location.search;\n  var storageKey = 'fomoRandomCount_' + currentUrl;\n  \n  var randomCount = sessionStorage.getItem(storageKey);\n  \n  if (!randomCount) {\n    randomCount = getRandomInt(1, 19);\n    sessionStorage.setItem(storageKey, randomCount);\n  }\n  \n  fomoCountElement.innerText = randomCount;\n  \n  function getRandomInt(min, max) {\n    min = Math.ceil(min);\n    max = Math.floor(max);\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n  }\n});\n</script>"
-          }
-        },
         "inventory_dEQL6L": {
           "type": "inventory",
           "disabled": true,
@@ -104,7 +98,6 @@
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
         "title_jnyBi3",
         "text_VTxHxE",
-        "custom_liquid_RtUUYb",
         "inventory_dEQL6L",
         "custom_liquid_CU3fQx",
         "price",
