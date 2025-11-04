@@ -317,7 +317,7 @@
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
-                <b>PZN</b>:&nbsp; {{- block.settings.text -}}
+                {{- block.settings.text -}}
                 </p>
               {%- when 'sku' -%}
                 <p
@@ -329,6 +329,21 @@
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   <b>SKU</b>:&nbsp; {{- product.selected_or_first_available_variant.sku -}}
                 </p>
+
+              {%- when 'pzn' -%}
+                {%- assign pzn = product.metafields.custom.pzn -%}
+                {%- if pzn and pzn != blank -%}
+                  <p
+                    class="product__pzn no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                    id="Pzn-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}
+                  >
+                    <span class="visually-hidden">PZN:</span>
+                    <b>PZN</b>:&nbsp;{{ pzn }}
+                  </p>
+                {%- endif -%}
+                
               {%- when 'title' -%}
                 {%- assign downcase_vendor = product.vendor | downcase -%}
                 {%- assign url = '#' -%}
@@ -1436,6 +1451,11 @@
           "label": "t:sections.main-product.blocks.sku.settings.text_style.label"
         }
       ]
+    },
+    {
+      "type": "pzn",
+      "name": "PZN",
+      "limit": 1
     },
     {
       "type": "inventory",
