@@ -404,7 +404,14 @@
                         </div>
                       </div>
                     {%- endif -%}
-                  {%- endif -%}
+                    {% else %}
+                      <div class="star-rating">
+                        <span class="stars">
+                          ★★★★★
+                        </span>
+                        <span class="review-count">0 Bewertungen</span>
+                      </div>
+                    {%- endif -%}
                   <div class="no-js-hidden wbhprice" id="price-{{ section.id }}-{{ card_product.id }}" role="status" {{ block.shopify_attributes }}>
                     <div class="card_product_Price">  
                         <span class="card_sale_price">

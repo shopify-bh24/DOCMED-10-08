@@ -5113,9 +5113,10 @@ html body .wbprofpay .wbprofpayinr .list-payment{
 }
 
 .star-rating{
-    font-size: 14px !important;
+    font-size: 12px !important;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2px !important;
 }
 
 /* ---------------------------search input ios ------------------- */
