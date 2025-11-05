@@ -1,3 +1,18 @@
+<style>
+  .card_product_dropdown_menu {
+    max-width: 100% !important;
+  }
+
+  .product_dropdown_menu_variant_picker{
+    max-width: 100% !important;
+  }
+  
+  .product_dropdown_menu_variant_picker .select__select:focus-visible{
+    border-radius: none !important;
+    box-shadow: none !important;
+  }
+</style>
+
 {% comment %}
   Renders product variant-picker
   Accepts:
@@ -77,13 +92,13 @@
               <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
                 {{ option.name }}
               </label>
-              <div class="select">
+              <div class="product_dropdown_menu_variant_picker select">
                 {%- if picker_type == 'swatch_dropdown' -%}
                   <span data-selected-dropdown-swatch="options[{{ option.name | escape }}]" class="dropdown-swatch">
                     {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
                   </span>
                 {%- endif -%}
-                <select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="select__select" name="options[{{ option.name | escape }}]" form="{{ product_form_id }}">
+                <select id="asdasdasdasdasdasdasd Option-{{ section.id }}-{{ forloop.index0 }}" class="card_product_dropdown_menu select__select" name="options[{{ option.name | escape }}]" form="{{ product_form_id }}">
                   {% render 'product-variant-options',
                     product: product,
                     option: option,
