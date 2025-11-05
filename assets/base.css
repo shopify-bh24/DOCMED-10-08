@@ -79,6 +79,7 @@ html.no-js .no-js-hidden {
 .product-form__input--dropdown.product-form__input select {
     background: rgb(var(--color-background));
     color: rgb(var(--color-foreground));
+    border: 1px solid rgb(var(--color-foreground), 0.7);
 } 
 
 .wb_home_sbtn.center {
@@ -2109,11 +2110,11 @@ details[open] > .share-button__fallback {
 /* Select */
 .select .icon-caret,
 .customer select + svg {
-    height: 0.6rem;
+    height: 0.7rem;
     pointer-events: none;
     position: absolute;
     top: calc(50% - 0.2rem);
-    right: calc(var(--inputs-border-width) + 2rem);
+    right: calc(var(--inputs-border-width) + 1rem);
 }
 .select__select,
 .customer select {
@@ -5117,6 +5118,12 @@ html body .wbprofpay .wbprofpayinr .list-payment{
     display: flex;
     flex-wrap: wrap;
     margin-top: 2px !important;
+    gap: 6px;
+    align-items: center;
+}
+
+.review-count{
+    margin-top: 1px;
 }
 
 /* ---------------------------search input ios ------------------- */

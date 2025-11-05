@@ -1,3 +1,20 @@
+<style>
+  .card_product_infomation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .stars{
+    font-size: 16px;
+    letter-spacing: 2px;
+    /* margin-right: 6px; */
+    color: transparent;             
+    -webkit-text-stroke: 1px #FFD700; 
+  }
+</style>
+
 {% comment %}
   Renders a product card
   Accepts:
@@ -237,7 +254,7 @@
           <div class="wbproductdes card__content">
             {% comment %}<input type="hidden" name="id" class="product-variant-id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>{% endcomment %}
             {%- assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: card_product.id -%}
-              <div class="card__information">
+              <div class="card__information card_product_infomation">
                 {% if color_swatchhover %}
                   {% unless show_variants or enable_addtocart %}
                       <variant-hover class="new-swatch variant-webi" data-section="{{ section.id }}" data-product="{{ card_product.id }}" data-url="{{ card_product.url }}" data-update-url="false" data-layout="card" {{ block.shopify_attributes }}>
