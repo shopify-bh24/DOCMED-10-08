@@ -18,66 +18,6 @@
         "paragraph_2": "<p>Unsere Teams zeichnen sich durch <strong>Offenheit</strong>, <strong>Motivation</strong> und den <strong>Willen</strong> aus, wirklich etwas zu bewegen. Ob im <strong>Marketing</strong>, in der <strong>Logistik</strong>, im <strong>Kundenservice</strong> oder im <strong>Finanzwesen</strong> – wir schätzen <strong>Eigeninitiative</strong>, <strong>Zusammenarbeit</strong> und gemeinsame <strong>Erfolge</strong>.</p><p>Wenn Sie auf der Suche nach einer sinnvollen <strong>Aufgabe</strong>, <strong>Verantwortung</strong> und <strong>Entwicklungsmöglichkeiten</strong> sind, sind Sie bei uns genau richtig.<br/><br/>Sie finden aktuell keine passende Position? Kein Problem – senden Sie uns einfach eine <strong>Initiativbewerbung mit Ihrem Lebenslauf</strong> an <strong>bewerbung@docmed.de</strong>.</p><p> </p>"
       }
     },
-    "benefits_cqda3C": {
-      "type": "benefits",
-      "blocks": {
-        "benefit_bF9kic": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
-            "label": "Flexible Arbeitszeiten"
-          }
-        },
-        "benefit_pCggn8": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-champagne-glasses\"></i>",
-            "label": "Firmenevents"
-          }
-        },
-        "benefit_6XFYHM": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-heart-pulse\"></i>",
-            "label": "Sport- und Gesundheitsangebote"
-          }
-        },
-        "benefit_MMawqn": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-coins\"></i>",
-            "label": "Sonderzahlungen"
-          }
-        },
-        "benefit_66aaPw": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-person\"></i>",
-            "label": "Mitgestaltungsmöglichkeiten"
-          }
-        },
-        "benefit_k8Pccj": {
-          "type": "benefit",
-          "settings": {
-            "icon_html": "<i class=\"fa-solid fa-laptop\"></i>",
-            "label": "Moderne technische Ausstattung"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_bF9kic",
-        "benefit_pCggn8",
-        "benefit_6XFYHM",
-        "benefit_MMawqn",
-        "benefit_66aaPw",
-        "benefit_k8Pccj"
-      ],
-      "name": "Benefits list",
-      "settings": {
-        "section_title": "Vorteile für Mitarbeitende",
-        "note_text": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
-      }
-    },
     "main": {
       "type": "page-carrer",
       "blocks": {
@@ -145,6 +85,66 @@
         "eb_loadmore": false,
         "padding_top": 48,
         "padding_bottom": 24
+      }
+    },
+    "benefits_cqda3C": {
+      "type": "benefits",
+      "blocks": {
+        "benefit_bF9kic": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-clock\"></i>",
+            "label": "Flexible Arbeitszeiten"
+          }
+        },
+        "benefit_pCggn8": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-champagne-glasses\"></i>",
+            "label": "Firmenevents"
+          }
+        },
+        "benefit_6XFYHM": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-heart-pulse\"></i>",
+            "label": "Sport- und Gesundheitsangebote"
+          }
+        },
+        "benefit_MMawqn": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-coins\"></i>",
+            "label": "Sonderzahlungen"
+          }
+        },
+        "benefit_66aaPw": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-person\"></i>",
+            "label": "Mitgestaltungsmöglichkeiten"
+          }
+        },
+        "benefit_k8Pccj": {
+          "type": "benefit",
+          "settings": {
+            "icon_html": "<i class=\"fa-solid fa-laptop\"></i>",
+            "label": "Moderne technische Ausstattung"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_bF9kic",
+        "benefit_pCggn8",
+        "benefit_6XFYHM",
+        "benefit_MMawqn",
+        "benefit_66aaPw",
+        "benefit_k8Pccj"
+      ],
+      "name": "Benefits list",
+      "settings": {
+        "section_title": "Vorteile für Mitarbeitende",
+        "note_text": "Die abgebildeten Vorteile für Mitarbeitende können je nach Abteilung und Position variieren."
       }
     },
     "image_banner_bGdbLe": {
@@ -307,8 +307,8 @@
   },
   "order": [
     "about_comapny_pWGYPA",
-    "benefits_cqda3C",
     "main",
+    "benefits_cqda3C",
     "image_banner_bGdbLe",
     "contact_form_jLG7qh"
   ]
