@@ -28,7 +28,7 @@
       "type": "cus-bread-crumb-sec",
       "name": "Cus Breadcrumb",
       "settings": {
-        "show_breadcrumb": false
+        "show_breadcrumb": true
       }
     },
     "product-grid": {
