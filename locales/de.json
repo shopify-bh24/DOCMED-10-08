@@ -43,8 +43,8 @@
       "page": "Seite {{ number }}",
       "next": "Nächste Seite",
       "previous": "Vorherige Seite",
-      "next_article": "Nächster",
-      "prev_article": "Vorheriger",
+      "next_article": ">",
+      "prev_article": "<",
       "paginationShowing": "Anzeigen",
       "paginationof": "von"
     },
