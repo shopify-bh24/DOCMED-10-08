@@ -23,6 +23,10 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
+        "title_jnyBi3": {
+          "type": "title",
+          "settings": {}
+        },
         "65491c3f-abb9-4bd5-9728-1b439626a36f": {
           "type": "sku",
           "settings": {
@@ -31,10 +35,6 @@
         },
         "pzn_xKqefU": {
           "type": "pzn",
-          "settings": {}
-        },
-        "title_jnyBi3": {
-          "type": "title",
           "settings": {}
         },
         "inventory_dEQL6L": {
@@ -98,9 +98,9 @@
       },
       "block_order": [
         "judge_me_reviews_preview_badge_Eg7qAP",
+        "title_jnyBi3",
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
         "pzn_xKqefU",
-        "title_jnyBi3",
         "inventory_dEQL6L",
         "custom_liquid_CU3fQx",
         "price",
