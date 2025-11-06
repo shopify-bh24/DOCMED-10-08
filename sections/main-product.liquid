@@ -1275,7 +1275,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (idInput && idInput.value) setPZN(idInput.value);
 
   // Listen for common custom events used by modern Shopify themes
-  document.addEventListener('variant:change', function (e) {
+  document.addEventListener('variant:change', function (e) { 
     var v = e.detail && (e.detail.variant || e.detail);
     if (v && v.id) setPZN(v.id);
   });
