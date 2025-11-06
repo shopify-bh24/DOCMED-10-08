@@ -158,7 +158,7 @@
             "default_open": true,
             "heading": "8. Geplante Updates zur Barrierefreiheit",
             "icon": "none",
-            "row_content": "<p><strong>- Neue Bilder, Icons & Medien</strong>: Alle visuellen Inhalte werden mit aussagekräftigen <strong>Alt-Texten</strong> versehen.</p><p><strong>- Tastaturbedienbarkeit</strong>: Navigation und Interaktion der Website werden vollständig per Tastatur möglich gemacht.</p><p><strong>- Verbesserung des responsiven Designs</strong>: Optimierung der Darstellung und Bedienbarkeit auf allen Endgeräten (Desktop, Tablet, Mobile).</p><p><strong>- Neue Buttons</strong>: Alle neu eingeführten Buttons erhalten eindeutige <strong>ARIA-Labels</strong>, damit Screenreader die Funktion klar wiedergeben können.</p>",
+            "row_content": "<p><strong>- Neue Bilder, Icons & Medien</strong>: Alle visuellen Inhalte werden mit aussagekräftigen <strong>Alt-Texten</strong> versehen.</p><p><strong>- Verbesserung des responsiven Designs</strong>: Optimierung der Darstellung und Bedienbarkeit auf allen Endgeräten (Desktop, Tablet, Mobile).</p><p><strong>- Neue Buttons</strong>: Alle neu eingeführten Buttons erhalten eindeutige <strong>ARIA-Labels</strong>, damit Screenreader die Funktion klar wiedergeben können.</p>",
             "page": ""
           }
         },
@@ -169,7 +169,7 @@
             "default_open": true,
             "heading": "9. Neuste Verbesserungen zur Barrierefreiheit",
             "icon": "none",
-            "row_content": "<p><strong>- Tastaturbedienbarkeit</strong>: Navigation und Interaktion der Website wurden per Tastatur möglich gemacht.</p><p><strong>-Breadcrumbs integriert</strong>, um die Navigation für Nutzerinnen und Nutzer klarer, zugänglicher und intuitiver zu gestalten.</p>",
+            "row_content": "<p><strong>- Tastaturbedienbarkeit</strong>: Navigation und Interaktion der Website wurden per Tastatur möglich gemacht.</p><p><strong>- Breadcrumbs integriert</strong>, um die Navigation für Nutzerinnen und Nutzer klarer, zugänglicher und intuitiver zu gestalten.</p>",
             "page": ""
           }
         }
