@@ -21,6 +21,13 @@
         "padding_bottom": 60
       }
     },
+    "breadcrumb_f3zACX": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "show_breadcrumb": true
+      }
+    },
     "image_with_text_DtrhVC": {
       "type": "image-with-text",
       "blocks": {
@@ -270,6 +277,7 @@
   },
   "order": [
     "main",
+    "breadcrumb_f3zACX",
     "image_with_text_DtrhVC",
     "collapsible_content_8DyTwY",
     "contact_form_jqGVW4"
