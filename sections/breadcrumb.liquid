@@ -1,12 +1,12 @@
 <style>
-  .breadcrumb_main { margin: 16px 0; }
+  .breadcrumb_main { margin: 16px auto; }
   .breadcrumb a { text-decoration: none; }
   .breadcrumb__sep { display:inline-flex; margin: 0 6px; vertical-align: middle; }
   .breadcrumb__current { opacity: .85; }
   .breadcrumb-collection-title { margin: 10px 0 0; font-size: 24px; font-weight: 700; }
 </style>
 
-{% if section.settings.show_breadcrumb %}
+{% if section.settings.show_breadcrumb %} 
   {%- unless template == 'index' -%}
   <div class="page-width breadcrumb_main">
 
@@ -99,9 +99,9 @@
       </div>
     </nav>
 
-    {% if template contains 'collection' and collection.handle %}
+    {% comment %} {% if template contains 'collection' and collection.handle %}
       <h2 class="breadcrumb-collection-title"><strong>{{ collection.title }}</strong></h2>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
   </div>
   {%- endunless -%}
