@@ -21,6 +21,13 @@
         "padding_bottom": 60
       }
     },
+    "breadcrumb_A6KQ7V": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "show_breadcrumb": true
+      }
+    },
     "contact_form_jqGVW4": {
       "type": "contact-form",
       "blocks": {
@@ -89,6 +96,7 @@
   },
   "order": [
     "main",
+    "breadcrumb_A6KQ7V",
     "contact_form_jqGVW4"
   ]
 }
