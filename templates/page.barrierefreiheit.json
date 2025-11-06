@@ -169,7 +169,7 @@
             "default_open": true,
             "heading": "9. Neuste Verbesserungen zur Barrierefreiheit",
             "icon": "none",
-            "row_content": "<p><strong>- Tastaturbedienbarkeit</strong>: Navigation und Interaktion der Website wurden per Tastatur möglich gemacht.</p>",
+            "row_content": "<p><strong>- Tastaturbedienbarkeit</strong>: Navigation und Interaktion der Website wurden per Tastatur möglich gemacht.</p><p><strong>-Breadcrumbs integriert</strong>, um die Navigation für Nutzerinnen und Nutzer klarer, zugänglicher und intuitiver zu gestalten.</p>",
             "page": ""
           }
         }
