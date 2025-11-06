@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "breadcrumb_rkT8dJ": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "show_breadcrumb": true
+      }
+    },
     "featured_blog_kdchjK": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
@@ -84,6 +91,7 @@
     }
   },
   "order": [
+    "breadcrumb_rkT8dJ",
     "featured_blog_kdchjK",
     "newsletter_6PAWGf"
   ]
