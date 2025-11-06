@@ -1277,7 +1277,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Listen for common custom events used by modern Shopify themes
   document.addEventListener('variant:change', function (e) { 
     var v = e.detail && (e.detail.variant || e.detail);
-    if (v && v.id) setPZN(v.id);
+    if (v && v.id) setPZN(v.id); 
   });
   document.addEventListener('variantChange', function (e) {
     var v = e.detail && (e.detail.variant || e.detail);
