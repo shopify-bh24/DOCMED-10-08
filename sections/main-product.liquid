@@ -365,20 +365,19 @@
                     </p>
                   {%- endif -%}
                   
-                {% assign current_variant = product.selected_or_first_available_variant  %}
-                {% assign variant_pzn = current_variant.metafields.custom.variant_pzn %}
+                  {%- assign current_variant = product.selected_or_first_available_variant -%}
+                  {%- assign initial_pzn = current_variant.metafields.custom.variant_pzn -%}
                   
-                  {%- if variant_pzn != blank -%}
-                    <p
-                      class="product__pzn no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-                      id="VariantPzn-{{ section.id }}"
-                      role="status"
-                      {{ block.shopify_attributes }}
-                    >
-                      <span class="visually-hidden">PZN:</span>
-                      <b>PZN</b>: {{ variant_pzn }}
-                    </p>
-                  {%- endif -%}
+                  <p
+                    class="product__pzn no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                    id="VariantPzn-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}
+                    {% if initial_pzn == blank %}hidden{% endif %}
+                  >
+                    <span class="visually-hidden">PZN:</span>
+                    <b>PZN</b>: <span data-pzn-text>{{ initial_pzn }}</span>
+                  </p>
                 
               {%- when 'title' -%}
                 {%- assign downcase_vendor = product.vendor | downcase -%}
@@ -1233,7 +1232,70 @@
   </script>
 
 
-    
+    <!-- Build a map of variant ID -> PZN once with Liquid -->
+<script type="application/json" id="VariantPznData-{{ section.id }}">
+{
+{% for v in product.variants %}
+  "{{ v.id }}": {{ v.metafields.custom.variant_pzn | json }}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var container = document.getElementById('VariantPzn-{{ section.id }}');
+  if (!container) return;
+
+  var textEl = container.querySelector('[data-pzn-text]');
+  var mapEl  = document.getElementById('VariantPznData-{{ section.id }}');
+
+  var pznMap = {};
+  try { pznMap = JSON.parse(mapEl && mapEl.textContent || '{}'); } catch (e) {}
+
+  function setPZN(variantId) {
+    var key = String(variantId || '');
+    var pzn = pznMap[key] || '';
+    if (pzn && String(pzn).trim() !== '') {
+      textEl.textContent = pzn;
+      container.removeAttribute('hidden');
+    } else {
+      textEl.textContent = '';
+      container.setAttribute('hidden', '');
+    }
+  }
+
+  // Try to locate the product form + hidden variant input
+  var form = document.getElementById('product-form-{{ section.id }}')
+         || document.querySelector('#product-form-{{ section.id }}, form[action*="/cart/add"][data-section="{{ section.id }}"]')
+         || document.querySelector('form[action*="/cart/add"]');
+
+  var idInput = form && form.querySelector('input[name="id"]');
+
+  // Initial render (covers page load + deep links)
+  if (idInput && idInput.value) setPZN(idInput.value);
+
+  // Listen for common custom events used by modern Shopify themes
+  document.addEventListener('variant:change', function (e) {
+    var v = e.detail && (e.detail.variant || e.detail);
+    if (v && v.id) setPZN(v.id);
+  });
+  document.addEventListener('variantChange', function (e) {
+    var v = e.detail && (e.detail.variant || e.detail);
+    if (v && v.id) setPZN(v.id);
+  });
+  document.addEventListener('product:variant-change', function (e) {
+    var v = e.detail && (e.detail.variant || e.detail);
+    if (v && v.id) setPZN(v.id);
+  });
+
+  // Fallback: when any option changes, update from the hidden input's value
+  if (form) {
+    form.addEventListener('change', function () {
+      if (idInput && idInput.value) setPZN(idInput.value);
+    });
+  }
+});
+</script>
 
 
 </section>
