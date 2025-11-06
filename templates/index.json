@@ -30,7 +30,7 @@
             "description": "eine zuverlässige Ausstattung ist essenziell für eine optimale Versorgung & Behandlung",
             "text_style": "body",
             "button_label": "Entdecken",
-            "link": "shopify://collections/zubehor-praxisbedarf",
+            "link": "shopify://collections",
             "link_window": false,
             "view_all_style": "solid",
             "box_align": "middle-left",
