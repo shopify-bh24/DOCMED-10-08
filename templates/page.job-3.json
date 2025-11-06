@@ -22,37 +22,44 @@
         "padding_bottom": 60
       }
     },
+    "breadcrumb_tirEUj": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "show_breadcrumb": true
+      }
+    },
     "jobs_section_p77A4z": {
       "type": "jobs_section",
       "blocks": {
         "task_NpK3yh": {
           "type": "task",
           "settings": {
-            "task_item": "Fensterreinigung"
+            "task_item": "<p>Fensterreinigung</p>"
           }
         },
         "task_4RitXC": {
           "type": "task",
           "settings": {
-            "task_item": "Ordnung und Sauberkeit im Lagerbereich"
+            "task_item": "<p>Ordnung und Sauberkeit im Lagerbereich</p>"
           }
         },
         "task_hVHGtW": {
           "type": "task",
           "settings": {
-            "task_item": "Reinigung der Büroräume, Küche und Sanitäranlagen"
+            "task_item": "<p>Reinigung der Büroräume, Küche und Sanitäranlagen</p>"
           }
         },
         "qual_ahFKcR": {
           "type": "qual",
           "settings": {
-            "qual_item": "Zuverlässigkeit und Teamfähigkeit"
+            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
           }
         },
         "qual_7biqFx": {
           "type": "qual",
           "settings": {
-            "qual_item": "Keine besonderen Vorkenntnisse erforderlich"
+            "qual_item": "<p>Keine besonderen Vorkenntnisse erforderlich</p>"
           }
         },
         "benefit_4wekqA": {
@@ -99,6 +106,8 @@
         "job_location": "Bochum, Deutschland (hybrid)",
         "job_type": "Angestellte/r",
         "job_category": "Reinigung",
+        "variant1": "",
+        "variant2": "",
         "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
         "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte.\nUnsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen.",
         "intro_paragraph_2": "Mit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
@@ -176,6 +185,7 @@
   },
   "order": [
     "main",
+    "breadcrumb_tirEUj",
     "jobs_section_p77A4z",
     "contact_form_hQxpjd"
   ]
