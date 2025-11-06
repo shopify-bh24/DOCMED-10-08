@@ -352,17 +352,33 @@
 
               {%- when 'pzn' -%}
                 {%- assign pzn = product.metafields.custom.pzn -%}
+                
                 {%- if pzn and pzn != blank -%}
                   <p
                     class="product__pzn no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                     id="Pzn-{{ section.id }}"
                     role="status"
                     {{ block.shopify_attributes }}
-                  >
+                    >
                     <span class="visually-hidden">PZN:</span>
                     <b>PZN</b>:&nbsp;{{ pzn }}
-                  </p>
-                {%- endif -%}
+                    </p>
+                  {%- endif -%}
+                  
+                {% assign current_variant = product.selected_or_first_available_variant  %}
+                {% assign variant_pzn = current_variant.metafields.custom.variant_pzn %}
+                  
+                  {%- if variant_pzn != blank -%}
+                    <p
+                      class="product__pzn no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                      id="VariantPzn-{{ section.id }}"
+                      role="status"
+                      {{ block.shopify_attributes }}
+                    >
+                      <span class="visually-hidden">PZN:</span>
+                      <b>PZN</b>: {{ variant_pzn }}
+                    </p>
+                  {%- endif -%}
                 
               {%- when 'title' -%}
                 {%- assign downcase_vendor = product.vendor | downcase -%}
@@ -1215,6 +1231,11 @@
       ]
     }
   </script>
+
+
+    
+
+
 </section>
 {% schema %}
 {

@@ -381,6 +381,27 @@
       
       {% comment %} ---------------------flickity js------------------------------------- {% endcomment %}
 
+      <script>
+        document.addEventListener("product:variant:change", function(event) {
+            const variant = event.detail.variant;
+            if (!variant) return;
+        
+            const pznEl = document.querySelector('[id^="VariantPzn"]');
+            if (!pznEl) return;
+        
+            const variantPzn = variant.metafields?.custom?.variant_pzn;
+        
+            if (variantPzn) {
+                pznEl.style.display = "block";
+                pznEl.innerHTML = "<b>PZN</b>: " + variantPzn;
+            } else {
+                pznEl.style.display = "none";
+            }
+        });
+        </script>
+        
+
+
 </body>
 </html>
 
