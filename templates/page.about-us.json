@@ -21,6 +21,13 @@
         "padding_bottom": 4
       }
     },
+    "breadcrumb_nd6ynA": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "show_breadcrumb": true
+      }
+    },
     "image_with_text_b79KA3": {
       "type": "image-with-text",
       "blocks": {
@@ -135,6 +142,7 @@
   },
   "order": [
     "main",
+    "breadcrumb_nd6ynA",
     "image_with_text_b79KA3",
     "image_banner_m6XTMX"
   ]

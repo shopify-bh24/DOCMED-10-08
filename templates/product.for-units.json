@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "breadcrumb_Aic9Np": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "show_breadcrumb": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -376,6 +383,7 @@
     }
   },
   "order": [
+    "breadcrumb_Aic9Np",
     "main",
     "ss_product_tabs_2_bzCJFz",
     "related-products",

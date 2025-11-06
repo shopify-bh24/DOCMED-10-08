@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "breadcrumb_KhexJX": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "show_breadcrumb": true
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -22,13 +29,6 @@
         "coll_overlay": 54,
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "cus_bread_crumb_sec_D4FWfF": {
-      "type": "cus-bread-crumb-sec",
-      "name": "Cus Breadcrumb",
-      "settings": {
-        "show_breadcrumb": true
       }
     },
     "product-grid": {
@@ -76,8 +76,8 @@
     }
   },
   "order": [
+    "breadcrumb_KhexJX",
     "banner",
-    "cus_bread_crumb_sec_D4FWfF",
     "product-grid"
   ]
 }
