@@ -74,7 +74,7 @@
         {%- comment -%} CART {%- endcomment -%}
         {%- elsif template contains 'cart' -%}
           <span class="breadcrumb__sep" aria-hidden="true">{% render 'icon-arrow-right' %}</span>
-          <span class="breadcrumb__current">{{ 'cart.general.title' | t | default: 'Cart' }}</span>
+          <span class="breadcrumb__current">{{ 'templates.cart.cart' | t }}</span>
 
         {%- comment -%} ACCOUNT / CUSTOMERS {%- endcomment -%}
         {%- elsif template contains 'customers' -%}
