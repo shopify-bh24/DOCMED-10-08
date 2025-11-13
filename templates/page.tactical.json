@@ -28,69 +28,6 @@
         "show_breadcrumb": true
       }
     },
-    "slideshow_rKxgaV": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_gacD6D": {
-          "type": "slide",
-          "settings": {
-            "enable_video_looping": false,
-            "auto_play_video": false,
-            "video_url": "",
-            "image": "shopify://shop_images/jakob-owens-Kr5KWxLo9QI-unsplash_copy.jpg",
-            "image_overlay_opacity": 0,
-            "text_caption": "Image text",
-            "outline_text": false,
-            "heading": "",
-            "heading_size": "h1",
-            "font_color": "",
-            "subheading": "",
-            "description": "",
-            "text_style": "body",
-            "button_label": "",
-            "link": "",
-            "link_window": false,
-            "view_all_style": "solid",
-            "box_align": "middle-left",
-            "show_text_box": true,
-            "text_alignment": "left",
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_gacD6D"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "slide_heading_font": "assistant_n4",
-        "default_font": false,
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "pagenation_foreground": "#1d2e40",
-        "pagenation_background": "#ffffff",
-        "pagenet_corner_radius": 10,
-        "slider_alignment": "center",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "accessibility_info": "",
-        "color_scheme": "",
-        "show_srolling_bar": false,
-        "wb_marktext": "Add promotional text here",
-        "mark_space": 30,
-        "mark_speed": 2,
-        "marq_diection": "right_left",
-        "seprater": "dots",
-        "text_padding_top": 8,
-        "text_padding_bottom": 8,
-        "show_text_below": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "contact_form_jqGVW4": {
       "type": "contact-form",
       "blocks": {
@@ -160,7 +97,6 @@
   "order": [
     "main",
     "breadcrumb_A6KQ7V",
-    "slideshow_rKxgaV",
     "contact_form_jqGVW4"
   ]
 }
