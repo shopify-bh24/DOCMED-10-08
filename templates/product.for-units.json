@@ -37,6 +37,10 @@
           "type": "pzn",
           "settings": {}
         },
+        "ve_dFDreb": {
+          "type": "ve",
+          "settings": {}
+        },
         "inventory_dEQL6L": {
           "type": "inventory",
           "disabled": true,
@@ -94,6 +98,7 @@
         "title_jnyBi3",
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
         "pzn_DhdrAa",
+        "ve_dFDreb",
         "inventory_dEQL6L",
         "price",
         "products_variants_7NcCUy",
