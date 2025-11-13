@@ -1327,6 +1327,70 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<!-- Build a map of variant ID -> VE once with Liquid -->
+<script type="application/json" id="VariantVeData-{{ section.id }}">
+{ {% for v in product.variants %}
+"{{ v.id }}": {{ v.metafields.custom.unit | json }}{% unless forloop.last %},{% endunless %}
+{% endfor %} }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var container = document.getElementById('VariantVe-{{ section.id }}');
+  if (!container) return;
+
+  var textEl = container.querySelector('[data-ve-text]');
+  var mapEl  = document.getElementById('VariantVeData-{{ section.id }}');
+
+  var veMap = {};
+  try { veMap = JSON.parse(mapEl && mapEl.textContent || '{}'); } catch (e) {}
+
+  function setVE(variantId) {
+    var key = String(variantId || '');
+    var ve = veMap[key] || '';
+    if (ve && String(ve).trim() !== '') {
+      textEl.textContent = ve;
+      container.removeAttribute('hidden');
+    } else {
+      textEl.textContent = '';
+      container.setAttribute('hidden', '');
+    }
+  }
+
+  // Try to locate the product form + hidden variant input
+  var form = document.getElementById('product-form-{{ section.id }}')
+         || document.querySelector('#product-form-{{ section.id }}, form[action*="/cart/add"][data-section="{{ section.id }}"]')
+         || document.querySelector('form[action*="/cart/add"]');
+
+  var idInput = form && form.querySelector('input[name="id"]');
+
+  // Initial render (page load)
+  if (idInput && idInput.value) setVE(idInput.value);
+
+  // Listen for variant change events (all major types)
+  document.addEventListener('variant:change', function (e) { 
+    var v = e.detail && (e.detail.variant || e.detail);
+    if (v && v.id) setVE(v.id); 
+  });
+  document.addEventListener('variantChange', function (e) {
+    var v = e.detail && (e.detail.variant || e.detail);
+    if (v && v.id) setVE(v.id);
+  });
+  document.addEventListener('product:variant-change', function (e) {
+    var v = e.detail && (e.detail.variant || e.detail);
+    if (v && v.id) setVE(v.id);
+  });
+
+  // Fallback: handle direct form input changes
+  if (form) {
+    form.addEventListener('change', function () {
+      if (idInput && idInput.value) setVE(idInput.value);
+    });
+  }
+});
+</script>
+
+
 
 </section>
 {% schema %}
