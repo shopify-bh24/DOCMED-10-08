@@ -21,6 +21,7 @@
       "blocks": {
         "judge_me_reviews_preview_badge_Eg7qAP": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {}
         },
         "title_jnyBi3": {
@@ -59,6 +60,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "products_variants_7NcCUy": {
@@ -79,6 +81,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
