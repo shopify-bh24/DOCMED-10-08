@@ -709,68 +709,6 @@
         "padding_bottom": 0
       }
     },
-    "snocks_text_columns_dR44aD": {
-      "type": "snocks-text-columns",
-      "blocks": {
-        "column_ATNFNb": {
-          "type": "column",
-          "settings": {
-            "heading": "DocMed GmbH – Für Ihre Pflege. Für Ihr Leben.",
-            "text": "<p>Schon unsere Großeltern wussten: Gesundheit ist das höchste Gut. Was früher ein Apothekenbesuch erforderte, ist heute ein smarter Klick im digitalen Warenkorb. Willkommen bei DocMed – Ihrem starken Partner für medizinische Produkte, Pflegehilfsmittel und Gesundheitsbedarf.</p>"
-          }
-        },
-        "column_gqzbqE": {
-          "type": "column",
-          "settings": {
-            "heading": "Digital, aber menschlich.",
-            "text": "<p>DocMed ist nicht nur ein Shop – wir sind ein Team. Aus Medizinexpert:innen, E-Commerce-Spezialist:innen und echten Problemlöser:innen. Wir verbinden Technik mit Menschlichkeit. So wird aus einem digitalen Klick echte Versorgung – egal, ob für Pflegebedürftige, Einrichtungen oder Angehörige</p>"
-          }
-        },
-        "column_eMhMmT": {
-          "type": "column",
-          "settings": {
-            "heading": "Von Alltag bis Akutfall: Unsere Produkte machen den Unterschied.",
-            "text": "<p>Unsere Vision? Wir möchten nicht einfach nur verkaufen – wir möchten Sie begleiten. Deshalb finden Sie bei DocMed ein kuratiertes Sortiment, das hält, was es verspricht. Von hochwertigen Pflegehilfsmitteln über moderne Medizintechnik bis hin zu cleveren Alltagshelfern. Schnell verfügbar, fair kalkuliert und auf Ihre Bedürfnisse zugeschnitten.</p>"
-          }
-        },
-        "column_ijGHGz": {
-          "type": "column",
-          "settings": {
-            "heading": "Ihre Versorgung. Unser Anspruch.",
-            "text": "<p>Warum wir das tun? Weil wir glauben, dass Gesundheit kein Luxus sein darf, sondern ein Grundrecht. Und weil wir jeden Tag aufs Neue erleben, wie viel einfacher Pflege sein kann – wenn die richtigen Produkte zur richtigen Zeit am richtigen Ort sind. Deshalb arbeiten wir mit renommierten Marken, entwickeln unsere Services kontinuierlich weiter und liefern nicht nur Pakete, sondern echte Unterstützung. Schnell, zuverlässig und mit einem hohen Anspruch an Qualität und Kundenservice.</p>"
-          }
-        },
-        "column_Gq9qCW": {
-          "type": "column",
-          "settings": {
-            "heading": "Mehr als nur ein Online-Shop: Wir verstehen, was wirklich zählt.",
-            "text": "<p>Pflege ist persönlich. Deshalb denken wir bei DocMed nicht in Paletten und Paketnummern, sondern in Menschen. In Pflegedienste, die täglich alles geben. In Angehörige, die Verantwortung übernehmen. In Menschen wie Sie, die Unterstützung suchen – ohne Umwege, ohne Kompromisse.</p><p>Ob Sie Ihre Eltern zu Hause pflegen, in einer Klinik arbeiten oder einfach verlässlichen Gesundheitsbedarf suchen – bei uns erhalten Sie nicht nur Produkte, sondern Lösungen. Mit Herz, mit Know-how und mit einem Lächeln auf der Rechnung.</p>"
-          }
-        },
-        "column_tPU3pc": {
-          "type": "column",
-          "settings": {
-            "heading": "Im Dienste Ihrer Gesundheit – mehr als nur ein Leitsatz.",
-            "text": "<p>Für uns bei DocMed ist „Im Dienste Ihrer Gesundheit“ kein Werbespruch. Es ist unsere Haltung. Unser täglicher Antrieb. Unsere Verantwortung. Ob Pflegehilfsmittel für Zuhause, medizinischer Bedarf für Praxen oder verlässliche Lösungen für Pflegedienste – wir stehen an Ihrer Seite.</p><p>Jeden Tag. Mit Fachwissen, mit Engagement und mit dem echten Wunsch, Ihre Versorgung einfacher, sicherer und menschlicher zu machen. Denn Gesundheit ist nicht nur unser Geschäft – sie ist unsere Mission.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "column_ATNFNb",
-        "column_gqzbqE",
-        "column_eMhMmT",
-        "column_ijGHGz",
-        "column_Gq9qCW",
-        "column_tPU3pc"
-      ],
-      "name": "About Us & Vision Text",
-      "settings": {
-        "columns": "3",
-        "text_align": "justify",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "contact_form_MtCmVQ": {
       "type": "contact-form",
       "blocks": {
@@ -845,7 +783,6 @@
     "custom_featured_coll_sec_hqKMU6",
     "multirow_Thm3Vt",
     "collapsible_content_7yExeM",
-    "snocks_text_columns_dR44aD",
     "contact_form_MtCmVQ"
   ]
 }
