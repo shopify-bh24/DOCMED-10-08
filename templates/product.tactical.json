@@ -265,6 +265,7 @@
     },
     "related_products_new_JwmmVT": {
       "type": "related-products-new",
+      "disabled": true,
       "name": "Related Products new",
       "settings": {
         "color_scheme": "",
@@ -337,6 +338,7 @@
     },
     "custom_featured_coll_sec_EgVBEz": {
       "type": "custom-featured-coll-sec",
+      "disabled": true,
       "name": "Push Produkte ",
       "settings": {
         "cus-bg-color": "#ffffff",
