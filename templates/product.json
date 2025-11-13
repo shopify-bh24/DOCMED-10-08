@@ -155,6 +155,7 @@
         },
         "tab_wTDP9Q": {
           "type": "tab",
+          "name": "Technische Daten",
           "settings": {
             "icon": "none",
             "header": "Technische Daten",
