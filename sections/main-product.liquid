@@ -378,6 +378,36 @@
                     <span class="visually-hidden">PZN:</span>
                     <b>PZN</b>: <span data-pzn-text>{{ initial_pzn }}</span>
                   </p>
+
+              {%- when 've' -%}
+                {%- assign ve = product.metafields.custom.ve -%}
+              
+                {%- if ve and ve != blank -%}
+                  <p
+                    class="product__ve no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                    id="Ve-{{ section.id }}"
+                    role="status"
+                    {{ block.shopify_attributes }}
+                  >
+                    <span class="visually-hidden">Packaging unit:</span>
+                    <b>VE</b>:&nbsp;{{ ve }}
+                  </p>
+                {%- endif -%}
+              
+                {%- assign current_variant = product.selected_or_first_available_variant -%}
+                {%- assign initial_ve = current_variant.metafields.custom.unit -%}
+              
+                <p
+                  class="product__ve no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                  id="VariantVe-{{ section.id }}"
+                  role="status"
+                  {{ block.shopify_attributes }}
+                  {% if initial_ve == blank %}hidden{% endif %}
+                >
+                  <span class="visually-hidden">Packaging unit:</span>
+                  <b>VE</b>: <span data-ve-text>{{ initial_ve }}</span>
+                </p>
+                  
                 
               {%- when 'title' -%}
                 {%- assign downcase_vendor = product.vendor | downcase -%}
@@ -1581,6 +1611,11 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "type": "pzn",
       "name": "PZN",
+      "limit": 1
+    },
+    {
+      "type": "ve",
+      "name": "VE",
       "limit": 1
     },
     {
