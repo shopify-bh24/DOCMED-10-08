@@ -49,7 +49,7 @@
             "text_style": "body",
             "button_label": "",
             "link": "",
-            "link_window": true,
+            "link_window": false,
             "view_all_style": "solid",
             "box_align": "middle-left",
             "show_text_box": true,
