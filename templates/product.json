@@ -135,6 +135,7 @@
       "blocks": {
         "tab_JYX6D7": {
           "type": "tab",
+          "name": "Beschreibung",
           "settings": {
             "icon": "none",
             "header": "Beschreibung",
@@ -144,6 +145,7 @@
         },
         "tab_7eBM6P": {
           "type": "tab",
+          "name": "Informationen",
           "settings": {
             "icon": "none",
             "header": "Informationen",
