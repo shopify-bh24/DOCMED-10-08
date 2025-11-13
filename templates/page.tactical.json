@@ -37,6 +37,7 @@
             "enable_video_looping": false,
             "auto_play_video": false,
             "video_url": "",
+            "image": "shopify://shop_images/jakob-owens-Kr5KWxLo9QI-unsplash_copy.jpg",
             "image_overlay_opacity": 0,
             "text_caption": "Image text",
             "outline_text": false,
