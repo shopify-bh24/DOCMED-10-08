@@ -122,18 +122,34 @@
 <script>
   (function() {
     var storageKey = 'breadcrumb_history_v1';
-    var maxItems = 5;  // limit to last 5 visited items
+    var maxItems = 5;
 
-    var homeUrl = {{ routes.root_url | json }}; 
+    var homeUrl = {{ routes.root_url | json }};
     var currentUrl = {{ canonical_url | json }};
 
-    // 1. RESET HISTORY WHEN USER RETURNS TO HOMEPAGE
-    if (currentUrl === homeUrl || currentUrl === homeUrl + "/") {
-      localStorage.removeItem(storageKey);
-      return; // do not build history breadcrumb on homepage
+    // Normalize URLs (remove trailing slash for comparison)
+    function normalize(url) {
+      return url.endsWith('/') ? url.slice(0, -1) : url;
     }
 
-    // 2. Build page label
+    var normalizedCurrent = normalize(currentUrl);
+    var normalizedHome = normalize(homeUrl);
+
+    // 1. CHECK IF USER IS ON HOMEPAGE OR LANGUAGE ROOT (/en, /it, /fr, ...)
+    // Pattern: /xx (two letters)
+    var languageRootPattern = /\/[a-zA-Z]{2}$/;
+
+    var path = normalizedCurrent.replace(normalizedHome, "");
+
+    if (
+      normalizedCurrent === normalizedHome ||      // homepage
+      languageRootPattern.test(path)               // /en or /it or /fr... etc
+    ) {
+      localStorage.removeItem(storageKey);
+      return; // do not build breadcrumb here
+    }
+
+    // 2. PAGE LABEL
     var label = {% if template contains 'product' %}
       {{ product.title | json }}
     {% elsif template contains 'collection' and collection %}
@@ -160,7 +176,7 @@
 
     if (!label || !currentUrl) return;
 
-    // 3. Load history
+    // 3. LOAD HISTORY
     var history = [];
     try {
       history = JSON.parse(localStorage.getItem(storageKey)) || [];
@@ -168,7 +184,7 @@
       history = [];
     }
 
-    // 4. Add current page to history
+    // 4. ADD CURRENT PAGE
     var current = { label: label, url: currentUrl };
 
     if (history.length === 0) {
@@ -178,17 +194,16 @@
       if (!last || last.url !== current.url) {
         history.push(current);
 
-        // Limit to max 5
+        // LIMIT TO MAX 5
         if (history.length > maxItems) {
           history = history.slice(history.length - maxItems);
         }
       }
     }
 
-    // 5. Save
     localStorage.setItem(storageKey, JSON.stringify(history));
 
-    // 6. Render breadcrumb
+    // 5. RENDER
     var historyContainer = document.getElementById('BreadcrumbHistory');
     var defaultContainer = document.getElementById('BreadcrumbDefault');
     if (!historyContainer || history.length === 0) return;
@@ -220,6 +235,7 @@
     }
   })();
 </script>
+
 
 
 {% schema %}
