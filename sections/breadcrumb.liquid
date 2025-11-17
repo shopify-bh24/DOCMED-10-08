@@ -120,120 +120,124 @@
 {% endif %}
 
 <script>
-  (function() {
-    var storageKey = 'breadcrumb_history_v1';
-    var maxItems = 5;
+(function() {
 
-    var homeUrl = {{ routes.root_url | json }};
-    var currentUrl = {{ canonical_url | json }};
+  var storageKey = 'breadcrumb_history_v1';
+  var maxItems = 5;
 
-    // Normalize URLs (remove trailing slash for comparison)
-    function normalize(url) {
-      return url.endsWith('/') ? url.slice(0, -1) : url;
-    }
+  // ----- REAL PATH FROM BROWSER -----
+  var path = window.location.pathname;
 
-    var normalizedCurrent = normalize(currentUrl);
-    var normalizedHome = normalize(homeUrl);
+  // Remove trailing slash for clean comparison
+  if (path.length > 1 && path.endsWith('/')) {
+    path = path.slice(0, -1);
+  }
 
-    // 1. CHECK IF USER IS ON HOMEPAGE OR LANGUAGE ROOT (/en, /it, /fr, ...)
-    // Pattern: /xx (two letters)
-    var languageRootPattern = /\/[a-zA-Z]{2}$/;
+  // ----- RESET RULE -----
+  // Matches:
+  // /
+  // /en
+  // /it
+  // /fr
+  // /xx (any 2-letter language code)
+  var isHome = (path === "");
+  var isLanguageRoot = /^\/[a-zA-Z]{2}$/.test(path);
 
-    var path = normalizedCurrent.replace(normalizedHome, "");
+  if (path === "/" || isLanguageRoot) {
+    localStorage.removeItem(storageKey);
+  }
 
-    if (
-      normalizedCurrent === normalizedHome ||      // homepage
-      languageRootPattern.test(path)               // /en or /it or /fr... etc
-    ) {
-      localStorage.removeItem(storageKey);
-      return; // do not build breadcrumb here
-    }
+  // ----- BUILD PAGE LABEL -----
+  var label =
+  {% if template contains 'product' %}
+    {{ product.title | json }}
+  {% elsif template contains 'collection' and collection %}
+    {{ collection.title | json }}
+  {% elsif template contains 'page' and page %}
+    {{ page.title | json }}
+  {% elsif template == 'blog' and blog %}
+    {{ blog.title | json }}
+  {% elsif template == 'article' and article %}
+    {{ article.title | json }}
+  {% elsif template contains 'cart' %}
+    {{ 'templates.cart.cart' | t | default: 'Cart' | json }}
+  {% elsif template contains 'search' %}
+    {{ 'general.search.search' | t | default: 'Search' | json }}
+  {% elsif template contains 'customers' %}
+    {{ 'customer.account.title' | t | default: 'Account' | json }}
+  {% elsif template contains 'list-collections' %}
+    {{ 'collections.general.all_collections' | t | default: 'Collections' | json }}
+  {% elsif template contains '404' %}
+    {{ 'general.404.title' | t | default: 'Page not found' | json }}
+  {% else %}
+    {{ page_title | json }}
+  {% endif %};
 
-    // 2. PAGE LABEL
-    var label = {% if template contains 'product' %}
-      {{ product.title | json }}
-    {% elsif template contains 'collection' and collection %}
-      {{ collection.title | json }}
-    {% elsif template contains 'page' and page %}
-      {{ page.title | json }}
-    {% elsif template == 'blog' and blog %}
-      {{ blog.title | json }}
-    {% elsif template == 'article' and article %}
-      {{ article.title | json }}
-    {% elsif template contains 'cart' %}
-      {{ 'templates.cart.cart' | t | default: 'Cart' | json }}
-    {% elsif template contains 'search' %}
-      {{ 'general.search.search' | t | default: 'Search' | json }}
-    {% elsif template contains 'customers' %}
-      {{ 'customer.account.title' | t | default: 'Account' | json }}
-    {% elsif template contains 'list-collections' %}
-      {{ 'collections.general.all_collections' | t | default: 'Collections' | json }}
-    {% elsif template contains '404' %}
-      {{ 'general.404.title' | t | default: 'Page not found' | json }}
-    {% else %}
-      {{ page_title | json }}
-    {% endif %};
+  var currentUrl = window.location.href;
+  if (!label) return;
 
-    if (!label || !currentUrl) return;
+  // ----- LOAD HISTORY -----
+  var history = [];
+  try {
+    history = JSON.parse(localStorage.getItem(storageKey)) || [];
+  } catch(e) {
+    history = [];
+  }
 
-    // 3. LOAD HISTORY
-    var history = [];
-    try {
-      history = JSON.parse(localStorage.getItem(storageKey)) || [];
-    } catch(e) {
-      history = [];
-    }
+  // ----- ADD CURRENT PAGE -----
+  var current = { label: label, url: currentUrl };
 
-    // 4. ADD CURRENT PAGE
-    var current = { label: label, url: currentUrl };
-
-    if (history.length === 0) {
+  if (history.length === 0) {
+    history.push(current);
+  } else {
+    var last = history[history.length - 1];
+    if (!last || last.url !== current.url) {
       history.push(current);
+
+      // Limit to 5
+      if (history.length > maxItems) {
+        history = history.slice(history.length - maxItems);
+      }
+    }
+  }
+
+  localStorage.setItem(storageKey, JSON.stringify(history));
+
+  // ----- RENDER -----
+  var historyContainer = document.getElementById('BreadcrumbHistory');
+  var defaultContainer = document.getElementById('BreadcrumbDefault');
+
+  if (!historyContainer) return;
+
+  // If history has less than 2 items → show fallback
+  if (history.length < 2) return;
+
+  history.forEach(function(item, index) {
+    if (index > 0) {
+      var sep = document.createElement('span');
+      sep.className = 'breadcrumb__sep';
+      sep.innerHTML = '&rsaquo;';
+      historyContainer.appendChild(sep);
+    }
+
+    if (index === history.length - 1) {
+      var span = document.createElement('span');
+      span.className = 'breadcrumb__current';
+      span.textContent = item.label;
+      historyContainer.appendChild(span);
     } else {
-      var last = history[history.length - 1];
-      if (!last || last.url !== current.url) {
-        history.push(current);
-
-        // LIMIT TO MAX 5
-        if (history.length > maxItems) {
-          history = history.slice(history.length - maxItems);
-        }
-      }
+      var link = document.createElement('a');
+      link.href = item.url;
+      link.textContent = item.label;
+      historyContainer.appendChild(link);
     }
+  });
 
-    localStorage.setItem(storageKey, JSON.stringify(history));
+  if (defaultContainer) {
+    defaultContainer.style.display = 'none';
+  }
 
-    // 5. RENDER
-    var historyContainer = document.getElementById('BreadcrumbHistory');
-    var defaultContainer = document.getElementById('BreadcrumbDefault');
-    if (!historyContainer || history.length === 0) return;
-
-    history.forEach(function(item, index) {
-      if (index > 0) {
-        var sep = document.createElement('span');
-        sep.className = 'breadcrumb__sep';
-        sep.setAttribute('aria-hidden', 'true');
-        sep.innerHTML = '&rsaquo;';
-        historyContainer.appendChild(sep);
-      }
-
-      if (index === history.length - 1) {
-        var span = document.createElement('span');
-        span.className = 'breadcrumb__current';
-        span.textContent = item.label;
-        historyContainer.appendChild(span);
-      } else {
-        var link = document.createElement('a');
-        link.href = item.url;
-        link.textContent = item.label;
-        historyContainer.appendChild(link);
-      }
-    });
-
-    if (defaultContainer && history.length > 1) {
-      defaultContainer.style.display = 'none';
-    }
-  })();
+})();
 </script>
 
 
