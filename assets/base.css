@@ -5326,7 +5326,7 @@ button:has(.cus-card-svg){
 
 .card__badge .badge {
   background: #F2F2F2 !important;
-  color: #000 !important;
+  color: #E60023 !important;
   font-weight:900;
   font-size:16px;
 }
