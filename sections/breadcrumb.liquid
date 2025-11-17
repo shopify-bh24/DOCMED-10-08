@@ -122,7 +122,7 @@
 <script>
 (function() {
   var storageKey = 'breadcrumb_history_v1';
-  var maxItems = 5;
+  var maxItems = {{section.settings.breadcrumb_limit}};
   var homeLabel = {{ 'wbcustomlabel.wballtext.home' | t | default: 'Home' | json }};
 
   function normalizePath(path) {
@@ -283,6 +283,15 @@
       "id": "show_breadcrumb",
       "default": true,
       "label": "Show breadcrumb"
+    },
+    {
+      "type": "range",
+      "id": "breadcrumb_limit",
+      "label": "Breadcrumb history limit",
+      "default": 5,
+      "min": 3,
+      "max": 10,
+      "step": 1
     }
   ],
   "presets": [
