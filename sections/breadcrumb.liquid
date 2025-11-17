@@ -121,33 +121,57 @@
 
 <script>
 (function() {
-
   var storageKey = 'breadcrumb_history_v1';
   var maxItems = 5;
+  var homeLabel = {{ 'wbcustomlabel.wballtext.home' | t | default: 'Home' | json }};
 
-  // ----- REAL PATH FROM BROWSER -----
-  var path = window.location.pathname;
-
-  // Remove trailing slash for clean comparison
-  if (path.length > 1 && path.endsWith('/')) {
-    path = path.slice(0, -1);
+  function normalizePath(path) {
+    if (!path) return '/';
+    if (path.length > 1 && path.charAt(path.length - 1) === '/') {
+      path = path.slice(0, -1);
+    }
+    return path;
   }
 
-  // ----- RESET RULE -----
-  // Matches:
-  // /
-  // /en
-  // /it
-  // /fr
-  // /xx (any 2-letter language code)
-  var isHome = (path === "");
-  var isLanguageRoot = /^\/[a-zA-Z]{2}$/.test(path);
-
-  if (path === "/" || isLanguageRoot) {
-    localStorage.removeItem(storageKey);
+  function isRootOrLang(path) {
+    path = normalizePath(path);
+    if (path === '/') return true;               // /
+    return /^\/[a-zA-Z]{2}$/.test(path);         // /en, /it, /de, ...
   }
 
-  // ----- BUILD PAGE LABEL -----
+  var currentPath = window.location.pathname || '/';
+  var normalizedCurrentPath = normalizePath(currentPath);
+
+  var refPath = '';
+  var refSameOrigin = false;
+
+  try {
+    if (document.referrer) {
+      var refUrl = new URL(document.referrer);
+      if (refUrl.origin === window.location.origin) {
+        refSameOrigin = true;
+        refPath = refUrl.pathname || '';
+      }
+    }
+  } catch (e) {}
+
+  var normalizedRefPath = normalizePath(refPath);
+
+  var currentIsRootOrLang = isRootOrLang(normalizedCurrentPath);
+  var refIsRootOrLang = refSameOrigin && isRootOrLang(normalizedRefPath);
+
+  var shouldReset = false;
+
+  // Reset if we ARE on / or /en or /it, OR we CAME FROM / or /en or /it
+  if (currentIsRootOrLang || refIsRootOrLang) {
+    shouldReset = true;
+  }
+
+  if (shouldReset) {
+    try { localStorage.removeItem(storageKey); } catch (e) {}
+  }
+
+  // ----- BUILD PAGE LABEL (Liquid → string) -----
   var label =
   {% if template contains 'product' %}
     {{ product.title | json }}
@@ -174,14 +198,26 @@
   {% endif %};
 
   var currentUrl = window.location.href;
-  if (!label) return;
+  if (!label || !currentUrl) return;
 
   // ----- LOAD HISTORY -----
   var history = [];
   try {
-    history = JSON.parse(localStorage.getItem(storageKey)) || [];
-  } catch(e) {
+    var stored = localStorage.getItem(storageKey);
+    if (stored) {
+      history = JSON.parse(stored) || [];
+    }
+  } catch (e) {
     history = [];
+  }
+
+  // If we just came from Home or /en /it (and history is fresh), seed "Home" as first item
+  if (refIsRootOrLang && !currentIsRootOrLang && history.length === 0) {
+    var homeUrl = window.location.origin + (normalizedRefPath === '/' ? '/' : normalizedRefPath + '/');
+    history.push({
+      label: homeLabel,
+      url: homeUrl
+    });
   }
 
   // ----- ADD CURRENT PAGE -----
@@ -193,29 +229,28 @@
     var last = history[history.length - 1];
     if (!last || last.url !== current.url) {
       history.push(current);
-
-      // Limit to 5
       if (history.length > maxItems) {
         history = history.slice(history.length - maxItems);
       }
     }
   }
 
-  localStorage.setItem(storageKey, JSON.stringify(history));
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(history));
+  } catch (e) {}
 
-  // ----- RENDER -----
+  // ----- RENDER BREADCRUMB -----
   var historyContainer = document.getElementById('BreadcrumbHistory');
   var defaultContainer = document.getElementById('BreadcrumbDefault');
 
   if (!historyContainer) return;
-
-  // If history has less than 2 items → show fallback
-  if (history.length < 2) return;
+  if (history.length < 2) return; // needs at least 2 items to replace default
 
   history.forEach(function(item, index) {
     if (index > 0) {
       var sep = document.createElement('span');
       sep.className = 'breadcrumb__sep';
+      sep.setAttribute('aria-hidden', 'true');
       sep.innerHTML = '&rsaquo;';
       historyContainer.appendChild(sep);
     }
@@ -236,11 +271,8 @@
   if (defaultContainer) {
     defaultContainer.style.display = 'none';
   }
-
 })();
 </script>
-
-
 
 {% schema %}
 {
