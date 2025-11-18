@@ -1,5 +1,11 @@
 <style>
-  
+  {% if picker_type == 'button' %}
+  /* Hide all unavailable / disabled variant buttons for this section */
+  #shopify-section-{{ section.id }} input[type="radio"].disabled + label,
+  #shopify-section-{{ section.id }} input[type="radio"][disabled] + label {
+    display: none !important;
+  }
+  {% endif %}
 </style>
 
 {% comment %}
@@ -99,27 +105,20 @@
     >
       {% if option.name == 'Color' %}
         {% if block.settings.show_colorswatch == true %}
-          {% comment %} {%- liquid
-              assign colorfile = value | handle | append: '.' | append: 'png'
-              assign colorimg = colorfile | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
-              assign colorvalue = value | downcase | replace: ' ', ''
-          -%} {% endcomment %}
+
           {%- liquid
             assign color_file_name = value | handle | append: '.' | append: 'png'
             assign swatchimage = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
             assign colorswatchvalue = value | downcase | replace: ' ', ''
-        -%}
-          {% comment %} <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="{% if option.selected_value == value %}active{% endif %}" {% if option.selected_value == value %} tabindex="0" {% endif %}
-            data-value="{{ value }}" style="background-color: {{ colorvalue }};{% if images[colorfile] != blank %}background-image: url({{ colorimg }});{% endif %}">
-            {{ value -}}
-            <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-          </label> {% endcomment %}
+          -%}
+
           <label class="color-swatchimg color-swatch {% if option.selected_value == value %} active{% endif %}"
             for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
             data-val="{{ value }}"
             tabindex="0"
             style="background-color: {{ colorswatchvalue }};{% if images[color_file_name] != blank %}  background-image: url({{ swatchimage | remove: " " }});{% endif %}">{{ value }}</label>
-      <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+          <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+
         {% else %}
           <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="{% if block.settings.pills_style == 'fill' %}fillpill{% endif %} {% if option.selected_value == value %}active{% endif %}" {% if option.selected_value == value %} tabindex="0" {% endif %} data-value="{{ value }}">
             {{ value -}}
@@ -155,4 +154,4 @@
       {%- endif %}
     </option>
   {%- endif -%}
-{%- endfor -%} 
+{%- endfor -%}
