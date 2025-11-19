@@ -316,6 +316,15 @@
             "tag": "",
             "url": "shopify://collections/kreuterhof"
           }
+        },
+        "item_NQ7Wr9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_a9efb0b4-fa9b-423c-af08-2b739d36572f.png",
+            "title": "Beurer",
+            "tag": "",
+            "url": "shopify://collections/beurer"
+          }
         }
       },
       "block_order": [
@@ -336,7 +345,8 @@
         "item_z84V6q",
         "item_8zz8UL",
         "item_yNAhmQ",
-        "item_CeKptW"
+        "item_CeKptW",
+        "item_NQ7Wr9"
       ],
       "custom_css": [],
       "name": "Brand Circles ",
