@@ -9,6 +9,18 @@
   .price-item--sale{
     color: #E60023;
   }
+
+  .badge--sale {
+    display: inline-block;
+    background: #ff4d4d;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    /* text-transform: uppercase; */
+    margin-bottom: 6px;
+  }
+
 </style>
 
 {% comment %}
@@ -57,89 +69,78 @@ if product.price_varies
   {% assign money_price = 'products.product.price.from_price_html' | t: price: money_price %}
 {% endif %}
 <div class="price price__container {% if card__default_price %} card__default_price {% endif %}
-  {%- if price_class %} {{ price_class }}{% endif -%}
-  {%- if available == false %} price--sold-out {% endif -%}
-  {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale show_badge{% endif -%}
-  {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
-  {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
-  {%- if show_badges %} price--show-badge{% endif -%}">
-		<div class="price__regular">
-      {%- if product.quantity_price_breaks_configured? -%}
-        {%- if show_compare_at_price -%}
-          {%- unless product.price_varies == false and product.compare_at_price_varies %}
-              <span class="price-item price-item--regular variant-item__old-price">
-                {% if settings.currency_code_enabled %}
-                  {% if compare_at_price != 0 %}
-                    {{ compare_at_price | money_with_currency }}
-                  {% endif %}
-                {% else %}
-                  {% if compare_at_price != 0 %}
-                    {{ compare_at_price | money }}
-                  {% endif %}
+{%- if price_class %} {{ price_class }}{% endif -%}
+{%- if available == false %} price--sold-out {% endif -%}
+{%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale show_badge{% endif -%}
+{%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
+{%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
+{%- if show_badges %} price--show-badge{% endif -%}">
+
+
+
+<div class="price__regular">
+    {%- if product.quantity_price_breaks_configured? -%}
+      {%- if show_compare_at_price -%}
+        {%- unless product.price_varies == false and product.compare_at_price_varies %}
+            <span class="price-item price-item--regular variant-item__old-price">
+              {% if settings.currency_code_enabled %}
+                {% if compare_at_price != 0 %}
+                  {{ compare_at_price | money_with_currency }}
                 {% endif %}
-              </span>
-          {%- endunless -%}
-        {%- endif -%}
-        <span class="price-item price-item--regular">{{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}}</span>
-      {%- else -%}
-        <span class="price-item price-item--regular">{{ money_price }}</span>
+              {% else %}
+                {% if compare_at_price != 0 %}
+                  {{ compare_at_price | money }}
+                {% endif %}
+              {% endif %}
+            </span>
+        {%- endunless -%}
+      {%- endif -%}
+      <span class="price-item price-item--regular">
+        {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}}
+      </span>
+    {%- else -%}
+      <span class="price-item price-item--regular">{{ money_price }}</span>
+    {%- endif -%}
+  </div>
+
+<div class="price__sale">
+    <span class="price-item price-item--sale price-item--last">
+      {{ money_price }}
+    </span>
+
+    {%- if money_price != compare_at_price %}
+        <small class="price-item price-item--regular">
+          {% if settings.currency_code_enabled %}
+            {% if compare_at_price != 0 %}
+              {{ compare_at_price | money_with_currency }}
+            {% endif %}
+          {% else %}
+            {% if compare_at_price != 0 %}
+              {{ compare_at_price | money }}
+            {% endif %}
+          {% endif %}
+        </small>
+    {%- endif -%}
+    </div>
+    
+      {%- if compare_at_price > price and compare_at_price != 0 -%}
+        <span class="badge badge--sale">Rabatt</span>
       {%- endif -%}
 
-      {% comment %} {% if allow_add_cart and product.selected_or_first_available_variant %}
-        <form method="post" action="/cart/add" class="product-card-form">
-        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-        <input type="hidden" name="quantity" value="1">
-        <button 
-          type="submit"
-          name="add"
-          formaction="/cart"
-          class="header_search_add_to_cart_button add-to-cart__submit button button--primary "
-          aria-label="{{ 'products.product.add_to_cart' | t }}"
-        >
-          <span class="cus-card-svg">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M12 5V19" stroke="#212121" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M5 12H19" stroke="#212121" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </span>
-        </button>
-      </form>
-      
-      {% endif %} {% endcomment %}
-      
-      
-    </div>
-		<div class="price__sale">
-			<span class="price-item price-item--sale price-item--last">
-        {{ money_price }}
-      </span>
-			{%- if money_price != compare_at_price %}
-          <small class="price-item price-item--regular">
-            {% if settings.currency_code_enabled %}
-              {% if compare_at_price != 0 %}
-                {{ compare_at_price | money_with_currency }}
-              {% endif %}
-            {% else %}
-              {% if compare_at_price != 0 %}
-                {{ compare_at_price | money }}
-              {% endif %}
-            {% endif %}
-          </small>
-			{%- endif -%}
-		</div>
-    {% if product.selected_or_first_available_variant.unit_price_measurement %}
-  		<small class="unit-price price-item price-item--last caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
-          <span class="cardunitp">{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
-          <span aria-hidden="true">/</span>
-          <span class="cardunitv">
-            {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
-  	          {{- product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
-            {%- endif -%}
-  	        {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
-          </span>
-  		</small>
-    {% endif %}
+  {% if product.selected_or_first_available_variant.unit_price_measurement %}
+    <small class="unit-price price-item price-item--last caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
+        <span class="cardunitp">{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
+        <span aria-hidden="true">/</span>
+        <span class="cardunitv">
+          {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+            {{- product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
+          {%- endif -%}
+          {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+        </span>
+    </small>
+  {% endif %}
 </div>
+
 
 <script>
   document.addEventListener('click', function(e) {
