@@ -67,7 +67,7 @@
       "name": "Bestseller",
       "settings": {
         "color_scheme": "background-2",
-        "collection": "bestseller",
+        "collection": "blog",
         "title": "<strong>Gut. Besser. Bestseller.</strong>",
         "heading_size": "h1",
         "head_align": "left",
