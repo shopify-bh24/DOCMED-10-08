@@ -178,6 +178,24 @@
             "url": "shopify://collections/bsn"
           }
         },
+        "item_VG3dzi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/erler_zimmer_anatomische_modelle.png",
+            "title": "Erler-Zimmer ",
+            "tag": "",
+            "url": "shopify://collections/erler-zimmer"
+          }
+        },
+        "item_EqwLDE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Schuelke.png",
+            "title": "Schülke",
+            "tag": "",
+            "url": "shopify://collections/schulke"
+          }
+        },
         "item_NiybVx": {
           "type": "item",
           "settings": {
@@ -214,15 +232,6 @@
             "url": "shopify://collections/hartmann"
           }
         },
-        "item_EqwLDE": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Schuelke.png",
-            "title": "Schülke",
-            "tag": "",
-            "url": "shopify://collections/schulke"
-          }
-        },
         "item_zTUFqH": {
           "type": "item",
           "disabled": true,
@@ -241,15 +250,6 @@
             "title": "Servoprax",
             "tag": "",
             "url": "shopify://collections/servoprax"
-          }
-        },
-        "item_VG3dzi": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/erler_zimmer_anatomische_modelle.png",
-            "title": "Erler-Zimmer ",
-            "tag": "",
-            "url": "shopify://collections/erler-zimmer"
           }
         },
         "item_XJbVxe": {
@@ -331,14 +331,14 @@
         "item_d6PdAA",
         "item_YXzhDi",
         "item_zKiYXb",
+        "item_VG3dzi",
+        "item_EqwLDE",
         "item_NiybVx",
         "item_kTmefk",
         "item_BPdDWB",
         "item_MaHUa8",
-        "item_EqwLDE",
         "item_zTUFqH",
         "item_yKLy6g",
-        "item_VG3dzi",
         "item_XJbVxe",
         "item_q6BjaT",
         "item_Vn6XfM",
