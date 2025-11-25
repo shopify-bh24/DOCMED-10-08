@@ -17,6 +17,69 @@
         "breadcrumb_limit": 5
       }
     },
+    "slideshow_pWzrAC": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_phPzRG": {
+          "type": "slide",
+          "settings": {
+            "enable_video_looping": false,
+            "auto_play_video": false,
+            "video_url": "",
+            "image_overlay_opacity": 0,
+            "text_caption": "Image text",
+            "outline_text": false,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "font_color": "",
+            "subheading": "<p> Banner subheading here </p><p></p>",
+            "description": "<p> Tell your brand's story through images </p><p></p>",
+            "text_style": "body",
+            "button_label": "Button label",
+            "link": "",
+            "link_window": false,
+            "view_all_style": "solid",
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_phPzRG"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "slide_heading_font": "assistant_n4",
+        "default_font": false,
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "pagenation_foreground": "#1d2e40",
+        "pagenation_background": "#ffffff",
+        "pagenet_corner_radius": 10,
+        "slider_alignment": "center",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "accessibility_info": "Slideshow about our brand",
+        "color_scheme": "",
+        "show_srolling_bar": false,
+        "wb_marktext": "Add promotional text here",
+        "mark_space": 30,
+        "mark_speed": 2,
+        "marq_diection": "right_left",
+        "seprater": "dots",
+        "text_padding_top": 8,
+        "text_padding_bottom": 8,
+        "show_text_below": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "featured_blog_kdchjK": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
@@ -93,6 +156,7 @@
   },
   "order": [
     "breadcrumb_rkT8dJ",
+    "slideshow_pWzrAC",
     "featured_blog_kdchjK",
     "newsletter_6PAWGf"
   ]
