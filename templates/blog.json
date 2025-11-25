@@ -13,7 +13,8 @@
       "type": "breadcrumb",
       "name": "Breadcrumb",
       "settings": {
-        "show_breadcrumb": true
+        "show_breadcrumb": true,
+        "breadcrumb_limit": 5
       }
     },
     "featured_blog_kdchjK": {
