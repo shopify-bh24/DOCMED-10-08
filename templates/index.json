@@ -39,10 +39,39 @@
             "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_9cWktR": {
+          "type": "slide",
+          "settings": {
+            "enable_video_looping": false,
+            "auto_play_video": false,
+            "video_url": "",
+            "image": "shopify://shop_images/Banner.png",
+            "mobile_image": "shopify://shop_images/Banner_89d91b10-ce23-41d7-a834-fac28678f698.png",
+            "image_overlay_opacity": 0,
+            "text_caption": "Medizinische Simulation auf höchstem Niveau",
+            "outline_text": false,
+            "heading": "",
+            "heading_size": "h1",
+            "font_color": "",
+            "subheading": "<p><strong>Realistische Modelle für Ausbildung, Training & Lehre.</strong></p>",
+            "description": "Erler Zimmer Simulationstools für Präzision & Praxisnähe.",
+            "text_style": "body",
+            "button_label": "Jetzt Erler-Zimmer-Produkte entdecken",
+            "link": "shopify://collections/erler-zimmer",
+            "link_window": false,
+            "view_all_style": "solid",
+            "box_align": "middle-right",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_HiqrFT"
+        "slide_HiqrFT",
+        "slide_9cWktR"
       ],
       "settings": {
         "slide_heading_font": "open_sans_n4",
