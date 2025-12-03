@@ -13,9 +13,12 @@
   endif
 %}
 
-<meta property="og:site_name" content="{{ shop.name }}">
+{% comment %} <meta property="og:site_name" content="{{ shop.name }}"> {% endcomment %}
 <meta property="og:url" content="{{ og_url }}">
-<meta property="og:title" content="{{ og_title | escape }}">
+{% comment %} <meta property="og:title" content="{{ og_title | escape }}"> {% endcomment %}
+<meta property="og:title" content="DocMed GmbH – zertifizierter Onlineshop für Medizinprodukte">
+<meta property="og:site_name" content="DocMed GmbH">
+
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:description" content="{{ og_description | escape }}">
 
