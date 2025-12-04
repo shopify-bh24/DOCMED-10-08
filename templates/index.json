@@ -47,6 +47,7 @@
             "auto_play_video": false,
             "video_url": "",
             "image": "shopify://shop_images/Banner_1.png",
+            "mobile_image": "shopify://shop_images/Design_ohne_Titel_1_e58b20f7-5304-49f5-a8ff-a64372ac3222.png",
             "image_overlay_opacity": 0,
             "text_caption": "Medizinische Simulationen auf höchstem Niveau",
             "outline_text": false,
@@ -63,7 +64,7 @@
             "box_align": "middle-left",
             "show_text_box": true,
             "text_alignment": "left",
-            "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+            "color_scheme": "inverse",
             "text_alignment_mobile": "center"
           }
         }

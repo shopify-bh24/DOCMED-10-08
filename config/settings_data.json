@@ -292,12 +292,12 @@
       },
       "inverse": {
         "settings": {
-          "background": "#7fc7cf",
+          "background": "#ded9d2",
           "background_gradient": "",
-          "text": "#1d2e40",
-          "button": "#1d2e40",
-          "button_label": "#ffffff",
-          "button_hover": "#7fc7cf",
+          "text": "#000000",
+          "button": "#000000",
+          "button_label": "#f2cdb0",
+          "button_hover": "#319a99",
           "button_label_hover": "#ffffff",
           "secondary_button_label": "#ffffff",
           "link_hover": "#ffffff",
