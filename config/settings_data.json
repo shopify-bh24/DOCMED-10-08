@@ -298,9 +298,9 @@
           "button": "#000000",
           "button_label": "#f2cdb0",
           "button_hover": "#f2cdb0",
-          "button_label_hover": "#ffffff",
+          "button_label_hover": "#f2cdb0",
           "secondary_button_label": "#ffffff",
-          "link_hover": "#ffffff",
+          "link_hover": "#ded9d2",
           "shadow": "#ffffff"
         }
       },
