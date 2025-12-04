@@ -633,6 +633,7 @@
       "blocks": {
         "heading_pyUyXa": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Pflegebetten",
             "heading_size": "h1"
@@ -640,6 +641,7 @@
         },
         "paragraph_64PXCQ": {
           "type": "paragraph",
+          "disabled": true,
           "settings": {
             "text": "Ergonomischer Komfort für Patienten & Pflegende.",
             "text_style": "body"
@@ -661,6 +663,7 @@
         "paragraph_64PXCQ",
         "button_xxkNj4"
       ],
+      "disabled": true,
       "name": "t:sections.hero-banner.presets.name",
       "settings": {
         "full_width": true,
