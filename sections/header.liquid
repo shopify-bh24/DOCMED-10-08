@@ -235,6 +235,10 @@ body .wbhuserleft span, .wbcarthtotal span,body .wbhcart .wbcarthtotal span:nth-
       display:block;
     }
   }
+
+  .search__input:focus-visible{
+    clip-path: content-box;
+  }
 {%- endstyle -%}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 {%- if settings.cart_type == "notification" and template != 'cart' -%}

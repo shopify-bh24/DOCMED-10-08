@@ -442,16 +442,16 @@
                           {% endif %}
                         </span>
                         <small class="card_compare_price"> 
-                        {% if settings.currency_code_enabled %}
-                          {% if card_product.compare_at_price != 0 %}
-                            {{ card_product.compare_at_price | money_with_currency }} 
+                          {% if settings.currency_code_enabled %}
+                            {% if card_product.compare_at_price != 0 %}
+                              {{ card_product.compare_at_price | money_with_currency }} 
+                            {% endif %}
+                          {% else %}
+                            {% if card_product.compare_at_price != 0 %}
+                              {{ card_product.compare_at_price | money }} 
+                            {% endif %}
                           {% endif %}
-                        {% else %}
-                          {% if card_product.compare_at_price != 0 %}
-                            {{ card_product.compare_at_price | money }} 
-                          {% endif %}
-                        {% endif %}
-                      </small> 
+                        </small> 
                       {% if card_product.selected_or_first_available_variant.unit_price_measurement %}
                         <small class="unit-price price-item price-item--last caption{% if card_product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
                             <span class="cardunitp">{{- card_product.selected_or_first_available_variant.unit_price | money -}}</span>
@@ -464,13 +464,13 @@
                             </span>
                         </small>
                       {% endif %}
-                      </div>
+                    </div>
                       {%- if show_variants == false -%}
                         {%- render 'price', product: card_product, use_variant: false, show_badges: false, card__default_price: true -%}
                       {%- else -%}
                         {%- render 'price', product: card_product, use_variant: true, show_badges: false, card__default_price: true -%}
                       {%- endif -%}
-                  </div>
+                    </div>
                   {%- if card_product.quantity_price_breaks_configured? -%}
                     <div class="card__information-volume-pricing-note">
                       <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>

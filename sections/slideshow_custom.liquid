@@ -1,6 +1,10 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+
+<style>
+</style>
+
 {%- style -%}
  
   @media (min-width: 992px) {
@@ -923,7 +927,7 @@
                 </div>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
-            <div class="banner__buttons {% if section.settings.show_srolling_bar %} marquee-banner__buttons{% endif %}">
+            <div class="asdaswasd banner__buttons {% if section.settings.show_srolling_bar %} marquee-banner__buttons{% endif %}">
                   <a
                     {% if block.settings.link %}
                       href="{{ block.settings.link }}"
