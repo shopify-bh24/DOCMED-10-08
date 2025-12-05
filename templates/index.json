@@ -36,7 +36,7 @@
             "box_align": "middle-left",
             "show_text_box": true,
             "text_alignment": "left",
-            "color_scheme": "inverse",
+            "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
             "text_alignment_mobile": "center"
           }
         },
@@ -64,7 +64,7 @@
             "box_align": "middle-left",
             "show_text_box": true,
             "text_alignment": "left",
-            "color_scheme": "inverse",
+            "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
             "text_alignment_mobile": "center"
           }
         }
@@ -89,7 +89,7 @@
         "change_slides_speed": 5,
         "image_behavior": "none",
         "accessibility_info": "Slideshow",
-        "color_scheme": "inverse",
+        "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
         "show_srolling_bar": false,
         "wb_marktext": "",
         "mark_space": 30,
