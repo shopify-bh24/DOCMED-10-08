@@ -99,7 +99,7 @@
   .cus-feat-itm--wrapper .stars {
     font-size: 16px;
     letter-spacing: 2px;
-    margin-right: 6px;
+    /* margin-right: 6px; */
     color: transparent;
     -webkit-text-stroke: 1px #FFD700;
   }
@@ -166,16 +166,18 @@
 
             <div class="cus-feat-itm--content">
 
-              <p class="cus-feat-itm--vendor">{{ product.vendor | strip_html | truncate: 10 }}</p>
+              {% comment %} <p class="cus-feat-itm--vendor">{{ product.vendor | strip_html | truncate: 10 }}</p> {% endcomment %}
+              <p class="cus-feat-itm--vendor">{{ product.vendor }}</p>
 
               <h3 class="cus-feat-itm--title">
-                <a href="{{ product.url }}">{{ product.title | strip_html | truncate: 30 }}</a>
+                {% comment %} <a href="{{ product.url }}">{{ product.title | strip_html | truncate: 30 }}</a> {% endcomment %}
+                <a href="{{ product.url }}">{{ product.title }}</a>
               </h3>
 
 
-              <p class="cus-feat-itm--desc">
+              {% comment %} <p class="cus-feat-itm--desc">
                 <a href="{{ product.url }}">{{ product.description | strip_html | truncate: 60 }}</a> 
-              </p>
+              </p> {% endcomment %} 
 
 
               <div class="cus-feat-itm-rating">
