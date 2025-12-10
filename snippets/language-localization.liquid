@@ -5,19 +5,62 @@
     - localPosition: pass in the position in which the form is coming up to create specific IDs
 {%- endcomment -%}
 
+<style>
+  .locale-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .locale-flag {
+    display: block;
+    border-radius: 2px;
+    object-fit: cover;
+    height: 13px;
+  }
+</style>
+
 <div class="disclosure">
+  {%- assign current_locale_code = localization.language.iso_code | downcase -%}
+  {%- assign current_flag_code = current_locale_code -%}
+  {%- if current_locale_code contains '-' -%}
+    {%- assign current_flag_code = current_locale_code | split: '-' | last | downcase -%}
+  {%- endif -%}
+  {%- if current_flag_code == 'en' -%}
+    {%- assign current_flag_code = 'gb' -%}
+  {%- endif -%}
+
   <button
     type="button"
     class="disclosure__button localization-form__select localization-selector link link--text caption-large focus-inset"
     aria-expanded="false"
     aria-controls="{{ localPosition }}List"
   >
-      <span>{{ localization.language.endonym_name }} </span>
+      <span class="locale-option">
+        <img
+          src="https://flagcdn.com/{{ current_flag_code }}.svg"
+          alt="Flag {{ localization.language.endonym_name | escape }}"
+          class="locale-flag"
+          width="20"
+          height="20"
+          loading="lazy"
+        >
+        {{ localization.language.endonym_name }}
+      </span>
     {% render 'icon-caret' %}
   </button>
   <div class="disclosure__list-wrapper" hidden>
     <ul id="{{ localPosition }}List" class="disclosure__list list-unstyled">
       {%- for language in localization.available_languages -%}
+        {%- assign locale_code = language.iso_code | downcase -%}
+        {%- assign flag_code = locale_code -%}
+        {%- if locale_code contains '-' -%}
+          {%- assign flag_code = locale_code | split: '-' | last | downcase -%}
+        {%- endif -%}
+        {%- if flag_code == 'en' -%}
+          {%- assign flag_code = 'gb' -%}
+        {%- endif -%}
+
         <li class="disclosure__item">
           <a
             class="link link--text disclosure__link caption-large focus-inset"
@@ -29,7 +72,15 @@
             {% endif %}
             data-value="{{ language.iso_code }}"
           >
-            <span>
+            <span class="locale-option">
+              <img
+                src="https://flagcdn.com/{{ flag_code }}.svg"
+                alt="Flag {{ language.endonym_name | escape }}"
+                class="locale-flag"
+                width="20"
+                height="20"
+                loading="lazy"
+              >
               {{ language.endonym_name | capitalize }}
             </span>
           </a>
