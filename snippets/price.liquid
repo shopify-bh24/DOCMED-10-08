@@ -124,7 +124,7 @@ if product.price_varies
     </div>
     
       {%- if compare_at_price > price and compare_at_price != 0 -%}
-        <span class="badge badge--sale">Rabatt</span>
+        <span class="badge badge--sale">{{'customer.order.discount' | t}}</span>
       {%- endif -%}
 
   {% if product.selected_or_first_available_variant.unit_price_measurement %}
