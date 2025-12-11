@@ -133,6 +133,7 @@
   },
   "products": {
     "product": {
+      "review": "review",
       "stock": "Stock",
       "from": "From",
       "add_to_cart": "Add to cart",

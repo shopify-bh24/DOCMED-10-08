@@ -133,6 +133,7 @@
   },
   "products": {
     "product": {
+      "review": "Bewertungen",
       "stock": "Stück",
       "from": "ab",
       "choose_options": "Optionen wählen",
