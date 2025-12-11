@@ -133,6 +133,7 @@
   },
   "products": {
     "product": {
+      "stock": "Stück",
       "from": "ab",
       "choose_options": "Optionen wählen",
       "add_to_cart": "Hinzufügen +",

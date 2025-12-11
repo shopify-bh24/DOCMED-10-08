@@ -390,7 +390,7 @@
                     {{ block.shopify_attributes }}
                   >
                     <span class="visually-hidden">Packaging unit:</span>
-                    <b>VE</b>:&nbsp;{{ ve }}
+                    <span><b>VE</b>:&nbsp;{{ ve }}&nbsp;{{ 'products.product.stock' | t }}</span>
                   </p>
                 {%- endif -%}
               
@@ -405,7 +405,7 @@
                   {% if initial_ve == blank %}hidden{% endif %}
                 >
                   <span class="visually-hidden">Packaging unit:</span>
-                  <b>VE</b>: <span data-ve-text>{{ initial_ve }}</span>
+                  <b>VE</b>: <span data-ve-text>{{ initial_ve }}</span>&nbsp;{{ 'products.product.stock' | t }}
                 </p>
                   
                 
