@@ -263,12 +263,11 @@
         },
         "item_zTUFqH": {
           "type": "item",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_28.png",
+            "image": "shopify://shop_images/Logos_Section.png",
             "title": "Megro",
             "tag": "",
-            "url": "shopify://collections/megro"
+            "url": "shopify://collections/wundmed"
           }
         },
         "item_yKLy6g": {
