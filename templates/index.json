@@ -281,9 +281,8 @@
         },
         "item_XJbVxe": {
           "type": "item",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Smith_Nephew_Medizintechnik.svg",
+            "image": "shopify://shop_images/Logos_Section_1.png",
             "title": "Smith & Nephew",
             "tag": "",
             "url": "shopify://collections/smith-nephew"
