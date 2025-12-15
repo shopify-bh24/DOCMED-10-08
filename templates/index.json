@@ -625,56 +625,6 @@
         "subheading": ""
       }
     },
-    "hero_banner_8Cc3P4": {
-      "type": "hero-banner",
-      "blocks": {
-        "heading_pyUyXa": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Pflegebetten",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_64PXCQ": {
-          "type": "paragraph",
-          "disabled": true,
-          "settings": {
-            "text": "Ergonomischer Komfort für Patienten & Pflegende.",
-            "text_style": "body"
-          }
-        },
-        "button_xxkNj4": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Burmeier pflegebetten entdecken",
-            "button_link": "shopify://collections/betten",
-            "button_style_secondary": "solid",
-            "link_window": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_pyUyXa",
-        "paragraph_64PXCQ",
-        "button_xxkNj4"
-      ],
-      "disabled": true,
-      "name": "t:sections.hero-banner.presets.name",
-      "settings": {
-        "full_width": true,
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-right",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_featured_coll_sec_hqKMU6": {
       "type": "custom-featured-coll-sec",
       "name": "Push Produkte ",
@@ -865,7 +815,6 @@
     "ss_circle_menu_2_bHr33m",
     "featured_collection_new_pzAqae",
     "cus_new_collectin_list_sec_ftM88k",
-    "hero_banner_8Cc3P4",
     "custom_featured_coll_sec_hqKMU6",
     "multirow_Thm3Vt",
     "collapsible_content_7yExeM",
