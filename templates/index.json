@@ -243,6 +243,15 @@
             "url": "shopify://collections/nobamed"
           }
         },
+        "item_zTUFqH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Logos_Section.png",
+            "title": "Wundmed",
+            "tag": "",
+            "url": "shopify://collections/wundmed"
+          }
+        },
         "item_BPdDWB": {
           "type": "item",
           "settings": {
@@ -259,15 +268,6 @@
             "title": "Hartmann",
             "tag": "",
             "url": "shopify://collections/hartmann"
-          }
-        },
-        "item_zTUFqH": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Logos_Section.png",
-            "title": "Megro",
-            "tag": "",
-            "url": "shopify://collections/wundmed"
           }
         },
         "item_yKLy6g": {
@@ -360,9 +360,9 @@
         "item_EqwLDE",
         "item_NiybVx",
         "item_kTmefk",
+        "item_zTUFqH",
         "item_BPdDWB",
         "item_MaHUa8",
-        "item_zTUFqH",
         "item_yKLy6g",
         "item_XJbVxe",
         "item_q6BjaT",
