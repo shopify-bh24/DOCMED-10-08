@@ -189,13 +189,13 @@
             "url": "shopify://collections/molnlycke"
           }
         },
-        "item_YXzhDi": {
+        "item_NhjjqX": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/B._Braun.png",
-            "title": "B. Braun",
+            "image": "shopify://shop_images/Design_ohne_Titel_2_bdda1a37-653b-446b-822c-3f77ba68f5f3.png",
+            "title": "Hansaplast",
             "tag": "",
-            "url": "shopify://collections/b-braun"
+            "url": "shopify://collections/hansaplast"
           }
         },
         "item_zKiYXb": {
@@ -250,6 +250,15 @@
             "title": "Wundmed",
             "tag": "",
             "url": "shopify://collections/wundmed"
+          }
+        },
+        "item_YXzhDi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/B._Braun.png",
+            "title": "B. Braun",
+            "tag": "",
+            "url": "shopify://collections/b-braun"
           }
         },
         "item_BPdDWB": {
@@ -350,26 +359,18 @@
             "tag": "",
             "url": "shopify://collections/beurer"
           }
-        },
-        "item_NhjjqX": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Design_ohne_Titel_2_bdda1a37-653b-446b-822c-3f77ba68f5f3.png",
-            "title": "Hansaplast",
-            "tag": "",
-            "url": "shopify://collections/hansaplast"
-          }
         }
       },
       "block_order": [
         "item_d6PdAA",
-        "item_YXzhDi",
+        "item_NhjjqX",
         "item_zKiYXb",
         "item_VG3dzi",
         "item_EqwLDE",
         "item_NiybVx",
         "item_kTmefk",
         "item_zTUFqH",
+        "item_YXzhDi",
         "item_BPdDWB",
         "item_MaHUa8",
         "item_yKLy6g",
@@ -380,8 +381,7 @@
         "item_8zz8UL",
         "item_yNAhmQ",
         "item_CeKptW",
-        "item_NQ7Wr9",
-        "item_NhjjqX"
+        "item_NQ7Wr9"
       ],
       "custom_css": [],
       "name": "Brand Circles ",
