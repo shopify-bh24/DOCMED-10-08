@@ -582,42 +582,21 @@
             "main_link": "#"
           }
         },
-        "collection_block_ajnFGh": {
+        "collection_block_bLPUzq": {
           "type": "collection_block",
-          "name": "Heimpflege",
+          "name": "weitere Einsatzbereiche",
           "settings": {
-            "image": "shopify://shop_images/Design_ohne_Titel_4.png",
-            "title": "Heimpflege",
-            "item1_text": "Betten",
-            "item1_link": "shopify://collections/betten",
-            "item2_text": "Toilette",
-            "item2_link": "shopify://collections/toilette",
-            "item3_text": "Toilettenpapier",
-            "item3_link": "shopify://collections/toilettenpapier",
-            "item4_text": "Toilettenrollenhalter",
-            "item4_link": "shopify://collections/toilettenrollenhalter",
-            "item5_text": "Bad",
-            "item5_link": "shopify://collections/bad",
-            "main_link_text": "",
-            "main_link": "#"
-          }
-        },
-        "collection_block_hhmzmB": {
-          "type": "collection_block",
-          "name": "Mobility",
-          "settings": {
-            "image": "shopify://shop_images/Design_ohne_Titel_7.png",
-            "title": "Mobilitätshilfen",
-            "item1_text": "Rollatoren",
-            "item1_link": "shopify://collections/rollatoren",
-            "item2_text": "Gehhilfen",
-            "item2_link": "shopify://collections/achselstutzen",
-            "item3_text": "Scooter",
-            "item3_link": "shopify://collections/scooter",
-            "item4_text": "Rollstühle",
-            "item4_link": "shopify://collections/rollstuhle",
-            "item5_text": "",
-            "item5_link": "",
+            "title": "Gesundheit & Wohlbefinden",
+            "item1_text": "Wärmetherapie",
+            "item1_link": "shopify://collections/warmetherapie-1",
+            "item2_text": "Wellness & Spa",
+            "item2_link": "shopify://collections/wellness-spa",
+            "item3_text": "Naturheilmittel",
+            "item3_link": "shopify://collections/naturheilmittel",
+            "item4_text": "Kosmetik",
+            "item4_link": "shopify://collections/kosmetik",
+            "item5_text": "Massagegeräte",
+            "item5_link": "shopify://collections/massagegerate",
             "main_link_text": "",
             "main_link": "#"
           }
@@ -626,8 +605,7 @@
       "block_order": [
         "collection_block_HtdNjC",
         "collection_block_FicKPW",
-        "collection_block_ajnFGh",
-        "collection_block_hhmzmB"
+        "collection_block_bLPUzq"
       ],
       "name": "Kollektion Übersicht ",
       "settings": {
