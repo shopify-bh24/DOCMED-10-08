@@ -598,8 +598,8 @@
             "item4_link": "shopify://collections/covid-19",
             "item5_text": "Schwangerschaftstests",
             "item5_link": "shopify://collections/schwangerschaft",
-            "main_link_text": "In-vitro-Diagnostik entdecken",
-            "main_link": "shopify://collections/in-vitro-diagnopse"
+            "main_link_text": "",
+            "main_link": ""
           }
         },
         "collection_block_dJT3eg": {
@@ -617,8 +617,8 @@
             "item4_link": "shopify://collections/desinfektionstucher",
             "item5_text": "Laborreiniger",
             "item5_link": "shopify://collections/laborreinigung",
-            "main_link_text": "mehr Anzeigen...",
-            "main_link": "shopify://collections/desinfektion"
+            "main_link_text": "",
+            "main_link": ""
           }
         }
       },
