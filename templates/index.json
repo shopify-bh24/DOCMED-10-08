@@ -601,12 +601,31 @@
             "main_link_text": "",
             "main_link": "#"
           }
+        },
+        "collection_block_dJT3eg": {
+          "type": "collection_block",
+          "settings": {
+            "title": "Hygiene",
+            "item1_text": "Handdesinfektion",
+            "item1_link": "shopify://collections/handdesinfektion",
+            "item2_text": "Flächendesinfektion",
+            "item2_link": "shopify://collections/flachendesinfektion",
+            "item3_text": "Desinfektionsreiniger",
+            "item3_link": "shopify://collections/desinfektionsreiniger",
+            "item4_text": "Desinfektionstücher",
+            "item4_link": "shopify://collections/desinfektionstucher",
+            "item5_text": "Laborreiniger",
+            "item5_link": "shopify://collections/laborreinigung",
+            "main_link_text": "Mehr anzeigen »",
+            "main_link": ""
+          }
         }
       },
       "block_order": [
         "collection_block_HtdNjC",
         "collection_block_FicKPW",
-        "collection_block_bLPUzq"
+        "collection_block_bLPUzq",
+        "collection_block_dJT3eg"
       ],
       "name": "Kollektion Übersicht ",
       "settings": {
