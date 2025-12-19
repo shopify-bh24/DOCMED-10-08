@@ -605,6 +605,7 @@
         "collection_block_dJT3eg": {
           "type": "collection_block",
           "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_4_bc0d0f07-43c7-4a7e-857b-1062c484b2fa.png",
             "title": "Hygiene",
             "item1_text": "Handdesinfektion",
             "item1_link": "shopify://collections/handdesinfektion",
