@@ -64,7 +64,7 @@
           "type": "categories",
           "settings": {
             "menu_heading": "Menü",
-            "main_mega_menu": "main-menu",
+            "main_mega_menu": "hauptmenue",
             "menu_style": "style-2",
             "button_style_secondary": "outline",
             "menu_position": "left",
