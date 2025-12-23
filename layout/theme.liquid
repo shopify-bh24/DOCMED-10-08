@@ -10,8 +10,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    
     <meta name="theme-color" content="">
-    {% assign canonical = canonical_url | remove: '/en' | remove: '/en-be' | remove: '/de-at' %}
-    <link rel="canonical" href="{{ canonical }}">
+    {% if template.name == 'collection' %}
+      <link rel="canonical" href="{{ shop.url }}{{ collection.url }}">
+    {% else %}
+      {% assign canonical = canonical_url
+        | remove: '/en'
+        | remove: '/en-be'
+        | remove: '/de-at'
+        | split: '?'
+        | first
+      %}
+      <link rel="canonical" href="{{ canonical }}">
+    {% endif %}
+
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
        {% comment %} ----------------flickity--------------------- {% endcomment %}
