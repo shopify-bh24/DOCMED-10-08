@@ -12,33 +12,6 @@
     "f4fc861e-a8e9-4733-8984-e73213d48588": {
       "type": "slideshow_custom",
       "blocks": {
-        "slide_zCKG6j": {
-          "type": "slide",
-          "settings": {
-            "enable_video_looping": false,
-            "auto_play_video": false,
-            "video_url": "",
-            "image": "shopify://shop_images/Banner_Desktop_2.png",
-            "image_overlay_opacity": 0,
-            "text_caption": "",
-            "outline_text": false,
-            "heading": "",
-            "heading_size": "h2",
-            "font_color": "",
-            "subheading": "",
-            "description": "Möbel und Ausstattung für Empfang, Behandlungsraum und Nebenbereiche – praxistauglich und funktional.",
-            "text_style": "body",
-            "button_label": "",
-            "link": "shopify://collections/praxiseinrichtung",
-            "link_window": false,
-            "view_all_style": "outline",
-            "box_align": "top-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "color_scheme": "scheme-abe3bc68-5409-41dd-abcf-8f9ac474947a",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_HiqrFT": {
           "type": "slide",
           "settings": {
@@ -124,7 +97,6 @@
         }
       },
       "block_order": [
-        "slide_zCKG6j",
         "slide_HiqrFT",
         "slide_FL8yYU",
         "slide_8UTcR3"
