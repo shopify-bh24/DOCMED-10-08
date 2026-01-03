@@ -13,12 +13,24 @@
       "type": "breadcrumb",
       "name": "Breadcrumb",
       "settings": {
-        "show_breadcrumb": true
+        "show_breadcrumb": true,
+        "breadcrumb_limit": 5
       }
     },
     "main": {
       "type": "main-product",
       "blocks": {
+        "offer_9QtRKa": {
+          "type": "offer",
+          "settings": {
+            "heading": "",
+            "icon": "truck",
+            "content": "<p><strong>Auf Lager: </strong>In 1-3 Werktagen geliefert</p>",
+            "icon2": "none",
+            "content2": "",
+            "icon_color": "#17af40"
+          }
+        },
         "judge_me_reviews_preview_badge_Eg7qAP": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
@@ -40,15 +52,6 @@
         "ve_Uazb3B": {
           "type": "ve",
           "settings": {}
-        },
-        "inventory_dEQL6L": {
-          "type": "inventory",
-          "disabled": true,
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 20,
-            "show_inventory_quantity": false
-          }
         },
         "custom_liquid_CU3fQx": {
           "type": "custom_liquid",
@@ -101,12 +104,12 @@
         }
       },
       "block_order": [
+        "offer_9QtRKa",
         "judge_me_reviews_preview_badge_Eg7qAP",
         "title_jnyBi3",
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
         "pzn_xKqefU",
         "ve_Uazb3B",
-        "inventory_dEQL6L",
         "custom_liquid_CU3fQx",
         "price",
         "products_variants_7NcCUy",
