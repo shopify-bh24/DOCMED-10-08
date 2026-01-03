@@ -155,7 +155,7 @@
     "show_vendor": true,
     "show_cart_note": false,
     "wbenable_ship": true,
-    "wbmin_order": "100 EUR",
+    "wbmin_order": "49,01 EUR",
     "wbprogscolor": "#7fc7cf",
     "drawer_free": "",
     "drawer_free_away": "",
