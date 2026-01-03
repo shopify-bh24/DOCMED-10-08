@@ -70,7 +70,7 @@
       "name": "Slider"
     }
   },
-   "carrer": {
+  "carrer": {
     "location": "Location:",
     "date": "Date:",
     "income": "Income:",
@@ -401,7 +401,7 @@
       "remove_all": "Remove all",
       "cancel": "Cancel"
     },
-     "page-carrer": {
+    "page-carrer": {
       "name": "Page Career",
       "settings": {
         "limit": {
@@ -439,7 +439,7 @@
           }
         }
       }
-    },
+    }
   },
   "localization": {
     "country_label": "Country/region",
@@ -681,5 +681,29 @@
       "news_popup": "Newsletter popup"
     }
   },
-  
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "address_form": {
+          "max_address": "The maximum number of {{max_addresses}} addresses has been reached. You must remove an address to add a new one."
+        }
+      },
+      "payment": {
+        "saved_addresses": "Saved addresses",
+        "save_this_address": "Save this address"
+      },
+      "shipping_errors": {
+        "must_use_address_banner": {
+          "one": "Your order can only be sent to the address of %{name}.",
+          "other": "Your order can only be sent to one of these addresses."
+        }
+      },
+      "billing": {
+        "update_address_banner": "Update this address to view delivery options."
+      },
+      "address_management": {
+        "confirm_address_deletion": "Are you sure you want to delete the address {{address}} ?"
+      }
+    }
+  }
 }
