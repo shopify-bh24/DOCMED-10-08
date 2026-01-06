@@ -86,21 +86,6 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
-        },
-        "icon_with_text_wMJqx6": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "horizontal",
-            "icon_1": "truck",
-            "heading_1": "Versand in 1-3 Tagen",
-            "icon_2": "box",
-            "heading_2": "Kostenloser Versand",
-            "icon_3": "return",
-            "heading_3": "30 tage Rückgaberecht",
-            "icon_4": "none",
-            "heading_4": ""
-          }
         }
       },
       "block_order": [
@@ -114,8 +99,7 @@
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
         "offer_9QtRKa",
-        "buy_buttons",
-        "icon_with_text_wMJqx6"
+        "buy_buttons"
       ],
       "settings": {
         "ghs_image": "ghs-image-list-efsixrhk",
