@@ -13,7 +13,7 @@
       "type": "breadcrumb",
       "name": "Breadcrumb",
       "settings": {
-        "show_breadcrumb": true,
+        "show_breadcrumb": false,
         "breadcrumb_limit": 5
       }
     },
