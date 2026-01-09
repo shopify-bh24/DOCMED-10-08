@@ -20,6 +20,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "judge_me_reviews_preview_badge_kkYMgJ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "65491c3f-abb9-4bd5-9728-1b439626a36f": {
           "type": "sku",
           "settings": {
@@ -33,13 +37,6 @@
         "ve_Uazb3B": {
           "type": "ve",
           "settings": {}
-        },
-        "custom_liquid_CU3fQx": {
-          "type": "custom_liquid",
-          "name": "mobile taps",
-          "settings": {
-            "custom_liquid": "<div  class=\"cus-tabs-blc-mobile-wrp\">\n</div>"
-          }
         },
         "custom_liquid_DTYCHG": {
           "type": "custom_liquid",
@@ -74,18 +71,26 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
+        },
+        "custom_liquid_CU3fQx": {
+          "type": "custom_liquid",
+          "name": "mobile taps",
+          "settings": {
+            "custom_liquid": "<div  class=\"cus-tabs-blc-mobile-wrp\">\n</div>"
+          }
         }
       },
       "block_order": [
+        "judge_me_reviews_preview_badge_kkYMgJ",
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
         "title_jnyBi3",
         "ve_Uazb3B",
-        "custom_liquid_CU3fQx",
         "custom_liquid_DTYCHG",
         "price",
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
-        "buy_buttons"
+        "buy_buttons",
+        "custom_liquid_CU3fQx"
       ],
       "settings": {
         "ghs_image": "ghs-image-list-efsixrhk",
@@ -162,7 +167,7 @@
         "content_custom": false,
         "content_font": "poppins_n4",
         "content_size": 14,
-        "content_size_mobile": 13,
+        "content_size_mobile": 11,
         "content_height": 170,
         "content_mt": 14,
         "btns_bg_color": "",
