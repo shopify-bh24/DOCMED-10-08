@@ -69,17 +69,6 @@
             "show_colorswatch": true
           }
         },
-        "offer_9QtRKa": {
-          "type": "offer",
-          "settings": {
-            "heading": "",
-            "icon": "truck",
-            "content": "<p><strong>Auf Lager: </strong>In 1-3 Werktagen geliefert</p>",
-            "icon2": "none",
-            "content2": "",
-            "icon_color": "#17af40"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -98,7 +87,6 @@
         "price",
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
-        "offer_9QtRKa",
         "buy_buttons"
       ],
       "settings": {
