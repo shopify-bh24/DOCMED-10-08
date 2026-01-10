@@ -189,9 +189,17 @@
             "url": "shopify://collections/molnlycke"
           }
         },
+        "item_Q8MEGX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Design-ohne-Titel-2022-07-02T123221.623.png",
+            "title": "Burmeier",
+            "tag": "",
+            "url": "shopify://collections/burmeier"
+          }
+        },
         "item_NhjjqX": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Design_ohne_Titel_2_bdda1a37-653b-446b-822c-3f77ba68f5f3.png",
             "title": "Hansaplast",
@@ -364,6 +372,7 @@
       },
       "block_order": [
         "item_d6PdAA",
+        "item_Q8MEGX",
         "item_NhjjqX",
         "item_zKiYXb",
         "item_VG3dzi",
