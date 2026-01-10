@@ -189,15 +189,6 @@
             "url": "shopify://collections/molnlycke"
           }
         },
-        "item_Q8MEGX": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Design-ohne-Titel-2022-07-02T123221.623.png",
-            "title": "Burmeier",
-            "tag": "",
-            "url": "shopify://collections/burmeier"
-          }
-        },
         "item_NhjjqX": {
           "type": "item",
           "settings": {
@@ -360,6 +351,15 @@
             "url": "shopify://collections/kreuterhof"
           }
         },
+        "item_Q8MEGX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Design-ohne-Titel-2022-07-02T123221.623.png",
+            "title": "Burmeier",
+            "tag": "",
+            "url": "shopify://collections/burmeier"
+          }
+        },
         "item_NQ7Wr9": {
           "type": "item",
           "settings": {
@@ -372,7 +372,6 @@
       },
       "block_order": [
         "item_d6PdAA",
-        "item_Q8MEGX",
         "item_NhjjqX",
         "item_zKiYXb",
         "item_VG3dzi",
@@ -391,6 +390,7 @@
         "item_8zz8UL",
         "item_yNAhmQ",
         "item_CeKptW",
+        "item_Q8MEGX",
         "item_NQ7Wr9"
       ],
       "custom_css": [],
