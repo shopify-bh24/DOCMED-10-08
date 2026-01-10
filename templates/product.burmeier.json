@@ -34,19 +34,18 @@
             "text_style": "body"
           }
         },
-        "pzn_xKqefU": {
-          "type": "pzn",
-          "settings": {}
-        },
-        "ve_Uazb3B": {
-          "type": "ve",
-          "settings": {}
-        },
         "custom_liquid_CU3fQx": {
           "type": "custom_liquid",
           "name": "mobile taps",
           "settings": {
             "custom_liquid": "<div  class=\"cus-tabs-blc-mobile-wrp\">\n</div>"
+          }
+        },
+        "custom_liquid_4xWrkE": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"sh-product-benefits-wrapper\">\n<div class=\"sh-product-benefits-container\">\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/screwdriver-wrench-solid-full.svg?v=1767988774\" alt=\"Bild 1\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Ideal für die Heimpflege geeignet</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/house-medical-flag-solid-full.svg?v=1767989043\" alt=\"Bild 2\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Pflegepraxis-orientiertes Design </span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/screwdriver-wrench-solid-full.svg?v=1767988774\" alt=\"Bild 3\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Entwickelt & produziert in Deutschland</span>\n    </div>\n    \n    <!-- Zusätzliche Benefits, basierend auf der Auswahl des Benutzers -->\n    \n</div>\n</div>\n\n<style>\n.sh-product-benefits-wrapper {\n    display: flex;\n    width: 100%;\n    justify-content: flex-start;\n}\n\n/* Ganze Box */\n.sh-product-benefits-container {\n    width: fit-content;\n    padding: 0px 0px;\n    background-color: #ffffff;\n    border-radius: 0px;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n}\n\n/* Benefit Zeilen */\n.sh-product-benefits-row {\n    display: flex;\n    align-items: center;\n    margin: 5px 0;\n    padding: 1px 5px;\n    background-color: #ffffff;\n    color: #1D2E40;\n    border-radius: 10px;\n    width: fit-content;\n}\n\n/* Icon */\n.sh-product-benefits-img {\n    width: 20px;\n    margin-right: 10px;\n    height: auto;\n    margin-block: unset !important;\n}\n\n/* Text */\n.sh-product-benefits-text {\n    flex: 1;\n    padding-top: 0px;\n    font-size: 16px;\n}\n</style>"
           }
         },
         "price": {
@@ -71,6 +70,7 @@
         },
         "offer_9QtRKa": {
           "type": "offer",
+          "disabled": true,
           "settings": {
             "heading": "",
             "icon": "truck",
@@ -92,9 +92,8 @@
         "judge_me_reviews_preview_badge_Eg7qAP",
         "title_jnyBi3",
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
-        "pzn_xKqefU",
-        "ve_Uazb3B",
         "custom_liquid_CU3fQx",
+        "custom_liquid_4xWrkE",
         "price",
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
