@@ -71,10 +71,10 @@
           "type": "offer",
           "settings": {
             "heading": "",
-            "icon": "truck",
+            "icon": "box",
             "content": "<p><strong>Auf Lager: </strong>In 3-5 Werktagen geliefert</p>",
-            "icon2": "check_mark",
-            "content2": "<p>Lieferkosten (Spedition) inklusive</p>",
+            "icon2": "truck",
+            "content2": "<p>Speditionslieferung – kostenfrei (inklusive)</p>",
             "icon_color": "#17af40"
           }
         },
