@@ -700,7 +700,7 @@
             "default_open": false,
             "heading": "Wie kann ich eine Bestellung aufgeben?",
             "icon": "none",
-            "custom_image": "shopify://shop_images/9.png",
+            "custom_image": "shopify://shop_images/cart-shopping-solid-full_2.svg",
             "row_content": "<p>Sie können Ihre Bestellung bequem über unseren Online-Shop aufgeben, indem Sie die gewünschten Produkte in den Warenkorb legen und dem Bestellprozess folgen.<br/><br/>Alternativ haben Sie die Möglichkeit, <strong>ein individuelles Angebot anzufordern</strong> oder Ihre Bestellung <strong>telefonisch oder per E-Mail</strong> bei unserem Team aufzugeben. Wir beraten Sie dabei gerne persönlich und unterstützen Sie bei der Produktauswahl sowie der Abwicklung.</p>",
             "page": ""
           }
@@ -711,7 +711,7 @@
             "default_open": false,
             "heading": "Wie lange dauert der Versand?",
             "icon": "none",
-            "custom_image": "shopify://shop_images/Schneller_Versand.png",
+            "custom_image": "shopify://shop_images/dolly-solid-full.svg",
             "row_content": "<p>Die Lieferzeit variiert je nach Produktverfügbarkeit. In der Regel erfolgt der Versand innerhalb von <strong>1-3 Werktagen</strong>. Genauere Informationen finden Sie in der Produktbeschreibung oder im Checkout.</p>",
             "page": ""
           }
@@ -722,7 +722,7 @@
             "default_open": false,
             "heading": "Wie hoch sind die Versandkosten?",
             "icon": "none",
-            "custom_image": "shopify://shop_images/8.png",
+            "custom_image": "shopify://shop_images/truck-regular-full_1.svg",
             "row_content": "<p>Alle Informationen zu <strong>Versandkosten und Lieferung</strong> finden Sie unter folgendem Link: <a href=\"https://docmedraw.myshopify.com/pages/bestellung-lieferung\" title=\"https://docmedraw.myshopify.com/pages/bestellung-lieferung\"><em><strong>Bestellung & Lieferung </strong></em></a></p>",
             "page": ""
           }
@@ -733,7 +733,7 @@
             "default_open": false,
             "heading": "Wie lange habe ich Zeit, um meine Bestellung zurückzusenden?",
             "icon": "none",
-            "custom_image": "shopify://shop_images/1.png",
+            "custom_image": "shopify://shop_images/rotate-left-solid-full.svg",
             "row_content": "<p><a href=\"/policies/refund-policy\" title=\"Refund Policy\"><em>Rückgabepolitik</em></a> haben ein 30-tägiges Rückgaberecht. Innerhalb dieses Zeitraums können Sie Ihre Bestellung ohne Angabe von Gründen an uns zurücksenden. Weitere Informationen zum Rücksendeprozess finden Sie in unserer <a href=\"/policies/refund-policy\" title=\"Refund Policy\"><em><strong>Rückgabepolitik</strong></em></a><em><strong>.</strong></em></p>",
             "page": ""
           }
