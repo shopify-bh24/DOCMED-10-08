@@ -734,7 +734,7 @@
             "heading": "Wie lange habe ich Zeit, um meine Bestellung zurückzusenden?",
             "icon": "none",
             "custom_image": "shopify://shop_images/1.png",
-            "row_content": "<p><a href=\"/policies/refund-policy\" title=\"Refund Policy\">Rückgabepolitik</a> haben ein 14-tägiges Rückgaberecht. Innerhalb dieses Zeitraums können Sie Ihre Bestellung ohne Angabe von Gründen an uns zurücksenden. Weitere Informationen zum Rücksendeprozess finden Sie in unserer <a href=\"/policies/refund-policy\" title=\"Refund Policy\"><em><strong>Rückgabepolitik</strong></em></a><em><strong>.</strong></em></p>",
+            "row_content": "<p><a href=\"/policies/refund-policy\" title=\"Refund Policy\"><em>Rückgabepolitik</em></a> haben ein 30-tägiges Rückgaberecht. Innerhalb dieses Zeitraums können Sie Ihre Bestellung ohne Angabe von Gründen an uns zurücksenden. Weitere Informationen zum Rücksendeprozess finden Sie in unserer <a href=\"/policies/refund-policy\" title=\"Refund Policy\"><em><strong>Rückgabepolitik</strong></em></a><em><strong>.</strong></em></p>",
             "page": ""
           }
         }
