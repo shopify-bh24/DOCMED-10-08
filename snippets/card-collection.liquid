@@ -9,6 +9,11 @@ Accepts:
 Usage:
 {% render 'card-collection' %}
 {% endcomment %}
+<style>
+  .card__heading a {
+    text-transform: none !important;
+  }
+</style>
 {%- liquid
   assign ratio = 1
   if media_aspect_ratio == 'portrait'

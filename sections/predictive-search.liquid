@@ -4,6 +4,13 @@
 | plus: predictive_search.resources.pages.size
 | plus: predictive_search.resources.articles.size
 %}
+
+<style>
+  .card__heading a {
+    text-transform: none !important;
+  }
+</style>
+
 {% assign section_id = section.id %}
   <div id="predictive-search-results" role="listbox" class="color-{{ settings.color_schemesearch }} gradient wbsearch_inner">
     {% comment %} <div id="predictive-search-option-search-keywords" class="predictive-search__search-for-button">

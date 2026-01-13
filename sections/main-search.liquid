@@ -70,6 +70,10 @@
     color: #58BFC6 !important;
     font-weight: 600;
   }
+
+  .card__heading a {
+    text-transform: none !important;
+  }
 </style>
 {%- liquid
   assign sort_by = search.sort_by | default: search.default_sort_by
