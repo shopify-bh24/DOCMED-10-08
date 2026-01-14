@@ -11,9 +11,11 @@
   "sections": {
     "breadcrumb_Aic9Np": {
       "type": "breadcrumb",
+      "disabled": true,
       "name": "Breadcrumb",
       "settings": {
-        "show_breadcrumb": true
+        "show_breadcrumb": true,
+        "breadcrumb_limit": 5
       }
     },
     "main": {
