@@ -22,13 +22,6 @@
         "padding_bottom": 60
       }
     },
-    "breadcrumb_aL8rwX": {
-      "type": "breadcrumb",
-      "name": "Breadcrumb",
-      "settings": {
-        "show_breadcrumb": true
-      }
-    },
     "jobs_section_p77A4z": {
       "type": "jobs_section",
       "blocks": {
@@ -150,7 +143,6 @@
   },
   "order": [
     "main",
-    "breadcrumb_aL8rwX",
     "jobs_section_p77A4z",
     "about_comapny_Gxgzmf"
   ]

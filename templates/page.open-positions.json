@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "breadcrumb_DKVXDR": {
-      "type": "breadcrumb",
-      "name": "Breadcrumb",
-      "settings": {
-        "show_breadcrumb": true
-      }
-    },
     "about_comapny_pWGYPA": {
       "type": "about_comapny",
       "name": "About Company",
@@ -313,7 +306,6 @@
     }
   },
   "order": [
-    "breadcrumb_DKVXDR",
     "about_comapny_pWGYPA",
     "main",
     "benefits_cqda3C",
