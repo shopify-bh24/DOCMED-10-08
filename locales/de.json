@@ -644,7 +644,7 @@
       "nocontent": "There is no any content found.",
       "see_all": "Alle anzeigen",
       "free_ship": "Herzlichen Glückwunsch,",
-      "free_shipinner": "dein Warenkorb ist versandkostenfrei.",
+      "free_shipinner": "Ihr Warenkorb ist versandkostenfrei.",
       "free_shiponly": "Noch",
       "free_shipaway": "bis zum Kostenlosem Versand!",
       "order_note": "Bestellnotiz ",
@@ -714,7 +714,24 @@
       },
       "marketing": {
         "accept_marketing_checkbox_label": "Versandstatus, Infos zu Produkten & Service per E-Mail erhalten"
+      },
+      "stock": {
+        "empty_cart_label": "Ihr Warenkorb ist leer"
+      },
+      "throttle": {
+        "cart_summary_heading": "Ihr Warenkorb",
+        "inventory": {
+          "sold_out": {
+            "heading": "Ihr Warenkorb ist ausverkauft"
+          }
+        }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "cart_updated": "Ihr Warenkorb wurde aktualisiert"
       }
+    },
+    "page_titles": {
+      "shopping_cart": "Warenkorb"
     }
   },
   "customer_accounts": {
