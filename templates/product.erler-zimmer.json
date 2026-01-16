@@ -151,9 +151,9 @@
         "message_QVCXwm"
       ],
       "settings": {
-        "title": "Angebotsanfrage zu diesem Artikel",
-        "heading_size": "h0",
-        "head_align": "left",
+        "title": "<strong>Angebotsanfrage zu diesem Artikel</strong>",
+        "heading_size": "h1",
+        "head_align": "center",
         "heading_color_scheme": "",
         "head_space": true,
         "description": "",
