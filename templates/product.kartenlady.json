@@ -61,6 +61,13 @@
             "show_colorswatch": true
           }
         },
+        "custom_liquid_GEQBrw": {
+          "type": "custom_liquid",
+          "name": "cart-counter",
+          "settings": {
+            "custom_liquid": "<div class=\"sh-cart-counter-container\">\n    <svg width=\"15\" height=\"15\" aria-hidden=\"true\" class=\"sh-circle-svg\">\n        <circle cx=\"7.5\" cy=\"7.5\" r=\"7.5\" fill=\"#A3E77F\"></circle>\n        <circle cx=\"7.5\" cy=\"7.5\" r=\"4\" fill=\"#008000\"></circle>\n    </svg>\n    <p class=\"sh-cart-count\">Aktuell in <span id=\"cartCount\"></span> Warenkörben</p>\n</div>\n\n<style>\n:root {\n    --sh-svg-vertical-offset: -6px;\n}\n\n.sh-cart-counter-container {\n    display: flex;\n    align-items: center;\n    justify-content: left;\n    margin-top: -10px;\n    margin-bottom: -20px;\n}\n\n.sh-circle-svg {\n    margin-right: 6px;\n    transform: translateY(var(--sh-svg-vertical-offset));\nflex-shrink: 0;\n}\n\np.sh-cart-count {\n    color: #4A5A6A;\n    line-height: 1;\n\n}\n</style>\n\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  const min = 2;\n  const max = 6;\n\n  const basePath = location.pathname;\n  const key = \"shCartCount:\" + basePath;\n\n  const el = () => document.getElementById(\"cartCount\");\n\n  function getCount() {\n    let val = sessionStorage.getItem(key);\n    if (!val) {\n      val = Math.floor(Math.random() * (max - min + 1)) + min;\n      sessionStorage.setItem(key, val);\n    }\n    return val;\n  }\n\n  function applyCount() {\n    const element = el();\n    if (element && !element.textContent) element.textContent = getCount();\n  }\n\n  applyCount();\n\n  new MutationObserver(applyCount).observe(document.body, {\n    childList: true,\n    subtree: true\n  });\n});\n</script>"
+          }
+        },
         "offer_9QtRKa": {
           "type": "offer",
           "settings": {
@@ -88,6 +95,7 @@
         "price",
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
+        "custom_liquid_GEQBrw",
         "offer_9QtRKa",
         "buy_buttons"
       ],
