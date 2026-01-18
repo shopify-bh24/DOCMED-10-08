@@ -28,19 +28,16 @@
           "type": "title",
           "settings": {}
         },
-        "65491c3f-abb9-4bd5-9728-1b439626a36f": {
-          "type": "sku",
+        "offer_pXtVYR": {
+          "type": "offer",
           "settings": {
-            "text_style": "body"
+            "heading": "",
+            "icon": "check_mark",
+            "content": "<p>getestet von VOX \"Hot oder Schrott\"</p>",
+            "icon2": "map_pin",
+            "content2": "<p>Made in Germany</p>",
+            "icon_color": "#17af40"
           }
-        },
-        "pzn_xKqefU": {
-          "type": "pzn",
-          "settings": {}
-        },
-        "ve_Uazb3B": {
-          "type": "ve",
-          "settings": {}
         },
         "custom_liquid_CU3fQx": {
           "type": "custom_liquid",
@@ -91,9 +88,7 @@
       "block_order": [
         "judge_me_reviews_preview_badge_Eg7qAP",
         "title_jnyBi3",
-        "65491c3f-abb9-4bd5-9728-1b439626a36f",
-        "pzn_xKqefU",
-        "ve_Uazb3B",
+        "offer_pXtVYR",
         "custom_liquid_CU3fQx",
         "price",
         "products_variants_7NcCUy",
