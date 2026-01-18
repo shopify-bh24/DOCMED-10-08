@@ -28,15 +28,10 @@
           "type": "title",
           "settings": {}
         },
-        "offer_pXtVYR": {
-          "type": "offer",
+        "custom_liquid_KGQxUe": {
+          "type": "custom_liquid",
           "settings": {
-            "heading": "",
-            "icon": "check_mark",
-            "content": "<p>getestet von VOX \"Hot oder Schrott\"</p>",
-            "icon2": "map_pin",
-            "content2": "<p>Made in Germany</p>",
-            "icon_color": "#17af40"
+            "custom_liquid": "<div class=\"sh-product-benefits-wrapper\">\n<div class=\"sh-product-benefits-container\">\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/map-pin-solid-full.svg?v=1768749944\" alt=\"Bild 1\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Made in Germany</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/car-on-solid-full.svg?v=1768750118\" alt=\"Bild 2\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">für eingeschränkte Mobilität</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/magnifying-glass-solid-full.svg?v=1768749852\" alt=\"Bild 3\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">getestet von VOX \"Hot oder Schrott\"</span>\n    </div>\n    \n    <!-- Zusätzliche Benefits, basierend auf der Auswahl des Benutzers -->\n    \n</div>\n</div>\n\n<style>\n.sh-product-benefits-wrapper {\n    display: flex;\n    width: 100%;\n    justify-content: flex-start;\n}\n\n/* Ganze Box */\n.sh-product-benefits-container {\n    width: fit-content;\n    padding: 0px 0px;\n    background-color: ;\n    border-radius: 0px;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n}\n\n/* Benefit Zeilen */\n.sh-product-benefits-row {\n    display: flex;\n    align-items: center;\n    margin: 5px 0;\n    padding: 1px 5px;\n    background-color: #7FC7CF;\n    color: #ffffff;\n    border-radius: 10px;\n    width: fit-content;\n}\n\n/* Icon */\n.sh-product-benefits-img {\n    width: 20px;\n    margin-right: 10px;\n    height: auto;\n    margin-block: unset !important;\n}\n\n/* Text */\n.sh-product-benefits-text {\n    flex: 1;\n    padding-top: 0px;\n    font-size: 16px;\n}\n</style>"
           }
         },
         "custom_liquid_CU3fQx": {
@@ -88,7 +83,7 @@
       "block_order": [
         "judge_me_reviews_preview_badge_Eg7qAP",
         "title_jnyBi3",
-        "offer_pXtVYR",
+        "custom_liquid_KGQxUe",
         "custom_liquid_CU3fQx",
         "price",
         "products_variants_7NcCUy",
