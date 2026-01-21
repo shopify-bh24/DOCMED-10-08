@@ -150,6 +150,7 @@
         "phone_bDUQrJ",
         "message_QVCXwm"
       ],
+      "disabled": true,
       "settings": {
         "title": "<strong>Angebotsanfrage zu diesem Artikel</strong>",
         "heading_size": "h1",
@@ -170,6 +171,36 @@
         "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
         "padding_top": 60,
         "padding_bottom": 60
+      }
+    },
+    "apps_B3Mhzt": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_XqNYAk": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "837708",
+            "text_color": "#1d2e40",
+            "button_background_color": "#1d2e40",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#7fc7cf",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_XqNYAk"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     },
     "ss_product_tabs_2_bzCJFz": {
@@ -388,6 +419,7 @@
     "breadcrumb_nEM3mG",
     "main",
     "contact_form_wNtY4c",
+    "apps_B3Mhzt",
     "ss_product_tabs_2_bzCJFz",
     "related-products",
     "related_products_new_JwmmVT",
