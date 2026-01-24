@@ -327,6 +327,42 @@
         "padding_bottom": 60
       }
     },
+    "apps_izTJJX": {
+      "type": "apps",
+      "blocks": {
+        "google_reviews_carousel_widget_block_FR4rtD": {
+          "type": "shopify://apps/google-reviews/blocks/carousel-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
+          "settings": {
+            "contentIndex": "1",
+            "customContentIndex": 31,
+            "font": "default",
+            "themeId": "light",
+            "ratingType": "stars",
+            "emojiType": "0",
+            "cardColor": "#f3f6f9",
+            "starsColor": "#fbb000",
+            "textColor": "#404040",
+            "transparent": 1,
+            "hasShadow": false,
+            "autoscroll": true,
+            "fluidScrolling": false,
+            "delay": 5,
+            "showRating": true,
+            "reviewPhotosType": "small",
+            "writeReview": true,
+            "fixedReviewsHeight": false
+          }
+        }
+      },
+      "block_order": [
+        "google_reviews_carousel_widget_block_FR4rtD"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
     "contact_form_wNtY4c": {
       "type": "contact-form",
       "blocks": {
@@ -398,6 +434,7 @@
     "ss_product_tabs_2_bzCJFz",
     "related-products",
     "related_products_new_egPQBg",
+    "apps_izTJJX",
     "contact_form_wNtY4c"
   ]
 }
