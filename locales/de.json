@@ -693,7 +693,9 @@
         }
       },
       "thank_you": {
-        "login": "Anmelden "
+        "login": "Anmelden ",
+        "thank_you_title": "Ihr Bestellung wurde bestätigt",
+        "confirmed_title": "Ihr Bestellung wurde bestätigt"
       },
       "general": {
         "contact_us_html": "Kontaktieren Sie uns für weitere Information",
@@ -745,6 +747,11 @@
     "account_information": {
       "verify_new_email_modal": {
         "description": "Bitte geben Sie den an {{email}} gesendet code ein"
+      }
+    },
+    "orders": {
+      "order_status": {
+        "confirmed_title": "Ihr Bestellung wurde bestätigt"
       }
     }
   }
