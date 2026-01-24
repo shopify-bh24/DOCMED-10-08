@@ -331,7 +331,7 @@
       },
       "update": "Aktualisieren",
       "login": {
-        "title": "Hast du ein Konto?",
+        "title": "Haben Sie bereits ein Konto ? ",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Loggen Sie sich ein</a>, damit es beim Checkout schneller geht.",
         "login": "Anmelden",
         "logintitle": "um schneller zur Kasse zu gehen."
@@ -725,7 +725,8 @@
         "cookie_preferences": "Cookies"
       },
       "customer_account": {
-        "sign_in_link_label": "Anmelden "
+        "sign_in_link_label": "Anmelden ",
+        "have_an_account_label": "Haben Sie bereits ein Konto ? "
       },
       "marketing": {
         "accept_marketing_checkbox_label": "Versandstatus, Infos zu Produkten & Service per E-Mail erhalten"
