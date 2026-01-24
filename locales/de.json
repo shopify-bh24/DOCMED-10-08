@@ -707,7 +707,8 @@
         },
         "thank_you_confirmed_with_email_and_phone_description": {
           "single_store": "Sie erhalten in Kürze eine Bestätigungs-E-Mail"
-        }
+        },
+        "contact_us_html": "Benötigen Sie Hilfe ? {{conatct_us}}"
       },
       "general": {
         "contact_us_html": "Kontaktieren Sie uns für weitere Information",
