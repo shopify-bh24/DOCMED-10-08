@@ -744,6 +744,9 @@
       },
       "merchandise_unavailable_in_buyer_location": {
         "cart_updated": "Ihr Warenkorb wurde aktualisiert"
+      },
+      "review": {
+        "review_title": "Schließen Sie ihre Bestellung jetzt ab "
       }
     },
     "page_titles": {
