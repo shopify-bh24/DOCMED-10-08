@@ -695,7 +695,19 @@
       "thank_you": {
         "login": "Anmelden ",
         "thank_you_title": "Ihr Bestellung wurde bestätigt",
-        "confirmed_title": "Ihr Bestellung wurde bestätigt"
+        "confirmed_title": "Ihr Bestellung wurde bestätigt",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_payment": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_payment": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "thank_you_confirmed_with_email_description": {
+          "single_store": "Sie erhalten in Kürze eine Bestätigungs-E-Mail"
+        },
+        "thank_you_confirmed_with_email_and_phone_description": {
+          "single_store": "Sie erhalten in Kürze eine Bestätigungs-E-Mail"
+        }
       },
       "general": {
         "contact_us_html": "Kontaktieren Sie uns für weitere Information",
