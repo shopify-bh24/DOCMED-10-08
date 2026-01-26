@@ -368,6 +368,15 @@
             "tag": "",
             "url": "shopify://collections/beurer"
           }
+        },
+        "item_R4hWJz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/images.png",
+            "title": "Johnson & Johnson",
+            "tag": "",
+            "url": "shopify://collections/johnson-johnson"
+          }
         }
       },
       "block_order": [
@@ -391,7 +400,8 @@
         "item_yNAhmQ",
         "item_CeKptW",
         "item_Q8MEGX",
-        "item_NQ7Wr9"
+        "item_NQ7Wr9",
+        "item_R4hWJz"
       ],
       "custom_css": [],
       "name": "Brand Circles ",
