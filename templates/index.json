@@ -558,6 +558,15 @@
         "padding_bottom": 36
       }
     },
+    "custom_featured_coll_sec_hqKMU6": {
+      "type": "custom-featured-coll-sec",
+      "name": "Push Produkte ",
+      "settings": {
+        "cus-bg-color": "#f5f5f7",
+        "collection": "push-products",
+        "heading": ""
+      }
+    },
     "cus_new_collectin_list_sec_ftM88k": {
       "type": "cus-new-collectin-list-sec",
       "blocks": {
@@ -652,53 +661,6 @@
         "cus-bg-color": "#ffffff",
         "heading": "",
         "subheading": ""
-      }
-    },
-    "custom_featured_coll_sec_hqKMU6": {
-      "type": "custom-featured-coll-sec",
-      "name": "Push Produkte ",
-      "settings": {
-        "cus-bg-color": "#f5f5f7",
-        "collection": "push-products",
-        "heading": ""
-      }
-    },
-    "multirow_Thm3Vt": {
-      "type": "multirow",
-      "blocks": {
-        "row_KhEAYk": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_design.jpg",
-            "caption": "",
-            "heading": "Sprechstundenbedarf",
-            "text": "<p><br/>Sprechstundenbedarf sind die medizinischen Verbrauchsmaterialien (z. B. Pflaster, Spritzen, Handschuhe, Desinfektions- und Schnelltest-Reagenzien), die eine Praxis direkt für die Behandlung gesetzlich versicherter Patienten benötigt und quartalsweise gesondert über die KV abrechnet – Verbrauch dokumentieren, Rahmenempfehlungen beachten, und alles läuft reibungslos.</p>",
-            "button_label": "Jetzt bestellen",
-            "button_link": "shopify://pages/sprechstundenbedarf",
-            "link_window": false,
-            "view_all_style": "outline",
-            "row_color_scheme": "accent-2"
-          }
-        }
-      },
-      "block_order": [
-        "row_KhEAYk"
-      ],
-      "disabled": true,
-      "name": "SSB",
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "align-left",
-        "row_gap": 1,
-        "section_color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 36
       }
     },
     "collapsible_content_7yExeM": {
@@ -932,9 +894,8 @@
     "3f381c47-733a-4027-b7cc-15a524815a39",
     "ss_circle_menu_2_bHr33m",
     "featured_collection_new_pzAqae",
-    "cus_new_collectin_list_sec_ftM88k",
     "custom_featured_coll_sec_hqKMU6",
-    "multirow_Thm3Vt",
+    "cus_new_collectin_list_sec_ftM88k",
     "collapsible_content_7yExeM",
     "1769257728e37c44bc",
     "contact_form_MtCmVQ",
