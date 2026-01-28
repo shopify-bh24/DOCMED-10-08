@@ -706,7 +706,7 @@
             "heading": "Wie hoch sind die Versandkosten?",
             "icon": "none",
             "custom_image": "shopify://shop_images/truck-regular-full_1.svg",
-            "row_content": "<p>Alle Informationen zu <strong>Versandkosten und Lieferung</strong> finden Sie unter folgendem Link: <a href=\"https://docmedraw.myshopify.com/pages/bestellung-lieferung\" title=\"https://docmedraw.myshopify.com/pages/bestellung-lieferung\"><em><strong>Bestellung & Lieferung </strong></em></a></p>",
+            "row_content": "<p>Alle Informationen zu <strong>Versandkosten und Lieferung</strong> finden Sie unter folgendem Link: <a href=\"/policies/shipping-policy\" title=\"Shipping Policy\"><em><strong>Bestellung & Lieferung </strong></em></a></p>",
             "page": ""
           }
         },
@@ -763,6 +763,7 @@
             "starsColor": "#fbb000",
             "textColor": "#404040",
             "transparent": 1,
+            "solidShadow": false,
             "hasShadow": false,
             "autoscroll": true,
             "fluidScrolling": false,
