@@ -748,6 +748,9 @@
       },
       "review": {
         "review_title": "Schließen Sie ihre Bestellung jetzt ab "
+      },
+      "processing": {
+        "you_will_not_be_charged": "Es wird noch nichts berechnet!"
       }
     },
     "page_titles": {
