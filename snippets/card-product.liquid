@@ -2,7 +2,7 @@
   .card_product_infomation{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    {% comment %} justify-content: space-between; {% endcomment %}
     height: 100%;
   }
 
@@ -16,6 +16,62 @@
 
   .card__heading a {
     text-transform: none !important;
+  }
+
+  .add-to-cart__submit{
+    padding: 0.5rem !important;
+  }
+
+  .product__availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.2;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 3px;
+    margin-bottom: 0px;
+  }
+  
+  .product__availability .availability-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex: 0 0 10px;
+  }
+  
+  .product__availability .availability-dot--in {
+    background: #22c55e;
+  }
+
+  .product__availability .availability-dot--inbound{
+    background: rgb(251 205 10);
+
+  }
+  
+  .product__availability .availability-dot--out {
+    background: #ef4444;
+  }
+
+  .card-product__sku {
+    margin-top: 5px;
+    font-size: 12px;
+    color: rgba(1, 31, 45);
+    margin-bottom: 0px;
+  }
+  
+  .card-product__ve {
+    margin-top: 3px;
+    font-size: 12px;
+    color: rgba(1, 31, 45);
+    margin-bottom: 0px;
+  }
+  
+  .card-product__pzn {
+    margin-top: 3px;
+    font-size: 12px;
+    color: rgba(1, 31, 45);
+    margin-bottom: 0px;
   }
 </style>
 
@@ -361,212 +417,306 @@
                   </variant-hover> 
                     {% endunless %}
                 {% endif %}
-                {%- if show_vendor -%}<div class="product__vendor cardhide_toggle">{{ card_product.vendor }}</div>{%- endif -%}
-                <h3 class="cardhide_toggle card__heading{% if card_product.featured_media or card_style == 'standard' %} h5{% endif %}" {% if card_product.featured_media or card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %}>
+                {%- if show_vendor -%}<div style="height: 100%; max-height: 35px;" class="product__vendor cardhide_toggle">{{ card_product.vendor }}</div>{%- endif -%}
+                <h3 style="height: 100%; max-height: 60px;" class="cardhide_toggle card__heading{% if card_product.featured_media or card_style == 'standard' %} h5{% endif %}" {% if card_product.featured_media or card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %}>
                     <a href="{{ card_product.url | default: '#' }}" id="CardLink-{{ section_id }}-{{ card_product.id }}" class="full-unstyled-link" aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}" >
                       {{ card_product.title | escape }}
                     </a>
                 </h3>
+                <div style="height: 100%; max-height: 110px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
+                  {% if card_product.selected_or_first_available_variant.sku != blank %}
+                    <p
+                      class="product__sku no-js-hidden card-product__sku"
+                      id="Sku-{{ section.id }}"
+                      role="status" 
+                    >
+                      <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
+                      <b>SKU</b>:&nbsp; {{- card_product.selected_or_first_available_variant.sku -}}
+                    </p>
+                  {% endif %}
+                  {%- assign pzn = card_product.metafields.custom.pzn -%}
+                  
+                  {%- if pzn and pzn != blank -%}
+                    <p
+                      class="product__pzn no-js-hidden card-product__pzn"
+                      id="Pzn-{{ section.id }}"
+                      role="status"
+                      >
+                      <span class="visually-hidden">PZN:</span>
+                      <b>PZN</b>:&nbsp;{{ pzn }}
+                      </p>
+                    {%- endif -%}
+                    
+                    {%- assign current_variant = card_product.selected_or_first_available_variant -%}
+                    {%- assign initial_pzn = current_variant.metafields.custom.variant_pzn -%}
+                    
+                    <p
+                      class="product__pzn no-js-hidden card-product__pzn"
+                      id="VariantPzn-{{ section.id }}"
+                      role="status"
+                      {% if initial_pzn == blank %}hidden{% endif %}
+                    >
+                      <span class="visually-hidden">PZN:</span>
+                      <b>PZN</b>: <span data-pzn-text>{{ initial_pzn }}</span>
+                    </p>
+                  {%- assign ve = card_product.metafields.custom.ve -%}
+                
+                  {%- if ve and ve != blank -%}
+                    <p
+                      class="product__ve no-js-hidden card-product__ve"
+                      id="Ve-{{ section.id }}"
+                      role="status"
+                    >
+                      <span class="visually-hidden">Packaging unit:</span>
+                      <span><b>VE</b>:&nbsp;{{ ve }}&nbsp;</span>
+                    </p>
+                  {%- endif -%}
+                
+                  {%- assign current_variant = card_product.selected_or_first_available_variant -%}
+                  {%- assign initial_ve = current_variant.metafields.custom.unit -%}
+                
+                  <p
+                    class="product__ve no-js-hidden card-product__ve"
+                    id="VariantVe-{{ section.id }}"
+                    role="status"
+                    {% if initial_ve == blank %}hidden{% endif %}
+                  >
+                    <span class="visually-hidden">Packaging unit:</span>
+                    <b>VE</b>: <span data-ve-text>{{ initial_ve }}</span>&nbsp;
+                  </p>
+                </div>
+                {%- assign current_variant = card_product.selected_or_first_available_variant -%}
+
+                {%- assign metafield_delivery = card_product.metafields.custom.delivery_text.value -%}
+                {%- assign fallback_delivery = 'products.delivery.default' | t -%}
+                {%- assign delivery_text = metafield_delivery | default: fallback_delivery -%}
+
+                {%- if metafield_delivery != blank -%}
+                  {%- assign availability_label = 'products.availability.inbound' | t -%}
+                  {%- assign availability_dot_class = 'availability-dot--inbound' -%}
+
+                {%- else -%}
+                  {%- assign availability_label = 'products.availability.in_stock' | t -%}
+                  {%- assign availability_dot_class = 'availability-dot--in' -%}
+
+                {%- endif -%}
+
+                <div>
+                  <p
+                    class="product__availability no-js-hidden"
+                    id="Availability-{{ section.id }}-{{ card_product.id }}"
+                    role="status"
+                  >
+                    {%- if current_variant.available -%}
+                      <span class="availability-dot {{ availability_dot_class }}" aria-hidden="true"></span>
+                      <span class="availability-label"><b>{{ availability_label }}:</b> {{ delivery_text }}</span>
+                    {%- else -%}
+                      <span class="availability-dot availability-dot--out" aria-hidden="true"></span>
+                      <span class="availability-label"><b>{{'products.availability.out_of_stock'}}</b></span>
+                    {%- endif -%}
+                  </p>
+                  <div class="card-information">
+                    <span class="caption-large light cardhide_toggle">{{ block.settings.description | escape }}</span>
+                    {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
+                      {% if settings.review_app == 'default' %}
+                        {%- if card_product.metafields.reviews.rating.value != blank -%}
+                          <div class="wbhrating cardhide_toggle">
+                            {% liquid
+                            assign rating_decimal = 0 
+                            assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1 
+                            if decimal >= 0.3 and decimal <= 0.7
+                            assign rating_decimal = 0.5
+                            elsif decimal > 0.7
+                            assign rating_decimal = 1
+                            endif 
+                            %}
+                            <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}">
+                                <span aria-hidden="true" class="rating-star" style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
+                            </div>
+                            <p class="rating-text caption">
+                              <span aria-hidden="true">{{ card_product.metafields.reviews.rating.value }} / {{ card_product.metafields.reviews.rating.value.scale_max }}</span>
+                            </p>
+                            <p class="rating-count caption">
+                              <span aria-hidden="true" class="visually-hidden">({{ card_product.metafields.reviews.rating_count }})</span>
+                              <span>( {{ card_product.metafields.reviews.rating_count }} )</span>
+                            </p>
+                          </div>
+                        {%- endif -%}
+                      {%- elsif settings.review_app == 'judgeme' -%}
+                          <div class="wbhrating">
+                            <div class="rating"> 
+                              <div class='jdgm-widget jdgm-preview-badge'>
+                                {{ card_product.metafields.judgeme.badge }}
+                              </div>
+                            </div>
+                          </div>
+                      {%- elsif settings.review_app == 'loox' -%}
+                        <div class="wbhrating">
+                          <div class="rating">
+                            <div class="loox-rating" data-id="{{ card_product.id }}" data-rating="{{ card_product.metafields.loox.avg_rating }}" data-raters="{{ card_product.metafields.loox.num_reviews }}"></div>
+                          </div>
+                        </div>
+                      {%- elsif settings.review_app == 'wisernotify' -%}
+                        <div class="wbhrating">
+                          <div class="rating">
+                              {% render 'wnreview_widgets', widget_type: 'wnreview_star_rating', card_product: product %}
+                          </div>
+                        </div>
+                      {%- elsif settings.review_app == 'okendo' -%}
+                        <div class="wbhrating">
+                          <div class="rating">
+                            {% capture product_data_attribute %}data-oke-reviews-product-id="shopify-{{ card_product.id }}"{% endcapture %} 
+                            <div data-oke-star-rating {{ product_data_attribute }}>{{ card_product.metafields.okendo.StarRatingSnippet }}</div>
+                          </div>
+                        </div>
+                      {%- endif -%}
+                      {% else %}
+                        <div class="star-rating">
+                          <span class="stars">
+                            ★★★★★
+                          </span>
+                          <span class="review-count">0 {{'products.product.review' | t}}</span>
+                        </div>
+                      {%- endif -%}
+                    <div class="no-js-hidden wbhprice" id="price-{{ section.id }}-{{ card_product.id }}" role="status" {{ block.shopify_attributes }}>
+                      <div class="card_product_Price">  
+                          <span class="card_sale_price">
+                            {% if card_product.price_varies %}
+                              {{ 'products.product.from' | t }}
+                            {% endif %}   
+                            {% if settings.currency_code_enabled %}
+                              {{ card_product.price | money_with_currency }} 
+                              {% else %}
+                              {{ card_product.price | money }} 
+                            {% endif %}
+                          </span>
+                          <small class="card_compare_price"> 
+                            {% if settings.currency_code_enabled %}
+                              {% if card_product.compare_at_price != 0 %}
+                                {{ card_product.compare_at_price | money_with_currency }} 
+                              {% endif %}
+                            {% else %}
+                              {% if card_product.compare_at_price != 0 %}
+                                {{ card_product.compare_at_price | money }} 
+                              {% endif %}
+                            {% endif %}
+                          </small> 
+                        {% if card_product.selected_or_first_available_variant.unit_price_measurement %}
+                          <small class="unit-price price-item price-item--last caption{% if card_product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
+                              <span class="cardunitp">{{- card_product.selected_or_first_available_variant.unit_price | money -}}</span>
+                              <span aria-hidden="true">/</span>
+                              <span class="cardunitv">
+                                {%- if card_product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+                                  {{- card_product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
+                                {%- endif -%}
+                                {{ card_product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+                              </span>
+                          </small>
+                        {% endif %}
+                      </div>
+                        {%- if show_variants == false -%}
+                          {%- render 'price', product: card_product, use_variant: false, show_badges: false, card__default_price: true -%}
+                        {%- else -%}
+                          {%- render 'price', product: card_product, use_variant: true, show_badges: false, card__default_price: true -%}
+                        {%- endif -%}
+                      </div>
+                    {%- if card_product.quantity_price_breaks_configured? -%}
+                      <div class="card__information-volume-pricing-note">
+                        <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
+                      </div>
+                    {%- endif -%}
+                    {% if cardstock_bar %}
+                      {% assign current_variant = card_product.selected_or_first_available_variant %}
+                      {%- liquid
+                        if current_variant.inventory_quantity > limited_stock_cut_off
+                          assign inventory_status = 'high'
+                          assign inventory_message = instock_message | replace: "{stock_number}", current_variant.inventory_quantity
+                        elsif current_variant.inventory_quantity == 0
+                          assign inventory_status = 'soon'
+                          assign inventory_message = continue_selling_message
+                        else
+                          assign inventory_status = 'low'
+                          assign inventory_message = limited_stock_message | replace: "{stock_number}", current_variant.inventory_quantity
+                        endif
+                      -%}
+                      {%- assign bar_progress = current_variant.inventory_quantity | times: 100 | divided_by: max_stock | append: '%' -%}
+                      <div id="Stock-{{ section.id }}" class="wbstockcount {% unless current_variant.available and current_variant.inventory_quantity >= 0 and current_variant.inventory_management == "shopify" %} hidden {% endunless %}">
+                        <div class="wbstockinfo wbstockinfo_{{ inventory_status }} ">{{ inventory_message }}</div> 
+                        {% if stock_inventory == false %}
+                          <div class="wbstockinfo-bar {% if inventory_status == "soon" %} hidden {% endif %}">
+                            <span class="wbstockinfo-probar" style="width: {{ bar_progress }}"></span>
+                          </div> 
+                        {% endif %}
+                      </div>
+                      {%- style -%}
+                      :root {
+                        --card_product-in-stock-color: {{ in_stock_color }};
+                        --card_product-low-stock-color: {{ limited_stock_color }};
+                        --card_product-continue-selling-color: {{ continue_selling_color }};
+                      }
+                      {%- endstyle -%}
+                      {{ 'component-stock-countdown.css' | asset_url | stylesheet_tag }}
+                      <script id="card_product-variants" type="application/json">
+                        {
+                          {%- for variant in card_product.variants -%}
+                            "{{- variant.id -}}": { "q":{{ variant.inventory_quantity }}, "p":"{{ variant.inventory_policy }}"}{%- if forloop.last == false -%},{%- endif -%}
+                          {%- endfor -%}
+                        }
+                      </script>
+                      <script id="card_product-stock-countdown-config" type="application/json">
+                        {
+                          "max_stock": {{ max_stock }},
+                          "limited_stock_cut_off": {{ limited_stock_cut_off }},
+                          "instock_message": "{{ instock_message }}",
+                          "limited_stock_message": "{{ limited_stock_message }}",
+                          "continue_selling_message": "{{ continue_selling_message }}"
+                        }
+                      </script> 
+                    {% endif %}
+                  </div>
+                </div>
                 {%- if enable_listdesc != blank -%}
                   <p class="wblistpdesc cardhide_toggle">{{ card_product.description | strip_html | truncatewords: 20 }}</p>
                 {%- endif -%}
-                <div class="card-information">
-                  <span class="caption-large light cardhide_toggle">{{ block.settings.description | escape }}</span>
-                  {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
-                    {% if settings.review_app == 'default' %}
-                      {%- if card_product.metafields.reviews.rating.value != blank -%}
-                        <div class="wbhrating cardhide_toggle">
-                          {% liquid
-                          assign rating_decimal = 0 
-                          assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1 
-                          if decimal >= 0.3 and decimal <= 0.7
-                          assign rating_decimal = 0.5
-                          elsif decimal > 0.7
-                          assign rating_decimal = 1
-                          endif 
-                          %}
-                          <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}">
-                              <span aria-hidden="true" class="rating-star" style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
-                          </div>
-                          <p class="rating-text caption">
-                            <span aria-hidden="true">{{ card_product.metafields.reviews.rating.value }} / {{ card_product.metafields.reviews.rating.value.scale_max }}</span>
-                          </p>
-                          <p class="rating-count caption">
-                            <span aria-hidden="true" class="visually-hidden">({{ card_product.metafields.reviews.rating_count }})</span>
-                            <span>( {{ card_product.metafields.reviews.rating_count }} )</span>
-                          </p>
-                        </div>
-                      {%- endif -%}
-                    {%- elsif settings.review_app == 'judgeme' -%}
-                        <div class="wbhrating">
-                          <div class="rating"> 
-                            <div class='jdgm-widget jdgm-preview-badge'>
-                              {{ card_product.metafields.judgeme.badge }}
-                            </div>
-                          </div>
-                        </div>
-                    {%- elsif settings.review_app == 'loox' -%}
-                      <div class="wbhrating">
-                        <div class="rating">
-                          <div class="loox-rating" data-id="{{ card_product.id }}" data-rating="{{ card_product.metafields.loox.avg_rating }}" data-raters="{{ card_product.metafields.loox.num_reviews }}"></div>
-                        </div>
-                      </div>
-                    {%- elsif settings.review_app == 'wisernotify' -%}
-                      <div class="wbhrating">
-                        <div class="rating">
-                            {% render 'wnreview_widgets', widget_type: 'wnreview_star_rating', card_product: product %}
-                        </div>
-                      </div>
-                    {%- elsif settings.review_app == 'okendo' -%}
-                      <div class="wbhrating">
-                        <div class="rating">
-                          {% capture product_data_attribute %}data-oke-reviews-product-id="shopify-{{ card_product.id }}"{% endcapture %} 
-                          <div data-oke-star-rating {{ product_data_attribute }}>{{ card_product.metafields.okendo.StarRatingSnippet }}</div>
-                        </div>
-                      </div>
-                    {%- endif -%}
-                    {% else %}
-                      <div class="star-rating">
-                        <span class="stars">
-                          ★★★★★
-                        </span>
-                        <span class="review-count">0 {{'products.product.review' | t}}</span>
-                      </div>
-                    {%- endif -%}
-                  <div class="no-js-hidden wbhprice" id="price-{{ section.id }}-{{ card_product.id }}" role="status" {{ block.shopify_attributes }}>
-                    <div class="card_product_Price">  
-                        <span class="card_sale_price">
-                          {% if card_product.price_varies %}
-                            {{ 'products.product.from' | t }}
-                          {% endif %}   
-                          {% if settings.currency_code_enabled %}
-                            {{ card_product.price | money_with_currency }} 
-                            {% else %}
-                            {{ card_product.price | money }} 
+                {% if show_quantity == true %}
+                  <div class="wbform_qty product-form__quantity cardhide_toggle">
+                    <label class="quantity__label form__label">{{ 'products.product.quantity.label' | t }}</label>
+                    <div class="price-per-item__container">
+                      <quantity-input class="quantity">
+                        <button class="quantity__button no-js-hidden" name="minus" type="button">
+                          <span class="visually-hidden">
+                            {{- 'products.product.quantity.decrease' | t: card_product: card_product.title | escape -}}
+                          </span>
+                          {% render 'icon-minus' %}
+                        </button>
+                        <input class="quantity__input {{ quantity_number }}"
+                          type="number"
+                          name="quantity"
+                          aria-label="{{ 'products.product.quantity.label' | t }}"
+                          id="Quantity-{{ section.id }}-{{ card_product.id }}"
+                          data-cart-quantity="{{ cart_qty }}"
+                          data-min="{{ card_product.selected_or_first_available_variant.quantity_rule.min }}"
+                          min="{{ card_product.selected_or_first_available_variant.quantity_rule.min }}"
+                          {% if card_product.selected_or_first_available_variant.quantity_rule.max != null %}
+                            data-max="{{ card_product.selected_or_first_available_variant.quantity_rule.max }}"
+                            max="{{ card_product.selected_or_first_available_variant.quantity_rule.max }}"
                           {% endif %}
-                        </span>
-                        <small class="card_compare_price"> 
-                          {% if settings.currency_code_enabled %}
-                            {% if card_product.compare_at_price != 0 %}
-                              {{ card_product.compare_at_price | money_with_currency }} 
-                            {% endif %}
-                          {% else %}
-                            {% if card_product.compare_at_price != 0 %}
-                              {{ card_product.compare_at_price | money }} 
-                            {% endif %}
-                          {% endif %}
-                        </small> 
-                      {% if card_product.selected_or_first_available_variant.unit_price_measurement %}
-                        <small class="unit-price price-item price-item--last caption{% if card_product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
-                            <span class="cardunitp">{{- card_product.selected_or_first_available_variant.unit_price | money -}}</span>
-                            <span aria-hidden="true">/</span>
-                            <span class="cardunitv">
-                              {%- if card_product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
-                                {{- card_product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
-                              {%- endif -%}
-                              {{ card_product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
-                            </span>
-                        </small>
-                      {% endif %}
+                          step="{{ card_product.selected_or_first_available_variant.quantity_rule.increment }}"
+                          value="{{ card_product.selected_or_first_available_variant.quantity_rule.min }}"
+                          form="{{ product_form_id }}"
+                        >
+                        <button class="quantity__button no-js-hidden" name="plus" type="button">
+                          <span class="visually-hidden">
+                            {{- 'products.product.quantity.increase' | t: card_product: card_product.title | escape -}}
+                          </span>
+                          {% render 'icon-plus' %}
+                        </button>
+                      </quantity-input>
                     </div>
-                      {%- if show_variants == false -%}
-                        {%- render 'price', product: card_product, use_variant: false, show_badges: false, card__default_price: true -%}
-                      {%- else -%}
-                        {%- render 'price', product: card_product, use_variant: true, show_badges: false, card__default_price: true -%}
-                      {%- endif -%}
-                    </div>
-                  {%- if card_product.quantity_price_breaks_configured? -%}
-                    <div class="card__information-volume-pricing-note">
-                      <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
-                    </div>
-                  {%- endif -%}
-                  {% if cardstock_bar %}
-                    {% assign current_variant = card_product.selected_or_first_available_variant %}
-                    {%- liquid
-                      if current_variant.inventory_quantity > limited_stock_cut_off
-                        assign inventory_status = 'high'
-                        assign inventory_message = instock_message | replace: "{stock_number}", current_variant.inventory_quantity
-                      elsif current_variant.inventory_quantity == 0
-                        assign inventory_status = 'soon'
-                        assign inventory_message = continue_selling_message
-                      else
-                        assign inventory_status = 'low'
-                        assign inventory_message = limited_stock_message | replace: "{stock_number}", current_variant.inventory_quantity
-                      endif
-                    -%}
-                    {%- assign bar_progress = current_variant.inventory_quantity | times: 100 | divided_by: max_stock | append: '%' -%}
-                    <div id="Stock-{{ section.id }}" class="wbstockcount {% unless current_variant.available and current_variant.inventory_quantity >= 0 and current_variant.inventory_management == "shopify" %} hidden {% endunless %}">
-                      <div class="wbstockinfo wbstockinfo_{{ inventory_status }} ">{{ inventory_message }}</div> 
-                      {% if stock_inventory == false %}
-                        <div class="wbstockinfo-bar {% if inventory_status == "soon" %} hidden {% endif %}">
-                          <span class="wbstockinfo-probar" style="width: {{ bar_progress }}"></span>
-                        </div> 
-                      {% endif %}
-                    </div>
-                    {%- style -%}
-                    :root {
-                      --card_product-in-stock-color: {{ in_stock_color }};
-                      --card_product-low-stock-color: {{ limited_stock_color }};
-                      --card_product-continue-selling-color: {{ continue_selling_color }};
-                    }
-                    {%- endstyle -%}
-                    {{ 'component-stock-countdown.css' | asset_url | stylesheet_tag }}
-                    <script id="card_product-variants" type="application/json">
-                      {
-                        {%- for variant in card_product.variants -%}
-                          "{{- variant.id -}}": { "q":{{ variant.inventory_quantity }}, "p":"{{ variant.inventory_policy }}"}{%- if forloop.last == false -%},{%- endif -%}
-                        {%- endfor -%}
-                      }
-                    </script>
-                    <script id="card_product-stock-countdown-config" type="application/json">
-                      {
-                        "max_stock": {{ max_stock }},
-                        "limited_stock_cut_off": {{ limited_stock_cut_off }},
-                        "instock_message": "{{ instock_message }}",
-                        "limited_stock_message": "{{ limited_stock_message }}",
-                        "continue_selling_message": "{{ continue_selling_message }}"
-                      }
-                    </script> 
-                  {% endif %}
-                </div>
-              </div>
-              {% if show_quantity == true %}
-                <div class="wbform_qty product-form__quantity cardhide_toggle">
-                  <label class="quantity__label form__label">{{ 'products.product.quantity.label' | t }}</label>
-                  <div class="price-per-item__container">
-                    <quantity-input class="quantity">
-                      <button class="quantity__button no-js-hidden" name="minus" type="button">
-                        <span class="visually-hidden">
-                          {{- 'products.product.quantity.decrease' | t: card_product: card_product.title | escape -}}
-                        </span>
-                        {% render 'icon-minus' %}
-                      </button>
-                      <input class="quantity__input {{ quantity_number }}"
-                        type="number"
-                        name="quantity"
-                        aria-label="{{ 'products.product.quantity.label' | t }}"
-                        id="Quantity-{{ section.id }}-{{ card_product.id }}"
-                        data-cart-quantity="{{ cart_qty }}"
-                        data-min="{{ card_product.selected_or_first_available_variant.quantity_rule.min }}"
-                        min="{{ card_product.selected_or_first_available_variant.quantity_rule.min }}"
-                        {% if card_product.selected_or_first_available_variant.quantity_rule.max != null %}
-                          data-max="{{ card_product.selected_or_first_available_variant.quantity_rule.max }}"
-                          max="{{ card_product.selected_or_first_available_variant.quantity_rule.max }}"
-                        {% endif %}
-                        step="{{ card_product.selected_or_first_available_variant.quantity_rule.increment }}"
-                        value="{{ card_product.selected_or_first_available_variant.quantity_rule.min }}"
-                        form="{{ product_form_id }}"
-                      >
-                      <button class="quantity__button no-js-hidden" name="plus" type="button">
-                        <span class="visually-hidden">
-                          {{- 'products.product.quantity.increase' | t: card_product: card_product.title | escape -}}
-                        </span>
-                        {% render 'icon-plus' %}
-                      </button>
-                    </quantity-input>
                   </div>
-                </div>
-              {% endif %}
+                {% endif %}
+              </div>
+
               {%- unless card_product.has_only_default_variant -%}
                 {% if show_variants and enable_addtocart %}
                 <div class="wb_popup_variant">
@@ -790,7 +940,7 @@
                       id="{{ quick_product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="add-to-cart__submit button button button--primary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
+                      class="asdaswqe add-to-cart__submit button button button--primary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ quick_product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                       data-product-url="{{ card_product.url }}"

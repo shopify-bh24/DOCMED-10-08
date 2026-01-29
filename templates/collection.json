@@ -13,7 +13,8 @@
       "type": "breadcrumb",
       "name": "Breadcrumb",
       "settings": {
-        "show_breadcrumb": true
+        "show_breadcrumb": true,
+        "breadcrumb_limit": 5
       }
     },
     "banner": {
@@ -40,14 +41,14 @@
         "image_ratio": "square",
         "show_secondary_image": false,
         "show_quantity": false,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": true,
         "enable_quick_add": false,
         "quicklook_style": "link",
         "show_count_timer": false,
-        "enable_listdesc": true,
+        "enable_listdesc": false,
         "color_swatchhover": false,
-        "enable_addtocart": false,
+        "enable_addtocart": true,
         "show_variants": false,
         "show_variant_label": false,
         "picker_type": "button",

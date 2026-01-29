@@ -223,41 +223,43 @@
           "greeting_message": "Wir sind für Sie da und freuen uns auf Ihre Fragen oder Ihr Feedback."
         }
       },
-      "15154131639906026026": {
-        "type": "shopify://apps/tinyseo/blocks/broken-link-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "14971748854670876780": {
-        "type": "shopify://apps/tinyseo/blocks/product-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
+      "5190533890702845989": {
+        "type": "shopify://apps/google-reviews/blocks/sticky-compact-slider-widget-block_embedded/8b378e9e-c56d-47ce-a754-feca5e0caf59",
+        "disabled": true,
         "settings": {
-          "hide_price": false
+          "contentIndex": "1",
+          "customContentIndex": 31,
+          "font": "default",
+          "themeId": "light",
+          "cardColor": "#F3F6F9",
+          "starsColor": "#FBB000",
+          "textColor": "#404040",
+          "transparent": 1,
+          "verticalPositionId": "bottom",
+          "horizontalPositionId": "right",
+          "delay": 5
         }
       },
-      "11089864892113081655": {
-        "type": "shopify://apps/tinyseo/blocks/website-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
+      "8837987693456358955": {
+        "type": "shopify://apps/google-reviews/blocks/sticky-compact-widget-block_embedded/8b378e9e-c56d-47ce-a754-feca5e0caf59",
+        "disabled": true,
+        "settings": {
+          "contentIndex": "1",
+          "customContentIndex": 31,
+          "font": "default",
+          "themeId": "light",
+          "cardColor": "#F3F6F9",
+          "starsColor": "#FBB000",
+          "textColor": "#404040",
+          "transparent": 1,
+          "verticalPositionId": "bottom",
+          "horizontalPositionId": "right",
+          "minimize": false
+        }
       },
-      "1369284949797581044": {
-        "type": "shopify://apps/tinyseo/blocks/collection-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "1360768219604461044": {
-        "type": "shopify://apps/tinyseo/blocks/store-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "2353461558643755616": {
-        "type": "shopify://apps/tinyseo/blocks/breadcrumbs-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "11104565113590962351": {
-        "type": "shopify://apps/tinyseo/blocks/article-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": true,
         "settings": {}
       }
     },

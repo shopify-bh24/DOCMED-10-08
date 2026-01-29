@@ -125,7 +125,8 @@
     margin-top: 12px;
 }
 product-form .add-to-cart__submit:hover:not([disabled]) span {
-  color: rgb(var(--color-button-hover-text));
+  /* color: rgb(var(--color-button-hover-text)); */
+  color: white;
 }
 .card-wrapper {
   color: inherit;
@@ -160,8 +161,9 @@ product-form .add-to-cart__submit:hover:not([disabled]) span {
   column-gap: 30px;
 }
 .wbproduct-container.product-card-wrapper .add-to-cart__submit:not([disabled]):hover{
-  color: rgb(var(--color-button-hover-text));
+  /* color: rgb(var(--color-button-hover-text)); */
   /* background: rgb(var(--color-bg-button-hover)); */
+  color: white;
 }
 .card--horizontal.ratio:before {
   padding-bottom: 0;

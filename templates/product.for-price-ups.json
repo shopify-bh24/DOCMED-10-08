@@ -42,13 +42,6 @@
           "type": "ve",
           "settings": {}
         },
-        "custom_liquid_CU3fQx": {
-          "type": "custom_liquid",
-          "name": "mobile taps",
-          "settings": {
-            "custom_liquid": "<div  class=\"cus-tabs-blc-mobile-wrp\">\n</div>"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {}
@@ -80,6 +73,13 @@
             "icon_color": "#17af40"
           }
         },
+        "custom_liquid_CU3fQx": {
+          "type": "custom_liquid",
+          "name": "mobile taps",
+          "settings": {
+            "custom_liquid": "<div  class=\"cus-tabs-blc-mobile-wrp\">\n</div>"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -94,11 +94,11 @@
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
         "pzn_xKqefU",
         "ve_Uazb3B",
-        "custom_liquid_CU3fQx",
         "price",
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
         "offer_9QtRKa",
+        "custom_liquid_CU3fQx",
         "buy_buttons"
       ],
       "settings": {
@@ -328,10 +328,10 @@
         "heading": ""
       }
     },
-    "apps_hTtqNU": {
+    "apps_Ef7aEX": {
       "type": "apps",
       "blocks": {
-        "google_reviews_carousel_widget_block_ABNTGy": {
+        "google_reviews_carousel_widget_block_tEV7qe": {
           "type": "shopify://apps/google-reviews/blocks/carousel-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
           "settings": {
             "contentIndex": "1",
@@ -356,7 +356,7 @@
         }
       },
       "block_order": [
-        "google_reviews_carousel_widget_block_ABNTGy"
+        "google_reviews_carousel_widget_block_tEV7qe"
       ],
       "settings": {
         "include_margins": true,
@@ -436,7 +436,7 @@
     "related-products",
     "related_products_new_JwmmVT",
     "custom_featured_coll_sec_EgVBEz",
-    "apps_hTtqNU",
+    "apps_Ef7aEX",
     "contact_form_wNtY4c"
   ]
 }

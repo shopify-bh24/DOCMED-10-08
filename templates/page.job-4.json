@@ -21,13 +21,6 @@
         "padding_bottom": 60
       }
     },
-    "breadcrumb_rEt8RW": {
-      "type": "breadcrumb",
-      "name": "Breadcrumb",
-      "settings": {
-        "show_breadcrumb": true
-      }
-    },
     "jobs_section_Nf99EF": {
       "type": "jobs_section",
       "blocks": {
@@ -164,7 +157,6 @@
   },
   "order": [
     "main",
-    "breadcrumb_rEt8RW",
     "jobs_section_Nf99EF",
     "about_comapny_8hi4L9"
   ]

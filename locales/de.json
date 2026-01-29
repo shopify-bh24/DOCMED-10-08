@@ -132,12 +132,20 @@
     "product_lck_desc": "Produktbeschreibung hier einfügen "
   },
   "products": {
+    "availability": {
+      "in_stock": "Auf Lager",
+      "inbound": "Im Zulauf",
+      "out_of_stock": "Nicht auf Lager"
+    },
+    "delivery": {
+      "default": "In 1–3 Werktagen geliefert"
+    },
     "product": {
       "review": "Bewertungen",
       "stock": "Stück",
       "from": "ab",
       "choose_options": "Optionen wählen",
-      "add_to_cart": "Hinzufügen +",
+      "add_to_cart": "zum Warenkorb hinzufügen +",
       "select_option": "Optionen auswählen",
       "quick_look": "Vorschau",
       "off_price": "% reduziert",
@@ -331,7 +339,7 @@
       },
       "update": "Aktualisieren",
       "login": {
-        "title": "Hast du ein Konto?",
+        "title": "Haben Sie bereits ein Konto ? ",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Loggen Sie sich ein</a>, damit es beim Checkout schneller geht.",
         "login": "Anmelden",
         "logintitle": "um schneller zur Kasse zu gehen."
@@ -643,8 +651,8 @@
       "sku": "SKU:",
       "nocontent": "There is no any content found.",
       "see_all": "Alle anzeigen",
-      "free_ship": "Herzlichen Glückwunsch,",
-      "free_shipinner": "dein Warenkorb ist versandkostenfrei.",
+      "free_ship": " ",
+      "free_shipinner": "Die Versandkosten für Ihre Bestellung entfallen.",
       "free_shiponly": "Noch",
       "free_shipaway": "bis zum Kostenlosem Versand!",
       "order_note": "Bestellnotiz ",
@@ -693,7 +701,22 @@
         }
       },
       "thank_you": {
-        "login": "Anmelden "
+        "login": "Anmelden ",
+        "thank_you_title": "Ihr Bestellung wurde bestätigt",
+        "confirmed_title": "Ihr Bestellung wurde bestätigt",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_payment": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_payment": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "Sie erhalten in Kürze eine Bestätigungs-E-Mail",
+        "thank_you_confirmed_with_email_description": {
+          "single_store": "Sie erhalten in Kürze eine Bestätigungs-E-Mail"
+        },
+        "thank_you_confirmed_with_email_and_phone_description": {
+          "single_store": "Sie erhalten in Kürze eine Bestätigungs-E-Mail"
+        },
+        "contact_us_html": "Benötigen Sie Hilfe ? {{conatct_us}}"
       },
       "general": {
         "contact_us_html": "Kontaktieren Sie uns für weitere Information",
@@ -701,7 +724,8 @@
           "session_identifier_not_unique_error": "Bei Ihrer Bestellung ist etwas schiefgelaufen. Bitte versuchen Sie es später erneut."
         },
         "submit_for_review_notice_label": "Die Zahlung ist erst fällig, wenn Ihre Bestellung überprüft wurde.",
-        "continue_to_shipping_method": "Weiter zum Versand"
+        "continue_to_shipping_method": "Weiter zum Versand",
+        "back_to_contact_information": "Zurück zum Warenkorb"
       },
       "shipping_errors": {
         "empty_state": "Bitte geben Sie ihre Lieferadresse ein, um Versandkosten anzuzeigen."
@@ -710,11 +734,35 @@
         "cookie_preferences": "Cookies"
       },
       "customer_account": {
-        "sign_in_link_label": "Anmelden "
+        "sign_in_link_label": "Anmelden ",
+        "have_an_account_label": "Haben Sie bereits ein Konto ? "
       },
       "marketing": {
         "accept_marketing_checkbox_label": "Versandstatus, Infos zu Produkten & Service per E-Mail erhalten"
+      },
+      "stock": {
+        "empty_cart_label": "Ihr Warenkorb ist leer"
+      },
+      "throttle": {
+        "cart_summary_heading": "Ihr Warenkorb",
+        "inventory": {
+          "sold_out": {
+            "heading": "Ihr Warenkorb ist ausverkauft"
+          }
+        }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "cart_updated": "Ihr Warenkorb wurde aktualisiert"
+      },
+      "review": {
+        "review_title": "Schließen Sie ihre Bestellung jetzt ab "
+      },
+      "processing": {
+        "you_will_not_be_charged": "Es wird noch nichts berechnet!"
       }
+    },
+    "page_titles": {
+      "shopping_cart": "Warenkorb"
     }
   },
   "customer_accounts": {
@@ -728,6 +776,11 @@
     "account_information": {
       "verify_new_email_modal": {
         "description": "Bitte geben Sie den an {{email}} gesendet code ein"
+      }
+    },
+    "orders": {
+      "order_status": {
+        "confirmed_title": "Ihr Bestellung wurde bestätigt"
       }
     }
   }

@@ -132,6 +132,14 @@
     "product_lck_desc": "Add product description here"
   },
   "products": {
+    "availability":{
+      "in_stock":"in stock",
+      "inbound": "Inbound",
+      "out_of_stock": "Out of stock"
+    },
+    "delivery":{
+      "default": "Delivered in 1-3 working days"
+    },
     "product": {
       "review": "review",
       "stock": "Stock",
@@ -704,6 +712,34 @@
       "address_management": {
         "confirm_address_deletion": "Are you sure you want to delete the address {{address}} ?"
       }
+    }
+  },
+  "customer_accounts": {
+    "subscriptions": {
+      "subscription_contracts": {
+        "title": "Use payment method for recurring orders",
+        "subscription_contracts_updated": "{{succeeded}} of {{total}} subscriptions updated",
+        "product_details": "Product details",
+        "load_more": "Load more",
+        "more_items": {
+          "one": "{{count}} other product",
+          "other": "{{count}} more products"
+        },
+        "product_count": {
+          "one": "{{count}} Product",
+          "other": "{{count}} products"
+        }
+      },
+      "contracts_update_failed": "Some subscription contracts could not be updated.",
+      "updating_contracts": {
+        "one": "{{count}} Subscription agreement is being updated…",
+        "other": "{{count}} Subscription agreements are being updated…"
+      },
+      "contracts_updated": {
+        "one": "{{count}} Subscription agreement successfully updated",
+        "other": "{{count}} Subscription contracts successfully updated"
+      },
+      "invalid_wallet_type_error": "Invalid wallet type."
     }
   }
 }

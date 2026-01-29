@@ -28,25 +28,11 @@
           "type": "title",
           "settings": {}
         },
-        "65491c3f-abb9-4bd5-9728-1b439626a36f": {
-          "type": "sku",
-          "settings": {
-            "text_style": "body"
-          }
-        },
-        "pzn_xKqefU": {
-          "type": "pzn",
-          "settings": {}
-        },
-        "ve_Uazb3B": {
-          "type": "ve",
-          "settings": {}
-        },
-        "custom_liquid_CU3fQx": {
+        "custom_liquid_KGQxUe": {
           "type": "custom_liquid",
-          "name": "mobile taps",
+          "name": "product-benefits",
           "settings": {
-            "custom_liquid": "<div  class=\"cus-tabs-blc-mobile-wrp\">\n</div>"
+            "custom_liquid": "<div class=\"sh-product-benefits-wrapper\">\n<div class=\"sh-product-benefits-container\">\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/map-pin-solid-full.svg?v=1768749944\" alt=\"Bild 1\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Made in Germany</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/car-on-solid-full.svg?v=1768750118\" alt=\"Bild 2\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">für eingeschränkte Mobilität</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/magnifying-glass-solid-full.svg?v=1768749852\" alt=\"Bild 3\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">getestet von VOX \"Hot oder Schrott\"</span>\n    </div>\n    \n    <!-- Zusätzliche Benefits, basierend auf der Auswahl des Benutzers -->\n    \n</div>\n</div>\n\n<style>\n.sh-product-benefits-wrapper {\n    display: flex;\n    width: 100%;\n    justify-content: flex-start;\n}\n\n/* Ganze Box */\n.sh-product-benefits-container {\n    width: fit-content;\n    padding: 0px 0px;\n    background-color: ;\n    border-radius: 0px;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n}\n\n/* Benefit Zeilen */\n.sh-product-benefits-row {\n    display: flex;\n    align-items: center;\n    margin: 5px 0;\n    padding: 1px 5px;\n    background-color: #7FC7CF;\n    color: #ffffff;\n    border-radius: 10px;\n    width: fit-content;\n}\n\n/* Icon */\n.sh-product-benefits-img {\n    width: 20px;\n    margin-right: 10px;\n    height: auto;\n    margin-block: unset !important;\n}\n\n/* Text */\n.sh-product-benefits-text {\n    flex: 1;\n    padding-top: 0px;\n    font-size: 16px;\n}\n</style>"
           }
         },
         "price": {
@@ -62,22 +48,11 @@
             "selector_style": "swatch"
           }
         },
-        "variant_picker_PMkhTg": {
-          "type": "variant_picker",
+        "custom_liquid_cFzUr7": {
+          "type": "custom_liquid",
+          "name": "product.variants.first.inventory_quantity",
           "settings": {
-            "picker_type": "button",
-            "show_colorswatch": true
-          }
-        },
-        "offer_9QtRKa": {
-          "type": "offer",
-          "settings": {
-            "heading": "",
-            "icon": "truck",
-            "content": "<p><strong>Auf Lager: </strong>In 1-3 Werktagen geliefert</p>",
-            "icon2": "none",
-            "content2": "",
-            "icon_color": "#17af40"
+            "custom_liquid": "{% if product.variants.first.inventory_quantity > 30 %}\n<div class=\"sh-instock-8765\" style=\"background-color: #ffffff; color: #228b22;\">\n    <svg class='sh-icon-7632-1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 100 100'><g><g id='Ebene_1'><g opacity='0.2'><circle cx='50' cy='50' r='49.3'/></g><circle cx='50' cy='50' r='26.9'/></g></g></svg>\n    <span><b>Auf Lager</b> | In 1-2 Werktagen geliefert</span>\n</div>\n{% elsif product.variants.first.inventory_quantity <= 30 and product.variants.first.inventory_quantity > 0 %}\n<div class=\"sh-instock-8765\" style=\"background-color: #ffffff; color: #FFA500;\">\n    <svg class='sh-icon-7632-2' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 100 100'><g><g id='Ebene_1'><g opacity='0.2'><circle cx='50' cy='50' r='49.3'/></g><circle cx='50' cy='50' r='26.9'/></g></g></svg>\n    <span><b>Nur noch wenige verfügbar!</b> | Jetzt noch Bestellen</span>\n</div>\n{% else %}\n<div class=\"sh-instock-8765\" style=\"background-color: #ffffff; color: #FF0000;\"><svg class='sh-icon-7632-3' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 100 100'><g><g id='Ebene_1'><g opacity='0.2'><circle cx='50' cy='50' r='49.3'/></g><circle cx='50' cy='50' r='26.9'/></g></g></svg>\n    <span><b>Ausverkauft</b> | Nachschub bald geliefert!</span>\n</div>\n{% endif %}\n\n<style>\n:root {\n    --sh-svg-vertical-offset: -1px;\n}\n\n.sh-instock-8765 {\n    border-radius: 10px;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    padding: 5px 0px;\n    display: flex;\n    align-items: center;\n    width: fit-content;\n    font-size: 16px;\n}\n\n\n@keyframes pulse {\n    0% {\n        r: 50;\n        opacity: 0.4;\n    }\n    50% {\n        r: 46;\n        opacity: 0.9;\n    }\n    100% {\n        r: 50;\n        opacity: 0.4;\n    }\n}\n\n.sh-icon-7632-1 {\n    fill: #228B22;\n    margin-right: 5px;\n    transform: translateY(var(--sh-svg-vertical-offset));\n    width: 16px;\n    height: 16px;\n}\n\n.sh-icon-7632-1 circle:first-child,\n.sh-icon-7632-2 circle:first-child,\n.sh-icon-7632-3 circle:first-child {\n    animation: pulse 2s infinite ease-in-out;\n}\n\n\n.sh-icon-7632-2 {\n    fill: #FFA500;\n    margin-right: 5px;\n    transform: translateY(var(--sh-svg-vertical-offset));\n    width: 16px;\n    height: 16px;\n}\n\n.sh-icon-7632-3 {\n    fill: #FF0000;\n    margin-right: 5px;\n    transform: translateY(var(--sh-svg-vertical-offset));\n    width: 16px;\n    height: 16px;\n}\n</style>"
           }
         },
         "buy_buttons": {
@@ -86,20 +61,24 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
+        },
+        "custom_liquid_CU3fQx": {
+          "type": "custom_liquid",
+          "name": "mobile taps",
+          "settings": {
+            "custom_liquid": "<div  class=\"cus-tabs-blc-mobile-wrp\">\n</div>"
+          }
         }
       },
       "block_order": [
         "judge_me_reviews_preview_badge_Eg7qAP",
         "title_jnyBi3",
-        "65491c3f-abb9-4bd5-9728-1b439626a36f",
-        "pzn_xKqefU",
-        "ve_Uazb3B",
-        "custom_liquid_CU3fQx",
+        "custom_liquid_KGQxUe",
         "price",
         "products_variants_7NcCUy",
-        "variant_picker_PMkhTg",
-        "offer_9QtRKa",
-        "buy_buttons"
+        "custom_liquid_cFzUr7",
+        "buy_buttons",
+        "custom_liquid_CU3fQx"
       ],
       "settings": {
         "ghs_image": "ghs-image-list-efsixrhk",
@@ -328,10 +307,10 @@
         "heading": ""
       }
     },
-    "apps_hTtqNU": {
+    "apps_eDHhYt": {
       "type": "apps",
       "blocks": {
-        "google_reviews_carousel_widget_block_ABNTGy": {
+        "google_reviews_carousel_widget_block_nwTpJU": {
           "type": "shopify://apps/google-reviews/blocks/carousel-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
           "settings": {
             "contentIndex": "1",
@@ -356,7 +335,7 @@
         }
       },
       "block_order": [
-        "google_reviews_carousel_widget_block_ABNTGy"
+        "google_reviews_carousel_widget_block_nwTpJU"
       ],
       "settings": {
         "include_margins": true,
@@ -436,7 +415,7 @@
     "related-products",
     "related_products_new_JwmmVT",
     "custom_featured_coll_sec_EgVBEz",
-    "apps_hTtqNU",
+    "apps_eDHhYt",
     "contact_form_wNtY4c"
   ]
 }

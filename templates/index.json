@@ -183,7 +183,7 @@
         "item_d6PdAA": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/M_lnlycke.png",
+            "image": "shopify://shop_images/M_lnlycke_Logo.png",
             "title": "Mölnycke",
             "tag": "",
             "url": "shopify://collections/molnlycke"
@@ -368,6 +368,15 @@
             "tag": "",
             "url": "shopify://collections/beurer"
           }
+        },
+        "item_R4hWJz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/images.png",
+            "title": "Johnson & Johnson",
+            "tag": "",
+            "url": "shopify://collections/johnson-johnson"
+          }
         }
       },
       "block_order": [
@@ -391,7 +400,8 @@
         "item_yNAhmQ",
         "item_CeKptW",
         "item_Q8MEGX",
-        "item_NQ7Wr9"
+        "item_NQ7Wr9",
+        "item_R4hWJz"
       ],
       "custom_css": [],
       "name": "Brand Circles ",
@@ -510,7 +520,7 @@
         "quicklook_style": "link",
         "show_count_timer": false,
         "color_swatchhover": false,
-        "enable_addtocart": false,
+        "enable_addtocart": true,
         "show_variants": false,
         "show_variant_label": false,
         "picker_type": "button",
@@ -546,6 +556,15 @@
         "swipe_on_mobile": true,
         "padding_top": 8,
         "padding_bottom": 36
+      }
+    },
+    "custom_featured_coll_sec_hqKMU6": {
+      "type": "custom-featured-coll-sec",
+      "name": "Push Produkte ",
+      "settings": {
+        "cus-bg-color": "#f5f5f7",
+        "collection": "push-products",
+        "heading": ""
       }
     },
     "cus_new_collectin_list_sec_ftM88k": {
@@ -644,64 +663,28 @@
         "subheading": ""
       }
     },
-    "custom_featured_coll_sec_hqKMU6": {
-      "type": "custom-featured-coll-sec",
-      "name": "Push Produkte ",
-      "settings": {
-        "cus-bg-color": "#f5f5f7",
-        "collection": "push-products",
-        "heading": ""
-      }
-    },
-    "multirow_Thm3Vt": {
-      "type": "multirow",
-      "blocks": {
-        "row_KhEAYk": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_design.jpg",
-            "caption": "",
-            "heading": "Sprechstundenbedarf",
-            "text": "<p><br/>Sprechstundenbedarf sind die medizinischen Verbrauchsmaterialien (z. B. Pflaster, Spritzen, Handschuhe, Desinfektions- und Schnelltest-Reagenzien), die eine Praxis direkt für die Behandlung gesetzlich versicherter Patienten benötigt und quartalsweise gesondert über die KV abrechnet – Verbrauch dokumentieren, Rahmenempfehlungen beachten, und alles läuft reibungslos.</p>",
-            "button_label": "Jetzt bestellen",
-            "button_link": "shopify://pages/sprechstundenbedarf",
-            "link_window": false,
-            "view_all_style": "outline",
-            "row_color_scheme": "accent-2"
-          }
-        }
-      },
-      "block_order": [
-        "row_KhEAYk"
-      ],
-      "disabled": true,
-      "name": "SSB",
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "align-left",
-        "row_gap": 1,
-        "section_color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "collapsible_content_7yExeM": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_nNB3gV": {
+        "collapsible_row_TtCwqK": {
           "type": "collapsible_row",
           "settings": {
-            "default_open": false,
+            "default_open": true,
             "heading": "Wie kann ich eine Bestellung aufgeben?",
             "icon": "none",
             "custom_image": "shopify://shop_images/cart-shopping-solid-full_2.svg",
             "row_content": "<p>Sie können Ihre Bestellung bequem über unseren Online-Shop aufgeben, indem Sie die gewünschten Produkte in den Warenkorb legen und dem Bestellprozess folgen.<br/><br/>Alternativ haben Sie die Möglichkeit, <strong>ein individuelles Angebot anzufordern</strong> oder Ihre Bestellung <strong>telefonisch oder per E-Mail</strong> bei unserem Team aufzugeben. Wir beraten Sie dabei gerne persönlich und unterstützen Sie bei der Produktauswahl sowie der Abwicklung.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nNB3gV": {
+          "type": "collapsible_row",
+          "settings": {
+            "default_open": true,
+            "heading": "Kann ich ein Angebot anfordern & per Rechnung bestellen?",
+            "icon": "none",
+            "custom_image": "shopify://shop_images/receipt-solid-full.svg",
+            "row_content": "<p>Ja, wir bieten unsere Artikel sowohl für <strong>B2B- als auch für B2C-Kunden</strong> an.<br/><br/>Gerne erstellen wir Ihnen ein individuelles Angebot. Nach Bestätigung des Angebots ist eine Bestellung per <strong>Rechnung (Vorkasse)</strong> möglich.<br/><br/>Bitte kontaktieren Sie uns hierzu über unser Kontaktformular oder per E-Mail und teilen Sie uns die gewünschten Artikel, Mengen sowie Ihre Rechnungs- und Lieferadresse mit.</p>",
             "page": ""
           }
         },
@@ -740,6 +723,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_TtCwqK",
         "collapsible_row_nNB3gV",
         "collapsible_row_pMzWYg",
         "collapsible_row_b9jDni",
@@ -760,6 +744,43 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1769257728e37c44bc": {
+      "type": "apps",
+      "blocks": {
+        "google_reviews_carousel_widget_block_NV3qfY": {
+          "type": "shopify://apps/google-reviews/blocks/carousel-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
+          "settings": {
+            "contentIndex": "1",
+            "customContentIndex": 31,
+            "font": "default",
+            "themeId": "light",
+            "ratingType": "stars",
+            "emojiType": "0",
+            "cardColor": "#f3f6f9",
+            "starsColor": "#fbb000",
+            "textColor": "#404040",
+            "transparent": 1,
+            "solidShadow": false,
+            "hasShadow": false,
+            "autoscroll": true,
+            "fluidScrolling": false,
+            "delay": 5,
+            "showRating": true,
+            "reviewPhotosType": "small",
+            "writeReview": true,
+            "fixedReviewsHeight": false
+          }
+        }
+      },
+      "block_order": [
+        "google_reviews_carousel_widget_block_NV3qfY"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 16,
         "padding_bottom": 0
       }
     },
@@ -826,6 +847,47 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "featured_blog_97NRwq": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "head_align": "left",
+        "heading_color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+        "head_space": false,
+        "description": "",
+        "description_style": "body",
+        "view_all_label": "mehr Anzeigen",
+        "show_view_all": true,
+        "view_button_pos": "bottom",
+        "view_all_style": "link",
+        "arrow_position": "inline",
+        "blog": "news",
+        "flex_direction": "column",
+        "image_height": "medium",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "show_image": true,
+        "date_position": "below",
+        "show_date": false,
+        "show_author": false,
+        "show_comment": false,
+        "show_tag": false,
+        "tag_layout": "default",
+        "show_seprator": true,
+        "secerpt": "truncate",
+        "show_read_more_button": true,
+        "read_more_uppercase": true,
+        "read_more_style": "link",
+        "blog_card_style": "card",
+        "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
     }
   },
   "order": [
@@ -833,10 +895,11 @@
     "3f381c47-733a-4027-b7cc-15a524815a39",
     "ss_circle_menu_2_bHr33m",
     "featured_collection_new_pzAqae",
-    "cus_new_collectin_list_sec_ftM88k",
     "custom_featured_coll_sec_hqKMU6",
-    "multirow_Thm3Vt",
+    "cus_new_collectin_list_sec_ftM88k",
     "collapsible_content_7yExeM",
-    "contact_form_MtCmVQ"
+    "1769257728e37c44bc",
+    "contact_form_MtCmVQ",
+    "featured_blog_97NRwq"
   ]
 }
