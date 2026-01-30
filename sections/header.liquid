@@ -239,6 +239,10 @@ body .wbhuserleft span, .wbcarthtotal span,body .wbhcart .wbcarthtotal span:nth-
   .search__input{
     clip-path: content-box;
   }
+
+  .header__icon.header__icon--menu.header__icon--summary.focus-inset.button.button--secondary:hover .mega-menu-title {
+    color: white !important;
+  }
 {%- endstyle -%}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 {%- if settings.cart_type == "notification" and template != 'cart' -%}
