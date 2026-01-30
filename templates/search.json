@@ -89,7 +89,7 @@
       "settings": {
         "color_scheme": "background-2",
         "collection": "bestseller",
-        "title": "<strong>Gut. Besser. Bestseller.</strong>",
+        "title": "",
         "heading_size": "h1",
         "head_align": "left",
         "heading_color_scheme": "",
