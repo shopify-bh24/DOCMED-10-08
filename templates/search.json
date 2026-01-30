@@ -51,40 +51,6 @@
     },
     "featured_collection_new_8RhUEX": {
       "type": "featured-collection-new",
-      "blocks": {
-        "heading_wmk9W3": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "icon1": "hotdeal",
-            "heading": "Heading",
-            "heading_size": "h2",
-            "subheading": ""
-          }
-        },
-        "date_3JYFny": {
-          "type": "date",
-          "disabled": true,
-          "settings": {
-            "wb_enddate": ""
-          }
-        },
-        "button_pyyAJB": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "icon2": "flash",
-            "btntxt": "Shop the collection",
-            "link": "",
-            "view_all_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "heading_wmk9W3",
-        "date_3JYFny",
-        "button_pyyAJB"
-      ],
       "name": "Bestseller",
       "settings": {
         "color_scheme": "background-2",
