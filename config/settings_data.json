@@ -151,7 +151,7 @@
     "cart_type": "drawer",
     "drawer_color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
     "wb_carticon": "wb_shopcart",
-    "wb_cartnumber": "wb_shoptotal",
+    "wb_cartnumber": "wb_shopqtytotal",
     "show_vendor": true,
     "show_cart_note": false,
     "wbenable_ship": true,

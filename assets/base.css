@@ -5361,6 +5361,19 @@ button:has(.cus-card-svg){
    justify-content:end !important;
 }
 
+.card-wrapper .card product-form .form .button {
+    width: 42px;
+    height: 42px;
+}
+
+.card-wrapper .card product-form .form .button:hover {
+  color: inherit !important;
+}
+
+.card-wrapper .card product-form .form .button span {
+    font-size: 20px;
+}
+
 .coll_fill_right  .wbsortbar {
   display:none;
 }

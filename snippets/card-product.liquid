@@ -73,6 +73,78 @@
     color: rgba(1, 31, 45);
     margin-bottom: 0px;
   }
+
+  .button-icon-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .button-icon {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .button-icon.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .button-icon--checkmark {
+    color: #22c55e;
+  }
+
+  .button-icon--checkmark .icon {
+    width: 13px;
+    height: 13px;
+    stroke: #22c55e;
+  }
+
+  .button-icon--plus .icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .button-icon--plus {
+    color: white;
+  }
+
+  .product-form__submit:hover .button-icon--plus {
+    color: white !important;
+  }
+
+  .product-form__submit.added .button-icon--plus {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .product-form__submit.added .button-icon--checkmark {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .button.added-to-cart {
+    color: #22c55e !important;
+  }
+
+  .button.added-to-cart span {
+    color: #22c55e !important;
+  }
+
+  .card_sale_price{
+    font-size: 18px;
+  }
+
+  .card_compare_price{
+    font-size: 14px;
+  }
 </style>
 
 {% comment %}
@@ -418,13 +490,13 @@
                     {% endunless %}
                 {% endif %}
                 {%- if show_vendor -%}<div style="height: 100%; max-height: 35px;" class="product__vendor cardhide_toggle">{{ card_product.vendor }}</div>{%- endif -%}
-                <h3 style="height: 100%; max-height: 60px;" class="cardhide_toggle card__heading{% if card_product.featured_media or card_style == 'standard' %} h5{% endif %}" {% if card_product.featured_media or card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %}>
+                <h3 style="max-height: 60px;" class="cardhide_toggle card__heading{% if card_product.featured_media or card_style == 'standard' %} h5{% endif %}" {% if card_product.featured_media or card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}" {% endif %}>
                     <a href="{{ card_product.url | default: '#' }}" id="CardLink-{{ section_id }}-{{ card_product.id }}" class="full-unstyled-link" aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}" >
                       {{ card_product.title | escape }}
                     </a>
                 </h3>
-                <div style="height: 100%; max-height: 110px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
-                  {% if card_product.selected_or_first_available_variant.sku != blank %}
+                <div style="height: 100%; max-height: 75px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
+                  {% if card_product.selected_or_first_available_variant.sku != blank %} 
                     <p
                       class="product__sku no-js-hidden card-product__sku"
                       id="Sku-{{ section.id }}"
@@ -579,7 +651,7 @@
                         </div>
                       {%- endif -%}
                     <div class="no-js-hidden wbhprice" id="price-{{ section.id }}-{{ card_product.id }}" role="status" {{ block.shopify_attributes }}>
-                      <div class="card_product_Price">  
+                      <div class="card_product_Price" {% if card_product.variants.size == 1 %} style="position: relative; top: 42px;"{% endif %}>
                           <span class="card_sale_price">
                             {% if card_product.price_varies %}
                               {{ 'products.product.from' | t }}
@@ -974,7 +1046,7 @@
                     </div>
                   </quick-add-modal>
                 {%- else -%}
-                  <product-form data-section-id="{{ section.id }}">
+                  <product-form data-section-id="{{ section.id }}" data-no-drawer="true">
                     <div class="product-form__error-message-wrapper" role="alert" hidden>
                       <svg
                         aria-hidden="true"
@@ -1005,36 +1077,33 @@
                           disabled
                         {% endif %}
                       >
-                      <button
-                        id="{{ product_form_id }}-submit"
-                        type="submit"
-                        name="add"
-                        class="add-to-cart__submit button button button--primary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
-                        aria-haspopup="dialog"
-                        aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                        aria-live="polite"
-                        data-sold-out-message="true"
-                        {% if card_product.selected_or_first_available_variant.available == false %}
-                          disabled
-                        {% endif %}
-                      >
-                        <span>
-                          {%- if card_product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.add_to_cart' | t }}
-                          {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
-                          {%- endif -%}
-                        </span>
-                        {% comment %} <span class="sold-out-message hidden">
-                          {{ 'products.product.sold_out' | t }}
-                        </span> {% endcomment %}
-                        {%- if horizontal_quick_add -%}
-                          <span class="icon-wrap">{% render 'icon-plus' %}</span>
-                        {%- endif -%}
-                        <div class="loading-overlay__spinner hidden">
-                              <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"> <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle> </svg>
+                        <button
+                          id="ProductSubmitButton-{{ section_id }}"
+                          type="submit"
+                          name="add"
+                          class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--primary{% else %}button--primary{% endif %}"
+            
+                        >
+                          <span class="button-icon-wrapper">
+                            <span class="button-icon button-icon--plus">
+                              +
+                            </span>
+                            <span class="button-icon button-icon--checkmark hidden">
+                              {% render "icon-checkmark" %}
+                            </span>
+                          </span>
+                          <div class="loading-overlay__spinner hidden">
+                            <svg
+                              aria-hidden="true"
+                              focusable="false"
+                              class="spinner"
+                              viewBox="0 0 66 66"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                            </svg>
                           </div>
-                      </button>
+                        </button>
                     {%- endform -%}
                   </product-form>
                 {%- endif -%}

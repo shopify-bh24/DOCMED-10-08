@@ -36,6 +36,7 @@ if (!customElements.get('quick-add-modal')) {
           this.removeGalleryListSemantic();
           this.updateImageSizes();
           this.preventVariantURLSwitching();
+          this.setNoDrawerOnProductForms();
           super.show(opener);
         })
         .finally(() => {
@@ -110,6 +111,15 @@ if (!customElements.get('quick-add-modal')) {
       }
 
       mediaImages.forEach(img => img.setAttribute('sizes', mediaImageSizes));
+    }
+
+    setNoDrawerOnProductForms() {
+      // Add data-no-drawer to all product-form elements in the modal
+      const productForms = this.modalContent.querySelectorAll('product-form');
+      productForms.forEach(form => {
+        form.setAttribute('data-no-drawer', 'true');
+        form.setAttribute('data-quick-add-modal', 'true');
+      });
     }
   });
 }
