@@ -21,73 +21,101 @@
         "padding_bottom": 60
       }
     },
-    "contact_form_jqGVW4": {
-      "type": "contact-form",
+    "rich_text_EFCLPq": {
+      "type": "rich-text",
       "blocks": {
-        "text_bAFdFL": {
+        "heading_r6kBjY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_knQKDn": {
           "type": "text",
           "settings": {
-            "field_label": "",
-            "label_placeholder": "Name",
-            "required_field": false
-          }
-        },
-        "email_ggFBBi": {
-          "type": "email",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Email",
-            "required_field": true
-          }
-        },
-        "phone_rwJbEd": {
-          "type": "phone",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Telefon",
-            "required_field": true
-          }
-        },
-        "message_yED6GK": {
-          "type": "message",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Ihre Nachricht...",
-            "required_field": false
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text_style": "body",
+            "custom_text": "",
+            "show_icon": "present-icon",
+            "content_icon": "snowflake"
           }
         }
       },
       "block_order": [
-        "text_bAFdFL",
-        "email_ggFBBi",
-        "phone_rwJbEd",
-        "message_yED6GK"
+        "heading_r6kBjY",
+        "text_knQKDn"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "full_width": true,
+        "space_around": 0,
+        "desktop_content_size": "large",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "17699777244131dbe0": {
+      "type": "apps",
+      "blocks": {
+        "google_reviews_masonry_widget_block_8kkmgD": {
+          "type": "shopify://apps/google-reviews/blocks/masonry-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
+          "settings": {
+            "contentIndex": "1",
+            "customContentIndex": 31,
+            "font": "default",
+            "themeId": "light",
+            "ratingType": "stars",
+            "emojiType": "0",
+            "cardColor": "#f3f6f9",
+            "starsColor": "#fbb000",
+            "textColor": "#404040",
+            "transparent": 1,
+            "solidShadow": false,
+            "reviewPhotosType": "small",
+            "showRating": true,
+            "writeReview": true,
+            "numberOfRowsMobile": 3,
+            "numberOfRowsDesktop": 2
+          }
+        },
+        "google_reviews_locations_widget_block_YArMYj": {
+          "type": "shopify://apps/google-reviews/blocks/locations-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
+          "settings": {
+            "contentIndex": "all",
+            "customContentIndex": 31,
+            "font": "default",
+            "themeId": "light",
+            "ratingType": "stars",
+            "emojiType": "0",
+            "cardColor": "#f3f6f9",
+            "starsColor": "#fbb000",
+            "textColor": "#404040",
+            "transparent": 1,
+            "solidShadow": false,
+            "photoType": "large",
+            "showMap": true
+          }
+        }
+      },
+      "block_order": [
+        "google_reviews_masonry_widget_block_8kkmgD",
+        "google_reviews_locations_widget_block_YArMYj"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "head_align": "left",
-        "heading_color_scheme": "",
-        "head_space": true,
-        "description": "",
-        "description_style": "body",
-        "enable_all": "text",
-        "contact_iframe_code": "",
-        "texttitle": "<strong>Sie benötigen Hilfe ?</strong>",
-        "demotext": "Ob für den privaten oder professionellen Gebrauch – wir helfen Ihnen, die optimale Lösung zu finden. Kontaktieren Sie uns!",
-        "contacttitle": "",
-        "contsubtext": "",
-        "footer_contact_no": "<p><strong>0234 - 357 905 59</strong></p>",
-        "show_social": true,
-        "contactfollow": "",
-        "color_scheme": "",
+        "include_margins": true,
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "main",
-    "contact_form_jqGVW4"
+    "rich_text_EFCLPq",
+    "17699777244131dbe0"
   ]
 }
