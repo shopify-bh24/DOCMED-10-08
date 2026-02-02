@@ -67,11 +67,39 @@
             "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_x6B4Nr": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "enable_video_looping": false,
+            "auto_play_video": false,
+            "video_url": "",
+            "image_overlay_opacity": 0,
+            "text_caption": "",
+            "outline_text": false,
+            "heading": "",
+            "heading_size": "h2",
+            "font_color": "",
+            "subheading": "",
+            "description": "",
+            "text_style": "body",
+            "button_label": "",
+            "link": "shopify://collections/erler-zimmer",
+            "link_window": false,
+            "view_all_style": "solid",
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_HiqrFT",
-        "slide_FL8yYU"
+        "slide_FL8yYU",
+        "slide_x6B4Nr"
       ],
       "settings": {
         "slide_heading_font": "open_sans_n4",
