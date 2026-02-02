@@ -1,4 +1,10 @@
- 
+ <style>
+  .aswrq.grid__item.slider__slide{
+    {% comment %} height: max-content !important; {% endcomment %}
+  }
+ </style>
+
+
   {{ 'component-card.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
@@ -112,7 +118,7 @@
 
 /* Product heading */
 .section-featured-collection-new .product-card-wrapper .card__heading {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   color: rgba(1, 31, 45);
 }
@@ -341,7 +347,7 @@
                   {% if temp == 0 %}
                     <li
                       id="Slide-{{ section.id }}-{{ forloop.index }}"
-                      class="grid__item slider__slide"
+                      class="aswrq grid__item slider__slide"
                     >
                   {% endif %}
                   {% render 'card-product',

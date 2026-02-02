@@ -302,7 +302,7 @@ wb-card-variant {
 .wbproduct-container .wb_select_btn,
 .wbproduct-container product-form,
 .wbproduct-container .selectedbtn {
-  margin: 0 15px 15px 15px;
+  /* margin: 0 15px 15px 15px; */
 }
 .card--standard .card__content { 
   padding: 0;

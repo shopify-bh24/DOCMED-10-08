@@ -5393,3 +5393,14 @@ button:has(.cus-card-svg){
   font-size: 11px !important;
 }
 }
+
+
+/* @media (min-aspect-ratio: 189 / 100){
+    .aswrq.grid__item.slider__slide{
+        height: 530px !important;
+    }
+
+    .card__product{
+        height: max-content !important;
+      }
+} */
