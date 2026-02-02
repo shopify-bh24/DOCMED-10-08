@@ -71,6 +71,7 @@
         },
         "offer_9QtRKa": {
           "type": "offer",
+          "disabled": true,
           "settings": {
             "heading": "",
             "icon": "truck",
@@ -344,6 +345,7 @@
             "starsColor": "#fbb000",
             "textColor": "#404040",
             "transparent": 1,
+            "solidShadow": false,
             "hasShadow": false,
             "autoscroll": true,
             "fluidScrolling": false,
