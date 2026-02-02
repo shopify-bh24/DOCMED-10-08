@@ -115,6 +115,35 @@
     text-transform: none !important;
   }
 
+  .product__availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.2;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 3px;
+    margin-bottom: 0px;
+  }
+  
+  .product__availability .availability-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex: 0 0 10px;
+  }
+  
+  .product__availability .availability-dot--in {
+    background: #22c55e;
+  }
+
+  .product__availability .availability-dot--inbound{
+    background: rgb(251, 205, 10);
+  }
+  
+  .product__availability .availability-dot--out {
+    background: #ef4444;
+  }
 </style>
 
 {% style %}
@@ -672,7 +701,37 @@
                       {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                     {%- endif -%}
                   </div>
+
+                  {%- assign current_variant = product.selected_or_first_available_variant -%}
+
+                  {%- assign metafield_delivery = product.metafields.custom.delivery_text.value -%}
+                  {%- assign fallback_delivery = 'products.delivery.default' | t -%}
+                  {%- assign delivery_text = metafield_delivery | default: fallback_delivery -%}
+
+                  {%- if metafield_delivery != blank -%}
+                    {%- assign availability_label = 'products.availability.inbound' | t -%}
+                    {%- assign availability_dot_class = 'availability-dot--inbound' -%}
+                  {%- else -%}
+                    {%- assign availability_label = 'products.availability.in_stock' | t -%}
+                    {%- assign availability_dot_class = 'availability-dot--in' -%}
+                  {%- endif -%}
+
+                  <p
+                    class="product__availability no-js-hidden main-product__delivery__text"
+                    id="Availability-{{ section.id }}-{{ product.id }}"
+                    role="status"
+                    style="margin-top: 10px; font-size: 14px;"
+                  >
+                    {%- if current_variant.available -%}
+                      <span class="availability-dot {{ availability_dot_class }}" aria-hidden="true"></span>
+                      <span class="availability-label" style="font-weight: 400;"><b>{{ availability_label }}:</b> {{ delivery_text }}</span>
+                    {%- else -%}
+                      <span class="availability-dot availability-dot--out" aria-hidden="true"></span>
+                      <span class="availability-label" style="font-weight: 400;"><b>{{ 'products.availability.out_of_stock' }}</b></span>
+                    {%- endif -%}
+                  </p>
                 </div>
+
                 <div class="wbspayinstall" {{ block.shopify_attributes }}>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -710,8 +769,6 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
-              {%- when 'custom_liquid' -%}
-                {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
                 <webi-collapse class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <div id="Detailswebi-{{ block.id }}-{{ section.id }}">

@@ -656,7 +656,8 @@ wb-card-variant {
   transition: .5s ease;
 }
 .wbproduct-container.product-card-wrapper .add-to-cart__submit{
-  width: 100%;
+  width: 42px;
+  height: 42px;
 }
 .blank__image{
   display: flex;

@@ -581,10 +581,10 @@
                   >
                     {%- if current_variant.available -%}
                       <span class="availability-dot {{ availability_dot_class }}" aria-hidden="true"></span>
-                      <span class="availability-label"><b>{{ availability_label }}:</b> {{ delivery_text }}</span>
+                      <span class="availability-label" style="font-weight: 400;"><b>{{ availability_label }}:</b> {{ delivery_text }}</span>
                     {%- else -%}
                       <span class="availability-dot availability-dot--out" aria-hidden="true"></span>
-                      <span class="availability-label"><b>{{'products.availability.out_of_stock'}}</b></span>
+                      <span class="availability-label" style="font-weight: 400;"><b>{{'products.availability.out_of_stock'}}</b></span>
                     {%- endif -%}
                   </p>
                   <div class="card-information">
@@ -651,7 +651,7 @@
                         </div>
                       {%- endif -%}
                     <div class="no-js-hidden wbhprice" id="price-{{ section.id }}-{{ card_product.id }}" role="status" {{ block.shopify_attributes }}>
-                      <div class="card_product_Price" {% if card_product.variants.size == 1 %} style="position: relative; top: 42px;"{% endif %}>
+                      <div class="card_product_Price" style="position: relative; top: 42px;">
                           <span class="card_sale_price">
                             {% if card_product.price_varies %}
                               {{ 'products.product.from' | t }}
@@ -1017,13 +1017,16 @@
                       aria-labelledby="{{ quick_product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                       data-product-url="{{ card_product.url }}"
                     >
-                      <span>{{ 'products.product.choose_options' | t }}</span>
+                      {% comment %} <span>{{ 'products.product.choose_options' | t }}</span>
                       {%- if horizontal_quick_add -%}
                         <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-                      {%- endif -%}
+                      {%- endif -%} {% endcomment %}
+                       <span>
+                        {% render 'icon-plus' %}
+                       </span>
                       <div class="loading-overlay__spinner hidden">
                               <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"> <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle> </svg>
-                          </div>
+                      </div>
                     </button>
                   </modal-opener>
                   <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
