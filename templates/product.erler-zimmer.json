@@ -34,16 +34,16 @@
           "type": "title",
           "settings": {}
         },
-        "ve_Uazb3B": {
-          "type": "ve",
-          "settings": {}
-        },
         "custom_liquid_DTYCHG": {
           "type": "custom_liquid",
           "name": "USP",
           "settings": {
             "custom_liquid": "<div class=\"sh-product-benefits-wrapper\">\n<div class=\"sh-product-benefits-container\">\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/screwdriver-wrench-solid-full.svg?v=1768309630\" alt=\"Bild 1\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Made in Germany</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/house-medical-flag-solid-full.svg?v=1768309772\" alt=\"Bild 2\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Praxisnah & realitätsgetreu </span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/chart-pie-solid-full.svg?v=1768039097\" alt=\"Bild 3\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Raten- & Rechnungskauf verfügbar</span>\n    </div>\n    \n    <!-- Zusätzliche Benefits, basierend auf der Auswahl des Benutzers -->\n    <div class='sh-product-benefits-row'> <img src='https://cdn.shopify.com/s/files/1/0889/3356/4681/files/graduation-cap-solid-full.svg?v=1768309725' alt='Bild 4' class='sh-product-benefits-img'> <span class='sh-product-benefits-text'>Eingesetzt in Universitäten & Schulungen</span> </div>\n</div>\n</div>\n\n<style>\n.sh-product-benefits-wrapper {\n    display: flex;\n    width: 100%;\n    justify-content: flex-start;\n}\n\n/* Ganze Box */\n.sh-product-benefits-container {\n    width: fit-content;\n    padding: 0px 0px;\n    background-color: #ffffff;\n    border-radius: 0px;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n}\n\n/* Benefit Zeilen */\n.sh-product-benefits-row {\n    display: flex;\n    align-items: center;\n    margin: 5px 0;\n    padding: 1px 5px;\n    background-color: #ffffff;\n    color: #1D2E40;\n    border-radius: 10px;\n    width: fit-content;\n}\n\n/* Icon */\n.sh-product-benefits-img {\n    width: 20px;\n    margin-right: 10px;\n    height: auto;\n    margin-block: unset !important;\n}\n\n/* Text */\n.sh-product-benefits-text {\n    flex: 1;\n    padding-top: 0px;\n    font-size: 16px;\n}\n</style>"
           }
+        },
+        "ve_Uazb3B": {
+          "type": "ve",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -84,8 +84,8 @@
         "judge_me_reviews_preview_badge_kkYMgJ",
         "65491c3f-abb9-4bd5-9728-1b439626a36f",
         "title_jnyBi3",
-        "ve_Uazb3B",
         "custom_liquid_DTYCHG",
+        "ve_Uazb3B",
         "price",
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
@@ -106,71 +106,6 @@
         "mobile_thumbnails": "show",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "contact_form_wNtY4c": {
-      "type": "contact-form",
-      "blocks": {
-        "text_jEjcyw": {
-          "type": "text",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Name",
-            "required_field": false
-          }
-        },
-        "email_c3Fk3W": {
-          "type": "email",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Email",
-            "required_field": true
-          }
-        },
-        "phone_bDUQrJ": {
-          "type": "phone",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Telefon",
-            "required_field": true
-          }
-        },
-        "message_QVCXwm": {
-          "type": "message",
-          "settings": {
-            "field_label": "",
-            "label_placeholder": "Ihre Nachricht...",
-            "required_field": false
-          }
-        }
-      },
-      "block_order": [
-        "text_jEjcyw",
-        "email_c3Fk3W",
-        "phone_bDUQrJ",
-        "message_QVCXwm"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "<strong>Angebotsanfrage zu diesem Artikel</strong>",
-        "heading_size": "h1",
-        "head_align": "center",
-        "heading_color_scheme": "",
-        "head_space": true,
-        "description": "",
-        "description_style": "body",
-        "enable_all": "text",
-        "contact_iframe_code": "",
-        "texttitle": "<strong>Sie benötigen ein individuelles Angebot für diesen Artikel</strong> ?",
-        "demotext": "z. B. bei größeren Abnahmemengen oder für eine Institution?",
-        "contacttitle": "",
-        "contsubtext": "<p>Senden Sie uns Ihre Anfrage – wir melden uns zeitnah bei Ihnen.</p>",
-        "footer_contact_no": "",
-        "show_social": false,
-        "contactfollow": "Bitte übermittlen Sie uns auch <strong>Artikelnummer</strong>",
-        "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "apps_B3Mhzt": {
@@ -304,6 +239,7 @@
             "starsColor": "#fbb000",
             "textColor": "#404040",
             "transparent": 1,
+            "solidShadow": false,
             "hasShadow": false,
             "autoscroll": true,
             "fluidScrolling": false,
@@ -454,7 +390,6 @@
   "order": [
     "breadcrumb_nEM3mG",
     "main",
-    "contact_form_wNtY4c",
     "apps_B3Mhzt",
     "ss_product_tabs_2_bzCJFz",
     "apps_chiJzm",
