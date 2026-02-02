@@ -70,11 +70,11 @@
         },
         "slide_x6B4Nr": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "enable_video_looping": false,
             "auto_play_video": false,
             "video_url": "",
+            "image": "shopify://shop_images/Banner_Desktop_4355fe8c-3047-4926-9a01-90fe6756a1a4.png",
             "image_overlay_opacity": 0,
             "text_caption": "",
             "outline_text": false,
@@ -84,14 +84,14 @@
             "subheading": "",
             "description": "",
             "text_style": "body",
-            "button_label": "",
-            "link": "shopify://collections/erler-zimmer",
+            "button_label": "Schülke & Mayr",
+            "link": "shopify://collections/schulke-mayr",
             "link_window": false,
             "view_all_style": "solid",
-            "box_align": "middle-left",
-            "show_text_box": true,
+            "box_align": "bottom-right",
+            "show_text_box": false,
             "text_alignment": "left",
-            "color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
+            "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
         }
