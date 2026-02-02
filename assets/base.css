@@ -5390,7 +5390,7 @@ button:has(.cus-card-svg){
 
 @media screen and (max-width:450px){
 .card_product_Price .card_sale_price{
-  font-size: 11px !important;
+  font-size: 14px !important;
 }
 }
 
