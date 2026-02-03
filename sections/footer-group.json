@@ -64,7 +64,7 @@
         "contact_number": "",
         "localization_heading": "",
         "enable_country_selector": false,
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "show_policy": true,
         "payment_enable": true,
         "show_copyright": true,
