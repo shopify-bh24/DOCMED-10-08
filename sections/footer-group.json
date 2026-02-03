@@ -68,7 +68,7 @@
         "show_policy": true,
         "payment_enable": true,
         "show_copyright": true,
-        "scroll-to-top": true,
+        "scroll-to-top": false,
         "color_scheme": "accent-2",
         "margin_top": 0,
         "padding_top": 20,
