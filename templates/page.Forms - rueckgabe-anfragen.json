@@ -11,6 +11,7 @@
   "sections": {
     "f1988715-d94b-4074-b8f0-6b27fb6bcaea": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "heading_size": "h0",
         "head_align": "left",
