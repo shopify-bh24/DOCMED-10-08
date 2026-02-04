@@ -92,6 +92,10 @@
     /* padding-left: 36px; */
   }
 
+  a{
+    color: #1d2e40;
+  }
+
 
   
   @media screen and (max-width: 600px) {
@@ -460,6 +464,74 @@
                   {% endif %}
                   <span>{{ product.title | escape }}</span>
                 </h1>
+
+                <div class="sh-product-benefits-wrapper">
+                  <div class="sh-product-benefits-container">
+                      <div class="sh-product-benefits-row">
+                          <img src="https://cdn.shopify.com/s/files/1/0889/3356/4681/files/screwdriver-wrench-solid-full.svg?v=1768309630" alt="Bild 1" class="sh-product-benefits-img">
+                          <span class="sh-product-benefits-text">Made in Germany</span>
+                      </div>
+                      <div class="sh-product-benefits-row">
+                          <img src="https://cdn.shopify.com/s/files/1/0889/3356/4681/files/house-medical-flag-solid-full.svg?v=1768309772" alt="Bild 2" class="sh-product-benefits-img">
+                          <span class="sh-product-benefits-text">Praxisnah & realitätsgetreu </span>
+                      </div>
+                      <div class="sh-product-benefits-row">
+                          <img src="https://cdn.shopify.com/s/files/1/0889/3356/4681/files/chart-pie-solid-full.svg?v=1768039097" alt="Bild 3" class="sh-product-benefits-img">
+                          <span class="sh-product-benefits-text">Raten- & Rechnungskauf verfügbar</span>
+                      </div>
+                      
+                      <!-- Zusätzliche Benefits, basierend auf der Auswahl des Benutzers -->
+                      <div class='sh-product-benefits-row'> <img src='https://cdn.shopify.com/s/files/1/0889/3356/4681/files/graduation-cap-solid-full.svg?v=1768309725' alt='Bild 4' class='sh-product-benefits-img'> <span class='sh-product-benefits-text'>Eingesetzt in Universitäten & Schulungen</span> </div>
+                  </div>
+                  </div>
+                  
+                  <style>
+                  .sh-product-benefits-wrapper {
+                      display: flex;
+                      width: 100%;
+                      justify-content: flex-start;
+                  }
+                  
+                  /* Ganze Box */
+                  .sh-product-benefits-container {
+                      width: fit-content;
+                      padding: 0px 0px;
+                      background-color: #ffffff;
+                      border-radius: 0px;
+                      margin-top: 0px;
+                      margin-bottom: 0px;
+                      align-items: flex-start;
+                      display: flex;
+                      flex-direction: column;
+                  }
+                  
+                  /* Benefit Zeilen */
+                  .sh-product-benefits-row {
+                      display: flex;
+                      align-items: center;
+                      margin: 5px 0;
+                      padding: 1px 5px;
+                      background-color: #ffffff;
+                      color: #1D2E40;
+                      border-radius: 10px;
+                      width: fit-content;
+                  }
+                  
+                  /* Icon */
+                  .sh-product-benefits-img {
+                      width: 20px;
+                      margin-right: 10px;
+                      height: auto;
+                      margin-block: unset !important;
+                  }
+                  
+                  /* Text */
+                  .sh-product-benefits-text {
+                      flex: 1;
+                      padding-top: 0px;
+                      font-size: 16px;
+                  }
+                  </style>
               {%- when 'product_meta' -%}
                 <ul class="wbmeta_main">
                   <li>

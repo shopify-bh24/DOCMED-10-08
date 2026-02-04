@@ -191,7 +191,7 @@ product-form .add-to-cart__submit:hover:not([disabled]) span {
     column-gap: 10px;
 }
 .product-card-wrapper .add-to-cart__submit svg path{
-  fill: rgb(var(--color-button-text));
+  fill: transparent !important;
 }
 .product-card-wrapper .product__vendor {
   margin-top: 8px;

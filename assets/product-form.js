@@ -183,8 +183,8 @@ if (!customElements.get('product-form')) {
       }
       
       // Update button text to "Added to cart" (German: "Zum Warenkorb hinzugefügt")
-      const addedText = button.dataset.addedText || 'Zum Warenkorb hinzugefügt';
-      buttonSpan.textContent = addedText;
+      const addedText = button.dataset.addedText || '<svg class="icon icon-checkmark" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+      buttonSpan.innerHTML = addedText;
       button.classList.add('added-to-cart');
       
       // Revert after 2.5 seconds
