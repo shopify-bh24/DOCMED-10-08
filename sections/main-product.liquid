@@ -465,73 +465,7 @@
                   <span>{{ product.title | escape }}</span>
                 </h1>
 
-                {% comment %} <div class="sh-product-benefits-wrapper">
-                  <div class="sh-product-benefits-container">
-                      <div class="sh-product-benefits-row">
-                          <img src="https://cdn.shopify.com/s/files/1/0889/3356/4681/files/screwdriver-wrench-solid-full.svg?v=1768309630" alt="Bild 1" class="sh-product-benefits-img">
-                          <span class="sh-product-benefits-text">Made in Germany</span>
-                      </div>
-                      <div class="sh-product-benefits-row">
-                          <img src="https://cdn.shopify.com/s/files/1/0889/3356/4681/files/house-medical-flag-solid-full.svg?v=1768309772" alt="Bild 2" class="sh-product-benefits-img">
-                          <span class="sh-product-benefits-text">Praxisnah & realitätsgetreu </span>
-                      </div>
-                      <div class="sh-product-benefits-row">
-                          <img src="https://cdn.shopify.com/s/files/1/0889/3356/4681/files/chart-pie-solid-full.svg?v=1768039097" alt="Bild 3" class="sh-product-benefits-img">
-                          <span class="sh-product-benefits-text">Raten- & Rechnungskauf verfügbar</span>
-                      </div>
-                      
-                      <!-- Zusätzliche Benefits, basierend auf der Auswahl des Benutzers -->
-                      <div class='sh-product-benefits-row'> <img src='https://cdn.shopify.com/s/files/1/0889/3356/4681/files/graduation-cap-solid-full.svg?v=1768309725' alt='Bild 4' class='sh-product-benefits-img'> <span class='sh-product-benefits-text'>Eingesetzt in Universitäten & Schulungen</span> </div>
-                  </div>
-                </div>
-                  
-                <style>
-                  .sh-product-benefits-wrapper {
-                      display: flex;
-                      width: 100%;
-                      justify-content: flex-start;
-                  }
-                  
-                  /* Ganze Box */
-                  .sh-product-benefits-container {
-                      width: fit-content;
-                      padding: 0px 0px;
-                      background-color: #ffffff;
-                      border-radius: 0px;
-                      margin-top: 0px;
-                      margin-bottom: 0px;
-                      align-items: flex-start;
-                      display: flex;
-                      flex-direction: column;
-                  }
-                  
-                  /* Benefit Zeilen */
-                  .sh-product-benefits-row {
-                      display: flex;
-                      align-items: center;
-                      margin: 5px 0;
-                      padding: 1px 5px;
-                      background-color: #ffffff;
-                      color: #1D2E40;
-                      border-radius: 10px;
-                      width: fit-content;
-                  }
-                  
-                  /* Icon */
-                  .sh-product-benefits-img {
-                      width: 20px;
-                      margin-right: 10px;
-                      height: auto;
-                      margin-block: unset !important;
-                  }
-                  
-                  /* Text */
-                  .sh-product-benefits-text {
-                      flex: 1;
-                      padding-top: 0px;
-                      font-size: 16px;
-                  }
-                </style> {% endcomment %}
+
               {%- when 'product_meta' -%}
                 <ul class="wbmeta_main">
                   <li>
@@ -817,37 +751,31 @@
                 | default: product.metafields.custom.unit }}
               </p>
 
+              
+              {%- when 'description' -%}
+                {%- if product.description != blank -%}
+                  <h2 class="wb_proleft_head">
+                    <svg
+                      width="30"
+                      height="30"
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="2"
+                      viewBox="0 0 30 30"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="fi_12423461"
+                    >
+                      <g transform="translate(-96 -48)"><path d="m116.939 53.732c-.469-.469-1.104-.732-1.767-.732h-9.672c-1.381 0-2.5 1.119-2.5 2.5v17c0 1.381 1.119 2.5 2.5 2.5h13c1.381 0 2.5-1.119 2.5-2.5v-13.672c0-.663-.263-1.298-.732-1.767zm-1.939.268h-9.5c-.828 0-1.5.672-1.5 1.5v17c0 .828.672 1.5 1.5 1.5h13c.828 0 1.5-.672 1.5-1.5v-13.5h-4.5c-.276 0-.5-.224-.5-.5zm3 15.5c0-.276-.224-.5-.5-.5h-11c-.276 0-.5.224-.5.5v2c0 .276.224.5.5.5h11c.276 0 .5-.224.5-.5zm-1 .5v1h-10v-1zm1-4.5c0-.276-.224-.5-.5-.5h-11c-.276 0-.5.224-.5.5v2c0 .276.224.5.5.5h11c.276 0 .5-.224.5-.5zm-1 .5v1h-10v-1zm1-4.5c0-.276-.224-.5-.5-.5h-11c-.276 0-.5.224-.5.5v2c0 .276.224.5.5.5h11c.276 0 .5-.224.5-.5zm-1 .5v1h-10v-1zm-1-7.75c.083.054.161.118.232.189l3.329 3.329c.071.071.135.149.189.232h-3.75z"></path></g>
+                    </svg>
 
-                {%- assign current_variant = product.selected_or_first_available_variant -%}
-
-                {%- assign metafield_delivery = product.metafields.custom.delivery_text.value -%}
-                {%- assign fallback_delivery = 'products.delivery.default' | t -%}
-                {%- assign delivery_text = metafield_delivery | default: fallback_delivery -%}
-
-                {%- if metafield_delivery != blank -%}
-                  {%- assign availability_label = 'products.availability.inbound' | t -%}
-                  {%- assign availability_dot_class = 'availability-dot--inbound' -%}
-
-                {%- else -%}
-                  {%- assign availability_label = 'products.availability.in_stock' | t -%}
-                  {%- assign availability_dot_class = 'availability-dot--in' -%}
-
+                    {{ 'wbcustomlabel.wballtext.about_product' | t }}
+                  </h2>
+                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                    {{ product.description }}
+                  </div>
                 {%- endif -%}
-
-                <div>7                  <p
-                    class="product__availability no-js-hidden"
-                    id="Availability-{{ section.id }}-{{ product.id }}"
-                    role="status"
-                  >
-                    {%- if current_variant.available -%}
-                      <span class="availability-dot {{ availability_dot_class }}" aria-hidden="true"></span>
-                      <span class="availability-label" style="font-weight: 400;"><b>{{ availability_label }}:</b> {{ delivery_text }}</span>
-                    {%- else -%}
-                      <span class="availability-dot availability-dot--out" aria-hidden="true"></span>
-                      <span class="availability-label" style="font-weight: 400;"><b>{{'products.availability.out_of_stock'}}</b></span>
-                    {%- endif -%}
-                  </p>
-                </div>n 'collapsible_tab' -%}
+              {%- when 'collapsible_tab' -%}
                 <webi-collapse class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <div id="Detailswebi-{{ block.id }}-{{ section.id }}">
                     <summary
