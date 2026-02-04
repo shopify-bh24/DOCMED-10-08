@@ -118,6 +118,38 @@
   .cus-product-title-wrp span {
     text-transform: none !important;
   }
+
+  .product__availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.2;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 3px;
+    margin-bottom: 0px;
+  }
+  
+  .product__availability .availability-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex: 0 0 10px;
+  }
+  
+  .product__availability .availability-dot--in {
+    background: #22c55e;
+  }
+
+  .product__availability .availability-dot--inbound{
+    background: rgb(251, 205, 10);
+  }
+  
+  .product__availability .availability-dot--out {
+    background: #ef4444;
+  }
+</style>
+
 {% style %}
    .color-swatch{
     border: 1.5px solid rgb(127,199,207);
@@ -335,6 +367,8 @@
           data-url="{{ product.url }}"
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
+          
+          
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
           {%- for block in section.blocks -%}
             {%- case block.type -%}
@@ -347,6 +381,9 @@
                 >
                 {{- block.settings.text -}}
                 </p>
+
+              {% when 'custom_liquid' %}
+                {{ block.settings.custom_liquid }}
               {%- when 'sku' -%}
                 <p
                   class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -433,7 +470,7 @@
                   <span>{{ product.title | escape }}</span>
                 </h1>
 
-
+ 
               {%- when 'product_meta' -%}
                 <ul class="wbmeta_main">
                   <li>
