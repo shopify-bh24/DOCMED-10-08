@@ -27,7 +27,7 @@
     "marq_position": "bottom-center",
     "show_emoji": "gift",
     "marq_text": "Add your offer here!",
-    "mark_space": 10,
+    "mark_space": 20,
     "mark_speed": 12,
     "marq_color_scheme": "background-2",
     "buttons_border_thickness": 1,
