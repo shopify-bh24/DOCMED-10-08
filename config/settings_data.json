@@ -302,7 +302,7 @@
           "button_hover": "#011f2d",
           "button_label_hover": "#011f2d",
           "secondary_button_label": "#ffffff",
-          "link_hover": "#ffffff",
+          "link_hover": "#011f2d",
           "shadow": "#ffffff"
         }
       },
