@@ -622,7 +622,7 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   .footer .list-menu__item--link{
     font-size: calc(var(--font-body-scale) * 14px);
     line-height: normal;
-    color: white;
+    /* color: white; */
     opacity: 0.75;
   }
   .footer .grid {
