@@ -623,7 +623,7 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
     font-size: calc(var(--font-body-scale) * 14px);
     line-height: normal;
     /* color: white; */
-    opacity: 0.75;
+    /* opacity: 0.75; */
   }
   .footer .grid {
     display: block;
