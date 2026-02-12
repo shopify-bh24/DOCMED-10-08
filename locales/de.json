@@ -698,6 +698,15 @@
         "discount_title": "Rabatt",
         "discount_title_stacking": {
           "one": "Rabatt"
+        },
+        "unit_price": {
+          "per_item": {
+            "single": "{{price}} pro Stück"
+          }
+        },
+        "price_per_item": {
+          "accessibility_label": "{{price}} pro Stück",
+          "label": "{{price}} / Stück"
         }
       },
       "thank_you": {
