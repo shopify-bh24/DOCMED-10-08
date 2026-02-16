@@ -30,7 +30,7 @@
             "description": "Von der professionellen Versorgung\nbis zur sicheren Anwendung im Alltag",
             "text_style": "body",
             "button_label": "Jetzt entdecken",
-            "link": "shopify://collections/in-vitro-diagnostik-tests-diagnostikprodukte",
+            "link": "shopify://collections/in-vitro-diagnostik-tests-diagnostik",
             "link_window": false,
             "view_all_style": "solid",
             "box_align": "middle-left",
@@ -884,7 +884,6 @@
             "autoscroll": true,
             "fluidScrolling": false,
             "delay": 5,
-            "showRating": true,
             "reviewPhotosType": "small",
             "writeReview": true,
             "fixedReviewsHeight": false
