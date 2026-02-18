@@ -11,10 +11,38 @@
   "sections": {
     "breadcrumb_WnPURq": {
       "type": "breadcrumb",
+      "disabled": true,
       "name": "Breadcrumb",
       "settings": {
         "show_breadcrumb": true,
         "breadcrumb_limit": 5
+      }
+    },
+    "1771438382aa5aa11e": {
+      "type": "apps",
+      "blocks": {
+        "exemptify_exemptify_cart_validation_block_aWgmia": {
+          "type": "shopify://apps/exemptify/blocks/ExemptifyCartValidationBlock/53648040-92ea-472b-92a5-eb781e92b01b",
+          "settings": {
+            "align_right": false,
+            "exemptify_cart_title": "EU VAT ID",
+            "title_size": 1.3,
+            "exemptify_cart_subttitle": "(VAT will be deducted at the next step)",
+            "subtitle_size": 0.8,
+            "exemptify_cart_placeholder": "EU VAT ID",
+            "exemptify_cart_email_placeholder": "Email address",
+            "additional_styles": "padding:10px;",
+            "additional_qs": "&"
+          }
+        }
+      },
+      "block_order": [
+        "exemptify_exemptify_cart_validation_block_aWgmia"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     },
     "cart-items": {
@@ -50,18 +78,22 @@
           "type": "shopify://apps/google-reviews/blocks/carousel-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
           "settings": {
             "contentIndex": "1",
+            "variant": "carousel",
+            "headerType": "top",
             "customContentIndex": 31,
             "font": "default",
             "themeId": "light",
-            "cardColor": "#F3F6F9",
-            "starsColor": "#FBB000",
+            "ratingType": "stars",
+            "emojiType": "0",
+            "cardColor": "#f3f6f9",
+            "starsColor": "#fbb000",
             "textColor": "#404040",
             "transparent": 1,
+            "solidShadow": false,
             "hasShadow": false,
             "autoscroll": true,
             "fluidScrolling": false,
             "delay": 5,
-            "showRating": true,
             "reviewPhotosType": "small",
             "writeReview": true,
             "fixedReviewsHeight": false
@@ -80,6 +112,7 @@
   },
   "order": [
     "breadcrumb_WnPURq",
+    "1771438382aa5aa11e",
     "cart-items",
     "cart-footer",
     "1768578988521c842c"
