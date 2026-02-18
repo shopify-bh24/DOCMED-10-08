@@ -1,4 +1,3 @@
- 
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
@@ -60,12 +59,10 @@
   .section-{{ section.id }}-padding .wbproduct-container .wbstockinfo_soon{
       color: {{ section.settings.continue_selling_color }};
   }
-  
-  
 {%- endstyle -%}
 <style>
   .section-featured-collection-new {
-  /* background: #F1F3F7;*/
+    /* background: #F1F3F7;*/
   }
 
   .section-featured-collection-new .card:not(.ratio) {
@@ -87,14 +84,14 @@
 
   .section-featured-collection-new .product-card-wrapper .card__heading a {
     display: -webkit-box;
-    -webkit-line-clamp: 2;   /* Limit to 2 lines */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.4em;      
-    max-height: 2.8em;       /* = 1.4em × 2 lines */
-    min-height: 2.8em; 
-  } 
+    line-height: 1.4em;
+    max-height: 2.8em; /* = 1.4em × 2 lines */
+    min-height: 2.8em;
+  }
 
   /* SKU */
   .section-featured-collection-new .product__sku {
@@ -139,8 +136,8 @@
     font-size: 16px;
     letter-spacing: 2px;
     margin-right: 6px;
-    color: transparent;             
-    -webkit-text-stroke: 1px #FFD700;  
+    color: transparent;
+    -webkit-text-stroke: 1px #ffd700;
   }
 
   .section-featured-collection-new .review-count {
@@ -148,28 +145,27 @@
   }
 
   /* Force prev/next buttons to appear on mobile the same as desktop */
-@media screen and (max-width: 749px) {
-  .slider-buttons {
-    display: flex !important;
-  }
+  @media screen and (max-width: 749px) {
+    .slider-buttons {
+      display: flex !important;
+    }
 
-  .slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  }
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
 
-  .slider-button--prev {
-    right: 5.5rem;
-  }
+    .slider-button--prev {
+      right: 5.5rem;
+    }
 
-  .slider-button--next {
-    right: 0.5rem;
+    .slider-button--next {
+      right: 0.5rem;
+    }
   }
-}
-
 </style>
 
 {%- liquid
@@ -200,222 +196,239 @@
 <div class="color-{{ section.settings.color_scheme }}_ isolate gradient_ feaprod {% if section.settings.image != blank %} image_with_product {% endif %}">
   <div class="collection section-{{ section.id }}-padding {% unless section.settings.full_width == true %}page-width{% endunless %} {% if section.settings.full_width %} collection--full-width{% endif %} slider-arrow--{{ section.settings.arrow_position }}">
     <product-recommendations
-      data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
+      data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
+    >
       {% if recommendations.performed and recommendations.products_count > 0 %}
-      <slider-component class="slider-mobile-gutter {% if show_desktop_slider %} slider-component-desktop{% endif %} {% if section.settings.image != blank %} img_with_product {% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        
-        <!-- Heading -->
-        <div class="{{ section.settings.head_align }} title-wrapper-with-link title-wrapper color-{{ section.settings.heading_color_scheme }}_ content-container">
-          <div class="heading inline-richtext">
-            {%- if section.settings.title != blank -%}
-              <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
-            {%- endif -%}
-            {%- if section.settings.description != blank
-              or section.settings.show_description
-              and section.settings.collection.description != empty
-            -%}
-              <div class="description {{ section.settings.description_style }} rte">
-                {%- if section.settings.show_description -%}
-                  {{ section.settings.collection.description }}
-                {%- else -%}
-                  {{ section.settings.description -}}
+        <slider-component class="slider-mobile-gutter {% if show_desktop_slider %} slider-component-desktop{% endif %} {% if section.settings.image != blank %} img_with_product {% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          <!-- Heading -->
+          <div class="{{ section.settings.head_align }} title-wrapper-with-link title-wrapper color-{{ section.settings.heading_color_scheme }}_ content-container">
+            <div class="heading inline-richtext">
+              {%- if section.settings.title != blank -%}
+                <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+              {%- endif -%}
+              {%- if section.settings.description != blank
+                or section.settings.show_description
+                and section.settings.collection.description != empty
+              -%}
+                <div class="description {{ section.settings.description_style }} rte">
+                  {%- if section.settings.show_description -%}
+                    {{ section.settings.collection.description }}
+                  {%- else -%}
+                    {{ section.settings.description -}}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+
+            <!-- Top Arrows + Button -->
+            {%- if section.settings.view_button_pos == 'top' or section.settings.arrow_position == 'top' -%}
+              <div class="{% if section.settings.arrow_position == 'top' %} wb_button_combo {% endif %} {% unless section.settings.show_view_all and more_in_collection %}bcombo_auto{% endunless %} {% if section.settings.view_button_pos == 'bottom' %}bcombo_auto{% endif %}">
+                {%- if section.settings.show_view_all and more_in_collection -%}
+                  {% if section.settings.view_button_pos == 'top' %}
+                    <div class="wb_home_sbtn">
+                      <a
+                        href="{{ section.settings.collection.url }}"
+                        class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                        aria-label="{{ 'sections.featured_collection.view_all' | t: collection_name: section.settings.collection.title }}"
+                      >
+                        <span>{{ 'sections.featured_collection.view_all' | t }}</span>
+                      </a>
+                    </div>
+                  {% endif %}
                 {%- endif -%}
+                {% if section.settings.arrow_position == 'top' %}
+                  <div class="wb_home_sbtn slider-buttons no-js-hidden {% unless show_desktop_slider %} desktop-arrows-hide {% endunless %}{% unless show_mobile_slider %} mobile-arrows-hide {% endunless %}">
+                    <button
+                      type="button"
+                      class="slider-button slider-button--prev button"
+                      name="previous"
+                      aria-label="{{ 'general.slider.previous_slide' | t }}"
+                      id="slider-button--prev-{{ section.id }}"
+                      aria-controls="slider-button--prev-{{ section.id }}"
+                    >
+                      <span>{% render 'icon-caret' %}</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="slider-button slider-button--next button"
+                      name="next"
+                      aria-label="{{ 'general.slider.next_slide' | t }}"
+                      id="slider-button--next-{{ section.id }}"
+                      aria-controls="slider-button--next-{{ section.id }}"
+                    >
+                      <span>{% render 'icon-caret' %}</span>
+                    </button>
+                  </div>
+                {% endif %}
               </div>
             {%- endif -%}
           </div>
 
-          <!-- Top Arrows + Button -->
-          {%- if section.settings.view_button_pos == 'top' or section.settings.arrow_position == 'top' -%}
-            <div class="{% if section.settings.arrow_position == 'top' %} wb_button_combo {% endif %} {% unless section.settings.show_view_all and more_in_collection %}bcombo_auto{% endunless %} {% if section.settings.view_button_pos == 'bottom' %}bcombo_auto{% endif %}">
-              {%- if section.settings.show_view_all and more_in_collection -%}
-                {% if section.settings.view_button_pos == 'top' %}
-                  <div class="wb_home_sbtn">
-                    <a
-                      href="{{ section.settings.collection.url }}"
-                      class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
-                      aria-label="{{ 'sections.featured_collection.view_all' | t: collection_name: section.settings.collection.title }}">
-                      <span>{{ 'sections.featured_collection.view_all' | t }}</span>
-                    </a>
-                  </div>
+          <!-- Banner + Products -->
+          <div class="section__wrapper {% if section.settings.image != blank %} grid {% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop">
+            {% if section.settings.image != blank %}
+              <!-- Banner Block (unchanged) -->
+              <div class="feat_banner banner-{{ section.settings.banner_position }} global-media-settings {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.image != blank %} image__part grid__item {% endif %} grid--{{ section.settings.columns_mobile }}-col-tablet-down {% if section.settings.text_caption == blank and section.settings.sub_heading == blank and section.settings.heading == blank and section.settings.show_banner_timer == false and section.settings.button_label == blank %}wb_no_bannertxt{% endif %}">
+                {{
+                  section.settings.image
+                  | image_url: width: 1200
+                  | image_tag: loading: 'lazy', class: 'wbcust_banner', width: section.settings.image.width
+                }}
+                {% if section.settings.button_label == blank and section.settings.button_link != blank %}
+                  <a class="full-image-link" href="{{ section.settings.button_link }}"></a>
                 {% endif %}
-              {%- endif -%}
-              {% if section.settings.arrow_position == 'top' %}
-                <div class="wb_home_sbtn slider-buttons no-js-hidden {% unless show_desktop_slider %} desktop-arrows-hide {% endunless %}{% unless show_mobile_slider %} mobile-arrows-hide {% endunless %}">
-                  <button type="button" class="slider-button slider-button--prev button" name="previous"
-                    aria-label="{{ 'general.slider.previous_slide' | t }}"
-                    id="slider-button--prev-{{ section.id }}"
-                    aria-controls="slider-button--prev-{{ section.id }}">
-                    <span>{% render 'icon-caret' %}</span>
-                  </button>
-                  <button type="button" class="slider-button slider-button--next button" name="next"
-                    aria-label="{{ 'general.slider.next_slide' | t }}"
-                    id="slider-button--next-{{ section.id }}"
-                    aria-controls="slider-button--next-{{ section.id }}">
-                    <span>{% render 'icon-caret' %}</span>
-                  </button>
-                </div>
-              {% endif %}
-            </div>
-          {%- endif -%}
-        </div>
-
-        <!-- Banner + Products -->
-        <div class="section__wrapper {% if section.settings.image != blank %} grid {% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop">
-          {% if section.settings.image != blank %}
-            <!-- Banner Block (unchanged) -->
-            <div class="feat_banner banner-{{ section.settings.banner_position }} global-media-settings {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.image != blank %} image__part grid__item {% endif %} grid--{{ section.settings.columns_mobile }}-col-tablet-down {% if section.settings.text_caption == blank and section.settings.sub_heading == blank and section.settings.heading == blank and section.settings.show_banner_timer == false and section.settings.button_label == blank %}wb_no_bannertxt{% endif %}">
-              {{
-                section.settings.image
-                | image_url: width: 1200
-                | image_tag: loading: 'lazy', class: 'wbcust_banner', width: section.settings.image.width
-              }}
-              {% if section.settings.button_label == blank and section.settings.button_link != blank %}
-                <a class="full-image-link" href="{{ section.settings.button_link }}"></a>
-              {% endif %}
-              <div class="image_wrapper wbtxt--{{ section.settings.box_align }} wbtxtc--{{ section.settings.text_alignment }} {% if section.settings.show_text_box == false %} b-transparent{% endif %}">
-                <div class="content_wrapper content-container color-{{ section.settings.imgcolor_scheme }} gradient">
-                  {% if section.settings.text_caption != blank %}
-                    <ul class="bnr_caption inline-richtext {% if section.settings.outline_text %}out-text {% endif %}">
-                      <li>{{ section.settings.text_caption }}</li>
-                    </ul>
-                  {% endif %}
-                  {% if section.settings.sub_heading != blank %}
-                    <p class="content_subheading">{{ section.settings.sub_heading }}</p>
-                  {% endif %}
-                  {% if section.settings.heading != blank %}
-                    <h3 class="content__heading {{ section.settings.bnrheading_size }}">
-                      {{ section.settings.heading }}
-                    </h3>
-                  {% endif %}
-                  {% if section.settings.show_banner_timer == true %}
-                    <div data-date="{{ section.settings.wb_bannerdate }}" class="banner_timer countd_all">
-                      <div class="banner_timer_inner">
-                        <div class="time main_cdays"><span class="count wb_cdays">00</span></div>
-                        <div class="time main_chours"><span class="count wb_chours">00</span></div>
-                        <div class="time main_cminutes"><span class="count wb_cminutes">00</span></div>
-                        <div class="time main_cseconds"><span class="count wb_cseconds">00</span></div>
+                <div class="image_wrapper wbtxt--{{ section.settings.box_align }} wbtxtc--{{ section.settings.text_alignment }} {% if section.settings.show_text_box == false %} b-transparent{% endif %}">
+                  <div class="content_wrapper content-container color-{{ section.settings.imgcolor_scheme }} gradient">
+                    {% if section.settings.text_caption != blank %}
+                      <ul class="bnr_caption inline-richtext {% if section.settings.outline_text %}out-text {% endif %}">
+                        <li>{{ section.settings.text_caption }}</li>
+                      </ul>
+                    {% endif %}
+                    {% if section.settings.sub_heading != blank %}
+                      <p class="content_subheading">{{ section.settings.sub_heading }}</p>
+                    {% endif %}
+                    {% if section.settings.heading != blank %}
+                      <h3 class="content__heading {{ section.settings.bnrheading_size }}">
+                        {{ section.settings.heading }}
+                      </h3>
+                    {% endif %}
+                    {% if section.settings.show_banner_timer == true %}
+                      <div data-date="{{ section.settings.wb_bannerdate }}" class="banner_timer countd_all">
+                        <div class="banner_timer_inner">
+                          <div class="time main_cdays"><span class="count wb_cdays">00</span></div>
+                          <div class="time main_chours"><span class="count wb_chours">00</span></div>
+                          <div class="time main_cminutes"><span class="count wb_cminutes">00</span></div>
+                          <div class="time main_cseconds"><span class="count wb_cseconds">00</span></div>
+                        </div>
+                        <div class="banner_timer_text">
+                          <span>{{ 'wbcustomlabel.wballtext.time_days' | t }}</span>
+                          <span>{{ 'wbcustomlabel.wballtext.time_hour' | t }}</span>
+                          <span>{{ 'wbcustomlabel.wballtext.time_min' | t }}</span>
+                          <span>{{ 'wbcustomlabel.wballtext.time_sec' | t }}</span>
+                        </div>
                       </div>
-                      <div class="banner_timer_text">
-                        <span>{{ 'wbcustomlabel.wballtext.time_days' | t }}</span>
-                        <span>{{ 'wbcustomlabel.wballtext.time_hour' | t }}</span>
-                        <span>{{ 'wbcustomlabel.wballtext.time_min' | t }}</span>
-                        <span>{{ 'wbcustomlabel.wballtext.time_sec' | t }}</span>
-                      </div>
-                    </div>
-                  {% endif %}
-                  {% if section.settings.button_label != blank %}
-                    <a
-                      {% if section.settings.button_link == blank %} role="link" aria-disabled="true"
-                      {% else %} href="{{ section.settings.button_link }}" {% endif %}
-                      {% if section.settings.link_window %} target="_blank" {% endif %}
-                      class="{% if section.settings.button_style_secondary == 'link' %} link underlined-link{% elsif section.settings.button_style_secondary == 'solid' %}button{% else %}button button--secondary{% endif %}">
-                      <span>{{ section.settings.button_label }}</span>
-                    </a>
-                  {% endif %}
+                    {% endif %}
+                    {% if section.settings.button_label != blank %}
+                      <a
+                        {% if section.settings.button_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ section.settings.button_link }}"
+                        {% endif %}
+                        {% if section.settings.link_window %}
+                          target="_blank"
+                        {% endif %}
+                        class="{% if section.settings.button_style_secondary == 'link' %} link underlined-link{% elsif section.settings.button_style_secondary == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                      >
+                        <span>{{ section.settings.button_label }}</span>
+                      </a>
+                    {% endif %}
+                  </div>
                 </div>
-              </div>
-            </div>
-          {% endif %}
-
-          <!-- Products -->
-          <div class="{% if section.settings.arrow_position == 'inline' %} relative {% endif %}{% if section.settings.image != blank %} pro-part grid__item {% endif %} section__wrap grid--{{ section.settings.columns_mobile }}-col-tablet-down">
-            {% if section.settings.arrow_position == 'inline' %}
-              <div class="wb_home_sbtn slider-buttons no-js-hidden {% unless show_desktop_slider %} desktop-arrows-hide {% endunless %}{% unless show_mobile_slider %} mobile-arrows-hide {% endunless %}">
-                <button type="button" class="slider-button slider-button--prev button" name="previous"
-                  aria-label="{{ 'general.slider.previous_slide' | t }}"
-                  id="slider-button--prev-{{ section.id }}"
-                  aria-controls="slider-button--prev-{{ section.id }}">
-                  <span>{% render 'icon-caret' %}</span>
-                </button>
               </div>
             {% endif %}
 
-            <ul id="Slider-{{ section.id }}"
-          class="over_scroll grid product-grid contains-card contains-card--product{% if section.settings.card_style == 'standard' %} contains-card--standard{% endif %}
-          grid--{{ section.settings.columns_desktop }}-col-desktop
-          grid--{{ section.settings.columns_mobile }}-col-tablet-down
-          slider slider--desktop slider--tablet
-          grid--3-col-tablet {% if section.settings.columns_desktop == 2 %} grid--2-col-tablet {% endif %}"
-          aria-label="{{ 'general.slider.name' | t }}">
-          
-          {% for recommendation in recommendations.products limit: section.settings.products_to_show %}
-            <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item slider__slide">
-              {% render 'card-product',
-                card_product: recommendation,
-                card_style: section.settings.card_style,
-                show_quantity: section.settings.show_quantity,
-                media_aspect_ratio: section.settings.image_ratio,
-                show_secondary_image: section.settings.show_secondary_image,
-                show_vendor: section.settings.show_vendor,
-                show_sku: section.settings.show_sku,
-                show_colorswatch: section.settings.show_colorswatch,
-                show_rating: section.settings.show_rating,
-                show_quick_add: section.settings.enable_quick_add,
-                show_variants: section.settings.show_variants,
-                show_variant_label: section.settings.show_variant_label,
-                picker_type: section.settings.picker_type,
-                cardstock_bar: section.settings.cardstock_bar,
-                show_count_timer: section.settings.show_count_timer,
-                max_stock: section.settings.max_stock,
-                limited_stock_cut_off: section.settings.limited_stock_cut_off,
-                limited_stock_message: section.settings.limited_stock_message,
-                instock_message: section.settings.instock_message,
-                continue_selling_message: section.settings.continue_selling_message,
-                limited_stock_color: section.settings.limited_stock_color,
-                in_stock_color: section.settings.in_stock_color,
-                continue_selling_color: section.settings.continue_selling_color,
-                quicklook_style: section.settings.quicklook_style,
-                color_swatchhover: section.settings.color_swatchhover,
-                enable_addtocart: section.settings.enable_addtocart,
-                stock_inventory: section.settings.stock_inventory,
-                section_id: section.id
-              %}
-            </li>
-          {% endfor %}
-        </ul>
-        
+            <!-- Products -->
+            <div class="{% if section.settings.arrow_position == 'inline' %} relative {% endif %}{% if section.settings.image != blank %} pro-part grid__item {% endif %} section__wrap grid--{{ section.settings.columns_mobile }}-col-tablet-down">
+              {% if section.settings.arrow_position == 'inline' %}
+                <div class="wb_home_sbtn slider-buttons no-js-hidden {% unless show_desktop_slider %} desktop-arrows-hide {% endunless %}{% unless show_mobile_slider %} mobile-arrows-hide {% endunless %}">
+                  <button
+                    type="button"
+                    class="slider-button slider-button--prev button"
+                    name="previous"
+                    aria-label="{{ 'general.slider.previous_slide' | t }}"
+                    id="slider-button--prev-{{ section.id }}"
+                    aria-controls="slider-button--prev-{{ section.id }}"
+                  >
+                    <span>{% render 'icon-caret' %}</span>
+                  </button>
+                </div>
+              {% endif %}
 
-              {% comment %} <div class="slider-buttons no-js-hidden">
-                <button
-                  type="button"
-                  class="slider-button slider-button--prev"
-                  name="previous"
-                  aria-label="{{ 'general.slider.previous_slide' | t }}"
-                  aria-controls="Slider-{{ section.id }}"
-                >
-                  {% render 'icon-caret' %}
-                </button>
-                <button
-                  type="button"
-                  class="slider-button slider-button--next"
-                  name="next"
-                  aria-label="{{ 'general.slider.next_slide' | t }}"
-                  aria-controls="Slider-{{ section.id }}"
-                >
-                  {% render 'icon-caret' %}
-                </button>
-              </div> {% endcomment %}
-              
+              {% comment %} <ul
+                id="Slider-{{ section.id }}"
+                class="
+                  over_scroll grid product-grid contains-card contains-card--product{% if section.settings.card_style == 'standard' %} contains-card--standard{% endif %}
+                  grid--{{ section.settings.columns_desktop }}-col-desktop
+                  grid--{{ section.settings.columns_mobile }}-col-tablet-down
+                  slider slider--desktop slider--tablet
+                  grid--3-col-tablet {% if section.settings.columns_desktop == 2 %} grid--2-col-tablet {% endif %}
+                "
+                aria-label="{{ 'general.slider.name' | t }}"
+              >
+                {% for recommendation in recommendations.products limit: section.settings.products_to_show %}
+                  <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item slider__slide">
+                    {% render 'card-product',
+                      card_product: recommendation,
+                      card_style: section.settings.card_style,
+                      show_quantity: section.settings.show_quantity,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_sku: section.settings.show_sku,
+                      show_colorswatch: section.settings.show_colorswatch,
+                      show_rating: section.settings.show_rating,
+                      show_quick_add: section.settings.enable_quick_add,
+                      show_variants: section.settings.show_variants,
+                      show_variant_label: section.settings.show_variant_label,
+                      picker_type: section.settings.picker_type,
+                      cardstock_bar: section.settings.cardstock_bar,
+                      show_count_timer: section.settings.show_count_timer,
+                      max_stock: section.settings.max_stock,
+                      limited_stock_cut_off: section.settings.limited_stock_cut_off,
+                      limited_stock_message: section.settings.limited_stock_message,
+                      instock_message: section.settings.instock_message,
+                      continue_selling_message: section.settings.continue_selling_message,
+                      limited_stock_color: section.settings.limited_stock_color,
+                      in_stock_color: section.settings.in_stock_color,
+                      continue_selling_color: section.settings.continue_selling_color,
+                      quicklook_style: section.settings.quicklook_style,
+                      color_swatchhover: section.settings.color_swatchhover,
+                      enable_addtocart: section.settings.enable_addtocart,
+                      stock_inventory: section.settings.stock_inventory,
+                      section_id: section.id
+                    %}
+                  </li>
+                {% endfor %}
+              </ul> {% endcomment %}
+
+              {% comment %}
+                <div class="slider-buttons no-js-hidden">
+                  <button
+                    type="button"
+                    class="slider-button slider-button--prev"
+                    name="previous"
+                    aria-label="{{ 'general.slider.previous_slide' | t }}"
+                    aria-controls="Slider-{{ section.id }}"
+                  >
+                    {% render 'icon-caret' %}
+                  </button>
+                  <button
+                    type="button"
+                    class="slider-button slider-button--next"
+                    name="next"
+                    aria-label="{{ 'general.slider.next_slide' | t }}"
+                    aria-controls="Slider-{{ section.id }}"
+                  >
+                    {% render 'icon-caret' %}
+                  </button>
+                </div>
+              {% endcomment %}
+            </div>
           </div>
-        </div>
-      </slider-component>
+        </slider-component>
       {% endif %}
     </product-recommendations>
   </div>
 </div>
 
-  
 {% schema %}
 {
   "name": "Related Products new",
   "tag": "section",
   "class": "section section-featured-collection-new",
   "disabled_on": {
-    "groups": [
-      "header",
-      "footer",
-      "custom.overlay"
-    ]
+    "groups": ["header", "footer", "custom.overlay"]
   },
   "settings": [
     {

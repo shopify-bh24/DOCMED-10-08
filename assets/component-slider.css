@@ -349,11 +349,11 @@ button.slider-button.slider-button--next.slider-top--next::before[disabled],
   background: rgba(var(--color-foreground), 0.1);
   border-radius: 0.4rem;
 }
+/* Show horizontal scrollbar for sliders (used as progress indicator) */
 .slider::-webkit-scrollbar {
-    height: 0.4rem;
-    width: 0.4rem;
-    display: none;
-} 
+  height: 0.4rem;
+  width: 0.4rem;
+}
 .slider-counter {
   display: flex;
   justify-content: center;

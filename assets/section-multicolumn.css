@@ -277,18 +277,18 @@
     font-size: calc(var(--font-body-scale) * 14px);
   }
   .deliveryinfo.multicolumn-list p {
-    font-size: calc(var(--font-body-scale) * 12px);
+    font-size: calc(var(--font-body-scale) * 11px);
   }
   .deliveryseprator .multicolumn-list__item:after {
     right: -6px;
   }
 } 
-@media (min-width: 576px) and (max-width: 767px){
+/* @media (min-width: 576px) and (max-width: 767px){
   .deliveryinfo.grid--1-col-tablet-down .grid__item {
     width: calc(50% - var(--grid-mobile-horizontal-spacing) * 1 / 2);
     max-width: calc(50% - var(--grid-mobile-horizontal-spacing) * 1 / 2);
   }
-}
+} */
 @media (max-width: 575px) {
   .deliveryinfo.grid--1-col .grid__item {
     max-width: 100%;

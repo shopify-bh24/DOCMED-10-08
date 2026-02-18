@@ -1,8 +1,8 @@
 function getFocusableElements(container) {
   return Array.from(
-      container.querySelectorAll(
-          "summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
-      )
+    container.querySelectorAll(
+      "summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
+    )
   );
 }
 
@@ -12,7 +12,7 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
 
   summary.setAttribute('aria-expanded', 'false');
 
-  if(summary.nextElementSibling.getAttribute('id')) {
+  if (summary.nextElementSibling.getAttribute('id')) {
     summary.setAttribute('aria-controls', summary.nextElementSibling.id);
   }
 
@@ -35,20 +35,20 @@ function trapFocus(container, elementToFocus = container) {
 
   trapFocusHandlers.focusin = (event) => {
     if (
-        event.target !== container &&
-        event.target !== last &&
-        event.target !== first
+      event.target !== container &&
+      event.target !== last &&
+      event.target !== first
     )
       return;
 
     document.addEventListener('keydown', trapFocusHandlers.keydown);
   };
 
-  trapFocusHandlers.focusout = function() {
+  trapFocusHandlers.focusout = function () {
     document.removeEventListener('keydown', trapFocusHandlers.keydown);
   };
 
-  trapFocusHandlers.keydown = function(event) {
+  trapFocusHandlers.keydown = function (event) {
     if (event.code.toUpperCase() !== 'TAB') return; // If not TAB key
     // On the last focusable element and tab forward, focus the first element.
     if (event.target === last && !event.shiftKey) {
@@ -58,8 +58,8 @@ function trapFocus(container, elementToFocus = container) {
 
     //  On the first focusable element and tab backward, focus the last element.
     if (
-        (event.target === container || event.target === first) &&
-        event.shiftKey
+      (event.target === container || event.target === first) &&
+      event.shiftKey
     ) {
       event.preventDefault();
       last.focus();
@@ -72,8 +72,8 @@ function trapFocus(container, elementToFocus = container) {
   elementToFocus.focus();
 
   if (elementToFocus.tagName === 'INPUT' &&
-      ['search', 'text', 'email', 'url'].includes(elementToFocus.type) &&
-      elementToFocus.value) {
+    ['search', 'text', 'email', 'url'].includes(elementToFocus.type) &&
+    elementToFocus.value) {
     elementToFocus.setSelectionRange(0, elementToFocus.value.length);
   }
 }
@@ -81,7 +81,7 @@ function trapFocus(container, elementToFocus = container) {
 // Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
 try {
   document.querySelector(":focus-visible");
-} catch(e) {
+} catch (e) {
   focusVisiblePolyfill();
 }
 
@@ -91,7 +91,7 @@ function focusVisiblePolyfill() {
   let mouseClick = null;
 
   window.addEventListener('keydown', (event) => {
-    if(navKeys.includes(event.code.toUpperCase())) {
+    if (navKeys.includes(event.code.toUpperCase())) {
       mouseClick = false;
     }
   });
@@ -152,7 +152,7 @@ class QuantityInput extends HTMLElement {
 
     this.input.addEventListener('change', this.onInputChange.bind(this));
     this.querySelectorAll('button').forEach(
-        (button) => button.addEventListener('click', this.onButtonClick.bind(this))
+      (button) => button.addEventListener('click', this.onButtonClick.bind(this))
     );
   }
 
@@ -234,13 +234,13 @@ if ((typeof window.Shopify) == 'undefined') {
   window.Shopify = {};
 }
 
-Shopify.bind = function(fn, scope) {
-  return function() {
+Shopify.bind = function (fn, scope) {
+  return function () {
     return fn.apply(scope, arguments);
   }
 };
 
-Shopify.setSelectorByValue = function(selector, value) {
+Shopify.setSelectorByValue = function (selector, value) {
   for (var i = 0, count = selector.options.length; i < count; i++) {
     var option = selector.options[i];
     if (value == option.value || value == option.innerHTML) {
@@ -250,11 +250,11 @@ Shopify.setSelectorByValue = function(selector, value) {
   }
 };
 
-Shopify.addListener = function(target, eventName, callback) {
-  target.addEventListener ? target.addEventListener(eventName, callback, false) : target.attachEvent('on'+eventName, callback);
+Shopify.addListener = function (target, eventName, callback) {
+  target.addEventListener ? target.addEventListener(eventName, callback, false) : target.attachEvent('on' + eventName, callback);
 };
 
-Shopify.postLink = function(path, options) {
+Shopify.postLink = function (path, options) {
   options = options || {};
   var method = options['method'] || 'post';
   var params = options['parameters'] || {};
@@ -263,7 +263,7 @@ Shopify.postLink = function(path, options) {
   form.setAttribute("method", method);
   form.setAttribute("action", path);
 
-  for(var key in params) {
+  for (var key in params) {
     var hiddenField = document.createElement("input");
     hiddenField.setAttribute("type", "hidden");
     hiddenField.setAttribute("name", key);
@@ -275,34 +275,34 @@ Shopify.postLink = function(path, options) {
   document.body.removeChild(form);
 };
 
-Shopify.CountryProvinceSelector = function(country_domid, province_domid, options) {
-  this.countryEl         = document.getElementById(country_domid);
-  this.provinceEl        = document.getElementById(province_domid);
+Shopify.CountryProvinceSelector = function (country_domid, province_domid, options) {
+  this.countryEl = document.getElementById(country_domid);
+  this.provinceEl = document.getElementById(province_domid);
   this.provinceContainer = document.getElementById(options['hideElement'] || province_domid);
 
-  Shopify.addListener(this.countryEl, 'change', Shopify.bind(this.countryHandler,this));
+  Shopify.addListener(this.countryEl, 'change', Shopify.bind(this.countryHandler, this));
 
   this.initCountry();
   this.initProvince();
 };
 
 Shopify.CountryProvinceSelector.prototype = {
-  initCountry: function() {
+  initCountry: function () {
     var value = this.countryEl.getAttribute('data-default');
     Shopify.setSelectorByValue(this.countryEl, value);
     this.countryHandler();
   },
 
-  initProvince: function() {
+  initProvince: function () {
     var value = this.provinceEl.getAttribute('data-default');
     if (value && this.provinceEl.options.length > 0) {
       Shopify.setSelectorByValue(this.provinceEl, value);
     }
   },
 
-  countryHandler: function(e) {
-    var opt       = this.countryEl.options[this.countryEl.selectedIndex];
-    var raw       = opt.getAttribute('data-provinces');
+  countryHandler: function (e) {
+    var opt = this.countryEl.options[this.countryEl.selectedIndex];
+    var raw = opt.getAttribute('data-provinces');
     var provinces = JSON.parse(raw);
 
     this.clearOptions(this.provinceEl);
@@ -320,13 +320,13 @@ Shopify.CountryProvinceSelector.prototype = {
     }
   },
 
-  clearOptions: function(selector) {
+  clearOptions: function (selector) {
     while (selector.firstChild) {
       selector.removeChild(selector.firstChild);
     }
   },
 
-  setOptions: function(selector, values) {
+  setOptions: function (selector, values) {
     for (var i = 0, count = values.length; i < values.length; i++) {
       var opt = document.createElement('option');
       opt.value = values[i];
@@ -355,10 +355,10 @@ class MenuDrawer extends HTMLElement {
   }
 
   onKeyUp(event) {
-    if(event.code.toUpperCase() !== 'ESCAPE') return;
+    if (event.code.toUpperCase() !== 'ESCAPE') return;
 
     const openDetailsElement = event.target.closest('details[open]');
-    if(!openDetailsElement) return;
+    if (!openDetailsElement) return;
 
     openDetailsElement === this.mainDetailsToggle ? this.closeMenuDrawer(event, this.mainDetailsToggle.querySelector('summary')) : this.closeSubmenu(openDetailsElement);
   }
@@ -376,7 +376,7 @@ class MenuDrawer extends HTMLElement {
     }
 
     if (detailsElement === this.mainDetailsToggle) {
-      if(isOpen) event.preventDefault();
+      if (isOpen) event.preventDefault();
       isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
 
       if (window.matchMedia('(max-width: 992px)')) {
@@ -415,7 +415,7 @@ class MenuDrawer extends HTMLElement {
     document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
-    
+
   }
 
   onFocusOut() {
@@ -505,8 +505,8 @@ class ModalDialog extends HTMLElement {
   constructor() {
     super();
     this.querySelector('[id^="ModalClose-"]').addEventListener(
-        'click',
-        this.hide.bind(this, false)
+      'click',
+      this.hide.bind(this, false)
     );
     this.addEventListener('keyup', (event) => {
       if (event.code.toUpperCase() === 'ESCAPE') this.hide();
@@ -611,16 +611,43 @@ class SliderComponent extends HTMLElement {
     this.slider.addEventListener('scroll', this.update.bind(this));
     this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
     this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+
+    this.isDragging = false;
+    this.startX = 0;
+
+    this.scrollLeftStart = 0;
+
+    this.slider.addEventListener('mousedown', (e) => this.startDragging(e));
+    window.addEventListener('mousemove', (e) => this.whileDragging(e));
+    window.addEventListener('mouseup', () => this.stopDragging());
+
+    this.slider.addEventListener('mouseleave', () => this.stopDragging());
+    this.progressBarFill = this.querySelector('.slider-progress-bar__fill');
   }
 
   initPages() {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
     if (this.sliderItemsToShow.length < 2) return;
+
+    // Calculate the distance between the start of slide 1 and slide 2
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
-    this.slidesPerPage = Math.floor(
-      (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
-    );
-    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
+
+    // Check if we are on mobile (standard Shopify breakpoint is 750px)
+    const isMobile = window.innerWidth < 750;
+
+    if (isMobile) {
+      // Force 1.3 logic for mobile calculations
+      this.slidesPerPage = 1.3;
+      // Total pages is total items minus the "peek" amount
+      this.totalPages = Math.ceil(this.sliderItemsToShow.length - this.slidesPerPage + 1);
+    } else {
+      // Standard desktop calculation
+      this.slidesPerPage = Math.floor(
+        (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
+      );
+      this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
+    }
+
     this.update();
   }
 
@@ -651,6 +678,12 @@ class SliderComponent extends HTMLElement {
           },
         })
       );
+    }
+    
+    if (this.progressBarFill) {
+      const scrollWidth = this.slider.scrollWidth - this.slider.clientWidth;
+      const scrollPercentage = (this.slider.scrollLeft / scrollWidth) * 100;
+      this.progressBarFill.style.width = `${Math.min(Math.max(scrollPercentage, 10), 100)}%`;
     }
 
     if (this.enableSliderLooping) return;
@@ -688,6 +721,29 @@ class SliderComponent extends HTMLElement {
       left: position,
     });
   }
+
+  startDragging(e) {
+    this.isDragging = true;
+    this.slider.style.scrollBehavior = 'auto'; // Disable smooth scroll for instant response
+    this.slider.style.scrollSnapType = 'none'; // Kill snapping while dragging
+    this.startX = e.pageX - this.slider.offsetLeft;
+    this.scrollLeftStart = this.slider.scrollLeft;
+  }
+
+  whileDragging(e) {
+    if (!this.isDragging) return;
+    const x = e.pageX - this.slider.offsetLeft;
+    const walk = (x - this.startX); // Increase multiplier (e.g., * 2) for faster dragging
+    this.slider.scrollLeft = this.scrollLeftStart - walk;
+  }
+
+  stopDragging() {
+    if (!this.isDragging) return;
+    this.isDragging = false;
+    this.slider.style.scrollBehavior = 'smooth'; 
+    this.slider.style.scrollSnapType = 'x mandatory'; // Re-enable snapping to "lock" the slide
+  }
+
 }
 
 customElements.define('slider-component', SliderComponent);
@@ -715,9 +771,9 @@ class SlideshowComponent extends SliderComponent {
     // custom code
     this.extraVisibleElement = 0;
     this.sliderItemsToShow.forEach(ele => {
-      if(this.isElementVisible(ele)) this.extraVisibleElement++;
+      if (this.isElementVisible(ele)) this.extraVisibleElement++;
     });
-    if(this.extraVisibleElement!=0) this.extraVisibleElement--;
+    if (this.extraVisibleElement != 0) this.extraVisibleElement--;
   }
 
   setAutoPlay() {
@@ -735,15 +791,15 @@ class SlideshowComponent extends SliderComponent {
   }
 
   // custom code
-  isElementVisible(element){
-      const rect = element.getBoundingClientRect();
-      const rect1 = this.getBoundingClientRect();
+  isElementVisible(element) {
+    const rect = element.getBoundingClientRect();
+    const rect1 = this.getBoundingClientRect();
 
-      return (
-        rect.left >=  rect1.left &&
-        rect.right <= rect1.right
-      );
-    };
+    return (
+      rect.left >= rect1.left &&
+      rect.right <= rect1.right
+    );
+  };
 
   onButtonClick(event) {
     super.onButtonClick(event);
@@ -949,11 +1005,11 @@ class VariantSelects extends HTMLElement {
     if (this.dataset.layout == 'card') {
       const card = this.closest('.card');
       const newMedia = card.querySelector(
-          `[data-media-id="${this.dataset.section}-${this.dataset.product}-${this.currentVariant.featured_media.id}"]`
+        `[data-media-id="${this.dataset.section}-${this.dataset.product}-${this.currentVariant.featured_media.id}"]`
       );
       if (!newMedia) return;
       const modalContent = card.querySelector('.card__media');
-      const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
+      const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
       const parent = newMedia.parentElement;
       if (parent.firstChild == newMedia) return;
       parent.prepend(newMedia);
@@ -961,7 +1017,7 @@ class VariantSelects extends HTMLElement {
       if (this.stickyHeader) {
         this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
       }
-    } 
+    }
     if (this.currentVariant.featured_media) {
       const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
       mediaGalleries.forEach((mediaGallery) =>
@@ -992,7 +1048,7 @@ class VariantSelects extends HTMLElement {
       }
     }
   }
-    updateStockCountdown() {
+  updateStockCountdown() {
     if (!this.currentVariant) return;
 
     if (this.dataset.layout == 'card') {
@@ -1018,7 +1074,7 @@ class VariantSelects extends HTMLElement {
             if (countdownWrapper.querySelector('.wbstockinfo-probar'))
               countdownWrapper.querySelector('.wbstockinfo-probar').style.width = ((variantsData[variant.id]['q'] * 100) / stockCountdownConfig.max_stock) + '%';
           }
-        } 
+        }
         else if (variantsData[variant.id]['p'] == "continue") {
           card.querySelector('.wbstockcount').classList.remove('hidden');
           card.querySelector('.wbstockinfo-bar')?.classList.add('hidden');
@@ -1031,7 +1087,7 @@ class VariantSelects extends HTMLElement {
           card.querySelector('.wbstockcount').classList.add('hidden');
         }
       }
-    } else {  
+    } else {
       let productMain = this.closest('.product');
       if (productMain && productMain.querySelector('.wbstockcount') != null) {
         let variantsData = JSON.parse(productMain.querySelector('#product-variants').innerHTML);
@@ -1052,7 +1108,7 @@ class VariantSelects extends HTMLElement {
             countdownWrapper.querySelector('.wbstockinfo').innerHTML = stockCountdownConfig.limited_stock_message.replace('{stock_number}', variantsData[variant.id]['q']);
             countdownWrapper.querySelector('.wbstockinfo-probar').style.width = ((variantsData[variant.id]['q'] * 100) / stockCountdownConfig.max_stock) + '%';
           }
-        } 
+        }
         else if (variantsData[variant.id]['p'] == "continue") {
           productMain.querySelector('.wbstockcount').classList.remove('hidden');
           productMain.querySelector('.wbstockinfo-bar').classList.add('hidden');
@@ -1066,7 +1122,7 @@ class VariantSelects extends HTMLElement {
       }
     }
   }
-  updateURLParameter(url, param, paramVal){
+  updateURLParameter(url, param, paramVal) {
     var newAdditionalURL = "";
     var tempArray = url.split("?");
     var baseURL = tempArray[0];
@@ -1074,8 +1130,8 @@ class VariantSelects extends HTMLElement {
     var temp = "";
     if (additionalURL) {
       tempArray = additionalURL.split("&");
-      for (var i=0; i<tempArray.length; i++){
-        if(tempArray[i].split('=')[0] != param){
+      for (var i = 0; i < tempArray.length; i++) {
+        if (tempArray[i].split('=')[0] != param) {
           newAdditionalURL += temp + tempArray[i];
           temp = "&";
         }
@@ -1104,18 +1160,16 @@ class VariantSelects extends HTMLElement {
       const productForms = card.querySelectorAll(`#ProductInfo-${this.dataset.section}-${this.dataset.product}`);
       productForms.forEach((productForm) => {
         const input = productForm.querySelectorAll('input[name="id"]');
-        Array.from(input).forEach((element,index) =>
-        {
+        Array.from(input).forEach((element, index) => {
           element.value = this.currentVariant.id;
         });
         const select = productForm.querySelectorAll('select[name="id"]');
-        Array.from(select).forEach((element,index) =>
-        {
+        Array.from(select).forEach((element, index) => {
           element.value = this.currentVariant.id;
         });
 
         const fieldsets = Array.from(this.querySelectorAll('fieldset'));
-        fieldsets.forEach(function(option) {
+        fieldsets.forEach(function (option) {
           Array.from(option.querySelectorAll('label')).find((element) => element.classList.remove('active'));
         });
         const optionData = this.closest('.grid__item').querySelectorAll('select option');
@@ -1124,20 +1178,20 @@ class VariantSelects extends HTMLElement {
         const salePrice = this.closest('.grid__item').querySelector('.price.price__container .price__sale .price-item--regular');
         const wbunitPrice = this.closest('.grid__item').querySelector('.price.price__container .unit-price .cardunitp');
         const wbunitValue = this.closest('.grid__item').querySelector('.price.price__container .unit-price .cardunitv');
-          
+
         const wbPercentBadge = this.closest('.grid__item').querySelector('.card__badge .percent__badge-sale');
         const wbAmountBadge = this.closest('.grid__item').querySelector('.card__badge .amount__badge-sale');
-        
+
         optionData.forEach((data) => {
-          if(data.value == this.currentVariant.id) {
-            if(data.dataset.cprice != '' &&  data.dataset.price != data.dataset.cprice) {
+          if (data.value == this.currentVariant.id) {
+            if (data.dataset.cprice != '' && data.dataset.price != data.dataset.cprice) {
               saleRegularPrice.innerHTML = data.dataset.price;
               salePrice.innerHTML = data.dataset.cprice;
-              if(data.dataset.damount != '') {
+              if (data.dataset.damount != '') {
                 wbAmountBadge.innerHTML = data.dataset.damount;
                 wbAmountBadge.classList.remove('hidden');
               }
-              if(data.dataset.percent != '') {
+              if (data.dataset.percent != '') {
                 wbPercentBadge.innerHTML = data.dataset.percent;
                 wbPercentBadge.classList.remove('hidden');
               }
@@ -1145,19 +1199,19 @@ class VariantSelects extends HTMLElement {
             }
             else {
               regularPrice.innerHTML = data.dataset.price;
-              if(wbPercentBadge){
+              if (wbPercentBadge) {
                 wbPercentBadge.classList.add('hidden');
               }
-              if(wbAmountBadge){
+              if (wbAmountBadge) {
                 wbAmountBadge.classList.add('hidden');
               }
               this.closest('.grid__item').querySelector('.price').classList.remove("price--on-sale");
             }
-            if(data.dataset.unitprice) {
+            if (data.dataset.unitprice) {
               wbunitPrice.innerHTML = data.dataset.unitprice;
               this.closest('.grid__item').querySelector('.price').classList.add("price--on-sale");
             }
-            if(data.dataset.unitvalue) {
+            if (data.dataset.unitvalue) {
               wbunitValue.innerHTML = data.dataset.unitvalue;
               this.closest('.grid__item').querySelector('.price').classList.add("price--on-sale");
             }
@@ -1191,7 +1245,7 @@ class VariantSelects extends HTMLElement {
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    
+
     listOfOptions.forEach((input) => {
       if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
         input.innerText = input.getAttribute('value');
@@ -1235,11 +1289,13 @@ class VariantSelects extends HTMLElement {
           this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
           const html = new DOMParser().parseFromString(responseText, 'text/html');
           sectionId = `${sectionId}-${this.dataset.product}`;
-          publish(PUB_SUB_EVENTS.variantChange, {data: {
+          publish(PUB_SUB_EVENTS.variantChange, {
+            data: {
               sectionId,
               html,
               variant: this.currentVariant
-            }});
+            }
+          });
 
         })
       // this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
@@ -1247,82 +1303,84 @@ class VariantSelects extends HTMLElement {
     }
 
     fetch(`${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
-        .then((response) => response.text())
-        .then((responseText) => {
-          // prevent unnecessary ui changes from abandoned selections
-          if (this.currentVariant.id !== requestedVariantId) return;
+      .then((response) => response.text())
+      .then((responseText) => {
+        // prevent unnecessary ui changes from abandoned selections
+        if (this.currentVariant.id !== requestedVariantId) return;
 
-          const html = new DOMParser().parseFromString(responseText, 'text/html')
-          const destinations = document.querySelectorAll(`#price-${this.dataset.section}`);
-          const sources = html.querySelectorAll(`#price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-          const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-          const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
-          const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-          const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
-          const volumePricingSource = html.getElementById(
-            `Volume-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-          );
+        const html = new DOMParser().parseFromString(responseText, 'text/html')
+        const destinations = document.querySelectorAll(`#price-${this.dataset.section}`);
+        const sources = html.querySelectorAll(`#price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
+        const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
+        const volumePricingSource = html.getElementById(
+          `Volume-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+        );
 
-          
-          if (this.dataset.layout != 'card') {
-            this.updateMedia(html);
+
+        if (this.dataset.layout != 'card') {
+          this.updateMedia(html);
+        }
+        const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
+        const pricePerItemSource = html.getElementById(`Price-Per-Item-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+
+        const volumePricingDestination = document.getElementById(`Volume-${this.dataset.section}`);
+        const qtyRules = document.getElementById(`Quantity-Rules-${this.dataset.section}`);
+        const volumeNote = document.getElementById(`Volume-Note-${this.dataset.section}`);
+        const unitSource = html.getElementById(`Variant-Unit-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const unitDestination = document.getElementById(`Variant-Unit-${this.dataset.section}`);
+
+        if (unitSource && unitDestination) {
+          unitDestination.innerHTML = unitSource.innerHTML;
+          unitDestination.classList.toggle('visibility-hidden', unitSource.innerText === '');
+        }
+
+
+        if (volumeNote) volumeNote.classList.remove('hidden');
+        if (volumePricingDestination) volumePricingDestination.classList.remove('hidden');
+        if (qtyRules) qtyRules.classList.remove('hidden');
+
+        if (sources.length == destinations.length && sources.length != 0) {
+          let idx = 0;
+          for (let source of sources) {
+            destinations[idx].innerHTML = source.innerHTML;
+            idx++;
           }
-          const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
-          const pricePerItemSource = html.getElementById(`Price-Per-Item-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        }
+        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+        if (skuSource && skuDestination) {
+          skuDestination.innerHTML = skuSource.innerHTML;
+          skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
+        }
 
-          const volumePricingDestination = document.getElementById(`Volume-${this.dataset.section}`);
-          const qtyRules = document.getElementById(`Quantity-Rules-${this.dataset.section}`);
-          const volumeNote = document.getElementById(`Volume-Note-${this.dataset.section}`);
-          const unitSource = html.getElementById(`Variant-Unit-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-          const unitDestination = document.getElementById(`Variant-Unit-${this.dataset.section}`);
-          
-          if (unitSource && unitDestination) {
-            unitDestination.innerHTML = unitSource.innerHTML;
-            unitDestination.classList.toggle('visibility-hidden', unitSource.innerText === '');
+        if (volumePricingSource && volumePricingDestination) {
+          volumePricingDestination.innerHTML = volumePricingSource.innerHTML;
+        }
+
+        if (pricePerItemSource && pricePerItemDestination) {
+          pricePerItemDestination.innerHTML = pricePerItemSource.innerHTML;
+          pricePerItemDestination.classList.toggle('visibility-hidden', pricePerItemSource.classList.contains('visibility-hidden'));
+        }
+
+        const price = document.getElementById(`price-${this.dataset.section}`);
+
+        if (price) price.classList.remove('hidden');
+
+        if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
+
+        const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
+        this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, window.variantStrings.soldOut);
+
+        publish(PUB_SUB_EVENTS.variantChange, {
+          data: {
+            sectionId,
+            html,
+            variant: this.currentVariant
           }
-
-          
-          if (volumeNote) volumeNote.classList.remove('hidden');
-          if (volumePricingDestination) volumePricingDestination.classList.remove('hidden');
-          if (qtyRules) qtyRules.classList.remove('hidden');
-
-          if (sources.length == destinations.length && sources.length != 0){
-            let idx = 0;
-            for(let source of sources){
-              destinations[idx].innerHTML = source.innerHTML;
-              idx++;
-            }
-          }
-          if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-          if (skuSource && skuDestination) {
-            skuDestination.innerHTML = skuSource.innerHTML;
-            skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
-          }
-
-          if (volumePricingSource && volumePricingDestination) {
-            volumePricingDestination.innerHTML = volumePricingSource.innerHTML;
-          }
-
-          if (pricePerItemSource && pricePerItemDestination) {
-            pricePerItemDestination.innerHTML = pricePerItemSource.innerHTML;
-            pricePerItemDestination.classList.toggle('visibility-hidden', pricePerItemSource.classList.contains('visibility-hidden'));
-          }
-
-          const price = document.getElementById(`price-${this.dataset.section}`);
-
-          if (price) price.classList.remove('hidden');
-
-          if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
-
-          const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
-          this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, window.variantStrings.soldOut);
-
-          publish(PUB_SUB_EVENTS.variantChange, {data: {
-              sectionId,
-              html,
-              variant: this.currentVariant
-            }});
         });
+      });
   }
 
   toggleAddButton(disable = true, text, modifyClass = true) {
@@ -1432,7 +1490,7 @@ class WebiCollapse extends HTMLElement {
       ele.addEventListener('keydown', this.handleKeyDown.bind(this));
     });
   }
-  handleKeyDown(event){
+  handleKeyDown(event) {
     if (event.keyCode === 13) {
       this.onSectionClick(event);
     }
@@ -1463,10 +1521,10 @@ class WebiCollapse extends HTMLElement {
     var sectionHeight = element.scrollHeight;
     element.style.height = sectionHeight + 'px';
     element.offsetHeight;
-  
+
     element.style.transition = 'height 0.3s ease';
     element.style.height = '0px';
-    
+
     element.addEventListener('transitionend', () => {
       element.removeEventListener('transitionend', this.collapseSection);
       element.style.transition = '';
@@ -1513,7 +1571,7 @@ class LoadMore extends HTMLElement {
       return await res.text();
     } catch (error) {
       console.log(error);
-    } 
+    }
   }
   async loadMoreProducts() {
     const load_more_spinner = this.getElementsByClassName('load-more_spinner')[0];
@@ -1534,12 +1592,12 @@ class LoadMore extends HTMLElement {
     let currentIndex = 0;
     while (new_products.length > currentIndex) {
       let product = new_products[currentIndex];
-      if(product.classList.contains('wbimgbnrblock')) {
+      if (product.classList.contains('wbimgbnrblock')) {
         currentIndex++;
         continue;
       };
       document.getElementById('product-grid').appendChild(product);
-    } 
+    }
   }
 }
 customElements.define('load-more', LoadMore);
@@ -1553,22 +1611,22 @@ document.querySelectorAll('.banner-content-remove').forEach((close) => {
     }
   });
 });
- 
+
 // Variant popup
 class WBCardVariant extends HTMLElement {
-  constructor() {  
+  constructor() {
     super();
     const selectBtn = this.querySelector('.wb_select_btn');
-    if(selectBtn) selectBtn.addEventListener('click', this.addClassToParent.bind(this));
+    if (selectBtn) selectBtn.addEventListener('click', this.addClassToParent.bind(this));
     document.addEventListener('click', this.onFocusOut.bind(this))
   }
-  onFocusOut(event){
+  onFocusOut(event) {
     event.stopPropagation();
-    if(this.contains(event.target)) return;
+    if (this.contains(event.target)) return;
     const ele = this.querySelector('.parent-selected');
-    if(ele){
+    if (ele) {
       ele.classList.remove('parent-selected');
-      ele.style='';  
+      ele.style = '';
     }
   }
   addClassToParent(event) {
@@ -1576,92 +1634,92 @@ class WBCardVariant extends HTMLElement {
     const beforeinfo = wbparentElement.getBoundingClientRect().height;
     wbparentElement.classList.add('parent-selected');
     const afterinfo = wbparentElement.getBoundingClientRect().height;
-    wbparentElement.style = 'margin-top: '+ (beforeinfo - afterinfo).toString() +'px;'; 
+    wbparentElement.style = 'margin-top: ' + (beforeinfo - afterinfo).toString() + 'px;';
   }
 }
-customElements.define('wb-card-variant', WBCardVariant);   
+customElements.define('wb-card-variant', WBCardVariant);
 
 
 // Verticle menu
 class DesktopWebiMenu extends HTMLElement {
-  constructor() {  
+  constructor() {
     super();
     const drop = this.dataset.drop ? this.dataset.drop : 'click';
     document.addEventListener('click', this.onFocusOut.bind(this));
     this.addEventListener('keydown', this.handleKeyDown.bind(this));
-    this.querySelectorAll('li').forEach(ele =>{
+    this.querySelectorAll('li').forEach(ele => {
       ele.addEventListener('keydown', this.handleLiKeyDown.bind(this));
-      ele.addEventListener(drop, ()=>{
+      ele.addEventListener(drop, () => {
         this.onLiClick(ele);
       });
-      if(drop == 'mouseover'){
-        ele.addEventListener('mouseout', ()=>{
-           this.closeLi();
+      if (drop == 'mouseover') {
+        ele.addEventListener('mouseout', () => {
+          this.closeLi();
         });
       }
     });
   }
-  handleLiKeyDown(event){
+  handleLiKeyDown(event) {
     if (event.keyCode === 13) {
-      if(event.target.classList.contains('menuclick')) event.target.classList.remove('menuclick');
+      if (event.target.classList.contains('menuclick')) event.target.classList.remove('menuclick');
       else this.onLiClick(event.target);
     }
   }
-  handleKeyDown(event){
+  handleKeyDown(event) {
     if (event.keyCode === 13) {
       this.onFocusOut(event);
     }
   }
-  onLiClick(ele){
+  onLiClick(ele) {
     this.closeLi();
     ele.classList.add('menuclick');
   }
-  closeLi(){
-    this.querySelectorAll('li.menuclick').forEach((ele) =>{
+  closeLi() {
+    this.querySelectorAll('li.menuclick').forEach((ele) => {
       ele.classList.remove('menuclick');
     })
   }
-  onFocusOut(event){
+  onFocusOut(event) {
     event.stopPropagation();
-    if(this.contains(event.target) && (!this.querySelector('#menu-drawer').contains(event.target))){ 
-      if(this.classList.contains('open')) {
+    if (this.contains(event.target) && (!this.querySelector('#menu-drawer').contains(event.target))) {
+      if (this.classList.contains('open')) {
         this.classList.remove('open');
         this.closeLi();
       }
       else this.classList.add('open');
-    }else if(!this.querySelector('#menu-drawer').contains(event.target)){
+    } else if (!this.querySelector('#menu-drawer').contains(event.target)) {
       this.classList.remove('open');
       this.closeLi();
     }
   }
 }
-customElements.define('desktop-webi-menu', DesktopWebiMenu);  
+customElements.define('desktop-webi-menu', DesktopWebiMenu);
 
 
 // Blog left sidebar Drawer Javascript
 
 class ArticleToggle extends HTMLElement {
-  constructor() {  
+  constructor() {
     super();
     this.sidebar = this.querySelector('.sidebar');
     this.toggleButton = this.querySelector('.toggle-button');
     this.closeBtn = this.querySelector('.sidebar-close');
-    this.toggleButton.addEventListener('click', this.toggleSidebar.bind(this)); 
+    this.toggleButton.addEventListener('click', this.toggleSidebar.bind(this));
     this.closeBtn.addEventListener('click', this.closeSidebar.bind(this));
-    
+
     document.addEventListener('click', this.handleOutsideClick.bind(this));
   }
-  
+
   toggleSidebar() {
     this.sidebar.classList.add('active');
     document.body.classList.add("overflow-hidden");
   }
-  
+
   closeSidebar() {
     this.sidebar.classList.remove('active');
     document.body.classList.remove("overflow-hidden");
   }
-  
+
   handleOutsideClick(event) {
     if (this.sidebar.classList.contains('active') && !this.sidebar.contains(event.target) && !this.toggleButton.contains(event.target)) {
       this.closeSidebar();
@@ -1679,10 +1737,10 @@ class Counter extends HTMLElement {
     this.counters = this.querySelectorAll('.counter-item .scroll_count');
     this.CounterObserver = new IntersectionObserver(
       (entries) => {
-        if (!entries.some(v => v.isIntersecting)){
+        if (!entries.some(v => v.isIntersecting)) {
           this.counters.forEach((counter, index) => {
             const counterNumber = +counter.innerText;
-            if(counterNumber == 0) return;
+            if (counterNumber == 0) return;
             counter.innerText = "0";
           });
           return;
@@ -1690,7 +1748,7 @@ class Counter extends HTMLElement {
         let speed = 100;
         this.counters.forEach((counter, index) => {
           function UpdateCounter() {
-            const targetNumber = +counter.dataset.target; 
+            const targetNumber = +counter.dataset.target;
             const initialNumber = +counter.innerText;
             const incPerCount = targetNumber / speed;
             if (initialNumber < targetNumber) {
@@ -1705,9 +1763,8 @@ class Counter extends HTMLElement {
           if (counter.parentElement.style.animation) {
             counter.parentElement.style.animation = '';
           } else {
-            counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
-              index / this.counters.length + 0.5
-            }s`;
+            counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${index / this.counters.length + 0.5
+              }s`;
           }
         });
       },
@@ -1723,16 +1780,16 @@ customElements.define('c-counter', Counter);
 
 // Variant hover
 class ColorSwatch extends VariantSelects {
-  constructor() { 
+  constructor() {
     super();
     const fieldsets = Array.from(this.querySelectorAll('fieldset label'));
-    this.querySelectorAll('fieldset label').forEach((ele)=>{
+    this.querySelectorAll('fieldset label').forEach((ele) => {
       ele.addEventListener('mouseenter', this.onVariantChangeHover.bind(this));
       ele.addEventListener('click', this.onLabelClick.bind(this));
-    }) 
+    })
   }
-  onLabelClick(event){
-    if(event.target.dataset.href){
+  onLabelClick(event) {
+    if (event.target.dataset.href) {
       window.location.href = event.target.dataset.href;
     }
   }
@@ -1746,30 +1803,30 @@ class ColorSwatch extends VariantSelects {
     });
   }
   updateOptions(ele) {
-    if(ele.attributes.for && this.querySelector('#'+ele.attributes.for.value)){
-      this.querySelector('#'+ele.attributes.for.value).checked = true;
+    if (ele.attributes.for && this.querySelector('#' + ele.attributes.for.value)) {
+      this.querySelector('#' + ele.attributes.for.value).checked = true;
     }
     const fieldsets = Array.from(this.querySelectorAll('fieldset'));
     this.options = fieldsets.map((fieldset) => {
       return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
     });
   }
-  updatelabelDataset(ele){
+  updatelabelDataset(ele) {
     let href = ele.dataset.href
-    if(href.indexOf('?variant=') > -1){
-      href = (href.substring(0, href.indexOf('?variant=')+9) + this.currentVariant.id)
-    }else{
-      href += ("?variant="+ this.currentVariant.id)
+    if (href.indexOf('?variant=') > -1) {
+      href = (href.substring(0, href.indexOf('?variant=') + 9) + this.currentVariant.id)
+    } else {
+      href += ("?variant=" + this.currentVariant.id)
     }
-    ele.dataset.href = href; 
+    ele.dataset.href = href;
   }
-  onVariantChangeHover(event){
+  onVariantChangeHover(event) {
     this.updateOptions(event.target);
     this.updateMasterId();
     this.updatelabelDataset(event.target);
     this.updateMedia();
   }
-  onVariantChange(){
+  onVariantChange() {
   }
 }
 customElements.define('color-swatch', ColorSwatch);
@@ -1823,7 +1880,7 @@ class ProductRecommendations extends HTMLElement {
         });
     }
 
-    new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 200px 0px'}).observe(this);
+    new IntersectionObserver(handleIntersection.bind(this), { rootMargin: '0px 0px 200px 0px' }).observe(this);
   }
 }
 

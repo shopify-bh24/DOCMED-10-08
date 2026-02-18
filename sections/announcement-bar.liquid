@@ -42,7 +42,7 @@
 %}
 {% if show_home_only %}
   <div class="announcement--bar color-{{ section.settings.color_scheme }} gradient annoucehome {% if section.settings.mobile_bar %}mobile_announce{% endif %} {% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %} {% if section.settings.show_line_separator %} b-border {% endif %}">
-    <div class="global_headannunce page-width">
+    <div class="global_headannunce page-width" style="display: flex; align-items: center;">
       <div class="announce_item announce_social">
         {%- if section.settings.show_social and social_icons -%}
           {%- render 'social-icons' -%}

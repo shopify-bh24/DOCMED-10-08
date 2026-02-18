@@ -27,6 +27,7 @@
     line-height: 1.5;
 }
 .announcement--bar .slider-button{
+    display: none !important;
     min-width: calc(3.8rem + var(--buttons-border-width) * 2);
 }
 .localization-wrapper.announce_item {
