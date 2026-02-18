@@ -735,7 +735,8 @@
         "submit_for_review_notice_label": "Die Zahlung ist erst fällig, wenn Ihre Bestellung überprüft wurde.",
         "continue_to_shipping_method": "Weiter zum Versand",
         "back_to_contact_information": "Zurück zum Warenkorb",
-        "complete_purchase_button_label": "Zahlungspflichtig bestellen"
+        "complete_purchase_button_label": "Zahlungspflichtig bestellen",
+        "back_to_payment_method": "Zurück zu Zahlungsmethode"
       },
       "shipping_errors": {
         "empty_state": "Bitte geben Sie ihre Lieferadresse ein, um Versandkosten anzuzeigen."
