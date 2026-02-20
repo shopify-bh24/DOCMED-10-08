@@ -77,6 +77,18 @@
           "settings": {
             "qual_item": "<p>Moderne Arbeitsumgebungi n Bochum</p>"
           }
+        },
+        "qual_FwcmQf": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Flexible Arbeitszeiten</p>"
+          }
+        },
+        "qual_LYrktp": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Gute Übernahmechancen nach erfolgreichem Abschluss</p>"
+          }
         }
       },
       "block_order": [
@@ -88,7 +100,9 @@
         "qual_HMHGiM",
         "qual_7gXqLK",
         "qual_CWeQBR",
-        "qual_zEpzz8"
+        "qual_zEpzz8",
+        "qual_FwcmQf",
+        "qual_LYrktp"
       ],
       "name": "Job Detail",
       "settings": {
