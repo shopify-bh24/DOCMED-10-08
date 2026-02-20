@@ -21,9 +21,20 @@
     "main": {
       "type": "page-carrer",
       "blocks": {
+        "item_c4RkU8": {
+          "type": "item",
+          "settings": {
+            "title_job": "Ausbildung zum Kaufmann / zur Kauffrau im E-Commerce (m/w/d)",
+            "loction_job": "Bochum",
+            "type_job": "Ausbildung",
+            "income_job": "",
+            "date_job": "Beginn (nach Absprache )",
+            "detail_job": "shopify://pages/job-5",
+            "detail_label_job": "Details"
+          }
+        },
         "item_M69gRb": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "title_job": "Koch/Köchin",
             "loction_job": "Bochum",
@@ -36,7 +47,6 @@
         },
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "title_job": "Lagerhelfer/innen (m/w/d)",
             "loction_job": "Bochum",
@@ -73,6 +83,7 @@
         }
       },
       "block_order": [
+        "item_c4RkU8",
         "item_M69gRb",
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
         "item_B64NHp",
