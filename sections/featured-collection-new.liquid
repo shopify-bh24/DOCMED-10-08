@@ -231,10 +231,10 @@
     }
 
     /* Ensure links/images don't get 'ghosted' or dragged while moving */
-    slider-component.is-dragging a,
+    {% comment %} slider-component.is-dragging a,
     slider-component.is-dragging img {
       pointer-events: none;
-    }
+    } {% endcomment %}
   }
 </style>
 
