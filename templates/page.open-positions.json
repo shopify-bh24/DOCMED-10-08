@@ -66,7 +66,7 @@
             "income_job": "",
             "date_job": "Ab sofort",
             "detail_job": "https://www.docmed.de/pages/jobs-steuerfachangestellter-steuerfachwirt-bilanzbuchhalter",
-            "detail_label_job": "Anzeigen"
+            "detail_label_job": "Details"
           }
         },
         "item_PtmeWH": {
@@ -78,7 +78,7 @@
             "income_job": "",
             "date_job": "",
             "detail_job": "https://www.docmed.de/pages/werkstudent-praktikum",
-            "detail_label_job": "Anzeigen"
+            "detail_label_job": "Details"
           }
         }
       },
