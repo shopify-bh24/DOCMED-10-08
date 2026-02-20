@@ -114,20 +114,129 @@
       "name": "Job Detail",
       "settings": {
         "company_name": "",
-        "job_title": "Lagerhelfer/in (m/w/d)",
-        "job_location": "Vollzeit/Teilzeit",
-        "job_type": "Lager- und Transportarbeiter/inFachlagerist/in",
+        "job_title": "Ausbildung zum Kaufmann / zur Kauffrau im E-Commerce (m/w/d) ",
+        "job_location": "Bochum",
+        "job_type": "Ausbildungsbeginn: nach Absprache",
         "job_category": "",
         "variant1": "",
         "variant2": "",
         "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
-        "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte. Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen.\n\nMit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
+        "intro_paragraph_1": "Du interessierst dich für Online-Shops, Marktplätze und digitale Geschäftsmodelle? \nDu möchtest verstehen, wie Produkte im Internet erfolgreich verkauft werden und wie ein modernes E-Commerce-Unternehmen arbeitet? \n\nDann starte deine Ausbildung bei uns. \n\nWir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum. Unsere Produkte vertreiben wir über unseren eigenen Webshop sowie über nationale und internationale Online-Marktplätze. \n\nWährend deiner Ausbildung erhältst du umfassende Einblicke in die operative Steuerung unseres Multi-Channel-E-Commerce-Geschäfts und lernst Schritt für Schritt, wie digitale Vertriebsprozesse professionell umgesetzt werden.",
         "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
-        "intro_paragraph_3": "Wir suchen Mitarbeiter/innen (m/w/d) für Lagertätigkeiten.",
+        "intro_paragraph_3": "Bewerbung gerne per E-Mail an: bewerbung@docmed.de",
         "intro_paragraph_4": "",
         "tasks_title": "Aufgaben",
         "qual_title": "Qualifikation",
         "benefit_title": "Benefits"
+      }
+    },
+    "jobs_section_DLgikW": {
+      "type": "jobs_section",
+      "blocks": {
+        "task_f3PTLc": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Pflege und Aktualisierungvon Produktdateninu nserem Webshop und aufv erschiedenen Online-Marktplätzen</p>"
+          }
+        },
+        "task_yRKjpm": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Etikettieren von Waren</p>"
+          }
+        },
+        "task_3UwMfG": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Bearbeitung von Retouren</p>"
+          }
+        },
+        "task_QLMU7Q": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Allgemeine Lagerarbeiten</p>"
+          }
+        },
+        "task_GfPGAB": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Ordnung und Sauberkeit im Lagerbereich</p>"
+          }
+        },
+        "qual_7kFzTQ": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
+          }
+        },
+        "qual_mttYpc": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsche Sprachkenntnisse (ab B2)</p>"
+          }
+        },
+        "qual_e4bbQW": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme</p>"
+          }
+        },
+        "benefit_PWXBjd": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
+          }
+        },
+        "benefit_fqRKBq": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Bezahlung je nach Qualifikation"
+          }
+        },
+        "benefit_VUDwdr": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine angenehme Arbeitsatmosphäre in einem motivierten Team"
+          }
+        },
+        "benefit_FinqKk": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Flexible Arbeitszeiten"
+          }
+        }
+      },
+      "block_order": [
+        "task_f3PTLc",
+        "task_yRKjpm",
+        "task_3UwMfG",
+        "task_QLMU7Q",
+        "task_GfPGAB",
+        "qual_7kFzTQ",
+        "qual_mttYpc",
+        "qual_e4bbQW",
+        "benefit_PWXBjd",
+        "benefit_fqRKBq",
+        "benefit_VUDwdr",
+        "benefit_FinqKk"
+      ],
+      "name": "Job Detail",
+      "settings": {
+        "company_name": "",
+        "job_title": "",
+        "job_location": "",
+        "job_type": "",
+        "job_category": "",
+        "variant1": "",
+        "variant2": "",
+        "intro_heading": "Das lernst du bei uns ",
+        "intro_paragraph_1": "Du interessierst dich für Online-Shops, Marktplätze und digitale Geschäftsmodelle? \nDu möchtest verstehen, wie Produkte im Internet erfolgreich verkauft werden und wie ein modernes E-Commerce-Unternehmen arbeitet? \n\nDann starte deine Ausbildung bei uns. \n\nWir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum. Unsere Produkte vertreiben wir über unseren eigenen Webshop sowie über nationale und internationale Online-Marktplätze. \n\nWährend deiner Ausbildung erhältst du umfassende Einblicke in die operative Steuerung unseres Multi-Channel-E-Commerce-Geschäfts und lernst Schritt für Schritt, wie digitale Vertriebsprozesse professionell umgesetzt werden.",
+        "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
+        "intro_paragraph_3": "Du wirst strukturiert eingearbeitet, erhältst persönliche Betreuung und übernimmst im Laufe deiner Ausbildung zunehmend eigenständig Aufgaben im Tagesgeschäft.",
+        "intro_paragraph_4": "",
+        "tasks_title": "Shop- & Marktplatz-Management ",
+        "qual_title": "Content & Sichtbarkeit ",
+        "benefit_title": "Performance & Auswertung "
       }
     },
     "contact_form_jqGVW4": {
@@ -198,6 +307,7 @@
   "order": [
     "main",
     "jobs_section_xQhFQD",
+    "jobs_section_DLgikW",
     "contact_form_jqGVW4"
   ]
 }
