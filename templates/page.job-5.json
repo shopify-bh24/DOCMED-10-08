@@ -54,6 +54,18 @@
             "task_item": "<p>Teamfähigkeit und Eigeninitiative</p>"
           }
         },
+        "task_WGTWfC": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Deutsch auf muttersprachlichem Niveau sowie gute Englischkenntnisse</p>"
+          }
+        },
+        "task_BUDEkr": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Grundkenntnissein MS Office</p>"
+          }
+        },
         "qual_HMHGiM": {
           "type": "qual",
           "settings": {
@@ -97,6 +109,8 @@
         "task_p3TjjR",
         "task_YD4xR6",
         "task_CqKDi7",
+        "task_WGTWfC",
+        "task_BUDEkr",
         "qual_HMHGiM",
         "qual_7gXqLK",
         "qual_CWeQBR",
