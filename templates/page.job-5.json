@@ -154,13 +154,7 @@
         "qual_mttYpc": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Deutsche Sprachkenntnisse (ab B2)</p>"
-          }
-        },
-        "qual_e4bbQW": {
-          "type": "qual",
-          "settings": {
-            "qual_item": "<p>Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme</p>"
+            "qual_item": "<p>Kennenlernen von Grundlagen der Suchmaschinenoptimierung (SEO) und Produkt-Sichtbarkeit</p>"
           }
         },
         "benefit_PWXBjd": {
@@ -193,7 +187,6 @@
         "task_yRKjpm",
         "qual_7kFzTQ",
         "qual_mttYpc",
-        "qual_e4bbQW",
         "benefit_PWXBjd",
         "benefit_fqRKBq",
         "benefit_VUDwdr",
