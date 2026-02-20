@@ -71,6 +71,12 @@
           "settings": {
             "qual_item": "<p>Einblicke in ein international agierendes E-Commerce-Unternehmen</p>"
           }
+        },
+        "qual_zEpzz8": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Moderne Arbeitsumgebungi n Bochum</p>"
+          }
         }
       },
       "block_order": [
@@ -81,7 +87,8 @@
         "task_CqKDi7",
         "qual_HMHGiM",
         "qual_7gXqLK",
-        "qual_CWeQBR"
+        "qual_CWeQBR",
+        "qual_zEpzz8"
       ],
       "name": "Job Detail",
       "settings": {
