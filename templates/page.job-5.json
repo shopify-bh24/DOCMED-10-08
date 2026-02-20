@@ -145,28 +145,10 @@
             "task_item": "<p>Unterstützung beim Einstellen neuer Produkte sowie Sicherstellung der Datenqualität (Texte, Bilder, Attribute, Preise)</p>"
           }
         },
-        "task_3UwMfG": {
-          "type": "task",
-          "settings": {
-            "task_item": "<p>Bearbeitung von Retouren</p>"
-          }
-        },
-        "task_QLMU7Q": {
-          "type": "task",
-          "settings": {
-            "task_item": "<p>Allgemeine Lagerarbeiten</p>"
-          }
-        },
-        "task_GfPGAB": {
-          "type": "task",
-          "settings": {
-            "task_item": "<p>Ordnung und Sauberkeit im Lagerbereich</p>"
-          }
-        },
         "qual_7kFzTQ": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
+            "qual_item": "<p>Mitwirkung bei der Erstellung und Optimierung von Produktbeschreibungen</p>"
           }
         },
         "qual_mttYpc": {
@@ -209,9 +191,6 @@
       "block_order": [
         "task_f3PTLc",
         "task_yRKjpm",
-        "task_3UwMfG",
-        "task_QLMU7Q",
-        "task_GfPGAB",
         "qual_7kFzTQ",
         "qual_mttYpc",
         "qual_e4bbQW",
