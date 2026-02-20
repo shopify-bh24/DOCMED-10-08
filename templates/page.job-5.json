@@ -21,6 +21,115 @@
         "padding_bottom": 60
       }
     },
+    "jobs_section_xQhFQD": {
+      "type": "jobs_section",
+      "blocks": {
+        "task_HqJgT4": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p> Verpacken von Waren</p>"
+          }
+        },
+        "task_exWDMV": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Etikettieren von Waren</p>"
+          }
+        },
+        "task_p3TjjR": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Bearbeitung von Retouren</p>"
+          }
+        },
+        "task_YD4xR6": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Allgemeine Lagerarbeiten</p>"
+          }
+        },
+        "task_CqKDi7": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Ordnung und Sauberkeit im Lagerbereich</p>"
+          }
+        },
+        "qual_HMHGiM": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
+          }
+        },
+        "qual_7gXqLK": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsche Sprachkenntnisse (ab B2)</p>"
+          }
+        },
+        "qual_CWeQBR": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme</p>"
+          }
+        },
+        "benefit_TEwJ7Y": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
+          }
+        },
+        "benefit_qdgDTC": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Bezahlung je nach Qualifikation"
+          }
+        },
+        "benefit_YtQe3n": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine angenehme Arbeitsatmosphäre in einem motivierten Team"
+          }
+        },
+        "benefit_jWTtAT": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Flexible Arbeitszeiten"
+          }
+        }
+      },
+      "block_order": [
+        "task_HqJgT4",
+        "task_exWDMV",
+        "task_p3TjjR",
+        "task_YD4xR6",
+        "task_CqKDi7",
+        "qual_HMHGiM",
+        "qual_7gXqLK",
+        "qual_CWeQBR",
+        "benefit_TEwJ7Y",
+        "benefit_qdgDTC",
+        "benefit_YtQe3n",
+        "benefit_jWTtAT"
+      ],
+      "name": "Job Detail",
+      "settings": {
+        "company_name": "",
+        "job_title": "Lagerhelfer/in (m/w/d)",
+        "job_location": "Vollzeit/Teilzeit",
+        "job_type": "Lager- und Transportarbeiter/inFachlagerist/in",
+        "job_category": "",
+        "variant1": "",
+        "variant2": "",
+        "intro_heading": "Bist du bereit für eine neue berufliche Herausforderung in der Gesundheitsbranche?",
+        "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte. Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen.\n\nMit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
+        "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
+        "intro_paragraph_3": "Wir suchen Mitarbeiter/innen (m/w/d) für Lagertätigkeiten.",
+        "intro_paragraph_4": "",
+        "tasks_title": "Aufgaben",
+        "qual_title": "Qualifikation",
+        "benefit_title": "Benefits"
+      }
+    },
     "contact_form_jqGVW4": {
       "type": "contact-form",
       "blocks": {
@@ -88,6 +197,7 @@
   },
   "order": [
     "main",
+    "jobs_section_xQhFQD",
     "contact_form_jqGVW4"
   ]
 }
