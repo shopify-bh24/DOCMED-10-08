@@ -57,7 +57,7 @@
         "qual_HMHGiM": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
+            "qual_item": "<p>Eine praxisnahe, vielseitige Ausbildung in einem wachstumsstarken Unternehmen</p>"
           }
         },
         "qual_7gXqLK": {
@@ -71,30 +71,6 @@
           "settings": {
             "qual_item": "<p>Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme</p>"
           }
-        },
-        "benefit_TEwJ7Y": {
-          "type": "benefit",
-          "settings": {
-            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
-          }
-        },
-        "benefit_qdgDTC": {
-          "type": "benefit",
-          "settings": {
-            "benefit_item": "Bezahlung je nach Qualifikation"
-          }
-        },
-        "benefit_YtQe3n": {
-          "type": "benefit",
-          "settings": {
-            "benefit_item": "Eine angenehme Arbeitsatmosphäre in einem motivierten Team"
-          }
-        },
-        "benefit_jWTtAT": {
-          "type": "benefit",
-          "settings": {
-            "benefit_item": "Flexible Arbeitszeiten"
-          }
         }
       },
       "block_order": [
@@ -105,11 +81,7 @@
         "task_CqKDi7",
         "qual_HMHGiM",
         "qual_7gXqLK",
-        "qual_CWeQBR",
-        "benefit_TEwJ7Y",
-        "benefit_qdgDTC",
-        "benefit_YtQe3n",
-        "benefit_jWTtAT"
+        "qual_CWeQBR"
       ],
       "name": "Job Detail",
       "settings": {
@@ -125,9 +97,9 @@
         "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
         "intro_paragraph_3": "Bewerbung gerne per E-Mail an: bewerbung@docmed.de",
         "intro_paragraph_4": "",
-        "tasks_title": "Aufgaben",
-        "qual_title": "Qualifikation",
-        "benefit_title": "Benefits"
+        "tasks_title": "Das bringst du mit ",
+        "qual_title": "Wir bieten dir ",
+        "benefit_title": ""
       }
     },
     "jobs_section_DLgikW": {
