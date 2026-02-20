@@ -21,30 +21,6 @@
     "main": {
       "type": "page-carrer",
       "blocks": {
-        "item_c4RkU8": {
-          "type": "item",
-          "settings": {
-            "title_job": "Ausbildung zum Kaufmann / zur Kauffrau im E-Commerce (m/w/d)",
-            "loction_job": "Bochum",
-            "type_job": "Ausbildung",
-            "income_job": "",
-            "date_job": "Beginn (nach Absprache )",
-            "detail_job": "shopify://pages/job-5",
-            "detail_label_job": "Details"
-          }
-        },
-        "item_M69gRb": {
-          "type": "item",
-          "settings": {
-            "title_job": "Koch/Köchin",
-            "loction_job": "Bochum",
-            "type_job": "Teilzeit (Vormittag)",
-            "income_job": "Quereinstieg möglich",
-            "date_job": "ab sofort",
-            "detail_job": "mailto:info@docmed.de",
-            "detail_label_job": "Bewerben"
-          }
-        },
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4": {
           "type": "item",
           "settings": {
@@ -54,18 +30,6 @@
             "income_job": "",
             "date_job": "Ab sofort",
             "detail_job": "https://www.docmed.de/pages/jobs-lagermitarbeiter",
-            "detail_label_job": "Details"
-          }
-        },
-        "item_B64NHp": {
-          "type": "item",
-          "settings": {
-            "title_job": "Steuerfachangestellte/r, Steuerfachwirt/in, Bilanzbuchhalter/in (m/w/d)",
-            "loction_job": "Bochum",
-            "type_job": "Vollzeit",
-            "income_job": "",
-            "date_job": "Ab sofort",
-            "detail_job": "https://www.docmed.de/pages/jobs-steuerfachangestellter-steuerfachwirt-bilanzbuchhalter",
             "detail_label_job": "Details"
           }
         },
@@ -80,14 +44,51 @@
             "detail_job": "https://www.docmed.de/pages/werkstudent-praktikum",
             "detail_label_job": "Details"
           }
+        },
+        "item_c4RkU8": {
+          "type": "item",
+          "settings": {
+            "title_job": "Ausbildung zum Kaufmann / zur Kauffrau im E-Commerce (m/w/d)",
+            "loction_job": "Bochum",
+            "type_job": "Ausbildung",
+            "income_job": "",
+            "date_job": "Beginn (nach Absprache )",
+            "detail_job": "shopify://pages/job-5",
+            "detail_label_job": "Details"
+          }
+        },
+        "item_M69gRb": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title_job": "Koch/Köchin",
+            "loction_job": "Bochum",
+            "type_job": "Teilzeit (Vormittag)",
+            "income_job": "Quereinstieg möglich",
+            "date_job": "ab sofort",
+            "detail_job": "mailto:info@docmed.de",
+            "detail_label_job": "Bewerben"
+          }
+        },
+        "item_B64NHp": {
+          "type": "item",
+          "settings": {
+            "title_job": "Steuerfachangestellte/r, Steuerfachwirt/in, Bilanzbuchhalter/in (m/w/d)",
+            "loction_job": "Bochum",
+            "type_job": "Vollzeit",
+            "income_job": "",
+            "date_job": "Ab sofort",
+            "detail_job": "https://www.docmed.de/pages/jobs-steuerfachangestellter-steuerfachwirt-bilanzbuchhalter",
+            "detail_label_job": "Details"
+          }
         }
       },
       "block_order": [
+        "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
+        "item_PtmeWH",
         "item_c4RkU8",
         "item_M69gRb",
-        "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
-        "item_B64NHp",
-        "item_PtmeWH"
+        "item_B64NHp"
       ],
       "name": "Open Positions",
       "settings": {
