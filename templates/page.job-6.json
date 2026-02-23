@@ -75,49 +75,61 @@
         "qual_yMe49L": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Eingeschriebene:r Student:in (z. B. BWL, Marketing, Medien, Kommunikation oder ein vergleichbarer Studiengang)</p>"
+            "qual_item": "<p>Abgeschlossenes Studium im Bereich BWL, Wirtschaftswissenschaften, Management oder eine vergleichbare Qualifikation</p>"
           }
         },
         "qual_TcF4LE": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Kommunikative, engagierte und hands-on Mentalität</p>"
+            "qual_item": "<p>Mehrjährige Erfahrung im Business Development, in einer kommerziellen<br/>Strategieposition oder in einer vergleichbaren wachstumsorientierten Rolle</p>"
           }
         },
         "qual_CnP8WR": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Sehr gute Deutschkenntnisse in Wort und Schrift, Englischkenntnisse von Vorteil</p>"
+            "qual_item": "<p>Ausgeprägtes strategisches und analytisches Denkvermögen</p>"
           }
         },
         "qual_zKzEXD": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Zuverlässige, selbstständige und verantwortungsbewusste Arbeitsweise</p>"
+            "qual_item": "<p>Unternehmerische Denkweise mit Hands-on-Mentalität</p>"
           }
         },
         "qual_rq4CUP": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Sicherer Umgang mit MS Office</p>"
+            "qual_item": "<p>Verhandlungssichere Kommunikationsfähigkeiten</p>"
+          }
+        },
+        "qual_azwWLU": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsch auf muttersprachlichem Niveau sowie verhandlungssicheres Englisch</p>"
+          }
+        },
+        "qual_NwLi7T": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Sicherer Umgang mit MS Office</p>"
           }
         },
         "benefit_EX8qYA": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Flexible Arbeitszeiten für eine gute Vereinbarkeit mit dem Studium"
+            "benefit_item": "Eine Schlüsselposition mit direktem Einfluss auf das Unternehmenswachstum"
           }
         },
         "benefit_R6mH8C": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Ein strukturiertes Mentoring-Programm mit persönlicher Betreuung"
+            "benefit_item": "Hohen Gestaltungsspielraum und strategische Verantwortung"
           }
         },
         "benefit_nd6wja": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Einblicke in ein international agierendes, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor"
+            "benefit_item": "Direkte Zusammenarbeit mit der Geschäftsleitung und kurze Entscheidungswege"
           }
         },
         "benefit_d9XhzD": {
@@ -153,6 +165,8 @@
         "qual_CnP8WR",
         "qual_zKzEXD",
         "qual_rq4CUP",
+        "qual_azwWLU",
+        "qual_NwLi7T",
         "benefit_EX8qYA",
         "benefit_R6mH8C",
         "benefit_nd6wja",
