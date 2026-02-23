@@ -149,6 +149,12 @@
           "settings": {
             "benefit_item": "Modernes Arbeitsumfeld in Bochum"
           }
+        },
+        "benefit_fyfkdB": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Ein motiviertes und ambitioniertes Team im Gesundheits-E-Commerce"
+          }
         }
       },
       "block_order": [
@@ -172,7 +178,8 @@
         "benefit_nd6wja",
         "benefit_d9XhzD",
         "benefit_njpMVJ",
-        "benefit_FR4GnD"
+        "benefit_FR4GnD",
+        "benefit_fyfkdB"
       ],
       "name": "Job Detail",
       "settings": {
@@ -189,7 +196,7 @@
         "intro_paragraph_2": "Als Business Development Manager:in identifizierst und entwickelst du neue Wachstumsfelder für unser Unternehmen. \n\nDu analysierst Märkte, bewertest Chancen und Risiken, baust strategische Partnerschaften auf und trägst direkt zur Umsatz- und Margenentwicklung bei. Dabei arbeitest du eng mit der Geschäftsleitung zusammen und gestaltest aktiv unsere langfristige Expansionsstrategie.",
         "intro_paragraph_3": "Bewerbung gerne per E-Mail an: bewerbung@docmed.de",
         "intro_paragraph_4": "",
-        "tasks_title": "Deine Aufgaben ",
+        "tasks_title": "Deine Aufgaben:",
         "qual_title": "Dein Profil:",
         "benefit_title": "Wir bieten:"
       }
