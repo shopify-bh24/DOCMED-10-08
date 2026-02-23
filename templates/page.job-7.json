@@ -21,6 +21,115 @@
         "padding_bottom": 60
       }
     },
+    "jobs_section_AbdEH9": {
+      "type": "jobs_section",
+      "blocks": {
+        "task_wUTRtj": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Entwicklung und Umsetzung von Maßnahmen zur nachhaltigen Skalierung unseres Marktplatzgeschäfts Sortimentsausbau, Sichtbarkeitsstrategien, Evaluierung neuer Plattformen und Internationalisierungsmöglichkeiten).</p>"
+          }
+        },
+        "task_XJf8Vn": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Verantwortung für die langfristige Performance und strategische<br/>Positionierung unserer Marktplatzkanäle mit Fokus auf profitables Wachstum.</p>"
+          }
+        },
+        "task_p3cxA6": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Bearbeitung von Retouren</p>"
+          }
+        },
+        "task_9W7eEe": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Allgemeine Lagerarbeiten</p>"
+          }
+        },
+        "task_wkdkRt": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Ordnung und Sauberkeit im Lagerbereich</p>"
+          }
+        },
+        "qual_cd9W6F": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
+          }
+        },
+        "qual_czPR6E": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsche Sprachkenntnisse (ab B2)</p>"
+          }
+        },
+        "qual_Qt7HxQ": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme</p>"
+          }
+        },
+        "benefit_CMkpzY": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
+          }
+        },
+        "benefit_iVhiWR": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Bezahlung je nach Qualifikation"
+          }
+        },
+        "benefit_MbtGCY": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Eine angenehme Arbeitsatmosphäre in einem motivierten Team"
+          }
+        },
+        "benefit_ebwtnQ": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Flexible Arbeitszeiten"
+          }
+        }
+      },
+      "block_order": [
+        "task_wUTRtj",
+        "task_XJf8Vn",
+        "task_p3cxA6",
+        "task_9W7eEe",
+        "task_wkdkRt",
+        "qual_cd9W6F",
+        "qual_czPR6E",
+        "qual_Qt7HxQ",
+        "benefit_CMkpzY",
+        "benefit_iVhiWR",
+        "benefit_MbtGCY",
+        "benefit_ebwtnQ"
+      ],
+      "name": "Job Detail",
+      "settings": {
+        "company_name": "",
+        "job_title": "(Junior) E-Commerce Manager/in (m/w/d)",
+        "job_location": "Vollzeit",
+        "job_type": "Standort Bochum",
+        "job_category": "Start:flexibel / nach Absprache",
+        "variant1": "",
+        "variant2": "",
+        "intro_heading": "Du möchtest digitale Vertriebskanäle nichtnur betreuen, sondern aktiv weiterentwickeln und skalieren?",
+        "intro_paragraph_1": "Wir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum. Unsere Produkte vertreiben wir über mehrere Online-Vertriebskanäle – darunter unser eigener Webshop sowie verschiedene nationale und internationale Marktplätze.\nZur weiteren Skalierung unseres digitalen Geschäfts suchen wir eine:n motivierte:n und performanceorientierte:n (Junior) E-Commerce Manager:in (m/w/d), der/die die strategische Weiterentwicklung unserer Marktplätze mitgestaltet und Verantwortung für nachhaltiges Wachstum übernimmt.",
+        "intro_paragraph_2": "Als (Junior) E-Commerce Manager:in verantwortest du sowohl die operative Steuerung als auch die strategische Weiterentwicklung unseres Multi-Channel-E-Commerce-Geschäfts.\nDu analysierst Performance-Daten, identifizierst Wachstumspotenziale und entwickelst Maßnahmen zur langfristigen Positionierung und Skalierung unserer Marktplatz- und D2C-Aktivitäten.",
+        "intro_paragraph_3": "Bewerbung gerne per E-Mail an: bewerbung@docmed.de",
+        "intro_paragraph_4": "",
+        "tasks_title": "Aufgaben",
+        "qual_title": "Qualifikation",
+        "benefit_title": "Benefits"
+      }
+    },
     "contact_form_jqGVW4": {
       "type": "contact-form",
       "blocks": {
@@ -88,6 +197,7 @@
   },
   "order": [
     "main",
+    "jobs_section_AbdEH9",
     "contact_form_jqGVW4"
   ]
 }
