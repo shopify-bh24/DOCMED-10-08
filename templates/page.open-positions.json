@@ -52,7 +52,19 @@
             "loction_job": "Bochum",
             "type_job": "Ausbildung",
             "income_job": "",
-            "date_job": "Beginn (nach Absprache )",
+            "date_job": "(nach Absprache )",
+            "detail_job": "shopify://pages/ausbildung-zum-kaufmann-zur-kauffrau-im-e-commerce",
+            "detail_label_job": "Details"
+          }
+        },
+        "item_JMd9mX": {
+          "type": "item",
+          "settings": {
+            "title_job": "(Junior) E-Commerce Manager/in (m/w/d)",
+            "loction_job": "Bochum",
+            "type_job": "Vollzeit",
+            "income_job": "",
+            "date_job": "flexibel/ nach Absprache",
             "detail_job": "shopify://pages/ausbildung-zum-kaufmann-zur-kauffrau-im-e-commerce",
             "detail_label_job": "Details"
           }
@@ -81,14 +93,28 @@
             "detail_job": "https://www.docmed.de/pages/jobs-steuerfachangestellter-steuerfachwirt-bilanzbuchhalter",
             "detail_label_job": "Details"
           }
+        },
+        "item_VFqfdq": {
+          "type": "item",
+          "settings": {
+            "title_job": "Business Development Manager/in (m/w/d) ",
+            "loction_job": "Bochum",
+            "type_job": "Vollzeit",
+            "income_job": "",
+            "date_job": "flexibel / nach Absprache ",
+            "detail_job": "shopify://pages/business-development-manager-in",
+            "detail_label_job": "Details"
+          }
         }
       },
       "block_order": [
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
         "item_PtmeWH",
         "item_c4RkU8",
+        "item_JMd9mX",
         "item_M69gRb",
-        "item_B64NHp"
+        "item_B64NHp",
+        "item_VFqfdq"
       ],
       "name": "Open Positions",
       "settings": {
