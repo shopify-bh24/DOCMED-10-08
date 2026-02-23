@@ -27,7 +27,7 @@
         "task_dnbtn3": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Entwicklung und Umsetzung von Maßnahmen zur nachhaltigen Skalierung unseres Marktplatzgeschäfts Sortimentsausbau, Sichtbarkeitsstrategien, Evaluierung neuer Plattformen und Internationalisierungsmöglichkeiten).</p>"
+            "task_item": "<p>Eigenständiges Auslösen und Nachverfolgen von Bestellungen auf Basis von Lagerbeständen und Bedarfsplanung.</p>"
           }
         },
         "task_AWHnar": {
@@ -156,15 +156,15 @@
       "name": "Job Detail",
       "settings": {
         "company_name": "",
-        "job_title": "(Junior) E-Commerce Manager/in (m/w/d)",
+        "job_title": "Einkäufer/in (m/w/d) ",
         "job_location": "Vollzeit",
         "job_type": "Standort Bochum",
         "job_category": "Start:flexibel / nach Absprache",
         "variant1": "",
         "variant2": "",
-        "intro_heading": "Du möchtest digitale Vertriebskanäle nichtnur betreuen, sondern aktiv weiterentwickeln und skalieren?",
-        "intro_paragraph_1": "Wir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum. Unsere Produkte vertreiben wir über mehrere Online-Vertriebskanäle – darunter unser eigener Webshop sowie verschiedene nationale und internationale Marktplätze.\nZur weiteren Skalierung unseres digitalen Geschäfts suchen wir eine:n motivierte:n und performanceorientierte:n (Junior) E-Commerce Manager:in (m/w/d), der/die die strategische Weiterentwicklung unserer Marktplätze mitgestaltet und Verantwortung für nachhaltiges Wachstum übernimmt.",
-        "intro_paragraph_2": "Als (Junior) E-Commerce Manager:in verantwortest du sowohl die operative Steuerung als auch die strategische Weiterentwicklung unseres Multi-Channel-E-Commerce-Geschäfts.\nDu analysierst Performance-Daten, identifizierst Wachstumspotenziale und entwickelst Maßnahmen zur langfristigen Positionierung und Skalierung unserer Marktplatz- und D2C-Aktivitäten.",
+        "intro_heading": "Du sorgst dafür, dass die richtigen Produkte zur richtigen Zeit verfügbar sind – zuverlässig und strukturiert.",
+        "intro_paragraph_1": "Wir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum. Unsere Produkte vertreiben wir über unseren eigenen Webshop sowie über nationale und internationale Marktplätze. \n\nZur Unterstützung unseres operativen Tagesgeschäfts suchen wir eine:n zuverlässige:n und detailorientierte:n Einkäufer:in (m/w/d), der/die unsere täglichen Beschaffungsprozesse eigenständig betreut und eine reibungslose Zusammenarbeit mit unseren Lieferanten sicherstellt.",
+        "intro_paragraph_2": "Als Einkäufer:in bist du für die operative Beschaffung unseres Produktportfolios verantwortlich. \n\nDu stellst sicher, dass Bestellungen rechtzeitig ausgelöst werden, Lieferungen nachverfolgt werden und Rechnungen sowie Wareneingänge korrekt geprüft werden. Deine Arbeit hat direkten Einfluss auf Warenverfügbarkeit, Lagerbestände und Prozesssicherheit.",
         "intro_paragraph_3": "Bewerbung gerne per E-Mail an: bewerbung@docmed.de",
         "intro_paragraph_4": "",
         "tasks_title": "Deine Aufgaben",
