@@ -27,31 +27,37 @@
         "task_Rxed3w": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Unterstützung bei der Gestaltung, Pflege und Optimierung unseres Shopify-Onlineshops</p>"
+            "task_item": "<p>Identifikation und Bewertung neuer Geschäftsmöglichkeiten, Märkte und Expansionspotenziale (national & international).</p>"
           }
         },
         "task_yFECKP": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Erstellung von SEO-optimierten Produktbeschreibungen und ansprechenden Texten</p>"
+            "task_item": "<p>Entwicklung und Umsetzung strategischer Wachstumsinitiativen im Einklang mit der Unternehmensstrategie.</p>"
           }
         },
         "task_LmrbFy": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Pflege von USPs und Produktinformationen als Metafelder in Shopify</p>"
+            "task_item": "<p>Aufbau und Pflege langfristiger Beziehungen zu Herstellern, Lieferanten und strategischen Partnern.</p>"
           }
         },
         "task_xgJcFb": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Erstellung von Alt-Texten für Produktbilder zur Verbesserung von SEO und Barrierefreiheit</p>"
+            "task_item": "<p>Verhandlung kommerzieller Konditionen sowie Begleitung des Onboardings neuer Marken und Produktportfolios.</p>"
           }
         },
         "task_i4m8Kc": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Durchführung von Recherchen und Übernahme kleinerer Aufgaben im Bereich E-Commerce und Online-Marketing</p>"
+            "task_item": "<p>Identifikation von Potenzialen zur Erweiterung unseres Produktportfolios, einschließlich neuer Kategorien oder Eigenmarkenansätze.</p>"
+          }
+        },
+        "task_CXxNiq": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Analyse von Markt- und Verkaufsdaten zur gezielten Steigerung von Umsatz und Profitabilität.</p>"
           }
         },
         "qual_yMe49L": {
@@ -127,6 +133,7 @@
         "task_LmrbFy",
         "task_xgJcFb",
         "task_i4m8Kc",
+        "task_CXxNiq",
         "qual_yMe49L",
         "qual_TcF4LE",
         "qual_CnP8WR",
@@ -143,18 +150,18 @@
       "settings": {
         "company_logo": "shopify://shop_images/DocMed_logo_4feb433d-8567-452a-8556-080ee222d917.png",
         "company_name": "",
-        "job_title": "Praktikum / Werkstudententätigkeit (m/w/d) im E-Commerce bei Pharmaunternehmen",
-        "job_location": "Beginn: flexibe / nach Absprache",
-        "job_type": "Praktikum (Vollzeit bis zu 6 Monate)  / (Werkstudent Teilzeit bis zu 12 Monate)",
-        "job_category": "",
+        "job_title": "Business Development Manager/in (m/w/d) ",
+        "job_location": "Vollzeit ",
+        "job_type": "Standort Bochum",
+        "job_category": "Start: flexibel / nach Absprache ",
         "variant1": "",
         "variant2": "",
-        "intro_heading": "Du möchtest praktische Erfahrungen im E-Commerce sammeln und tief in die Welt von Shopify eintauchen?",
-        "intro_paragraph_1": "Dann bist du bei uns genau richtig! Wir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum und suchen eine:n engagierte:n Praktikant:in oder Werkstudent:in (m/w/d) im Bereich E-Commerce & Shopify.",
-        "intro_paragraph_2": "",
+        "intro_heading": "Du willst Wachstum nicht nur begleiten, sondern aktiv gestalten? ",
+        "intro_paragraph_1": "Wir sind ein international tätiges, schnell wachsendes E-Commerce-Unternehmen im Gesundheitssektor mit Sitz in Bochum. Unsere Produkte vertreiben wir über mehrere digitale Vertriebskanäle – darunter unser eigener Webshop sowie verschiedene nationale und internationale Marktplätze. \n\nZur weiteren Expansion unseres Geschäfts suchen wir eine:n strategisch denkende:n und unternehmerisch handelnde:n Business Development Manager:in (m/w/d), der/die neue Geschäftspotenziale identifiziert, strategische Partnerschaften aufbaut und unser nachhaltiges Wachstum maßgeblich vorantreibt.",
+        "intro_paragraph_2": "Als Business Development Manager:in identifizierst und entwickelst du neue Wachstumsfelder für unser Unternehmen. \n\nDu analysierst Märkte, bewertest Chancen und Risiken, baust strategische Partnerschaften auf und trägst direkt zur Umsatz- und Margenentwicklung bei. Dabei arbeitest du eng mit der Geschäftsleitung zusammen und gestaltest aktiv unsere langfristige Expansionsstrategie.",
         "intro_paragraph_3": "Bewerbung gerne per E-Mail an: bewerbung@docmed.de",
         "intro_paragraph_4": "",
-        "tasks_title": "Deine Aufgaben:",
+        "tasks_title": "Deine Aufgaben ",
         "qual_title": "Dein Profil:",
         "benefit_title": "Wir bieten:"
       }
