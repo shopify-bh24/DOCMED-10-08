@@ -66,52 +66,64 @@
             "task_item": "<p>Kommunikation mit Lieferanten zu Verfügbarkeiten, Lieferzeiten und offenen Vorgängen.</p>"
           }
         },
+        "task_9caAfR": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Nachverfolgung verspäteter Lieferungen und Abstimmung bei Lieferproblemen.</p>"
+          }
+        },
         "qual_UN4YGb": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Abgeschlossenes Studium im Bereich BWL, Marketing, E-Commerce oder eine vergleichbare Qualifikation<br/><br/>(oder relevante Berufserfahrung im E-Commerce)</p>"
+            "qual_item": "<p>Abgeschlossene kaufmännische Ausbildung (z. B.Industriekaufmann/-frau, Kaufmann/-frau im Groß- und Außenhandel oder vergleichbar) –mindestens erforderlich</p>"
           }
         },
         "qual_EPK8BX": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Analytisches Denkvermögen und ausgeprägte Performance-Orientierung</p>"
+            "qual_item": "<p>Ein abgeschlossenes betriebswirtschaftliches Studium (Bachelor) ist ein Plus, aber keine Voraussetzung</p>"
           }
         },
         "qual_aDdgmU": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Strukturierte, eigenständige und unternehmerische Arbeitsweise</p>"
+            "qual_item": "<p>Strukturierte, sorgfältige und zuverlässige Arbeitsweise</p>"
           }
         },
         "qual_iDCRkz": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Deutsch auf muttersprachlichem Niveau sowie verhandlungssicheres Englisch</p>"
+            "qual_item": "<p>Gutes Zahlenverständnis und hohe Genauigkeit</p>"
           }
         },
         "qual_NRbYXT": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Sicherer Umgang mit MS Office</p>"
+            "qual_item": "<p>Sicherer Umgang mit MS Office sowie idealerweise Erfahrung mit ERP-Systemen</p>"
+          }
+        },
+        "qual_q6DTGE": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsch auf muttersprachlichem Niveau sowie gute Englischkenntnisse</p>"
           }
         },
         "benefit_AbWJFM": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Eine wachstumsorientierte Position mit strategischem Gestaltungsspielraum"
+            "benefit_item": "Eine verantwortungsvolle operative Position mit klar definiertem Aufgabenbereich "
           }
         },
         "benefit_RfczGn": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Direkte Zusammenarbeit mit der Geschäftsleitung und kurze    Entscheidungswege"
+            "benefit_item": "Strukturierte Einarbeitung und feste Prozesse "
           }
         },
         "benefit_xBM6KD": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Klare Entwicklungsperspektiven innerhalb eines dynamisch wachsenden Unternehmens"
+            "benefit_item": "Direkte Zusammenarbeit mit internen Teams "
           }
         },
         "benefit_hii8V4": {
@@ -141,11 +153,13 @@
         "task_ziY6DK",
         "task_3yKXeJ",
         "task_a3ttGK",
+        "task_9caAfR",
         "qual_UN4YGb",
         "qual_EPK8BX",
         "qual_aDdgmU",
         "qual_iDCRkz",
         "qual_NRbYXT",
+        "qual_q6DTGE",
         "benefit_AbWJFM",
         "benefit_RfczGn",
         "benefit_xBM6KD",
