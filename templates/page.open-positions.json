@@ -71,7 +71,6 @@
         },
         "item_M69gRb": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "title_job": "Koch/Köchin",
             "loction_job": "Bochum",
@@ -79,7 +78,7 @@
             "income_job": "Quereinstieg möglich",
             "date_job": "ab sofort",
             "detail_job": "mailto:info@docmed.de",
-            "detail_label_job": "Bewerben"
+            "detail_label_job": "Details"
           }
         },
         "item_B64NHp": {
