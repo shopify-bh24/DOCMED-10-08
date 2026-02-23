@@ -60,6 +60,18 @@
             "task_item": "<p>Analyse von Markt- und Verkaufsdaten zur gezielten Steigerung von Umsatz und Profitabilität.</p>"
           }
         },
+        "task_dC9gVH": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Enge Zusammenarbeit mit E-Commerce, Marketing, Einkauf und Logistik zur erfolgreichen Umsetzung von Wachstumsprojekten.</p>"
+          }
+        },
+        "task_UXExKR": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Erstellung von Business Cases, Forecasts und strategischen Entscheidungsvorlagen für die Geschäftsleitung.</p>"
+          }
+        },
         "qual_yMe49L": {
           "type": "qual",
           "settings": {
@@ -134,6 +146,8 @@
         "task_xgJcFb",
         "task_i4m8Kc",
         "task_CXxNiq",
+        "task_dC9gVH",
+        "task_UXExKR",
         "qual_yMe49L",
         "qual_TcF4LE",
         "qual_CnP8WR",
