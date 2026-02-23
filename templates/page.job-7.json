@@ -39,61 +39,97 @@
         "task_p3cxA6": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Bearbeitung von Retouren</p>"
+            "task_item": "<p>Analyse relevanter KPIs wie Umsatz, Marge, Conversion Rate und Sichtbarkeit zur Identifikation strategischer Wachstumstreiber.</p>"
           }
         },
         "task_9W7eEe": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Allgemeine Lagerarbeiten</p>"
+            "task_item": "<p>Strategische Weiterentwicklung unseres eigenen Webshops in Abstimmung mit der Marktplatzstrategie.</p>"
           }
         },
         "task_wkdkRt": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Ordnung und Sauberkeit im Lagerbereich</p>"
+            "task_item": "<p>Optimierung von Produktdarstellung und Customer Journey zur Steigerung der Conversion-Rate und Gesamtperformance.</p>"
+          }
+        },
+        "task_84hAGB": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Enge Zusammenarbeit mit Einkauf, Logistik, Marketing und Kundenservice zur Abstimmung von kommerzieller Strategie und operativer Umsetzung.</p>"
+          }
+        },
+        "task_4qDAyF": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Erstellung von Performance-Reports sowie strategischen Handlungsempfehlungen für die Geschäftsleitung.</p>"
           }
         },
         "qual_cd9W6F": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
+            "qual_item": "<p>Abgeschlossenes Studium im Bereich BWL, Marketing, E-Commerce oder eine vergleichbare Qualifikation<br/><br/>(oder relevante Berufserfahrung im E-Commerce)</p>"
           }
         },
         "qual_czPR6E": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Deutsche Sprachkenntnisse (ab B2)</p>"
+            "qual_item": "<p>Analytisches Denkvermögen und ausgeprägte Performance-Orientierung</p>"
           }
         },
         "qual_Qt7HxQ": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Sicher im Umgang mit dem Computer , einschließlich der gängigen MS-Office-Programme</p>"
+            "qual_item": "<p>Strukturierte, eigenständige und unternehmerische Arbeitsweise</p>"
+          }
+        },
+        "qual_FjY3by": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsch auf muttersprachlichem Niveau sowie verhandlungssicheres Englisch</p>"
+          }
+        },
+        "qual_iRDJmg": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Sicherer Umgang mit MS Office</p>"
           }
         },
         "benefit_CMkpzY": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Eine unbefristete Stelle in Vollzeit/Teilzeit"
+            "benefit_item": "Eine wachstumsorientierte Position mit strategischem Gestaltungsspielraum"
           }
         },
         "benefit_iVhiWR": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Bezahlung je nach Qualifikation"
+            "benefit_item": "Direkte Zusammenarbeit mit der Geschäftsleitung und kurze    Entscheidungswege"
           }
         },
         "benefit_MbtGCY": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Eine angenehme Arbeitsatmosphäre in einem motivierten Team"
+            "benefit_item": "Klare Entwicklungsperspektiven innerhalb eines dynamisch wachsenden Unternehmens"
           }
         },
         "benefit_ebwtnQ": {
           "type": "benefit",
           "settings": {
             "benefit_item": "Flexible Arbeitszeiten"
+          }
+        },
+        "benefit_7xkD67": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Modernes Arbeitsumfeld in Bochum"
+          }
+        },
+        "benefit_MBCQfj": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Ein motiviertes und ambitioniertes Team im     Gesundheits-E-Commerce"
           }
         }
       },
@@ -103,13 +139,19 @@
         "task_p3cxA6",
         "task_9W7eEe",
         "task_wkdkRt",
+        "task_84hAGB",
+        "task_4qDAyF",
         "qual_cd9W6F",
         "qual_czPR6E",
         "qual_Qt7HxQ",
+        "qual_FjY3by",
+        "qual_iRDJmg",
         "benefit_CMkpzY",
         "benefit_iVhiWR",
         "benefit_MbtGCY",
-        "benefit_ebwtnQ"
+        "benefit_ebwtnQ",
+        "benefit_7xkD67",
+        "benefit_MBCQfj"
       ],
       "name": "Job Detail",
       "settings": {
