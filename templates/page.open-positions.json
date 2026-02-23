@@ -105,6 +105,18 @@
             "detail_job": "shopify://pages/business-development-manager-in",
             "detail_label_job": "Details"
           }
+        },
+        "item_ajGkB6": {
+          "type": "item",
+          "settings": {
+            "title_job": "Einkäufer/in (m/w/d) ",
+            "loction_job": "Bochum",
+            "type_job": "Vollzeit",
+            "income_job": "",
+            "date_job": "flexibel / nach Absprache ",
+            "detail_job": "shopify://pages/business-development-manager-in",
+            "detail_label_job": "Details"
+          }
         }
       },
       "block_order": [
@@ -114,7 +126,8 @@
         "item_JMd9mX",
         "item_M69gRb",
         "item_B64NHp",
-        "item_VFqfdq"
+        "item_VFqfdq",
+        "item_ajGkB6"
       ],
       "name": "Open Positions",
       "settings": {
