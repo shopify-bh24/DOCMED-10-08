@@ -262,13 +262,10 @@
         "disabled": true,
         "settings": {}
       },
-      "17530695623102652971": {
-        "type": "shopify://apps/exemptify/blocks/ExemptifyApp/53648040-92ea-472b-92a5-eb781e92b01b",
+      "3243910605452009494": {
+        "type": "shopify://apps/oo-eu-tax-exemption/blocks/tax-exemption/bc577450-6605-4fce-887f-6c25c2bccc22",
         "disabled": false,
-        "settings": {
-          "execution_mode": "async",
-          "additional_qs": "&"
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
