@@ -69,18 +69,6 @@
             "detail_label_job": "Details"
           }
         },
-        "item_M69gRb": {
-          "type": "item",
-          "settings": {
-            "title_job": "Koch/Köchin",
-            "loction_job": "Bochum",
-            "type_job": "Teilzeit (Vormittag)",
-            "income_job": "Quereinstieg möglich",
-            "date_job": "ab sofort",
-            "detail_job": "mailto:info@docmed.de",
-            "detail_label_job": "Details"
-          }
-        },
         "item_B64NHp": {
           "type": "item",
           "settings": {
@@ -123,7 +111,6 @@
         "item_PtmeWH",
         "item_c4RkU8",
         "item_JMd9mX",
-        "item_M69gRb",
         "item_B64NHp",
         "item_VFqfdq",
         "item_ajGkB6"
