@@ -224,6 +224,9 @@
     }  
   }
 {%- endstyle -%}
+
+<h1 class="visually-hidden">DocMed GmbH – zertifizierter Onlineshop für Medizinprodukte</h1>
+
 <div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width {% else %} full_page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} image--banner" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
     {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
