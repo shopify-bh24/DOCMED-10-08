@@ -38,13 +38,9 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    <title>
-      {% if template == 'index' %}
-        DocMed GmbH – zertifizierter Onlineshop für Medizinprodukte
-      {% else %}
-        {{ page_title }} – DocMed GmbH
-      {% endif %}
-    </title>
+  <title>
+    {{ page_title }}{% unless page_title contains shop.name %} – {{ shop.name }}{% endunless %}
+  </title>
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
