@@ -132,12 +132,12 @@
     "product_lck_desc": "Add product description here"
   },
   "products": {
-    "availability":{
-      "in_stock":"in stock",
+    "availability": {
+      "in_stock": "in stock",
       "inbound": "Inbound",
       "out_of_stock": "Out of stock"
     },
-    "delivery":{
+    "delivery": {
       "default": "Delivered in 1-3 working days"
     },
     "product": {
@@ -309,7 +309,7 @@
   "sections": {
     "header": {
       "announcement": "Announcement",
-      "menu": "MENU",
+      "menu": "Menu",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
