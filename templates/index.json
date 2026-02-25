@@ -901,6 +901,36 @@
         "padding_bottom": 0
       }
     },
+    "text_columns_tjFfPx": {
+      "type": "text-columns",
+      "blocks": {
+        "column_thdVYR": {
+          "type": "column",
+          "settings": {
+            "heading": "Sample Heading",
+            "text": "<p>Sample paragraph text goes here.</p>"
+          }
+        },
+        "column_Nk9bNG": {
+          "type": "column",
+          "settings": {
+            "heading": "Sample Heading",
+            "text": "<p>Sample paragraph text goes here.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_thdVYR",
+        "column_Nk9bNG"
+      ],
+      "name": "DocMed Text Columns",
+      "settings": {
+        "columns": "3",
+        "text_align": "justify",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "contact_form_MtCmVQ": {
       "type": "contact-form",
       "blocks": {
@@ -1017,6 +1047,7 @@
     "cus_new_collectin_list_sec_ftM88k",
     "collapsible_content_7yExeM",
     "1769257728e37c44bc",
+    "text_columns_tjFfPx",
     "contact_form_MtCmVQ",
     "featured_blog_97NRwq"
   ]
