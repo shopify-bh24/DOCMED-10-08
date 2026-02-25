@@ -217,13 +217,13 @@
             "url": "shopify://collections/molnlycke"
           }
         },
-        "item_NhjjqX": {
+        "item_yKLy6g": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Design_ohne_Titel_2_bdda1a37-653b-446b-822c-3f77ba68f5f3.png",
-            "title": "Hansaplast",
+            "image": "shopify://shop_images/Design_ohne_Titel_52ee44be-c6d4-458c-9dbe-c333433ec63d.png",
+            "title": "Dr. Schumacher GmbH",
             "tag": "",
-            "url": "shopify://collections/hansaplast"
+            "url": "shopify://collections/dr-schumacher-gmbh"
           }
         },
         "item_zKiYXb": {
@@ -233,6 +233,15 @@
             "title": "BSN",
             "tag": "",
             "url": "shopify://collections/bsn"
+          }
+        },
+        "item_MaHUa8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Hartmann.png",
+            "title": "Hartmann",
+            "tag": "",
+            "url": "shopify://collections/hartmann"
           }
         },
         "item_VG3dzi": {
@@ -298,24 +307,6 @@
             "url": "shopify://collections/3m"
           }
         },
-        "item_MaHUa8": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Hartmann.png",
-            "title": "Hartmann",
-            "tag": "",
-            "url": "shopify://collections/hartmann"
-          }
-        },
-        "item_yKLy6g": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Design_ohne_Titel_52ee44be-c6d4-458c-9dbe-c333433ec63d.png",
-            "title": "Dr. Schumacher GmbH",
-            "tag": "",
-            "url": "shopify://collections/dr-schumacher-gmbh"
-          }
-        },
         "item_XJbVxe": {
           "type": "item",
           "settings": {
@@ -350,6 +341,15 @@
             "title": "DocMed",
             "tag": "",
             "url": "shopify://collections/docmed-gmbh"
+          }
+        },
+        "item_NhjjqX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_2_bdda1a37-653b-446b-822c-3f77ba68f5f3.png",
+            "title": "Hansaplast",
+            "tag": "",
+            "url": "shopify://collections/hansaplast"
           }
         },
         "item_8zz8UL": {
@@ -409,8 +409,9 @@
       },
       "block_order": [
         "item_d6PdAA",
-        "item_NhjjqX",
+        "item_yKLy6g",
         "item_zKiYXb",
+        "item_MaHUa8",
         "item_VG3dzi",
         "item_EqwLDE",
         "item_NiybVx",
@@ -418,12 +419,11 @@
         "item_zTUFqH",
         "item_YXzhDi",
         "item_BPdDWB",
-        "item_MaHUa8",
-        "item_yKLy6g",
         "item_XJbVxe",
         "item_q6BjaT",
         "item_Vn6XfM",
         "item_z84V6q",
+        "item_NhjjqX",
         "item_8zz8UL",
         "item_yNAhmQ",
         "item_CeKptW",
@@ -870,6 +870,8 @@
           "type": "shopify://apps/google-reviews/blocks/carousel-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
           "settings": {
             "contentIndex": "1",
+            "variant": "carousel",
+            "headerType": "top",
             "customContentIndex": 31,
             "font": "default",
             "themeId": "light",
