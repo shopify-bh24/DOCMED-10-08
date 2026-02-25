@@ -439,7 +439,7 @@
               </button>
             </noscript>
             <a href="{{ routes.cart_url }}" class="button button--primary btn-block"><span>{{ 'wbcustomlabel.wballtext.viewcart' | t }}</span></a>
-            <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button button--primary" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
+            <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button button--secondary" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
               <span>{{ 'sections.cart.checkout' | t }}</span>
             </button>
           </div>
