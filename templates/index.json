@@ -907,21 +907,29 @@
         "column_thdVYR": {
           "type": "column",
           "settings": {
-            "heading": "Sample Heading",
-            "text": "<p>Sample paragraph text goes here.</p>"
+            "heading": "Im Dienste Ihrer Gesundheit – Unser Versprechen",
+            "text": "<p>Seit unserer Gründung leitet uns ein klarer Leitsatz: <strong>Im Dienste Ihrer Gesundheit</strong>. Dieser Slogan ist für uns mehr als nur eine Floskel auf dem Papier. Er ist das Fundament unserer täglichen Arbeit. Ob wir neue Produkte auswählen, unseren Service optimieren oder Sie individuell beraten – jede Entscheidung treffen wir mit dem Ziel, die Gesundheitsversorgung ein Stück besser, sicherer und einfacher zu machen. Wir halten Ihnen den Rücken frei, damit Sie sich auf das Wesentliche konzentrieren können.</p>"
           }
         },
-        "column_Nk9bNG": {
+        "column_mbfbdw": {
           "type": "column",
           "settings": {
-            "heading": "Sample Heading",
-            "text": "<p>Sample paragraph text goes here.</p>"
+            "heading": "Geprüfte Sicherheit: Zertifiziert vom Bundesministerium für Gesundheit",
+            "text": "<p>In einer Branche, in der es um das höchste Gut – die Gesundheit – geht, ist Vertrauen die wichtigste Währung. Deshalb überlassen wir nichts dem Zufall. <strong>DocMed ist offiziell beim Bundesministerium für Gesundheit zertifiziert.</strong> Diese Auszeichnung ist für Sie die Garantie, dass unsere Prozesse, unsere Lagerung und unsere Produkte den strengsten gesetzlichen Anforderungen entsprechen. Wir verkaufen nicht einfach nur Waren; wir liefern zertifizierte Sicherheit, auf die Sie sich verlassen können.</p>"
+          }
+        },
+        "column_3eUbwX": {
+          "type": "column",
+          "settings": {
+            "heading": "Grenzenlose Gesundheit: Weltweit für B2B & Privatkunden",
+            "text": "<p>Unser Anspruch macht an Grenzen nicht halt. <strong>DocMed agiert international</strong> und beliefert Kunden weit über die Landesgrenzen hinaus. Dabei schlagen wir die Brücke zwischen zwei Welten: Wir sind der verlässliche Partner für den <strong>B2B-Sektor</strong>, der Kliniken und Arztpraxen mit Großmengen versorgt, und gleichzeitig die erste Anlaufstelle für <strong>B2C-Privatkunden</strong>, die Wert auf geprüfte Qualität für die eigene Gesundheit legen. Egal ob Großbestellung oder Einzelstück – unser Slogan „Im Dienste Ihrer Gesundheit“ gilt für jeden Kunden gleichermaßen.</p>"
           }
         }
       },
       "block_order": [
         "column_thdVYR",
-        "column_Nk9bNG"
+        "column_mbfbdw",
+        "column_3eUbwX"
       ],
       "name": "DocMed Text Columns",
       "settings": {
