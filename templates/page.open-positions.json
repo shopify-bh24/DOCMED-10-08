@@ -21,6 +21,18 @@
     "main": {
       "type": "page-carrer",
       "blocks": {
+        "item_8mXn6m": {
+          "type": "item",
+          "settings": {
+            "title_job": "Mini-Job Lagerhelfer/in (m/w/d)",
+            "loction_job": "Bochum",
+            "type_job": "Mini-Job",
+            "income_job": "",
+            "date_job": "ab sofort / nach Absprache",
+            "detail_job": "shopify://pages/mini-job-lagerhelfer-in-m-w-d",
+            "detail_label_job": "Details"
+          }
+        },
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4": {
           "type": "item",
           "settings": {
@@ -28,7 +40,7 @@
             "loction_job": "Bochum",
             "type_job": "Vollzeit",
             "income_job": "",
-            "date_job": "Ab sofort",
+            "date_job": "ab sofort / nach Absprache",
             "detail_job": "https://www.docmed.de/pages/jobs-lagermitarbeiter",
             "detail_label_job": "Details"
           }
@@ -52,7 +64,7 @@
             "loction_job": "Bochum",
             "type_job": "Ausbildung",
             "income_job": "",
-            "date_job": "(nach Absprache )",
+            "date_job": "nach Absprache",
             "detail_job": "shopify://pages/ausbildung-zum-kaufmann-zur-kauffrau-im-e-commerce",
             "detail_label_job": "Details"
           }
@@ -107,6 +119,7 @@
         }
       },
       "block_order": [
+        "item_8mXn6m",
         "86eb261b-e18e-4ad6-af9f-e978e4f90ee4",
         "item_PtmeWH",
         "item_c4RkU8",
