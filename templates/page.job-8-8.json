@@ -21,6 +21,101 @@
         "padding_bottom": 60
       }
     },
+    "jobs_section_x76yYe": {
+      "type": "jobs_section",
+      "blocks": {
+        "task_xCDmAN": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p> Verpacken von Waren</p>"
+          }
+        },
+        "task_9JMJg7": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Etikettieren von Waren</p>"
+          }
+        },
+        "task_RaXEkm": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Bearbeitung von Retouren</p>"
+          }
+        },
+        "task_LMr9ny": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Allgemeine Lagerarbeiten</p>"
+          }
+        },
+        "qual_MwPxmf": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Teamfähigkeit</p>"
+          }
+        },
+        "qual_xL74AK": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Zuverlässigkeit und Teamfähigkeit</p>"
+          }
+        },
+        "qual_gidXeD": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsche Sprachkenntnisse (ab B2)</p>"
+          }
+        },
+        "benefit_ahU9td": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Angenehme Arbeitsatmosphäre in einem motivierten Team"
+          }
+        },
+        "benefit_JFpecP": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Perfekt als erster Job oder Nebenjob geeignet"
+          }
+        },
+        "benefit_jcrmbB": {
+          "type": "benefit",
+          "settings": {
+            "benefit_item": "Flexible und individuell vereinbare Arbeitszeiten"
+          }
+        }
+      },
+      "block_order": [
+        "task_xCDmAN",
+        "task_9JMJg7",
+        "task_RaXEkm",
+        "task_LMr9ny",
+        "qual_MwPxmf",
+        "qual_xL74AK",
+        "qual_gidXeD",
+        "benefit_ahU9td",
+        "benefit_JFpecP",
+        "benefit_jcrmbB"
+      ],
+      "name": "Job Detail",
+      "settings": {
+        "company_name": "",
+        "job_title": "Mini-Job Lagerhelfer/in (m/w/d)",
+        "job_location": "Mini Job",
+        "job_type": "Lager- und Transportarbeiter/inFachlagerist/in",
+        "job_category": "",
+        "variant1": "",
+        "variant2": "",
+        "intro_heading": "Du bist auf der Suche nach einem Minijob, der nicht stressig ist und sich gut in deinen Alltag integrieren lässt?",
+        "intro_paragraph_1": "DocMed ist ein mittelständisches E-Commerce-Unternehmen mit Sitz in Bochum und gehören zu den schnell wachsenden Anbietern im Bereich pharmazeutischer und medizinischer Produkte. Unsere Mission ist es, hochwertige Produkte im Gesundheitswesen für B2B- und B2C-Kunden in über 50 Ländern weltweit einfach und zuverlässig zugänglich zu machen.\n\nMit einem engagierten Team, modernen Technologien und einer klaren Wachstumsstrategie gestalten wir den digitalen Handel im Gesundheitssektor aktiv mit.",
+        "intro_paragraph_2": "Wir suchen nach motivierten Talenten aber auch erfahrenen Branchenprofis, die unsere Vision teilen und gemeinsam mit uns wachsen wollen.",
+        "intro_paragraph_3": "Wir suchen Mitarbeiter/innen (m/w/d) für Lagertätigkeiten.",
+        "intro_paragraph_4": "",
+        "tasks_title": "Aufgaben",
+        "qual_title": "Qualifikation",
+        "benefit_title": "Benefits"
+      }
+    },
     "contact_form_jqGVW4": {
       "type": "contact-form",
       "blocks": {
@@ -88,6 +183,7 @@
   },
   "order": [
     "main",
+    "jobs_section_x76yYe",
     "contact_form_jqGVW4"
   ]
 }
