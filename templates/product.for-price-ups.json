@@ -348,7 +348,6 @@
             "autoscroll": true,
             "fluidScrolling": false,
             "delay": 5,
-            "showRating": true,
             "reviewPhotosType": "small",
             "writeReview": true,
             "fixedReviewsHeight": false

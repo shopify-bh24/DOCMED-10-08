@@ -322,7 +322,7 @@
       "subtotal": "Zwischensumme",
       "new_subtotal": "Neue Zwischensumme",
       "note": "Spezielle Bestellanweisungen",
-      "checkout": "Sicher zur Kasse",
+      "checkout": "Auschecken",
       "empty": "Ihr Warenkorb ist leer",
       "cart_error": "Beim Aktualisieren ihres Warenkorbs ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
       "cart_quantity_error_html": "Sie können Ihrem Warenkorb nur {{ quantity }} Stück dieses Artikels hinzufügen.",
@@ -560,7 +560,7 @@
       "discount": "Rabatt",
       "shipping": "Versand",
       "free_shipping": "Kostenloser Versand",
-      "free_shipping_description": "ab 49€ in DE",
+      "free_shipping_description": "ab {{ amount }} in {{ country }}",
       "tax": "Steuer",
       "product": "Produkt",
       "sku": "SKU",
@@ -725,8 +725,7 @@
         "thank_you_confirmed_with_email_and_phone_description": {
           "single_store": "Sie erhalten in Kürze eine Bestätigungs-E-Mail"
         },
-        "contact_us_html": "Benötigen Sie Hilfe ? {{conatct_us}}",
-        "checkout_again": "Erneut bestellen"
+        "contact_us_html": "Benötigen Sie Hilfe ? {{conatct_us}}"
       },
       "general": {
         "contact_us_html": "Kontaktieren Sie uns für weitere Information",
@@ -767,8 +766,7 @@
         "cart_updated": "Ihr Warenkorb wurde aktualisiert"
       },
       "review": {
-        "review_title": "Schließen Sie ihre Bestellung jetzt ab ",
-        "checkout_as_guest": "Als Gast bestellen"
+        "review_title": "Schließen Sie ihre Bestellung jetzt ab "
       },
       "processing": {
         "you_will_not_be_charged": "Es wird noch nichts berechnet!"

@@ -892,8 +892,9 @@
                         {% unless allVariantDisabled %}
                           <button class="wb_select_btn button button--primary">
                             <span>
-                              {%- render 'icon-plus' -%}
-                              {{- 'products.product.select_option' | t -}}
+                              {% comment %} {%- render 'icon-plus' -%} {% endcomment %}
+                              <span class="button-icon button-icon--plus">+</span>
+                              {% comment %} {{- 'products.product.select_option' | t -}} {% endcomment %}
                             </span>
                           </button>
                         {% endunless %}

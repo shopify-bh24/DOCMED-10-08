@@ -1173,12 +1173,39 @@
 
           </div>
 
-          <div class="sh-trust">
+            <div class="sh-trust">
             <div class="sh-advantage">
               <img src="https://cdn.shopify.com/s/files/1/0889/3356/4681/files/free-shipping.png?v=1758796995" />
               <div class="sh-meta_text">
-                <p class="sh-meta_titel">{{'customer.order.free_shipping' | t}}</p>
-                <p class="sh-meta_untertitel">{{'customer.order.free_shipping_description' | t}}</p>
+                {% liquid
+                  assign isNumber = settings.wbmin_order | plus: 0
+                  if isNumber != 0
+                    assign shipminprice = settings.wbmin_order | times: 100
+                  else
+                    assign ship_multicurrencies = settings.wbmin_order | split: ','
+                    for ship_multicurrency in ship_multicurrencies
+                      assign shipminprices = ship_multicurrency | split: ':'
+                      if shipminprices.first == localization.country.currency.iso_code
+                        assign shipminprice = shipminprices.last | times: 100
+                      endif
+                    endfor
+                  endif
+
+                  if localization.country.iso_code == 'CH'
+                    assign shipminprice = 250 | times: 100
+                    assign free_shipping_amount = '250,00 €'
+                  else
+                    if settings.currency_code_enabled
+                      assign free_shipping_amount = shipminprice | money_with_currency
+                    else
+                      assign free_shipping_amount = shipminprice | money
+                    endif
+                  endif
+                %}
+                <p class="sh-meta_titel">{{ 'customer.order.free_shipping' | t }}</p>
+                <p class="sh-meta_untertitel">
+                  {{ 'customer.order.free_shipping_description' | t: amount: free_shipping_amount, country: localization.country.name }}
+                </p>
               </div>
             </div>
 

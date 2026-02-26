@@ -94,6 +94,7 @@
           </div>
         {%- endif -%}
         <ul id="Slider-{{ section.id }}-{{ block.id }}"
+          style="padding: 0px 4px;"
           class="over_scroll {% if section.settings.show__slider %} slider slider--desktop slider--tablet{% endif %} grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--3-col-tablet grid--{{ section.settings.columns_mobile }}-col-tablet-down"
           >
           {% for recommendation in recommendations.products %}

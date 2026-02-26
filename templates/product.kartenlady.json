@@ -183,7 +183,6 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "title": "Das könnte Ihnen auch gefallen",
         "heading_size": "h2",
@@ -193,9 +192,9 @@
         "description": "",
         "description_style": "body",
         "products_to_show": 5,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "show__slider": true,
-        "arrow_position": "inline",
+        "arrow_position": "top",
         "color_scheme": "background-2",
         "card_style": "card",
         "image_ratio": "square",
@@ -228,6 +227,7 @@
     },
     "related_products_new_JwmmVT": {
       "type": "related-products-new",
+      "disabled": true,
       "name": "Related Products new",
       "settings": {
         "color_scheme": "",
@@ -300,6 +300,7 @@
     },
     "custom_featured_coll_sec_EgVBEz": {
       "type": "custom-featured-coll-sec",
+      "disabled": true,
       "name": "Push Produkte ",
       "settings": {
         "cus-bg-color": "#ffffff",
@@ -314,6 +315,8 @@
           "type": "shopify://apps/google-reviews/blocks/carousel-widget-block/8b378e9e-c56d-47ce-a754-feca5e0caf59",
           "settings": {
             "contentIndex": "1",
+            "variant": "carousel",
+            "headerType": "top",
             "customContentIndex": 31,
             "font": "default",
             "themeId": "light",
@@ -328,7 +331,6 @@
             "autoscroll": true,
             "fluidScrolling": false,
             "delay": 5,
-            "showRating": true,
             "reviewPhotosType": "small",
             "writeReview": true,
             "fixedReviewsHeight": false

@@ -72,6 +72,10 @@
 }
 .over_scroll .grid__item {
   overflow: hidden;
+  box-shadow: 0px 0px 2px 2px #0003;
+  background: #fff;
+  border-radius: 13px;
+  margin: 10px 0;
 }
 .wbproduct-container .wb_popup_variant {
   opacity: 0;
@@ -97,6 +101,10 @@
 }
 .wb_select_btn{
   z-index: 1;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  margin-bottom: 1rem;
 }
 .popup_hidden_cart, .wbproduct-container .wbproductdes.parent-selected  ~.wb_select_btn,
 .wbproduct-container .wbproductdes.parent-selected .cardhide_toggle{
