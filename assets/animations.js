@@ -21,6 +21,8 @@ function onIntersection(elements, observer) {
   });
 }
 
+
+
 function initializeScrollAnimationTrigger(rootEl = document, isDesignModeEvent = false) {
   const animationTriggerElements = Array.from(rootEl.getElementsByClassName(SCROLL_ANIMATION_TRIGGER_CLASSNAME));
   if (animationTriggerElements.length === 0) return;
