@@ -429,7 +429,7 @@
     },
     "quick_order_list": {
       "product_total": "Product subtotal",
-      "view_cart": "Warenkorb",
+      "view_cart": "Warenkorb ansehen",
       "each": "{{ money }}/ea",
       "product": "Product",
       "variant": "Variant",
@@ -737,7 +737,7 @@
         "back_to_contact_information": "Zurück zum Warenkorb",
         "complete_purchase_button_label": "Zahlungspflichtig bestellen",
         "back_to_payment_method": "Zurück zu Zahlungsmethode",
-        "cart": "Warenkorb ansehen",
+        "cart": "Warenkorb",
         "back_to_cart": "Zurück zum Warenkorb"
       },
       "shipping_errors": {
@@ -775,7 +775,7 @@
       }
     },
     "page_titles": {
-      "shopping_cart": "Warenkorb ansehen"
+      "shopping_cart": "Warenkor"
     }
   },
   "customer_accounts": {
