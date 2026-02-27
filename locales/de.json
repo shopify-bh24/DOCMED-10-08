@@ -754,7 +754,7 @@
         "accept_marketing_checkbox_label": "Versandstatus, Infos zu Produkten & Service per E-Mail erhalten"
       },
       "stock": {
-        "empty_cart_label": "Ihr Warenkorb ist leer"
+        "empty_cart_label": "Warenkorb ist leer"
       },
       "throttle": {
         "cart_summary_heading": "Ihr Warenkorb",
@@ -765,7 +765,7 @@
         }
       },
       "merchandise_unavailable_in_buyer_location": {
-        "cart_updated": "Ihr Warenkorb wurde aktualisiert"
+        "cart_updated": "Warenkorb wurde aktualisiert"
       },
       "review": {
         "review_title": "Schließen Sie ihre Bestellung jetzt ab "
