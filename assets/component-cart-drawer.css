@@ -621,6 +621,9 @@ cart-drawer-items{
 .cart-drawer .cart__checkout-button {
   max-width: none;
 }
+.cart-drawer .cart__checkout-button span {
+  text-transform: inherit !important;
+}
 .drawer__footer .cart__dynamic-checkout-buttons {
   max-width: 100%;
 }
