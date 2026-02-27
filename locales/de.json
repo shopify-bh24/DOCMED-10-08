@@ -736,7 +736,9 @@
         "continue_to_shipping_method": "Weiter zum Versand",
         "back_to_contact_information": "Zurück zum Warenkorb",
         "complete_purchase_button_label": "Zahlungspflichtig bestellen",
-        "back_to_payment_method": "Zurück zu Zahlungsmethode"
+        "back_to_payment_method": "Zurück zu Zahlungsmethode",
+        "cart": "Warenkorb ansehen",
+        "back_to_cart": "Zurück zum Warenkorb"
       },
       "shipping_errors": {
         "empty_state": "Bitte geben Sie ihre Lieferadresse ein, um Versandkosten anzuzeigen."
