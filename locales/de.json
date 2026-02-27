@@ -633,7 +633,7 @@
       "viewfull": "Details anzeigen",
       "quickview": "Vorschau",
       "quicksuccessmsg": "Artikel zum Warenkorb hinzugefügt",
-      "viewcart": "Warenkorb",
+      "viewcart": "Warenkorb ansehen",
       "banner": "Banner",
       "colors": "Farben",
       "scrolltop": "Scroll to top",
@@ -775,7 +775,7 @@
       }
     },
     "page_titles": {
-      "shopping_cart": "Warenkor"
+      "shopping_cart": "Warenkorb"
     }
   },
   "customer_accounts": {
