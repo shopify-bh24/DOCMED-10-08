@@ -582,7 +582,6 @@
         "logo_image_iW8WJG",
         "logo_image_6gwQBa"
       ],
-      "disabled": true,
       "name": "t:sections.logo_bar.presets.name",
       "settings": {
         "full_width": true,
@@ -871,7 +870,8 @@
           "settings": {
             "contentIndex": "1",
             "variant": "carousel",
-            "headerType": "top",
+            "headerType_rotator": "top",
+            "headerType_carousel": "top",
             "customContentIndex": 31,
             "font": "default",
             "themeId": "light",
@@ -886,7 +886,8 @@
             "autoscroll": true,
             "fluidScrolling": false,
             "delay": 5,
-            "reviewPhotosType": "small",
+            "reviewPhotosType_carousel": "small",
+            "reviewPhotosType_rotator": "small",
             "writeReview": true,
             "fixedReviewsHeight": false
           }
