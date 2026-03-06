@@ -582,6 +582,7 @@
         "logo_image_iW8WJG",
         "logo_image_6gwQBa"
       ],
+      "disabled": true,
       "name": "t:sections.logo_bar.presets.name",
       "settings": {
         "full_width": true,
