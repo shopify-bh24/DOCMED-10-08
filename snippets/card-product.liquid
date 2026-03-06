@@ -152,6 +152,10 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .button-icon.button-icon--plus {
+    font-size: 20px;
+  }
 </style>
 
 {% comment %}
@@ -631,7 +635,7 @@
                   {{ card_product.title | escape }}
                 </a>
               </h3>
-              <div style="height: 100%; max-height: 75px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
+              <div style="height: 100%; max-height: 100px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
                 {% if card_product.selected_or_first_available_variant.sku != blank %}
                   <p
                     class="product__sku no-js-hidden card-product__sku"

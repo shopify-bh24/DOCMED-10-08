@@ -52,7 +52,6 @@
           "settings": {
             "contentIndex": "1",
             "variant": "carousel",
-            "headerType": "top",
             "customContentIndex": 31,
             "font": "default",
             "themeId": "light",
@@ -67,7 +66,6 @@
             "autoscroll": true,
             "fluidScrolling": false,
             "delay": 5,
-            "reviewPhotosType": "small",
             "writeReview": true,
             "fixedReviewsHeight": false
           }
@@ -86,7 +84,7 @@
       "type": "apps",
       "blocks": {
         "oo_eu_tax_exemption_cart_tax_exemption_tN8cKz": {
-          "type": "shopify://apps/oo-eu-tax-exemption/blocks/cart-tax-exemption/bc577450-6605-4fce-887f-6c25c2bccc22",
+          "type": "shopify://apps/oo-b2b-wholesale/blocks/cart-tax-exemption/bc577450-6605-4fce-887f-6c25c2bccc22",
           "settings": {}
         }
       },

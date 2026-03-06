@@ -15,15 +15,25 @@
     padding: 10px 20px;
   }
 {% endif %}
+
 .section-{{ section.id }}-padding {
   padding-top: {{ section.settings.padding_top }}px;
   padding-bottom: {{ section.settings.padding_bottom }}px;
 }
+
 @media screen and (max-width: 991px) {
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-  }  
+  }
+}
+
+/* Show ~1.5 products per view on mobile */
+@media screen and (max-width: 749px) {
+  .related-products .product-grid.slider .slider__slide {
+    flex: 0 0 calc(100% / 1.5);
+    max-width: calc(100% / 1.5);
+  }
 }
 {%- endstyle -%}
 {%- liquid
@@ -94,7 +104,7 @@
           </div>
         {%- endif -%}
         <ul id="Slider-{{ section.id }}-{{ block.id }}"
-          style="padding: 0px 4px;"
+          style="padding: 4px;"
           class="over_scroll {% if section.settings.show__slider %} slider slider--desktop slider--tablet{% endif %} grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--3-col-tablet grid--{{ section.settings.columns_mobile }}-col-tablet-down"
           >
           {% for recommendation in recommendations.products %}
