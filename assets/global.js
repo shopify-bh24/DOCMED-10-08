@@ -879,36 +879,26 @@ class SlideshowComponent extends SliderComponent {
     }
   }
 
-  // REVERT autoRotateSlides to original - don't touch it
   autoRotateSlides() {
-    const slideScrollPosition = (this.currentPage + this.extraVisibleElement) === this.sliderItems.length 
-      ? 0 
-      : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth;
-    this.slider.scrollTo({
-      left: slideScrollPosition
-    });
-  }
-
-  // Only fix initPages for mobile cut-off
-  initPages() {
-    this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
-    if (this.sliderItemsToShow.length < 2) return;
-
-    this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
-
     const isMobile = window.innerWidth < 750;
 
     if (isMobile) {
-      this.slidesPerPage = 1;
-      this.totalPages = this.sliderItemsToShow.length;
-    } else {
-      this.slidesPerPage = Math.floor(
-        (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
-      );
-      this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-    }
+      // Advance by 2 items at a time to match manual button behavior
+      const nextScrollPosition = this.slider.scrollLeft + (this.sliderItemOffset * 2);
+      const isAtEnd = nextScrollPosition >= this.slider.scrollWidth - this.slider.clientWidth;
 
-    this.update();
+      const slideScrollPosition = isAtEnd ? 0 : nextScrollPosition;
+
+      this.slider.scrollTo({ left: slideScrollPosition });
+    } else {
+      // Original desktop logic — untouched
+      const slideScrollPosition =
+        (this.currentPage + this.extraVisibleElement) === this.sliderItems.length
+          ? 0
+          : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth;
+
+      this.slider.scrollTo({ left: slideScrollPosition });
+    }
   }
 
   setSlideVisibility() {
