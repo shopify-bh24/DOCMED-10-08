@@ -637,7 +637,7 @@ class SliderComponent extends HTMLElement {
 
     if (isMobile) {
       // Force 1.3 logic for mobile calculations
-      this.slidesPerPage = 1.3;
+      this.slidesPerPage = 2;
       // Total pages is total items minus the "peek" amount
       this.totalPages = Math.ceil(this.sliderItemsToShow.length - this.slidesPerPage + 1);
     } else {
