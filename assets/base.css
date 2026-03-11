@@ -5269,7 +5269,7 @@ html body .wbprofpay .wbprofpayinr .list-payment{
      opacity:0.35 !important; 
 }
 .wb_home_sbtn .slider-button {
-    background: #1D2E40 !important;
+    background: transparent !important;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
    color:#fff;
