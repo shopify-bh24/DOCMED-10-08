@@ -60,7 +60,6 @@
     .log-btn span svg {
       width: 10px !important;
       height: 10px !important;
-      color: #1D2E40 !important;
     }
   }
 
@@ -164,7 +163,7 @@
                 aria-controls="Slider-{{ section.id }}"
                 data-logo-prev
               >
-                <span>{% render 'icon-caret' %}</span>
+                <span>{% render 'icon-caret', btn_color_white: false %}</span>
               </button>
               <button
                 type="button"
