@@ -52,21 +52,6 @@
     z-index: 1;
     top: 50px;
   }
-  
-  @media screen and (max-width: 750px) {
-    .log-btn {
-      border-radius: 100%;
-      width: 30px !important;
-      height: 30px !important;
-      border: 1px solid #1D2E40 !important;
-      background-color: transparent !important;
-    }
-
-    .log-btn span svg {
-      width: 10px !important;
-      height: 10px !important;
-    }
-  }
 
   .log-btn.slider-button.slider-button--prev {
     left: -60px;
@@ -82,7 +67,7 @@
 
   @media screen and (max-width: 1199px) {
     .log-btn {
-      top: 30px;
+      top: 40px;
     }
 
     .logo-bar__container {
@@ -92,9 +77,25 @@
     }
   }
 
+  @media screen and (max-width: 991px) {
+    .log-btn {
+      top: 60px;
+    }
+  }
+
   @media screen and (max-width: 750px) {
+    .logo-bar-section {
+      padding: 0px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .log-btn {
+      top: 30px;
+    }
+
     .logo-bar-item {
-      width: calc(75% - 10px);
+      width: 67px;
       margin-right: 12px !important;
     }
 
@@ -110,18 +111,6 @@
       padding-right: 2rem;
     }
 
-    .log-btn.slider-button.slider-button--prev {
-      left: -30px;
-    }
-
-    .log-btn.slider-button.slider-button--next {
-      right: -30px;
-    }
-
-    .log-btn {
-      top: 20px;
-    }
-
     .log-btn::after {
       background-color: transparent !important;
     }
@@ -130,15 +119,35 @@
       background-color: transparent !important;
     }
 
-    .logo-bar-section {
-      padding: 0px;
+    .log-btn {
+      border-radius: 100%;
+      width: 30px !important;
+      height: 30px !important;
+      border: 1px solid #1D2E40 !important;
+      background: transparent !important;
+      top: 20px;
+      transition: all 0.2s ease !important;
     }
-  }
+    
+    .log-btn span svg {
+      width: 10px !important;
+      height: 10px !important;
+    }
+    
+    .log-btn.slider-button.slider-button--prev {
+      left: -30px;
+    }
 
-  @media screen and (max-width: 450px) {
-    .logo-bar-item {
-      width: 67px;
-      margin-right: 12px !important;
+    .log-btn.slider-button.slider-button--next {
+      right: -30px;
+    }
+    
+    .log-btn:hover {
+      box-shadow: 0 4px 14px rgba(29, 46, 64, 0.4) !important;
+    }
+
+    .log-btn:focus {
+      box-shadow: 0 4px 14px rgba(29, 46, 64, 0.4) !important;
     }
   }
 
