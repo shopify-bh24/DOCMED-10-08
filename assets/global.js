@@ -629,19 +629,16 @@ class SliderComponent extends HTMLElement {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
     if (this.sliderItemsToShow.length < 2) return;
 
-    // Calculate the distance between the start of slide 1 and slide 2
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
 
-    // Check if we are on mobile (standard Shopify breakpoint is 750px)
     const isMobile = window.innerWidth < 750;
 
     if (isMobile) {
-      // Force 1.3 logic for mobile calculations
-      this.slidesPerPage = 2;
-      // Total pages is total items minus the "peek" amount
-      this.totalPages = Math.ceil(this.sliderItemsToShow.length - this.slidesPerPage + 1);
+      // On mobile, each button click scrolls exactly 1 full slide (no partial/peeking offset)
+      // slidesPerPage = 1 means "advance 1 at a time"
+      this.slidesPerPage = 1;
+      this.totalPages = this.sliderItemsToShow.length;
     } else {
-      // Standard desktop calculation
       this.slidesPerPage = Math.floor(
         (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
       );
