@@ -880,11 +880,25 @@ class SlideshowComponent extends SliderComponent {
   }
 
   autoRotateSlides() {
-    // custom code
-    const slideScrollPosition = (this.currentPage + this.extraVisibleElement) === this.sliderItems.length ? 0 : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth;
-    this.slider.scrollTo({
-      left: slideScrollPosition
-    });
+    const isMobile = window.innerWidth < 750;
+    
+    if (isMobile) {
+      // Use the same logic as button clicks — scroll by exactly one item offset
+      const isLastSlide = this.slider.scrollLeft + this.slider.clientWidth >= this.slider.scrollWidth - 1;
+      const slideScrollPosition = isLastSlide 
+        ? 0 
+        : this.slider.scrollLeft + this.sliderItemOffset;
+      
+      this.slider.scrollTo({ left: slideScrollPosition });
+    } else {
+      // Original desktop logic
+      const slideScrollPosition = 
+        (this.currentPage + this.extraVisibleElement) === this.sliderItems.length 
+          ? 0 
+          : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth;
+      
+      this.slider.scrollTo({ left: slideScrollPosition });
+    }
   }
 
   setSlideVisibility() {
