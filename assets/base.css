@@ -5379,7 +5379,7 @@ button:has(.cus-card-svg){
 }
 
 .button:after, button.button:after{
- background-color:#1D2E40 !important;
+ background-color:#1D2E40;
 }
 
 .card-wrapper .card  product-form  .form .button { 
