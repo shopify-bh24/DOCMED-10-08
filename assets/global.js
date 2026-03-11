@@ -702,6 +702,14 @@ class SliderComponent extends HTMLElement {
   }
 
   isSlideVisible(element, offset = 0) {
+    const isMobile = window.innerWidth < 750;
+    if (isMobile) {
+      // On mobile, use scroll position to determine first/last
+      const atStart = this.slider.scrollLeft <= 0;
+      const atEnd = this.slider.scrollLeft + this.slider.clientWidth >= this.slider.scrollWidth - 1;
+      if (offset === 0) return atStart;   // checking first item
+      return atEnd;                        // checking last item
+    }
     const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
     return element.offsetLeft + element.clientWidth <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
   }
