@@ -534,9 +534,9 @@
         },
         "collection_block_FicKPW": {
           "type": "collection_block",
-          "name": "weitere Einsatzbereiche",
+          "name": "Labor",
           "settings": {
-            "image": "shopify://shop_images/Design_ohne_Titel.png",
+            "image": "shopify://shop_images/Design_ohne_Titel_1_9e9004ca-6b7a-4ca3-8720-3ea5be39d6de.png",
             "title": "Labor",
             "item1_text": "Diagnostik",
             "item1_link": "shopify://collections/in-vitro-diagnostik-tests-diagnostik",
