@@ -745,7 +745,7 @@ class SliderComponent extends HTMLElement {
   stopDragging() {
     if (!this.isDragging) return;
     this.isDragging = false;
-    this.slider.style.scrollBehavior = 'smooth'; 
+    this.slider.style.scrollBehavior = 'smooth !important'; 
     this.slider.style.scrollSnapType = 'x mandatory'; // Re-enable snapping to "lock" the slide
   }
 
