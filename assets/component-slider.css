@@ -235,7 +235,7 @@ button.slider-button.slider-button--next.slider-top--next::before[disabled],
     position: relative;
     flex-wrap: inherit;
     overflow-x: auto;
-    scroll-snap-type: none !important;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scroll-padding-left: 1.5rem;
     -webkit-overflow-scrolling: touch;
@@ -292,7 +292,7 @@ button.slider-button.slider-button--next.slider-top--next::before[disabled],
   .slider--desktop {
     position: relative;
     flex-wrap: inherit;
-    scroll-snap-type: none !important;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overflow-x: scroll;
@@ -463,5 +463,5 @@ slideshow-component .pagenation_align--right.slider-buttons{
   .home-collect.over .slider-arrow--inline button.slider-button.slider-button--prev,
   .home-collect.over .slider-arrow--inline button.slider-button.slider-button--next {
     top: 62%; 
-  } 
+  }
 } */

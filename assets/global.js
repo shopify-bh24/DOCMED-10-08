@@ -1384,6 +1384,20 @@ class VariantSelects extends HTMLElement {
           skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
         }
 
+        const pznSource = html.getElementById(`VariantPzn-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const pznDestination = document.getElementById(`VariantPzn-${this.dataset.section}`);
+        if (pznSource && pznDestination) {
+          pznDestination.innerHTML = pznSource.innerHTML;
+          pznDestination.toggleAttribute('hidden', pznSource.hasAttribute('hidden'));
+        }
+
+        const veSource = html.getElementById(`VariantVe-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        const veDestination = document.getElementById(`VariantVe-${this.dataset.section}`);
+        if (veSource && veDestination) {
+          veDestination.innerHTML = veSource.innerHTML;
+          veDestination.toggleAttribute('hidden', veSource.hasAttribute('hidden'));
+        }
+
         if (volumePricingSource && volumePricingDestination) {
           volumePricingDestination.innerHTML = volumePricingSource.innerHTML;
         }
