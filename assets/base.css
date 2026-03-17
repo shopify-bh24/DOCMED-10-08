@@ -1555,7 +1555,7 @@ deferred-media {
 }
 .button.button--secondary:hover{
     background: rgb(var(--color-bg-button-hover));
-    border: var(--buttons-border-width) solid rgb(var(--color-bg-button-hover));
+    /* border: var(--buttons-border-width) solid rgb(var(--color-bg-button-hover)); */
 }
 .button--secondary:after {
     --border-opacity: var(--buttons-border-opacity);
@@ -1636,7 +1636,7 @@ a.button:hover:not([aria-disabled="true"]),
 } */
 .button--secondary:hover:not([disabled]) {
     background: rgb(var(--color-bg-button-hover));
-    color: rgb(var(--color-button-hover-text));
+    /* color: rgb(var(--color-button-hover-text)); */
 }
 @keyframes move {
     0% {
