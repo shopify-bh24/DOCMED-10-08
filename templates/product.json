@@ -216,7 +216,7 @@
         "products_to_show": 5,
         "columns_desktop": 4,
         "show__slider": true,
-        "arrow_position": "inline",
+        "arrow_position": "top",
         "color_scheme": "background-2",
         "card_style": "card",
         "image_ratio": "square",
