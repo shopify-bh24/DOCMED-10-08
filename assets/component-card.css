@@ -827,7 +827,7 @@ wb-card-variant {
     gap: 3px;
   }
   .wbproduct-container .wb_select_btn, .wbproduct-container.product-card-wrapper .add-to-cart__submit {
-    font-size: calc(var(--font-body-scale) * 12px);
+    font-size: calc(var(--font-body-scale) * 20px);
   }
   .image_with_product .wb_no_bannertxt .image_wrapper{
     position: absolute;

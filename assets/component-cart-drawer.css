@@ -321,6 +321,13 @@ cart-drawer-items .cart-item__old-price {
     width: 100%;
     padding: 10px 10px;
 }
+
+@media screen and (max-width: 450px) {
+  #CartDrawer .cart__ctas a.btn-block {
+    font-size: 13px;
+  }
+}
+
 cart-drawer-items ul:empty,cart-drawer-items p:empty,cart-drawer-items div:empty{
     display: none;
 }

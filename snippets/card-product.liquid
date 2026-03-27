@@ -152,6 +152,12 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media screen and (max-width: 425px) {
+    .card-product__sku__container {
+      max-height: 100px !important;
+    }
+  }
 </style>
 
 {% comment %}
@@ -631,7 +637,7 @@
                   {{ card_product.title | escape }}
                 </a>
               </h3>
-              <div style="height: 100%; max-height: 75px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
+              <div class="card-product__sku__container" style="height: 100%; max-height: 75px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
                 {% if card_product.selected_or_first_available_variant.sku != blank %}
                   <p
                     class="product__sku no-js-hidden card-product__sku"
@@ -892,8 +898,9 @@
                         {% unless allVariantDisabled %}
                           <button class="wb_select_btn button button--primary">
                             <span>
-                              {%- render 'icon-plus' -%}
-                              {{- 'products.product.select_option' | t -}}
+                              +
+                              {% comment %} {%- render 'icon-plus' -%}
+                              {{- 'products.product.select_option' | t -}} {% endcomment %}
                             </span>
                           </button>
                         {% endunless %}
@@ -1384,8 +1391,8 @@
                 {% unless allVariantDisabled %}
                   <button class="wb_select_btn button button--primary">
                     <span>
-                      {%- render 'icon-plus' -%}
-                      {{- 'products.product.select_option' | t -}}
+                      {% comment %} {%- render 'icon-plus' -%}
+                      {{- 'products.product.select_option' | t -}} {% endcomment %}
                     </span>
                   </button>
                 {% endunless %}

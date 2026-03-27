@@ -170,6 +170,14 @@
             </div>
           {% endif %}
         </div>
+        <button
+          class="drawer__close"
+          type="button"
+          onclick="this.closest('cart-drawer').close()"
+          aria-label="{{ 'accessibility.close' | t }}"
+        >
+          {% render 'icon-close' %}
+        </button>
       </div>
       {%- if settings.show_cart_countdown -%}
         <div class="countmargin">
