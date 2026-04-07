@@ -5322,7 +5322,8 @@ button:has(.cus-card-svg){
 .product-grid-container .card__information .card_product_Price,
 .product-grid-container .card__information .card_product_Price .card_compare_price,
 .product-grid-container .card__information .card_product_Price .card_sale_price {
-    color:#000;
+    /* color:#000; */
+    color:#E60023;
 }
 
 .card__heading{
