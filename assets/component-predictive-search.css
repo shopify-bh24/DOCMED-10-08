@@ -119,7 +119,6 @@ button.predictive-search__item.predictive-search__item--term {
 .predictive-search .price .price-item {
   margin-top: 5px;
   font-weight: var(--font-body-weight-bold);
-  color: #E60023;
 }
 .predictive-search__item--term .icon-arrow {
   width: calc(var(--font-heading-scale) * 2.4rem);
