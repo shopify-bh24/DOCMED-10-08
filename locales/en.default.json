@@ -148,6 +148,7 @@
       "choose_options": "Choose options",
       "select_option": "Select options",
       "quick_look": "Quick look",
+      "unit_price_item": "ITEM",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
       "inventory_in_stock": "In stock",

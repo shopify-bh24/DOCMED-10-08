@@ -135,7 +135,12 @@ if product.price_varies
           {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
             {{- product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
           {%- endif -%}
-          {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+          {%- assign ref_unit = product.selected_or_first_available_variant.unit_price_measurement.reference_unit -%}
+          {%- if ref_unit == 'item' -%}
+            {{ 'products.product.unit_price_item' | t }}
+          {%- else -%}
+            {{ ref_unit }}
+          {%- endif -%}
         </span>
     </small>
   {% endif %}

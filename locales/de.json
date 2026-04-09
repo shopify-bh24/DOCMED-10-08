@@ -141,6 +141,7 @@
       "default": "In 1–3 Werktagen geliefert"
     },
     "product": {
+      "unit_price_item": "Stück",
       "review": "Bewertungen",
       "stock": "Stück",
       "from": "ab",
