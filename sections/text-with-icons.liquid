@@ -104,7 +104,7 @@
             <li>
               <div class="text-with-icon_card__info">
                 {%- if block.settings.title != blank -%}
-                  <h2 class="h3 {{ section.settings.text_size }}">{{ block.settings.title }}</h2>
+                  <h2 class="h3 {{ section.settings.text_size }}">{{ block.settings.title | metafield_text }}</h2>
                 {%- endif -%}
                 {%- if block.settings.demotext != blank -%}
                   <p>{{ block.settings.demotext }}</p>
