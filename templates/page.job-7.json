@@ -51,19 +51,25 @@
         "task_wkdkRt": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Optimierung von Produktdarstellung und Customer Journey zur Steigerung der Conversion-Rate und Gesamtperformance.</p>"
+            "task_item": "<p>Kontrolle von Lagerbeständen im ERP-System sowie Identifikation von Engpässen oder Überbeständen. </p>"
           }
         },
         "task_84hAGB": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Enge Zusammenarbeit mit Einkauf, Logistik, Marketing und Kundenservice zur Abstimmung von kommerzieller Strategie und operativer Umsetzung.</p>"
+            "task_item": "<p>Sicherstellung einer korrekten Dokumentation von Wareneingängen und Systembuchungen. </p>"
           }
         },
         "task_4qDAyF": {
           "type": "task",
           "settings": {
-            "task_item": "<p>Erstellung von Performance-Reports sowie strategischen Handlungsempfehlungen für die Geschäftsleitung.</p>"
+            "task_item": "<p>Kommunikation mit Lieferanten zu Verfügbarkeiten, Lieferzeiten und offenen Vorgängen. </p>"
+          }
+        },
+        "task_6yEjeN": {
+          "type": "task",
+          "settings": {
+            "task_item": "<p>Nachverfolgung verspäteter Lieferungen und Abstimmung bei Lieferproblemen. </p>"
           }
         },
         "qual_cd9W6F": {
@@ -141,6 +147,7 @@
         "task_wkdkRt",
         "task_84hAGB",
         "task_4qDAyF",
+        "task_6yEjeN",
         "qual_cd9W6F",
         "qual_czPR6E",
         "qual_Qt7HxQ",
@@ -156,7 +163,7 @@
       "name": "Job Detail",
       "settings": {
         "company_name": "",
-        "job_title": "(Junior) E-Commerce Manager/in (m/w/d)",
+        "job_title": "Einkäufer/in (m/w/d) ",
         "job_location": "Vollzeit",
         "job_type": "Standort Bochum",
         "job_category": "Start:flexibel / nach Absprache",
