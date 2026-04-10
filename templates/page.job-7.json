@@ -102,6 +102,12 @@
             "qual_item": "<p>Gutes Zahlenverständnis und hohe Genauigkeit </p>"
           }
         },
+        "qual_MeETQa": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Sicherer Umgang mit MS Office sowie idealerweise Erfahrung mit ERP-Systemen </p>"
+          }
+        },
         "benefit_CMkpzY": {
           "type": "benefit",
           "settings": {
@@ -153,6 +159,7 @@
         "qual_Qt7HxQ",
         "qual_FjY3by",
         "qual_iRDJmg",
+        "qual_MeETQa",
         "benefit_CMkpzY",
         "benefit_iVhiWR",
         "benefit_MbtGCY",
