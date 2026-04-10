@@ -108,16 +108,22 @@
             "qual_item": "<p>Sicherer Umgang mit MS Office sowie idealerweise Erfahrung mit ERP-Systemen </p>"
           }
         },
+        "qual_YBqEDc": {
+          "type": "qual",
+          "settings": {
+            "qual_item": "<p>Deutsch auf muttersprachlichem Niveau sowie gute Englischkenntnisse </p>"
+          }
+        },
         "benefit_CMkpzY": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Eine wachstumsorientierte Position mit strategischem Gestaltungsspielraum"
+            "benefit_item": "Eine verantwortungsvolle operative Position mit klar definiertem Aufgabenbereich "
           }
         },
         "benefit_iVhiWR": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Direkte Zusammenarbeit mit der Geschäftsleitung und kurze    Entscheidungswege"
+            "benefit_item": "Strukturierte Einarbeitung und feste Prozesse "
           }
         },
         "benefit_MbtGCY": {
@@ -160,6 +166,7 @@
         "qual_FjY3by",
         "qual_iRDJmg",
         "qual_MeETQa",
+        "qual_YBqEDc",
         "benefit_CMkpzY",
         "benefit_iVhiWR",
         "benefit_MbtGCY",
