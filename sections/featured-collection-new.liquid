@@ -184,6 +184,12 @@
 .section-featured-collection-new .review-count {
   color: #000;
 }
+
+@media screen and (max-width: 600px) {
+  .featured-collection__button .icon.icon-caret{
+    color: #fff !important;
+  }
+}
 </style>
 
     <div class="color-{{ section.settings.color_scheme }}_ isolate gradient_ feaprod {% if section.settings.image != blank %} image_with_product {% endif %}">
