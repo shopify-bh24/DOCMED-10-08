@@ -94,9 +94,16 @@
             "padding_top": 0,
             "padding_bottom": 0,
             "height": 0.5,
-            "color": "#BDBDBD",
+            "color": "#bdbdbd",
             "width": 100,
             "position": "center"
+          }
+        },
+        "sectionheroes_upsell_jQDfwb": {
+          "type": "shopify://apps/sectionheroes/blocks/upsell/019abad6-4363-7418-bd8f-a8feb1296bd6",
+          "settings": {
+            "padding_top": 25,
+            "padding_bottom": 25
           }
         }
       },
@@ -112,7 +119,8 @@
         "variant_picker_PMkhTg",
         "offer_9QtRKa",
         "buy_buttons",
-        "sectionheroes_md_divider_9JBeQc"
+        "sectionheroes_md_divider_9JBeQc",
+        "sectionheroes_upsell_jQDfwb"
       ],
       "settings": {
         "ghs_image": "ghs-image-list-efsixrhk",
