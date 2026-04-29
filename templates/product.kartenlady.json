@@ -28,31 +28,27 @@
           "type": "title",
           "settings": {}
         },
-        "custom_liquid_KGQxUe": {
-          "type": "custom_liquid",
-          "name": "product-benefits",
-          "settings": {
-            "custom_liquid": "<div class=\"sh-product-benefits-wrapper\">\n<div class=\"sh-product-benefits-container\">\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/map-pin-solid-full.svg?v=1768749944\" alt=\"Bild 1\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">Made in Germany</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/car-on-solid-full.svg?v=1768750118\" alt=\"Bild 2\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">für eingeschränkte Mobilität</span>\n    </div>\n    <div class=\"sh-product-benefits-row\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0889/3356/4681/files/magnifying-glass-solid-full.svg?v=1768749852\" alt=\"Bild 3\" class=\"sh-product-benefits-img\">\n        <span class=\"sh-product-benefits-text\">getestet von VOX \"Hot oder Schrott\"</span>\n    </div>\n    \n    <!-- Zusätzliche Benefits, basierend auf der Auswahl des Benutzers -->\n    \n</div>\n</div>\n\n<style>\n.sh-product-benefits-wrapper {\n    display: flex;\n    width: 100%;\n    justify-content: flex-start;\n}\n\n/* Ganze Box */\n.sh-product-benefits-container {\n    width: fit-content;\n    padding: 0px 0px;\n    background-color: ;\n    border-radius: 0px;\n    margin-top: 0px;\n    margin-bottom: 0px;\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n}\n\n/* Benefit Zeilen */\n.sh-product-benefits-row {\n    display: flex;\n    align-items: center;\n    margin: 5px 0;\n    padding: 1px 5px;\n    background-color: #7FC7CF;\n    color: #ffffff;\n    border-radius: 10px;\n    width: fit-content;\n}\n\n/* Icon */\n.sh-product-benefits-img {\n    width: 20px;\n    margin-right: 10px;\n    height: auto;\n    margin-block: unset !important;\n}\n\n/* Text */\n.sh-product-benefits-text {\n    flex: 1;\n    padding-top: 0px;\n    font-size: 16px;\n}\n</style>"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {}
         },
-        "products_variants_7NcCUy": {
-          "type": "products_variants",
+        "sectionheroes_md_product_benefits_MCVjwR": {
+          "type": "shopify://apps/sectionheroes/blocks/md_product-benefits/019abad6-4363-7418-bd8f-a8feb1296bd6",
           "settings": {
-            "option_name": "",
-            "option_value_metafield": "",
-            "products": "{{ product.metafields.custom.product_variations.value }}",
-            "selector_style": "swatch"
-          }
-        },
-        "custom_liquid_cFzUr7": {
-          "type": "custom_liquid",
-          "name": "product.variants.first.inventory_quantity",
-          "settings": {
-            "custom_liquid": ""
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "row_width": "fit-content",
+            "benefit_text": "High Quality",
+            "icon_size": 17,
+            "icon_m_r": 8,
+            "benefit_text_color": "#000000",
+            "text_font_size": 16,
+            "text_padding_top": 2,
+            "row_bg_enabled": false,
+            "row_bg_color": "#FFFFFF",
+            "row_pd_v": 0,
+            "row_pd_h": 0,
+            "row_br": 0
           }
         },
         "sectionheroes_md_buybox_wrapper_g6Xeqi": {
@@ -124,10 +120,8 @@
       "block_order": [
         "judge_me_reviews_preview_badge_Eg7qAP",
         "title_jnyBi3",
-        "custom_liquid_KGQxUe",
         "price",
-        "products_variants_7NcCUy",
-        "custom_liquid_cFzUr7",
+        "sectionheroes_md_product_benefits_MCVjwR",
         "sectionheroes_md_buybox_wrapper_g6Xeqi",
         "sectionheroes_md_social_proof_LBCNGP",
         "buy_buttons",
@@ -236,6 +230,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "title": "Das könnte Ihnen auch gefallen",
         "heading_size": "h2",
