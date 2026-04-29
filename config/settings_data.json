@@ -252,11 +252,6 @@
         "type": "shopify://apps/oo-eu-tax-exemption/blocks/tax-exemption/bc577450-6605-4fce-887f-6c25c2bccc22",
         "disabled": false,
         "settings": {}
-      },
-      "6146500278089136509": {
-        "type": "shopify://apps/bm-country-blocker-ip-blocker/blocks/boostmark-blocker/bf9db4b9-be4b-45e1-8127-bbcc07d93e7e",
-        "disabled": false,
-        "settings": {}
       }
     },
     "color_schemes": {
