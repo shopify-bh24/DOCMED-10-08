@@ -55,6 +55,26 @@
             "custom_liquid": ""
           }
         },
+        "sectionheroes_md_buybox_wrapper_g6Xeqi": {
+          "type": "shopify://apps/sectionheroes/blocks/md_buybox-wrapper/019abad6-4363-7418-bd8f-a8feb1296bd6",
+          "settings": {
+            "bot_m": 0,
+            "top_m": 0,
+            "ml_d": 0,
+            "auto_d": true,
+            "cust_sel": "",
+            "mob_show": true,
+            "bg_c": "#ffffff",
+            "bd_w": 1,
+            "br": 12,
+            "sh_c": "#000000",
+            "sh_i": 10,
+            "pd_t": 24,
+            "pd_b": 24,
+            "pd_h": 28,
+            "bleed_handle": ""
+          }
+        },
         "sectionheroes_md_social_proof_LBCNGP": {
           "type": "shopify://apps/sectionheroes/blocks/md_social-proof/019abad6-4363-7418-bd8f-a8feb1296bd6",
           "settings": {
@@ -108,6 +128,7 @@
         "price",
         "products_variants_7NcCUy",
         "custom_liquid_cFzUr7",
+        "sectionheroes_md_buybox_wrapper_g6Xeqi",
         "sectionheroes_md_social_proof_LBCNGP",
         "buy_buttons",
         "custom_liquid_CU3fQx"
