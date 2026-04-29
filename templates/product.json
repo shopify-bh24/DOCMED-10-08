@@ -87,6 +87,17 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
+        },
+        "sectionheroes_md_divider_9JBeQc": {
+          "type": "shopify://apps/sectionheroes/blocks/md_divider/019abad6-4363-7418-bd8f-a8feb1296bd6",
+          "settings": {
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "height": 0.5,
+            "color": "#BDBDBD",
+            "width": 100,
+            "position": "center"
+          }
         }
       },
       "block_order": [
@@ -100,7 +111,8 @@
         "products_variants_7NcCUy",
         "variant_picker_PMkhTg",
         "offer_9QtRKa",
-        "buy_buttons"
+        "buy_buttons",
+        "sectionheroes_md_divider_9JBeQc"
       ],
       "settings": {
         "ghs_image": "ghs-image-list-efsixrhk",
