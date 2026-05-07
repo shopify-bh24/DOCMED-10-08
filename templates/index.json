@@ -258,7 +258,7 @@
         "logo_image_YJwcNA": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Cederroth.png",
+            "image": "shopify://shop_images/Cederroth_1.png",
             "link": "shopify://collections/cederroth",
             "logo_title": ""
           }
@@ -274,7 +274,7 @@
         "logo_image_CJQYtE": {
           "type": "logo_image",
           "settings": {
-            "image": "shopify://shop_images/Hansaplast.png",
+            "image": "shopify://shop_images/hansaplast_wundversorgung.png",
             "link": "shopify://collections/hansaplast",
             "logo_title": ""
           }
