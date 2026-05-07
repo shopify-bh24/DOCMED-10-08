@@ -212,6 +212,9 @@
        flex-wrap: wrap;
      }
   }
+  .vendor-logo {
+    margin-top: 15px;
+  }
 {% endstyle %}
 <section
   id="MainProduct-{{ section.id }}"
@@ -463,9 +466,64 @@
                     {%- assign url = collection.url -%}
                   {%- endif -%}
                 {%- endfor -%}
+                {% assign vendor_name = product.vendor 
+                  | replace: ". ", "." 
+                  | replace: "& ", "" 
+                  | replace: " ", "_"
+                  | replace: "ö", "o"
+                %}
+
+                {% case vendor_name %}
+                  {% when "3M/Solventum", "3M-Medica" %}
+                    {% assign vendor_logo_name = "3m_Healthcare_logo" %}
+                  {% when "B.Braun", "B. Braun" %}
+                    {% assign vendor_logo_name = "B.Braun" %}
+                  {% else %}
+                    {% assign vendor_logo_name = vendor_name %}
+                {% endcase %}
+
+                {% if vendor_logo_name == "Smith_Nephew" or vendor_logo_name == "smith_nephew" %}
+                  {% assign vendor_logo_name = "Smith_Nephew_v2" %}
+                {% endif %}
+
+                {% assign vendor_base_url = "https://cdn.shopify.com/s/files/1/0889/3356/4681/files/"
+                  | append: vendor_logo_name
+                %}
+
+                {% assign vendor_logo_png_file = vendor_logo_name | append: '.png' %}
+                {% assign vendor_logo_png_url = vendor_logo_png_file | file_url %}
+
                 <h1 class="product__title test cus-product-title-wrp" {{ block.shopify_attributes }}>
                   {% if product.vendor != blank %}
-                    <a href="{{ url }}" class="vendor cus-vendor">{{ product.vendor }}</a>
+                    <a href="{{ url }}" class="vendor cus-vendor">
+                      <img
+                        id="vendor-logo-{{ product.id }}"
+                        src="{{ vendor_logo_png_url }}"
+                        alt="{{ product.vendor | escape }}"
+                        class="vendor-logo"
+                        data-vendor-base="{{ vendor_base_url }}"
+                        style="display:none; max-width: 160px; max-height: 40px; width: auto; height: auto; object-fit: contain;"
+                        data-formats='[".png", ".jpg", ".svg", ".gif"]'
+                        data-format-index="0"
+                        onload="
+                          this.style.display='inline';
+                          this.nextElementSibling.style.display='none';
+                        "
+                        onerror="
+                          this.style.display='none';
+                          this.nextElementSibling.style.display='inline';
+                    
+                          var formats = JSON.parse(this.dataset.formats);
+                          var nextIndex = parseInt(this.dataset.formatIndex) + 1;
+                    
+                          if (nextIndex < formats.length) {
+                            this.dataset.formatIndex = nextIndex;
+                            this.src = this.dataset.vendorBase + formats[nextIndex];
+                          }
+                        "
+                      >
+                      <span style="display:inline;">{{ product.vendor | escape }}</span>
+                    </a>
                   {% endif %}
                   <span>{{ product.title | escape }}</span>
                 </h1>
