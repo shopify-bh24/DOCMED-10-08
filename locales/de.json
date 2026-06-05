@@ -795,6 +795,9 @@
     "orders": {
       "order_status": {
         "confirmed_title": "Ihr Bestellung wurde bestätigt"
+      },
+      "order_list": {
+        "empty_state_subtitle": "Jetzt zum Shop wechseln und bestellen"
       }
     },
     "sign_in": {
