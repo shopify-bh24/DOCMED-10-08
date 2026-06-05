@@ -796,6 +796,11 @@
       "order_status": {
         "confirmed_title": "Ihr Bestellung wurde bestätigt"
       }
+    },
+    "sign_in": {
+      "step_one": {
+        "consent_agreement": "Durch das Fortfahren stimmen Sie unseren AGB zu."
+      }
     }
   }
 }
