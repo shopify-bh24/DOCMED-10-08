@@ -73,7 +73,7 @@
               %}
               {{ settings.logo | image_url: width: 500 | image_tag: class: 'password-logo', widths: '50, 100, 150, 200, 250, 300, 400, 500', width: settings.logo_width, height: logo_height, alt: logo_alt }}
             {%- else -%}
-              <h1 class="h2">{{ shop.name }}</h1>
+              <p class="h2">{{ shop.name }}</p>
             {%- endif -%}
             {%- if shop.password_message != blank -%}
               <div class="password-content">
