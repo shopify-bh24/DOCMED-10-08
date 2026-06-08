@@ -707,7 +707,7 @@ body .wbhuserleft span, .wbcarthtotal span,body .wbhcart .wbcarthtotal span:nth-
       </script>
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
-        <h1 class="header__heading">
+        <p class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading header__heading-link link link--text focus-inset">
         <span class="h2 logo-desktop-text {% if settings.logo %}hidden{% endif %} ">{{ shop.name }}</span>
@@ -765,7 +765,7 @@ body .wbhuserleft span, .wbcarthtotal span,body .wbhcart .wbcarthtotal span:nth-
           {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
-        </h1>
+      </p>
       {%- endif -%}
     {%- endif -%}
     {%- unless section.settings.logo_position == 'top-left' -%}
