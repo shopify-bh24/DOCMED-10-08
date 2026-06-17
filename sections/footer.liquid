@@ -91,13 +91,25 @@
       assign only_empty_brand = true
     endif
   -%}
-  {%- if section.blocks.size > 0 or section.settings.show_social or section.settings.enable_follow_on_shop -%}
+  {%- if section.blocks.size > 0 or section.settings.show_social or section.settings.enable_follow_on_shop or section.settings.show_brand_column -%}
+    {%- liquid
+      assign show_logo_topbar = false
+      if section.settings.footer_logo != blank and section.settings.show_brand_column != true
+        assign show_logo_topbar = true
+      endif
+      assign show_topbar = false
+      if section.settings.show_social
+        assign show_topbar = true
+      elsif show_logo_topbar
+        assign show_topbar = true
+      elsif section.settings.contact_number != blank
+        assign show_topbar = true
+      endif
+    -%}
+    {%- if show_topbar -%}
     <div class="footer__content-topbar-main">
       <div class="footer__content-topbar page-width">
-        {% if section.settings.show_social == true
-          or section.settings.footer_logo != blank
-          or section.settings.contact_number != blank
-        %}
+        {% if show_topbar %}
           <div class="footer__content-topbar-wrapper section-{{ section.id }}-padding grid grid--1-col-tablet-down grid--3-col-desktop grid--2-col grid--3-col-tablet {{ footer_grid_class }}">
             <div class="topbar_item grid__item">
               {% if section.settings.social_heading != blank -%}
@@ -110,7 +122,7 @@
               {% endif %}
             </div>
             <div class="topbar_item grid__item">
-              {%- if section.settings.footer_logo != blank -%}
+              {%- if show_logo_topbar -%}
                 {%- assign logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = section.settings['footer-logo_width']
                   | divided_by: section.settings.footer_logo.aspect_ratio
@@ -145,8 +157,13 @@
         {% endif %}
       </div>
     </div>
+    {%- endif -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width{% if section.blocks.size == 0 %} hidden{% endif %}">
+      <div class="footer__content-top page-width">
+        <div class="footer__top-layout{% unless section.settings.show_brand_column %} footer__top-layout--no-brand{% endunless %}">
+        {%- if section.settings.show_brand_column -%}
+          {%- render 'footer-brand-column', section: section -%}
+        {%- endif -%}
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -157,7 +174,7 @@
               assign footer_grid_class = 'grid--5-col-desktop grid--5-col-tablet'
             endif
           -%}
-          <webi-collapse class="footer__blocks-wrapper grid grid--1-col-tablet-down grid--{{ section.blocks.size }}-col-desktop grid--2-col grid--4-col-tablet {{ footer_grid_class }} {%- for block in section.blocks -%}{% if block.type == 'newsletter' %} custom-newsletter {% endif %}{%- endfor -%}">
+          <webi-collapse class="footer__blocks-wrapper footer__menus grid grid--1-col-tablet-down grid--{{ section.blocks.size }}-col-desktop grid--2-col grid--4-col-tablet {{ footer_grid_class }} {%- for block in section.blocks -%}{% if block.type == 'newsletter' %} custom-newsletter {% endif %}{%- endfor -%}">
             {%- for block in section.blocks -%}
               <div
                 class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %} {% if block.type == 'newsletter' %} footer-block--newsletter{% endif %}"
@@ -244,7 +261,7 @@
       style="position:absolute; top:0; left:0; width:100%; height:auto; z-index:100;"
     >
   </div>
-</a
+</a>
                         </div>
                     </div>
                   {%- when 'newsletter' -%}
@@ -326,9 +343,15 @@
             {%- endfor -%}
           </webi-collapse>
         {%- endif -%}
+        </div>
       </div>
     {%- endunless -%}
   {%- endif -%}
+  <div class="footer__payments-row">
+    <div class="page-width">
+      {%- render 'footer-payment-icons' -%}
+    </div>
+  </div>
   {% if section.settings.enable_language_selector
     or section.settings.enable_country_selector
     or section.settings.show_policy
@@ -871,6 +894,114 @@
       "id": "contact_number",
       "label": "t:sections.footer.blocks.brand_information.settings.contact_number.label",
       "default": "Call us: +01234 56789 00"
+    },
+    {
+      "type": "header",
+      "content": "Brand & contact column"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_brand_column",
+      "label": "Show brand & contact column",
+      "info": "Replaces the centered logo bar with a left column: logo, tagline, contact, address, shipping partners and certificate.",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "footer_tagline",
+      "label": "Tagline (under logo)",
+      "default": "Im Dienste Ihrer Gesundheit"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "contact_heading",
+      "label": "Contact heading",
+      "default": "Ihr Kontakt zu uns"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "contact_hours",
+      "label": "Opening hours",
+      "default": "Von 08:00 bis 18:00 Uhr"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "contact_phone",
+      "label": "Phone",
+      "default": "Tel: 0234 - 357 905 59"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "contact_email",
+      "label": "Email",
+      "default": "shop@docmed.de"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_address",
+      "label": "Address",
+      "default": "<p>DocMed GmbH<br>Lothringer Höhe 1<br>44805 Bochum<br>Germany</p>"
+    },
+    {
+      "type": "header",
+      "content": "Shipping partners (Versandpartner)",
+      "info": "Upload the carrier logos you ship with (e.g. DHL, GLS)."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "shipping_heading",
+      "label": "Heading",
+      "default": "Unsere Versandpartner"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_logo_1",
+      "label": "Logo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_logo_2",
+      "label": "Logo 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_logo_3",
+      "label": "Logo 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_logo_4",
+      "label": "Logo 4"
+    },
+    {
+      "type": "range",
+      "id": "shipping_logo_height",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "Logo height",
+      "default": 28
+    },
+    {
+      "type": "header",
+      "content": "Security certificate"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_certificate",
+      "label": "Show verification badge (Versandhandelsregister)",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "cert_badge_1",
+      "label": "Extra badge 1 (next to certificate)"
+    },
+    {
+      "type": "image_picker",
+      "id": "cert_badge_2",
+      "label": "Extra badge 2 (next to certificate)"
     },
     {
       "type": "inline_richtext",

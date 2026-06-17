@@ -1,0 +1,180 @@
+{%- comment -%}
+  Footer brand / contact column.
+  Renders the logo, tagline, "Ihr Kontakt zu uns" block, address,
+  the "Unsere Versandpartner" shipping logos and the verification badge.
+  All content is driven by the footer section settings.
+
+  Accepts:
+  - section: the footer section object
+{%- endcomment -%}
+<div class="footer__brand-col">
+  {%- if section.settings.footer_logo != blank -%}
+    {%- assign brand_logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
+    {%- assign brand_logo_height = section.settings.footer_logo.width | divided_by: section.settings.footer_logo.aspect_ratio | round -%}
+    <a
+      href="{{ routes.root_url }}"
+      class="footer__brand-logo"
+      style="max-width: {{ section.settings['footer-logo_width'] }}px;"
+    >
+      <img
+        src="{{ section.settings.footer_logo | image_url: width: 300 }}"
+        srcset="{{ section.settings.footer_logo | image_url: width: 300 }} 1x, {{ section.settings.footer_logo | image_url: width: 600 }} 2x"
+        alt="{{ brand_logo_alt }}"
+        width="{{ section.settings.footer_logo.width }}"
+        height="{{ brand_logo_height }}"
+        loading="lazy"
+      >
+    </a>
+  {%- endif -%}
+
+  {%- if section.settings.footer_tagline != blank -%}
+    <p class="footer__brand-tagline">{{ section.settings.footer_tagline }}</p>
+  {%- endif -%}
+
+  {%- liquid
+    assign has_contact = false
+    if section.settings.contact_heading != blank or section.settings.contact_hours != blank or section.settings.contact_phone != blank or section.settings.contact_email != blank
+      assign has_contact = true
+    endif
+  -%}
+  {%- if has_contact -%}
+    <div class="footer__brand-block footer__brand-contact">
+      {%- if section.settings.contact_heading != blank -%}
+        <p class="footer__brand-subheading">{{ section.settings.contact_heading }}</p>
+      {%- endif -%}
+      <ul class="footer__contact-list">
+        {%- if section.settings.contact_hours != blank -%}
+          <li class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            </span>
+            <span class="footer__contact-text">{{ section.settings.contact_hours }}</span>
+          </li>
+        {%- endif -%}
+        {%- if section.settings.contact_phone != blank -%}
+          <li class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+            <span class="footer__contact-text footer__brand-phone">{{ section.settings.contact_phone }}</span>
+          </li>
+        {%- endif -%}
+        {%- if section.settings.contact_email != blank -%}
+          <li class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            </span>
+            <span class="footer__contact-text">{{ section.settings.contact_email }}</span>
+          </li>
+        {%- endif -%}
+      </ul>
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.footer_address != blank -%}
+    <div class="footer__brand-block footer__brand-address footer__contact-line">
+      <span class="footer__contact-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      </span>
+      <div class="footer__contact-text rte">{{ section.settings.footer_address }}</div>
+    </div>
+  {%- endif -%}
+
+  {%- liquid
+    assign has_shipping = false
+    if section.settings.shipping_logo_1 != blank or section.settings.shipping_logo_2 != blank or section.settings.shipping_logo_3 != blank or section.settings.shipping_logo_4 != blank
+      assign has_shipping = true
+    endif
+    assign has_cert_badges = false
+    if section.settings.cert_badge_1 != blank or section.settings.cert_badge_2 != blank
+      assign has_cert_badges = true
+    endif
+  -%}
+  <div class="footer__brand-block footer__trust-row">
+    {%- if section.settings.show_certificate or has_cert_badges -%}
+      <div class="footer__certificate">
+        {%- if section.settings.show_certificate -%}
+          {%- comment -%}
+            The DIMDI/Versandhandelsregister verification badge must be loaded from
+            versandhandel.dimdi.de (remote, no fixed dimensions) — that is the point
+            of the official compliance widget, so these checks are disabled here.
+          {%- endcomment -%}
+          {% # theme-check-disable RemoteAsset, ImgWidthAndHeight %}
+          <a
+            href="https://versandhandel.dimdi.de/websearch/servlet/Gate?accessid=dimdi_var&term=441b940d4ec7c01003d99a187a54edad"
+            rel="nofollow noopener"
+            target="_blank"
+            class="footer__cert-link"
+          >
+            <div style="position:relative; width:120px;">
+              <img
+                src="//versandhandel.dimdi.de/img/logo.png"
+                alt="Link zum Versandhandels-Register"
+                style="width:100%; height:auto; position:relative; z-index:1;"
+              >
+              <img
+                src="//versandhandel.dimdi.de/img/logo.gif"
+                alt=""
+                style="position:absolute; top:0; left:0; width:100%; height:auto; z-index:2;"
+              >
+            </div>
+          </a>
+          {% # theme-check-enable RemoteAsset, ImgWidthAndHeight %}
+        {%- endif -%}
+        {%- for i in (1..2) -%}
+          {%- assign cert_key = 'cert_badge_' | append: i -%}
+          {%- assign cert_badge = section.settings[cert_key] -%}
+          {%- if cert_badge != blank -%}
+            <img
+              class="footer__cert-badge"
+              src="{{ cert_badge | image_url: width: 280 }}"
+              alt="{{ cert_badge.alt | default: 'Zertifikat' | escape }}"
+              width="{{ cert_badge.width }}"
+              height="{{ cert_badge.height }}"
+              loading="lazy"
+            >
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <div class="footer__partners">
+      {%- if section.settings.shipping_heading != blank -%}
+        <p class="footer__brand-subheading">{{ section.settings.shipping_heading }}</p>
+      {%- endif -%}
+      {%- if has_shipping -%}
+        <div
+          class="footer__shipping-logos"
+          style="--footer-ship-height: {{ section.settings.shipping_logo_height | default: 28 }}px;"
+        >
+          {%- for i in (1..4) -%}
+            {%- assign logo_key = 'shipping_logo_' | append: i -%}
+            {%- assign ship_logo = section.settings[logo_key] -%}
+            {%- if ship_logo != blank -%}
+              <img
+                class="footer__shipping-logo"
+                src="{{ ship_logo | image_url: width: 240 }}"
+                alt="{{ ship_logo.alt | default: 'Versandpartner' | escape }}"
+                width="{{ ship_logo.width }}"
+                height="{{ ship_logo.height }}"
+                loading="lazy"
+              >
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <div class="footer__partner-tiles">
+          <span class="footer__partner-tile footer__partner-tile--dhl">
+            <img src="{{ 'logo-dhl.svg' | asset_url }}" alt="DHL" width="80" height="12" loading="lazy">
+          </span>
+          <span class="footer__partner-tile footer__partner-tile--post">
+            <img src="{{ 'logo-deutsche-post.svg' | asset_url }}" alt="Deutsche Post" width="40" height="40" loading="lazy">
+          </span>
+          <span class="footer__partner-tile footer__partner-tile--gls">
+            <img src="{{ 'logo-gls.svg' | asset_url }}" alt="GLS" width="80" height="28" loading="lazy">
+          </span>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

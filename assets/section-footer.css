@@ -925,3 +925,264 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
     font-size: calc(var(--font-body-scale) * 13px);
   }
 }
+
+/* ===================================================================
+   Redesigned footer top: brand/contact column + menu columns
+   =================================================================== */
+.footer__top-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.footer__top-layout--no-brand .footer__menus.footer__blocks-wrapper {
+  flex-basis: 100%;
+}
+.footer__brand-col {
+  flex: 1 1 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer .footer__menus.footer__blocks-wrapper {
+  flex: 2 1 460px;
+  margin: 0;
+}
+.footer__brand-logo {
+  display: inline-block;
+  margin: 0;
+}
+.footer__brand-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.footer .footer__brand-tagline {
+  margin: -1.6rem 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: calc(var(--font-body-scale) * 12px);
+  line-height: 1.5;
+  color: rgba(var(--color-foreground), 0.55);
+}
+.footer .footer__brand-subheading {
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: var(--font-body-weight-bold);
+  font-size: calc(var(--font-body-scale) * 13px);
+  line-height: 1.4;
+  color: rgba(var(--color-foreground), 0.55);
+}
+.footer .footer__brand-contact p,
+.footer .footer__brand-address p {
+  margin: 0;
+  line-height: 1.8;
+  word-break: break-word;
+}
+.footer .footer__brand-contact .footer__brand-phone,
+.footer .footer__brand-contact .footer__brand-phone a {
+  font-weight: var(--font-body-weight-bold);
+  color: rgba(var(--color-foreground), 0.9);
+}
+.footer .footer__brand-contact a,
+.footer .footer__brand-address a {
+  line-height: 1.8;
+}
+.footer__shipping-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.6rem;
+}
+.footer__shipping-logo {
+  height: var(--footer-ship-height, 28px);
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  display: block;
+  box-sizing: content-box;
+  padding: 0.7rem 1rem;
+  background: #fff;
+  border: 1px solid rgba(var(--color-foreground), 0.08);
+  border-radius: 0.8rem;
+  box-shadow: 0 1px 3px rgba(var(--color-foreground), 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.footer__shipping-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(var(--color-foreground), 0.13);
+}
+.footer__certificate a {
+  display: inline-block;
+  line-height: 0;
+}
+@media screen and (max-width: 767px) {
+  .footer__top-layout {
+    display: block;
+    gap: 0;
+  }
+  .footer__brand-col {
+    max-width: 100%;
+    margin-bottom: 2.8rem;
+  }
+}
+
+/* ---- Contact block: icon chips ---- */
+.footer__contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer__contact-line {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.footer__brand-address.footer__contact-line {
+  align-items: flex-start;
+}
+.footer__contact-icon {
+  flex: 0 0 auto;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--color-foreground), 0.06);
+  color: rgba(var(--color-foreground), 0.85);
+}
+.footer__brand-address .footer__contact-icon {
+  margin-top: 0.2rem;
+}
+.footer__contact-icon svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.footer .footer__contact-text,
+.footer .footer__contact-text p {
+  margin: 0;
+  line-height: 1.55;
+  word-break: break-word;
+}
+.footer .footer__contact-text a {
+  line-height: 1.55;
+}
+
+/* ---- Menu columns: link + heading polish ---- */
+.footer .footer-block__details-content .list-menu__item--link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+@media screen and (min-width: 768px) {
+  .footer .footer-block__details-content .list-menu__item--link:hover {
+    transform: translateX(4px);
+  }
+  .footer__menus .footer-block__heading::after {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 2px;
+    margin-top: 1rem;
+    border-radius: 2px;
+    background: rgb(var(--color-link-hover));
+    opacity: 0.85;
+  }
+}
+
+/* ---- Certificate badge ---- */
+.footer__certificate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4rem;
+}
+.footer__certificate a {
+  transition: opacity 0.2s ease;
+}
+.footer__certificate a:hover {
+  opacity: 0.82;
+}
+.footer__cert-badge {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 7rem;
+  max-width: 12rem;
+  object-fit: contain;
+}
+/* Trust row: certificate badge + shipping partners side by side */
+.footer__trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.footer__partners {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .footer__partners .footer__brand-subheading {
+  margin: 0;
+}
+
+/* Default shipping-partner logo tiles (DHL / Deutsche Post / GLS) */
+.footer__partner-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer__partner-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.6rem;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+}
+.footer__partner-tile img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 78%;
+  max-height: 62%;
+}
+.footer__partner-tile--dhl {
+  background: #ffcc00;
+}
+.footer__partner-tile--post {
+  background: #ffcc00;
+}
+.footer__partner-tile--gls {
+  background: #061ab1;
+}
+
+/* ---- Payment methods row ---- */
+.footer__payments-row {
+  border-top: 1px solid rgba(var(--color-foreground), 0.1);
+  padding: 2rem 0;
+}
+.footer__payment {
+  display: flex;
+  justify-content: center;
+}
+.footer .footer__payment .list-payment {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+.footer__payment .list-payment__item {
+  margin: 0;
+}
+.footer__payment .list-payment__item .icon {
+  width: 38px;
+  height: 24px;
+}
