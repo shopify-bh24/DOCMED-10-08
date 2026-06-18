@@ -759,7 +759,8 @@
         "empty_cart_label": "Warenkorb ist leer",
         "price_update": {
           "description": "Die Preise einiger Artikel haben sich geändert und wurden in Ihrem Warenkorb angepasst."
-        }
+        },
+        "return_to_store_label": "Zurück zum Warenkorb"
       },
       "throttle": {
         "cart_summary_heading": "Ihr Warenkorb",
@@ -793,7 +794,8 @@
           "outdated": {
             "shipping_method": "Die Versandoptionen für ihre Bestellung haben sich geändert. Prüfen Sie die Auswahl."
           }
-        }
+        },
+        "return_to_store": "Zurück zum Warenkorb"
       },
       "contact": {
         "phone_tooltip": "Falls wir Sie zu ihrer Bestellung kontaktieren müssen"
