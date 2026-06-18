@@ -773,6 +773,9 @@
       },
       "processing": {
         "you_will_not_be_charged": "Es wird noch nichts berechnet!"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Express Checkout (optional)"
       }
     },
     "page_titles": {
