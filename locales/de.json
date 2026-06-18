@@ -794,6 +794,9 @@
       },
       "contact": {
         "phone_tooltip": "Falls wir Sie zu ihrer Bestellung kontaktieren müssen"
+      },
+      "payment": {
+        "offsite_gateway_review_page_redirect_hint": "Nachdem Sie Ihre Bestellung überprüft haben, werden Sie zu {{ gateway_label }} weitergeleitet, um Ihren Kauf abzuschließen."
       }
     },
     "page_titles": {
