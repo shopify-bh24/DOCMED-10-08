@@ -578,7 +578,6 @@ menu-drawer > details[open] > summary::before {
 @media screen and (min-width: 992px) {
   .shopify-section-group-header-group:has(.wbcategories desktop-webi-menu.open),
   .section-header:has(.wbcategories desktop-webi-menu.open) {
-    position: relative;
     z-index: 50;
   }
   .wbcategories desktop-webi-menu.open {
