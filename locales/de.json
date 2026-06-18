@@ -796,7 +796,8 @@
           },
           "missing": {
             "address1": "Geben Sie eine Adresse ein",
-            "first_name": "Geben Sie einen Vornamen ein"
+            "first_name": "Geben Sie einen Vornamen ein",
+            "last_name": "Geben Sie einen Nachnamen ein"
           }
         },
         "return_to_store": "Zurück zum Warenkorb"
@@ -810,7 +811,8 @@
       },
       "field_errors": {
         "address_address1_blank": "Geben Sie eine Adresse ein",
-        "address_first_name_blank": "Geben Sie einen Vornamen ein"
+        "address_first_name_blank": "Geben Sie einen Vornamen ein",
+        "address_last_name_blank": "Geben Sie einen Nachnamen ein"
       }
     },
     "page_titles": {
