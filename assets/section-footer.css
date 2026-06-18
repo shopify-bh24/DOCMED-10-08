@@ -95,8 +95,8 @@
   text-transform: capitalize;
 }
 .footer__content-top {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
   display: block;
 }
 .footer .footer_localization_separator:after {
@@ -151,10 +151,11 @@
 .footer-block__details-content .list-menu__item--link,
 .footer-block__newsletter .newsletter-form small {
   color: rgba(var(--color-foreground),.75);
-  line-height: 40px;
+  line-height: 2;
+  font-size: calc(var(--font-body-scale) * 15px);
   word-break: break-word;
   font-weight: var(--font-body-weight)
-} 
+}
 .footer .disclosure__button:hover span,
 .footer .disclosure__button:hover .icon-caret path,
 .footer .disclosure__list-wrapper a:hover span{
@@ -475,11 +476,11 @@ footer .flog {
   color: rgb(var(--color-foreground));
   font-weight: var(--font-body-weight-bold);
   font-family: var(--font-heading-family);
-  font-size: calc(var(--font-body-scale) * 24px);
+  font-size: calc(var(--font-body-scale) * 19px);
   font-style: var(--font-heading-style);
   border: none;
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0 0 12px;
   background: transparent;
   text-align: left;
   cursor: auto;
@@ -762,7 +763,7 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
 }
 @media screen and (min-width: 768px) {
   .footer__content-top .grid {
-    row-gap: 6rem;
+    row-gap: 3rem;
     margin-bottom: 0;
   }
   .footer__content-bottom-wrapper .footer__column:first-child {
@@ -933,7 +934,7 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 3rem;
 }
 .footer__top-layout--no-brand .footer__menus.footer__blocks-wrapper {
   flex-basis: 100%;
@@ -943,7 +944,7 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1.4rem;
 }
 .footer .footer__menus.footer__blocks-wrapper {
   flex: 2 1 460px;
@@ -957,14 +958,6 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   display: block;
   width: 100%;
   height: auto;
-}
-.footer .footer__brand-tagline {
-  margin: -1.6rem 0 0;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: calc(var(--font-body-scale) * 12px);
-  line-height: 1.5;
-  color: rgba(var(--color-foreground), 0.55);
 }
 .footer .footer__brand-subheading {
   margin: 0 0 1rem;
@@ -990,6 +983,93 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
 .footer .footer__brand-address a {
   line-height: 1.8;
 }
+@media screen and (max-width: 767px) {
+  .footer__top-layout {
+    display: block;
+    gap: 0;
+  }
+  .footer__brand-col {
+    max-width: 100%;
+    margin-bottom: 2.8rem;
+  }
+}
+
+/* ---- Contact + icon chips ---- */
+.footer .footer__contact-card-heading {
+  margin: 0 0 1rem;
+  color: rgba(var(--color-foreground), 0.7);
+}
+.footer__contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__contact-line {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.footer__brand-address.footer__contact-line {
+  align-items: flex-start;
+}
+.footer__contact-icon {
+  flex: 0 0 auto;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--color-foreground), 0.06);
+  color: rgba(var(--color-foreground), 0.85);
+  transition: transform 0.2s ease;
+}
+.footer__contact-line:hover .footer__contact-icon {
+  transform: translateY(-1px) scale(1.06);
+}
+.footer__brand-address .footer__contact-icon {
+  margin-top: 0.2rem;
+}
+.footer__contact-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.footer .footer__contact-text,
+.footer .footer__contact-text p {
+  margin: 0;
+  line-height: 1.55;
+  font-size: calc(var(--font-body-scale) * 14px);
+  word-break: break-word;
+}
+.footer .footer__contact-text a {
+  line-height: 1.55;
+  font-size: inherit;
+}
+
+/* ---- Menu columns: link + heading polish ---- */
+.footer .footer-block__details-content .list-menu__item--link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+@media screen and (min-width: 768px) {
+  .footer .footer-block__details-content .list-menu__item--link:hover {
+    transform: translateX(4px);
+  }
+  .footer__menus .footer-block__heading::after {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 2px;
+    margin-top: 1rem;
+    border-radius: 2px;
+    background: rgb(var(--color-link-hover));
+    opacity: 0.85;
+  }
+}
+
+/* Shipping-partner uploaded logos (white cards) */
 .footer__shipping-logos {
   display: flex;
   flex-wrap: wrap;
@@ -1014,85 +1094,6 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(var(--color-foreground), 0.13);
 }
-.footer__certificate a {
-  display: inline-block;
-  line-height: 0;
-}
-@media screen and (max-width: 767px) {
-  .footer__top-layout {
-    display: block;
-    gap: 0;
-  }
-  .footer__brand-col {
-    max-width: 100%;
-    margin-bottom: 2.8rem;
-  }
-}
-
-/* ---- Contact block: icon chips ---- */
-.footer__contact-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.footer__contact-line {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-.footer__brand-address.footer__contact-line {
-  align-items: flex-start;
-}
-.footer__contact-icon {
-  flex: 0 0 auto;
-  width: 3.4rem;
-  height: 3.4rem;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(var(--color-foreground), 0.06);
-  color: rgba(var(--color-foreground), 0.85);
-}
-.footer__brand-address .footer__contact-icon {
-  margin-top: 0.2rem;
-}
-.footer__contact-icon svg {
-  width: 1.7rem;
-  height: 1.7rem;
-}
-.footer .footer__contact-text,
-.footer .footer__contact-text p {
-  margin: 0;
-  line-height: 1.55;
-  word-break: break-word;
-}
-.footer .footer__contact-text a {
-  line-height: 1.55;
-}
-
-/* ---- Menu columns: link + heading polish ---- */
-.footer .footer-block__details-content .list-menu__item--link {
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-@media screen and (min-width: 768px) {
-  .footer .footer-block__details-content .list-menu__item--link:hover {
-    transform: translateX(4px);
-  }
-  .footer__menus .footer-block__heading::after {
-    content: "";
-    display: block;
-    width: 3.2rem;
-    height: 2px;
-    margin-top: 1rem;
-    border-radius: 2px;
-    background: rgb(var(--color-link-hover));
-    opacity: 0.85;
-  }
-}
 
 /* ---- Certificate badge ---- */
 .footer__certificate {
@@ -1115,6 +1116,7 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   max-width: 12rem;
   object-fit: contain;
 }
+
 /* Trust row: certificate badge + shipping partners side by side */
 .footer__trust-row {
   display: flex;
@@ -1162,15 +1164,34 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
 .footer__partner-tile--gls {
   background: #061ab1;
 }
+.footer__partner-tile--hermes {
+  background: #0a9aa6;
+}
 
 /* ---- Payment methods row ---- */
 .footer__payments-row {
   border-top: 1px solid rgba(var(--color-foreground), 0.1);
-  padding: 2rem 0;
+  padding: 1.4rem 0;
 }
 .footer__payment {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.footer .footer__payment-heading {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: calc(var(--font-body-scale) * 12px);
+  font-weight: var(--font-body-weight-bold);
+  color: rgba(var(--color-foreground), 0.5);
+}
+.footer__payment .list-payment__item {
+  transition: transform 0.2s ease;
+}
+.footer__payment .list-payment__item:hover {
+  transform: translateY(-2px);
 }
 .footer .footer__payment .list-payment {
   flex-wrap: wrap;
@@ -1185,4 +1206,12 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
 .footer__payment .list-payment__item .icon {
   width: 38px;
   height: 24px;
+}
+
+/* ---- Column structure: divider between brand column and menus ---- */
+@media screen and (min-width: 990px) {
+  .footer .footer__menus.footer__blocks-wrapper {
+    border-left: 1px solid rgba(var(--color-foreground), 0.08);
+    padding-left: 4rem;
+  }
 }

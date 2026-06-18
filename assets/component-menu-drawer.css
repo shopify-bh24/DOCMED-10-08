@@ -568,3 +568,42 @@ menu-drawer > details[open] > summary::before {
     row-gap: var(--grid-desktop-vertical-spacing);
   }
 }
+
+/* --- Fix: desktop "categories" mega-menu flyout hidden on inner pages (e.g. product page) ---
+   The header group is pinned at z-index: 4 (base.css). On templates such as the product
+   page, a section / stacking context can end up painting over the absolutely-positioned
+   flyout (.menu-drawer__submenu, positioned at left: 100%), so it appears empty/dark.
+   Lift the whole header above page content ONLY while the desktop mega-menu is open,
+   leaving the header's normal stacking — and every other page/state — unchanged. */
+@media screen and (min-width: 992px) {
+  .shopify-section-group-header-group:has(.wbcategories desktop-webi-menu.open),
+  .section-header:has(.wbcategories desktop-webi-menu.open) {
+    position: relative;
+    z-index: 50;
+  }
+  .wbcategories desktop-webi-menu.open {
+    position: relative;
+    z-index: 5;
+  }
+  .js .wbcategories desktop-webi-menu.open .menu-drawer__submenu {
+    z-index: 4;
+  }
+}
+
+/* --- Fix: categories flyout submenu text was rendering dark-on-dark (navy on navy)
+   on some templates (e.g. the product page), where the link text inherited/leaked a
+   dark colour instead of the dark dropdown scheme's foreground. Re-assert the dropdown
+   scheme foreground (white for the accent-2 scheme) on the flyout's links so the menu
+   is readable on every page. Scoped to the desktop categories flyout only;
+   the homepage (already white) is unaffected. --- */
+@media screen and (min-width: 992px) {
+  .wbcategories .menu-drawer__submenu .header__submenu .header__menu-item,
+  .wbcategories .menu-drawer__submenu .header__submenu .list-menu__item,
+  .wbcategories .menu-drawer__submenu .header__submenu a {
+    color: rgb(var(--color-foreground)) !important;
+  }
+  .wbcategories .menu-drawer__submenu .header__submenu .header__menu-item:hover,
+  .wbcategories .menu-drawer__submenu .header__submenu a:hover {
+    color: rgb(var(--color-link-hover)) !important;
+  }
+}

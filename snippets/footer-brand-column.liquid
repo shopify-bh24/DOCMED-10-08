@@ -27,20 +27,16 @@
     </a>
   {%- endif -%}
 
-  {%- if section.settings.footer_tagline != blank -%}
-    <p class="footer__brand-tagline">{{ section.settings.footer_tagline }}</p>
-  {%- endif -%}
-
   {%- liquid
     assign has_contact = false
     if section.settings.contact_heading != blank or section.settings.contact_hours != blank or section.settings.contact_phone != blank or section.settings.contact_email != blank
       assign has_contact = true
     endif
   -%}
-  {%- if has_contact -%}
-    <div class="footer__brand-block footer__brand-contact">
+  {%- if has_contact or section.settings.footer_address != blank -%}
+    <div class="footer__brand-block footer__contact-card">
       {%- if section.settings.contact_heading != blank -%}
-        <p class="footer__brand-subheading">{{ section.settings.contact_heading }}</p>
+        <p class="footer__brand-subheading footer__contact-card-heading">{{ section.settings.contact_heading }}</p>
       {%- endif -%}
       <ul class="footer__contact-list">
         {%- if section.settings.contact_hours != blank -%}
@@ -67,16 +63,15 @@
             <span class="footer__contact-text">{{ section.settings.contact_email }}</span>
           </li>
         {%- endif -%}
+        {%- if section.settings.footer_address != blank -%}
+          <li class="footer__contact-line footer__brand-address">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <div class="footer__contact-text rte">{{ section.settings.footer_address }}</div>
+          </li>
+        {%- endif -%}
       </ul>
-    </div>
-  {%- endif -%}
-
-  {%- if section.settings.footer_address != blank -%}
-    <div class="footer__brand-block footer__brand-address footer__contact-line">
-      <span class="footer__contact-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      </span>
-      <div class="footer__contact-text rte">{{ section.settings.footer_address }}</div>
     </div>
   {%- endif -%}
 
@@ -172,6 +167,9 @@
           </span>
           <span class="footer__partner-tile footer__partner-tile--gls">
             <img src="{{ 'logo-gls.svg' | asset_url }}" alt="GLS" width="80" height="28" loading="lazy">
+          </span>
+          <span class="footer__partner-tile footer__partner-tile--hermes">
+            <img src="{{ 'logo-hermes.svg' | asset_url }}" alt="Hermes" width="40" height="40" loading="lazy">
           </span>
         </div>
       {%- endif -%}
