@@ -795,7 +795,8 @@
             "shipping_method": "Die Versandoptionen für ihre Bestellung haben sich geändert. Prüfen Sie die Auswahl."
           },
           "missing": {
-            "address1": "Geben Sie eine Adresse ein"
+            "address1": "Geben Sie eine Adresse ein",
+            "first_name": "Geben Sie einen Vornamen ein"
           }
         },
         "return_to_store": "Zurück zum Warenkorb"
@@ -808,7 +809,8 @@
         "offsite_gateway_review_page_redirect_hint": "Nachdem Sie Ihre Bestellung überprüft haben, werden Sie zu {{ gateway_label }} weitergeleitet, um Ihren Kauf abzuschließen."
       },
       "field_errors": {
-        "address_address1_blank": "Geben Sie eine Adresse ein"
+        "address_address1_blank": "Geben Sie eine Adresse ein",
+        "address_first_name_blank": "Geben Sie einen Vornamen ein"
       }
     },
     "page_titles": {
