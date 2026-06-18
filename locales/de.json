@@ -742,7 +742,8 @@
         "back_to_cart": "Zurück zum Warenkorb"
       },
       "shipping_errors": {
-        "empty_state": "Bitte geben Sie ihre Lieferadresse ein, um Versandkosten anzuzeigen."
+        "empty_state": "Bitte geben Sie ihre Lieferadresse ein, um Versandkosten anzuzeigen.",
+        "shipping_method": "Die Versandoptionen für ihre Bestellung haben sich geändert. Prüfen Sie die Auswahl."
       },
       "shop_policies": {
         "cookie_preferences": "Cookies"
@@ -783,6 +784,13 @@
       },
       "pickup_point": {
         "or": "oder"
+      },
+      "wallets": {
+        "errors": {
+          "outdated": {
+            "shipping_method": "Die Versandoptionen für ihre Bestellung haben sich geändert. Prüfen Sie die Auswahl."
+          }
+        }
       }
     },
     "page_titles": {
