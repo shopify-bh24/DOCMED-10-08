@@ -756,7 +756,10 @@
         "accept_marketing_checkbox_label": "Versandstatus, Infos zu Produkten & Service per E-Mail erhalten"
       },
       "stock": {
-        "empty_cart_label": "Warenkorb ist leer"
+        "empty_cart_label": "Warenkorb ist leer",
+        "price_update": {
+          "description": "Die Preise einiger Artikel haben sich geändert und wurden in Ihrem Warenkorb angepasst."
+        }
       },
       "throttle": {
         "cart_summary_heading": "Ihr Warenkorb",
