@@ -797,7 +797,13 @@
           "missing": {
             "address1": "Geben Sie eine Adresse ein",
             "first_name": "Geben Sie einen Vornamen ein",
-            "last_name": "Geben Sie einen Nachnamen ein"
+            "last_name": "Geben Sie einen Nachnamen ein",
+            "billing_first_name": "Geben Sie einen Vornamen für diese Rechnungsadresse ein",
+            "billing_address1": "Geben Sie eine Rechnungsadresse ein",
+            "billing_address2": "Geben Sie eine Wohnung, ein Zimmer usw. für diese Rechnungsadresse ein",
+            "billing_city": "Geben Sie eine Stadt für diese Rechnungsadresse ein",
+            "billing_province": "Wählen Sie ein Bundesland/einen Kanton für diese Rechnungsadresse aus",
+            "billing_zip": "Geben Sie eine Postleitzahl für diese Rechnungsadresse ein"
           }
         },
         "return_to_store": "Zurück zum Warenkorb"
