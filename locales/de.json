@@ -779,6 +779,9 @@
       },
       "local_pickup": {
         "or": "ODER"
+      },
+      "pickup_point": {
+        "or": "weitere Zahlungsmethoden weiter unten "
       }
     },
     "page_titles": {
