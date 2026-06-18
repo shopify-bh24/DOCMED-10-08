@@ -915,6 +915,26 @@ subcart-drawer .cartupsell_bnr {
     padding-right: 5px;
   }
 }
+/* Fix empty-cart "zurück zur Startseite" button.
+   Force solid background + correct text color in both states,
+   suppressing the gradient and ::after overlay. */
+.cart-drawer__empty-content .button {
+  background: rgb(var(--color-button)) !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+.cart-drawer__empty-content .button::after {
+  display: none !important;
+}
+.cart-drawer__empty-content .button:hover {
+  background: rgb(var(--color-bg-button-hover)) !important;
+  background-image: none !important;
+  color: rgb(var(--color-button)) !important;
+}
+.cart-drawer__empty-content .button:hover span {
+  color: rgb(var(--color-button)) !important;
+}
+
 @media (min-width: 768px){
   cart-drawer .drawer__cart-items-wrapper .cart-item__media {
     width: auto;

@@ -1164,8 +1164,11 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
 .footer__partner-tile--gls {
   background: #061ab1;
 }
-.footer__partner-tile--hermes {
-  background: #0a9aa6;
+.footer__partner-tile--ups {
+  background: #351c15;
+}
+.footer__partner-tile--dpd {
+  background: #dc0032;
 }
 
 /* ---- Payment methods row ---- */

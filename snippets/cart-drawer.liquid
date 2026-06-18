@@ -536,9 +536,9 @@
               <span>{{ 'sections.cart.update' | t }}</span>
             </button>
           </noscript>
-          <a href="{{ routes.cart_url }}" class="button button--secondary btn-block"
+          {% comment %} <a href="{{ routes.cart_url }}" class="button button--secondary btn-block"
             ><span>{{ 'wbcustomlabel.wballtext.viewcart' | t }}</span></a
-          >
+          > {% endcomment %}
           <button
             type="submit"
             id="CartDrawer-Checkout"

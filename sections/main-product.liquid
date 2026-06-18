@@ -150,7 +150,64 @@
   }
 
   .cus-vendor{
-    width: max-content; 
+    width: max-content;
+  }
+
+  /* ---- Shipping policy popup ---- */
+  .product__shipping-policy-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font: inherit;
+    font-size: inherit;
+    color: rgb(var(--color-link));
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .product__shipping-policy-btn:hover {
+    color: rgb(var(--color-link-hover, var(--color-link)));
+    opacity: 0.8;
+  }
+  .shipping-policy-modal {
+    border: none;
+    border-radius: 1.2rem;
+    padding: 0;
+    max-width: min(680px, 94vw);
+    max-height: 80vh;
+    width: 100%;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  }
+  .shipping-policy-modal::backdrop {
+    background: rgba(0,0,0,0.45);
+  }
+  .shipping-policy-modal__inner {
+    padding: 2.8rem 2.8rem 2.4rem;
+    overflow-y: auto;
+    max-height: 80vh;
+    position: relative;
+  }
+  .shipping-policy-modal__close {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    background: none;
+    border: none;
+    padding: 0.4rem;
+    cursor: pointer;
+    color: rgb(var(--color-foreground));
+    opacity: 0.6;
+    line-height: 1;
+  }
+  .shipping-policy-modal__close:hover { opacity: 1; }
+  .shipping-policy-modal__title {
+    font-size: calc(var(--font-heading-scale) * 2rem);
+    margin: 0 3rem 1.6rem 0;
+  }
+  .shipping-policy-modal__body { font-size: 1.4rem; line-height: 1.7; }
+  @media (max-width: 749px) {
+    .shipping-policy-modal__inner { padding: 2rem 1.6rem 1.8rem; }
   }
 </style>
 
@@ -771,9 +828,30 @@
                       {{ 'products.product.include_taxes' | t }}
                     {%- endif -%}
                     {%- if shop.shipping_policy.body != blank -%}
-                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                      <button
+                        type="button"
+                        class="product__shipping-policy-btn"
+                        onclick="document.getElementById('shipping-modal-{{ section.id }}').showModal()"
+                      >Versand</button> wird beim Checkout berechnet
                     {%- endif -%}
                   </div>
+
+                  {%- if shop.shipping_policy.body != blank -%}
+                    <dialog id="shipping-modal-{{ section.id }}" class="shipping-policy-modal">
+                      <div class="shipping-policy-modal__inner">
+                        <button
+                          type="button"
+                          class="shipping-policy-modal__close"
+                          onclick="this.closest('dialog').close()"
+                          aria-label="Schließen"
+                        >
+                          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1L17 17M17 1L1 17"/></svg>
+                        </button>
+                        <h2 class="shipping-policy-modal__title">{{ shop.shipping_policy.title }}</h2>
+                        <div class="shipping-policy-modal__body rte">{{ shop.shipping_policy.body }}</div>
+                      </div>
+                    </dialog>
+                  {%- endif -%}
 
                   {%- assign current_variant = product.selected_or_first_available_variant -%}
 
@@ -1557,6 +1635,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 </section>
+
+<script>
+  (function () {
+    document.querySelectorAll('.shipping-policy-modal').forEach(function (dialog) {
+      dialog.addEventListener('click', function (e) {
+        if (e.target === dialog) dialog.close();
+      });
+    });
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
