@@ -775,7 +775,8 @@
         "you_will_not_be_charged": "Es wird noch nichts berechnet!"
       },
       "alternative_payment_method_banner": {
-        "express_checkout": "Express Checkout (optional)"
+        "express_checkout": "Express Checkout (optional)",
+        "or": "weitere Zahlungsmethoden weiter unten "
       },
       "local_pickup": {
         "or": "ODER"
