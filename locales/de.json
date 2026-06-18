@@ -791,6 +791,9 @@
             "shipping_method": "Die Versandoptionen für ihre Bestellung haben sich geändert. Prüfen Sie die Auswahl."
           }
         }
+      },
+      "contact": {
+        "phone_tooltip": "Falls wir Sie zu ihrer Bestellung kontaktieren müssen"
       }
     },
     "page_titles": {
