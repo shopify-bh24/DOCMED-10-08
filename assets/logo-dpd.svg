@@ -1,3 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" role="img" aria-label="DPD">
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" fill="#ffffff" letter-spacing="2">DPD</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" role="img" aria-label="DPD">
+  <!-- Left face (dark red) -->
+  <path d="M4 19 L32 33 L32 74 L4 60 Z" fill="#900020"/>
+  <!-- Right face (medium red) -->
+  <path d="M32 33 L60 19 L60 60 L32 74 Z" fill="#c80028"/>
+  <!-- Top face (bright red) -->
+  <path d="M4 19 L32 5 L60 19 L32 33 Z" fill="#dc0032"/>
+  <!-- Open-box white flap lines -->
+  <path d="M32 5 L47 12 L60 5" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="47" y1="12" x2="47" y2="33" stroke="white" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- dpd wordmark -->
+  <text x="134" y="59" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" fill="#3d3d3d">dpd</text>
 </svg>

@@ -1165,10 +1165,20 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   background: #061ab1;
 }
 .footer__partner-tile--ups {
-  background: #351c15;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.footer__partner-tile--ups img {
+  max-width: 88%;
+  max-height: 88%;
 }
 .footer__partner-tile--dpd {
-  background: #dc0032;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.footer__partner-tile--dpd img {
+  max-width: 88%;
+  max-height: 78%;
 }
 
 /* ---- Payment methods row ---- */

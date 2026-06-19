@@ -1,3 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" role="img" aria-label="UPS">
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" fill="#ffd100" letter-spacing="2">UPS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 122" role="img" aria-label="UPS">
+  <!-- Gold outer shield -->
+  <path d="M6 6 L94 6 L94 66 Q92 102 50 118 Q8 102 6 66 Z" fill="#ffd100"/>
+  <!-- Dark brown inner shield -->
+  <path d="M13 13 L87 13 L87 66 Q86 98 50 111 Q14 98 13 66 Z" fill="#3d1f0d"/>
+  <!-- UPS text in gold -->
+  <text x="50" y="82" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="33" fill="#ffd100" text-anchor="middle" letter-spacing="-1">UPS</text>
 </svg>
