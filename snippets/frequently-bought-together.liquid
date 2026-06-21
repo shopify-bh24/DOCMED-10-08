@@ -1,0 +1,278 @@
+{%- assign fbt_products = product.metafields.custom.frequently_bought_together.value -%}
+{%- if fbt_products != blank and fbt_products.size > 0 -%}
+
+<style>
+  .fbt-section {
+    margin-top: 20px;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 8px;
+    padding: 14px 16px;
+    background: #fff;
+  }
+  .fbt-section__heading {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--color-foreground, #1d2e40);
+    letter-spacing: 0.01em;
+  }
+  .fbt-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .fbt-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.07);
+  }
+  .fbt-item__img-link {
+    flex-shrink: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+  .fbt-item__img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+  }
+  .fbt-item__body {
+    flex: 1;
+    min-width: 0;
+  }
+  .fbt-item__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-foreground, #1d2e40);
+    text-decoration: none;
+  }
+  .fbt-item__title:hover { text-decoration: underline; }
+  .fbt-item__price {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--color-foreground, #1d2e40);
+  }
+  .fbt-item__price-from { color: var(--color-foreground, #1d2e40); }
+  .fbt-item__price-sale { color: #c0392b; font-weight: 600; }
+  .fbt-item__price-compare {
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 3px;
+    font-weight: 400;
+  }
+  .fbt-item__unit-price {
+    font-size: 10px;
+    color: #777;
+    margin-top: 1px;
+  }
+  .fbt-item__add {
+    flex-shrink: 0;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgb(var(--color-button, 29 46 64));
+    color: rgb(var(--color-button-text, 255 255 255));
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.15s, background 0.15s;
+    overflow: hidden;
+  }
+  .fbt-item__add:hover { opacity: 0.85; }
+  .fbt-item__add:disabled { cursor: wait; }
+  .fbt-item__add:disabled:hover { opacity: 1; }
+  .fbt-item__add--done { background: #2e7d32 !important; }
+  /* Spinner sits on top of the + icon — no layout shift */
+  .fbt-item__spinner {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgb(var(--color-button, 29 46 64));
+    border-radius: 50%;
+  }
+  .fbt-item__spinner--active { display: flex; }
+  /* Self-contained spinner — white ring on the dark button, no theme deps */
+  .fbt-item__spinner .fbt-spin {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #fff;
+    animation: fbt-spin 0.7s linear infinite;
+  }
+  @keyframes fbt-spin { to { transform: rotate(360deg); } }
+  .fbt-item__unavailable {
+    flex-shrink: 0;
+    width: 36px;
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+  }
+</style>
+
+<div class="fbt-section">
+  <h2 class="fbt-section__heading">Andere kauften auch</h2>
+  <ul class="fbt-list" role="list">
+    {%- for fbt_product in fbt_products limit: 4 -%}
+      {%- assign fbt_variant = fbt_product.selected_or_first_available_variant -%}
+      <li class="fbt-item">
+
+        <a href="{{ fbt_product.url }}" class="fbt-item__img-link" tabindex="-1" aria-hidden="true">
+          {%- if fbt_product.featured_image -%}
+            <img
+              src="{{ fbt_product.featured_image | image_url: width: 120 }}"
+              alt="{{ fbt_product.featured_image.alt | default: fbt_product.title | escape }}"
+              width="60"
+              height="60"
+              loading="lazy"
+              class="fbt-item__img"
+            >
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'fbt-item__img' }}
+          {%- endif -%}
+        </a>
+
+        <div class="fbt-item__body">
+          <a href="{{ fbt_product.url }}" class="fbt-item__title">{{ fbt_product.title }}</a>
+          <div class="fbt-item__price">
+            {%- if fbt_product.price_varies -%}
+              <span class="fbt-item__price-from">ab {{ fbt_product.price_min | money }}</span>
+            {%- elsif fbt_variant.compare_at_price > fbt_variant.price -%}
+              <span class="fbt-item__price-sale">{{ fbt_variant.price | money }}</span>
+              <s class="fbt-item__price-compare">{{ fbt_variant.compare_at_price | money }}</s>
+            {%- else -%}
+              <span>{{ fbt_variant.price | money }}</span>
+            {%- endif -%}
+            {%- if fbt_variant.unit_price_measurement -%}
+              <div class="fbt-item__unit-price">
+                {{ fbt_variant.unit_price | money }}
+                /
+                {%- if fbt_variant.unit_price_measurement.reference_value != 1 -%}
+                  {{ fbt_variant.unit_price_measurement.reference_value }}
+                {%- endif -%}
+                {{ fbt_variant.unit_price_measurement.reference_unit }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+        {%- if fbt_variant and fbt_variant.available -%}
+          <button
+            type="button"
+            class="fbt-item__add"
+            data-fbt-variant="{{ fbt_variant.id }}"
+            aria-label="In den Warenkorb: {{ fbt_product.title | escape }}"
+          >
+            <svg viewBox="0 0 14 14" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="7" y1="1" x2="7" y2="13"/>
+              <line x1="1" y1="7" x2="13" y2="7"/>
+            </svg>
+            <span class="fbt-item__spinner" aria-hidden="true">
+              <span class="fbt-spin"></span>
+            </span>
+          </button>
+        {%- else -%}
+          <span class="fbt-item__unavailable" aria-hidden="true">–</span>
+        {%- endif -%}
+
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<script>
+(function () {
+  var checkSvg = '<svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1.5,7 5,11 12.5,3"/></svg>';
+
+  /* Dawn's CartDrawer.getSectionsToRender() returns { id, selector } objects.
+     The section IDs we must request from cart/add.js are the .id values. */
+  function getSectionIds(drawer) {
+    if (drawer && typeof drawer.getSectionsToRender === 'function') {
+      try {
+        var ids = drawer.getSectionsToRender()
+          .map(function (s) { return s.id; })
+          .filter(Boolean);
+        if (ids.length) return ids;
+      } catch (e) {}
+    }
+    return ['cart-drawer', 'cart-icon-bubble'];
+  }
+
+  document.querySelectorAll('[data-fbt-variant]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.disabled) return;
+      btn.disabled = true;
+
+      var spinner = btn.querySelector('.fbt-item__spinner');
+      var originalHTML = btn.innerHTML;
+      var drawer = document.querySelector('cart-drawer');
+      var sectionIds = getSectionIds(drawer);
+
+      /* 1. Show the loading spinner */
+      if (spinner) spinner.classList.add('fbt-item__spinner--active');
+
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+        body: JSON.stringify({
+          id: parseInt(btn.getAttribute('data-fbt-variant'), 10),
+          quantity: 1,
+          sections: sectionIds,
+          sections_url: window.location.pathname
+        })
+      })
+      .then(function (r) { if (!r.ok) throw new Error('cart/add failed'); return r.json(); })
+      .then(function (state) {
+        /* 2. Spinner -> green tick */
+        if (spinner) spinner.classList.remove('fbt-item__spinner--active');
+        btn.classList.add('fbt-item__add--done');
+        btn.innerHTML = checkSvg;
+
+        /* 3. Hold the tick a beat, THEN update + open the cart drawer */
+        setTimeout(function () {
+          drawer = document.querySelector('cart-drawer');
+          if (drawer && typeof drawer.renderContents === 'function' && state.sections) {
+            drawer.setActiveElement && drawer.setActiveElement(btn);
+            drawer.renderContents(state); /* updates content AND opens the drawer */
+          } else if (drawer && typeof drawer.open === 'function') {
+            drawer.open(btn);
+          }
+        }, 450);
+
+        /* 4. Revert button back to + */
+        setTimeout(function () {
+          btn.classList.remove('fbt-item__add--done');
+          btn.innerHTML = originalHTML;
+          btn.disabled = false;
+        }, 1600);
+      })
+      .catch(function (err) {
+        console.error('[FBT]', err);
+        if (spinner) spinner.classList.remove('fbt-item__spinner--active');
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+      });
+    });
+  });
+})();
+</script>
+
+{%- endif -%}

@@ -26,10 +26,28 @@ header .search-modal__content .search-modal__close-button.link {
 .search-modal__content .search__input.field__input {
     background: rgba(var(--color-background));
     border: none;
-    height: 40px;
+    height: 44px;
+    line-height: normal;
+}
+
+/* base :focus adds padding-top:2rem which pushes descenders to ~47px in a 40px box.
+   Reduce to 1.4rem so baseline+descenders land at ~42px, within the new 44px height. */
+.search-modal__content .search__input.field__input:focus,
+.search-modal__content .search__input.field__input:not(:placeholder-shown),
+.search-modal__content .search__input.field__input:-webkit-autofill {
+    padding-top: 1.4rem;
+    padding-bottom: 0.4rem;
+}
+
+/* Shrink the floating label to fit above the reduced top-padding area. */
+.search-modal__content .search__input.field__input:focus ~ .field__label,
+.search-modal__content .search__input.field__input:not(:placeholder-shown) ~ .field__label {
+    font-size: 0.75rem;
+    top: 0.2rem;
+    line-height: 1.2;
 }
 .search__input.field__input {
-  padding-right: 9.8rem;
+  /* padding-right: 9.8rem; */
 }
 main-search .field__button{
   /* background: rgba(var(--color-button-text)); */
