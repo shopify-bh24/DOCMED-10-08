@@ -22,7 +22,7 @@
         "enable_quick_add": false,
         "quicklook_style": "link",
         "color_swatchhover": false,
-        "enable_addtocart": false,
+        "enable_addtocart": true,
         "show_variants": false,
         "show_variant_label": true,
         "picker_type": "button",
