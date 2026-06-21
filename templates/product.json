@@ -98,13 +98,6 @@
             "width": 100,
             "position": "center"
           }
-        },
-        "sectionheroes_upsell_jQDfwb": {
-          "type": "shopify://apps/sectionheroes/blocks/upsell/019abad6-4363-7418-bd8f-a8feb1296bd6",
-          "settings": {
-            "padding_top": 25,
-            "padding_bottom": 25
-          }
         }
       },
       "block_order": [
@@ -119,8 +112,7 @@
         "variant_picker_PMkhTg",
         "offer_9QtRKa",
         "buy_buttons",
-        "sectionheroes_md_divider_9JBeQc",
-        "sectionheroes_upsell_jQDfwb"
+        "sectionheroes_md_divider_9JBeQc"
       ],
       "settings": {
         "ghs_image": "ghs-image-list-efsixrhk",
@@ -226,7 +218,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "title": "Das könnte Ihnen auch gefallen",
+        "title": "Weitere Produkte für Ihren Bedarf",
         "heading_size": "h2",
         "head_align": "left",
         "heading_color_scheme": "scheme-77b2cfd5-6085-45ba-893c-34c1568058e1",
