@@ -130,6 +130,45 @@
     visibility: visible;
   }
 
+  /* Quick-add (FBT-style) animation: white spinner ring overlaid on the button */
+  .fbt-quick-add {
+    position: relative;
+    overflow: hidden;
+  }
+  .fbt-qa-spinner {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgb(var(--color-button, 29 46 64));
+    border-radius: inherit;
+  }
+  .fbt-qa-spinner--active {
+    display: flex;
+  }
+  .fbt-qa-spinner .fbt-spin {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #fff;
+    animation: fbt-spin 0.7s linear infinite;
+  }
+  @keyframes fbt-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* "Choose options" (quick-view) + button: while it loads the options popup,
+     hide the + so only the centered spinner shows — no more "+ ○". */
+  .add-to-cart__submit.loading .button-icon,
+  .quick-add__submit.loading .button-icon {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .button.added-to-cart {
     color: #22c55e !important;
   }
@@ -167,6 +206,85 @@
     }
   }
 </style>
+
+<script>
+(function () {
+  if (window.__quickAddFbtInit) return;
+  window.__quickAddFbtInit = true;
+
+  /* Dawn's CartDrawer.getSectionsToRender() returns { id, selector } objects;
+     the IDs we must request from cart/add.js are the .id values. */
+  function getSectionIds(drawer) {
+    if (drawer && typeof drawer.getSectionsToRender === 'function') {
+      try {
+        var ids = drawer.getSectionsToRender()
+          .map(function (s) { return s.id; })
+          .filter(Boolean);
+        if (ids.length) return ids;
+      } catch (e) {}
+    }
+    return ['cart-drawer', 'cart-icon-bubble'];
+  }
+
+  /* Delegated so it works for every card, including slider/AJAX-rendered ones. */
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.fbt-quick-add[data-quick-add-variant]');
+    if (!btn) return;
+    e.preventDefault();
+    if (btn.disabled) return;
+    btn.disabled = true;
+
+    var drawer = document.querySelector('cart-drawer');
+    var sectionIds = getSectionIds(drawer);
+
+    /* 1. Build the spinner on demand (kept out of the markup) and show it */
+    var spinner = document.createElement('span');
+    spinner.className = 'fbt-qa-spinner fbt-qa-spinner--active';
+    spinner.setAttribute('aria-hidden', 'true');
+    spinner.innerHTML = '<span class="fbt-spin"></span>';
+    btn.appendChild(spinner);
+
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+      body: JSON.stringify({
+        id: parseInt(btn.getAttribute('data-quick-add-variant'), 10),
+        quantity: 1,
+        sections: sectionIds,
+        sections_url: window.location.pathname
+      })
+    })
+    .then(function (r) { if (!r.ok) throw new Error('cart/add failed'); return r.json(); })
+    .then(function (state) {
+      /* 2. Spinner -> green tick */
+      if (spinner) spinner.remove();
+      btn.classList.add('added');
+
+      /* 3. Hold the tick a beat, THEN update + open the cart drawer */
+      setTimeout(function () {
+        drawer = document.querySelector('cart-drawer');
+        if (drawer && typeof drawer.renderContents === 'function' && state.sections) {
+          drawer.setActiveElement && drawer.setActiveElement(btn);
+          drawer.renderContents(state);
+        } else if (drawer && typeof drawer.open === 'function') {
+          drawer.open(btn);
+        }
+      }, 450);
+
+      /* 4. Revert button back to + */
+      setTimeout(function () {
+        btn.classList.remove('added');
+        btn.disabled = false;
+      }, 1800);
+    })
+    .catch(function (err) {
+      console.error('[quick-add]', err);
+      if (spinner) spinner.remove();
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
 
 {% comment %}
   Renders a product card
@@ -1045,7 +1163,7 @@
                               </div>
                             </quick-add-modal>
                           {%- else -%}
-                            <product-form data-section-id="{{ section.id }}" data-no-drawer="true">
+                            <product-form data-section-id="{{ section.id }}">
                               <div class="product-form__error-message-wrapper" role="alert" hidden>
                                 <svg
                                   aria-hidden="true"
@@ -1078,9 +1196,11 @@
                                 >
                                 <button
                                   id="ProductSubmitButton-{{ section_id }}"
-                                  type="submit"
-                                  name="add"
-                                  class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--primary{% else %}button--primary{% endif %}"
+                                  type="button"
+                                  data-quick-add-variant="{{ card_product.selected_or_first_available_variant.id }}"
+                                  aria-haspopup="dialog"
+                                  class="product-form__submit button button--full-width button--primary fbt-quick-add"
+                                  {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                                 >
                                   <span class="button-icon-wrapper">
                                     <span class="button-icon button-icon--plus"> + </span>
@@ -1088,17 +1208,6 @@
                                       {% render 'icon-checkmark' %}
                                     </span>
                                   </span>
-                                  <div class="loading-overlay__spinner hidden">
-                                    <svg
-                                      aria-hidden="true"
-                                      focusable="false"
-                                      class="spinner"
-                                      viewBox="0 0 66 66"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                                    </svg>
-                                  </div>
                                 </button>
                               {%- endform -%}
                             </product-form>

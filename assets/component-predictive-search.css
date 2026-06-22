@@ -19,6 +19,19 @@ predictive-search .wbproduct-container .wbproductdes, predictive-search .wbprodu
   margin: 0 auto;
   padding: 0;
 }
+/* Lift the search dropdown above the desktop "categories" mega-menu (which jumps
+   to z-index: 5 while open, see component-menu-drawer.css) AND stretch it to the
+   full viewport width, so the menu / page content can't show beside or over it. */
+@media screen and (min-width: 992px) {
+  .predictive-search.predictive-search--header {
+    z-index: 60;
+    width: 100vw;
+    max-width: 100vw;
+    left: 50%;
+    right: auto;
+    margin-left: -50vw;
+  }
+}
 .wbsearch_inner,#predictive-search-results{
   max-width: 100%;
   border-radius: var(--popup-corner-radius);
