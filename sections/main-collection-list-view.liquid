@@ -493,10 +493,10 @@
                   </li>
                 {%- endfor -%}
               </ul>
-              {% if section.settings.pagination_type == 'load-more' %}
+              {% if section.settings.pagination_type == 'load-more' or section.settings.pagination_type == 'infinite' %}
                 {%- if paginate.next.url -%}
-                  <div class="load-more">
-                    <load-more>
+                  <div class="load-more{% if section.settings.pagination_type == 'infinite' %} load-more--infinite{% endif %}">
+                    <load-more{% if section.settings.pagination_type == 'infinite' %} data-infinite="true"{% endif %}>
                       <div class="button">
                         <span>{{ 'wbcustomlabel.wballtext.load_more' | t }}</span>
                       </div>
@@ -866,6 +866,10 @@
         {
           "value": "load-more",
           "label": "t:sections.main-collection-product-grid.settings.pagination_type.options__2.label"
+        },
+        {
+          "value": "infinite",
+          "label": "Infinite scroll"
         }
       ],
       "default": "paged",

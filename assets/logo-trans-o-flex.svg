@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 64" role="img" aria-label="trans-o-flex">
+  <text x="2" y="46" font-family="Arial, Helvetica, sans-serif" font-style="italic" font-weight="800" font-size="42" fill="#6f7073" letter-spacing="-1.5">trans&#183;o&#183;flex</text>
+  <g transform="translate(266,5)" fill="none" stroke="#f18a00" stroke-width="11" stroke-linecap="round">
+    <path d="M30 4 A24 24 0 1 0 53 32"/>
+    <path d="M30 18 A13 13 0 1 1 43 31"/>
+  </g>
+  <rect x="299" y="43" width="29" height="11" rx="5.5" fill="#f18a00"/>
+</svg>

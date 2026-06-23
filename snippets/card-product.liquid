@@ -135,21 +135,33 @@
     position: relative;
     overflow: hidden;
   }
+  /* While loading, remove the + entirely so only the spinner shows */
+  .fbt-quick-add.fbt-loading .button-icon-wrapper {
+    display: none;
+  }
   .fbt-qa-spinner {
     display: none;
     position: absolute;
-    inset: 0;
-    align-items: center;
-    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgb(var(--color-button, 29 46 64));
     border-radius: inherit;
   }
   .fbt-qa-spinner--active {
-    display: flex;
+    display: block;
   }
+  /* Center the ring absolutely (top/left 50% minus half its size) so the
+     rotate animation can never knock it off-center. */
   .fbt-qa-spinner .fbt-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 16px;
     height: 16px;
+    margin: -8px 0 0 -8px;
+    box-sizing: border-box;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.35);
     border-top-color: #fff;
@@ -172,11 +184,10 @@
   }
 
   /* "Choose options" (quick-view) + button: while it loads the options popup,
-     hide the + so only the centered spinner shows — no more "+ ○". */
+     remove the + so only the centered spinner shows — no more "+ ○". */
   .add-to-cart__submit.loading .button-icon,
   .quick-add__submit.loading .button-icon {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
   }
 
   .button.added-to-cart {
@@ -253,6 +264,7 @@
     spinner.setAttribute('aria-hidden', 'true');
     spinner.innerHTML = '<span class="fbt-spin"></span>';
     btn.appendChild(spinner);
+    btn.classList.add('fbt-loading');
 
     fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: 'POST',
@@ -268,6 +280,7 @@
     .then(function (state) {
       /* 2. Spinner -> green tick */
       if (spinner) spinner.remove();
+      btn.classList.remove('fbt-loading');
       btn.classList.add('added');
 
       /* 3. Hold the tick a beat, THEN update + open the cart drawer */
@@ -290,6 +303,7 @@
     .catch(function (err) {
       console.error('[quick-add]', err);
       if (spinner) spinner.remove();
+      btn.classList.remove('fbt-loading');
       btn.disabled = false;
     });
   });

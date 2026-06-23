@@ -1169,8 +1169,16 @@ footer localization-form #FooterCountryForm .disclosure__list-wrapper{
   border: 1px solid rgba(0,0,0,0.08);
 }
 .footer__partner-tile--ups img {
-  max-width: 88%;
+  max-width: 78%;
   max-height: 88%;
+}
+.footer__partner-tile--transoflex {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.footer__partner-tile--transoflex img {
+  max-width: 88%;
+  max-height: 60%;
 }
 .footer__partner-tile--dpd {
   background: #fff;

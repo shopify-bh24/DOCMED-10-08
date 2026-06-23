@@ -1604,10 +1604,33 @@ customElements.define('user-popup', UserPopup);
 class LoadMore extends HTMLElement {
   constructor() {
     super();
-    this.addEventListener('click', this.loadMoreProducts.bind(this));
     this.next_url = document.getElementById('product-grid').dataset.nextUrl;
     this.loadMoreBtn = this.querySelector('.button');
+    this.infinite = this.dataset.infinite === 'true';
+    this.loading = false;
+
+    if (this.infinite) {
+      // Infinite scroll: auto-load as this element scrolls into view.
+      // Hide the button and watch the element with an IntersectionObserver.
+      this.style.display = 'block';
+      this.style.minHeight = '1px';
+      if (this.loadMoreBtn) this.loadMoreBtn.style.display = 'none';
+      this.observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) this.loadMoreProducts();
+        },
+        { rootMargin: '600px 0px' }
+      );
+      this.observer.observe(this);
+    } else {
+      this.addEventListener('click', this.loadMoreProducts.bind(this));
+    }
   }
+
+  disconnectedCallback() {
+    if (this.observer) this.observer.disconnect();
+  }
+
   async getNextPage() {
     try {
       let res = await fetch(this.next_url);
@@ -1616,30 +1639,46 @@ class LoadMore extends HTMLElement {
       console.log(error);
     }
   }
+
   async loadMoreProducts() {
+    if (this.loading || !this.next_url) return;
+    this.loading = true;
+
     const load_more_spinner = this.getElementsByClassName('load-more_spinner')[0];
-    if (this.loadMoreBtn) this.loadMoreBtn.style.display = 'none';
-    load_more_spinner.style.display = 'block';
+    if (!this.infinite && this.loadMoreBtn) this.loadMoreBtn.style.display = 'none';
+    if (load_more_spinner) load_more_spinner.style.display = 'block';
+
     let nextPage = await this.getNextPage();
     const parser = new DOMParser();
     const nextPageDoc = parser.parseFromString(nextPage, 'text/html');
-    load_more_spinner.style.display = 'none';
     const productgrid = nextPageDoc.getElementById('product-grid');
     const new_products = productgrid.getElementsByClassName('grid__item');
-    const temp = new_products;
     const new_url = productgrid.dataset.nextUrl;
-    if (new_url) {
-      if (this.loadMoreBtn) this.loadMoreBtn.style.display = 'inline-flex';
-    }
-    this.next_url = new_url;
+
     let currentIndex = 0;
     while (new_products.length > currentIndex) {
       let product = new_products[currentIndex];
       if (product.classList.contains('wbimgbnrblock')) {
         currentIndex++;
         continue;
-      };
+      }
       document.getElementById('product-grid').appendChild(product);
+    }
+
+    this.next_url = new_url;
+    if (load_more_spinner) load_more_spinner.style.display = 'none';
+    this.loading = false;
+
+    if (this.infinite) {
+      if (this.next_url) {
+        // Re-evaluate intersection so continuous scrolling keeps loading.
+        this.observer.unobserve(this);
+        this.observer.observe(this);
+      } else {
+        this.observer.disconnect();
+      }
+    } else if (this.next_url && this.loadMoreBtn) {
+      this.loadMoreBtn.style.display = 'inline-flex';
     }
   }
 }

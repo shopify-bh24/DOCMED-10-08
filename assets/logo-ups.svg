@@ -1,8 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 122" role="img" aria-label="UPS">
+  <defs>
+    <linearGradient id="upsGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe389"/>
+      <stop offset=".5" stop-color="#ffd100"/>
+      <stop offset="1" stop-color="#d6a000"/>
+    </linearGradient>
+    <linearGradient id="upsBrown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c3614"/>
+      <stop offset="1" stop-color="#2a1405"/>
+    </linearGradient>
+  </defs>
   <!-- Gold outer shield -->
-  <path d="M6 6 L94 6 L94 66 Q92 102 50 118 Q8 102 6 66 Z" fill="#ffd100"/>
-  <!-- Dark brown inner shield -->
-  <path d="M13 13 L87 13 L87 66 Q86 98 50 111 Q14 98 13 66 Z" fill="#3d1f0d"/>
-  <!-- UPS text in gold -->
-  <text x="50" y="82" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="33" fill="#ffd100" text-anchor="middle" letter-spacing="-1">UPS</text>
+  <path d="M6 6 H94 V66 Q92 102 50 118 Q8 102 6 66 Z" fill="url(#upsGold)"/>
+  <!-- Brown inner shield -->
+  <path d="M13 13 H87 V66 Q86 98 50 111 Q14 98 13 66 Z" fill="url(#upsBrown)"/>
+  <!-- Package bow at top -->
+  <path d="M33 34 Q50 25 67 34 Q50 29 33 34 Z" fill="url(#upsGold)"/>
+  <!-- UPS wordmark -->
+  <text x="50" y="85" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="34" fill="url(#upsGold)" text-anchor="middle" letter-spacing="-1.5">UPS</text>
 </svg>
