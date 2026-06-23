@@ -69,7 +69,7 @@
         "enable_sorting": false,
         "enable_fill_category": false,
         "menu": "main-menu",
-        "pagination_type": "paged",
+        "pagination_type": "infinite",
         "columns_mobile": "2",
         "padding_top": 12,
         "padding_bottom": 60
