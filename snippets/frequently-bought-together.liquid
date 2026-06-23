@@ -129,7 +129,7 @@
 </style>
 
 <div class="fbt-section">
-  <h2 class="fbt-section__heading">Andere kauften auch</h2>
+  <h2 class="fbt-section__heading">{{ 'wbcustomlabel.wballtext.fbt_heading' | t }}</h2>
   <ul class="fbt-list" role="list">
     {%- for fbt_product in fbt_products limit: 4 -%}
       {%- assign fbt_variant = fbt_product.selected_or_first_available_variant -%}

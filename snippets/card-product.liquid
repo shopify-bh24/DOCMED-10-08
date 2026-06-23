@@ -161,6 +161,16 @@
     }
   }
 
+  /* On success the quick-add "+" turns green with a white tick — matching the FBT button. */
+  .fbt-quick-add.added {
+    background: #2e7d32 !important;
+  }
+  .fbt-quick-add.added .button-icon--checkmark,
+  .fbt-quick-add.added .button-icon--checkmark .icon {
+    color: #fff !important;
+    stroke: #fff !important;
+  }
+
   /* "Choose options" (quick-view) + button: while it loads the options popup,
      hide the + so only the centered spinner shows — no more "+ ○". */
   .add-to-cart__submit.loading .button-icon,
