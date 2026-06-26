@@ -777,7 +777,8 @@
         "review_title": "Schließen Sie ihre Bestellung jetzt ab "
       },
       "processing": {
-        "you_will_not_be_charged": "Es wird noch nichts berechnet!"
+        "you_will_not_be_charged": "Es wird noch nichts berechnet!",
+        "redirecting_to_bank": "Sie werden zu {{ bank }} weitergeleitet"
       },
       "alternative_payment_method_banner": {
         "express_checkout": "Express Checkout (optional)",
@@ -806,7 +807,8 @@
             "billing_zip": "Geben Sie eine Postleitzahl für diese Rechnungsadresse ein"
           }
         },
-        "return_to_store": "Zurück zum Warenkorb"
+        "return_to_store": "Zurück zum Warenkorb",
+        "redirection_notice": "Sie werden zu {{ walletName }} weitergeleitet, um Ihren Kauf abzuschließen."
       },
       "contact": {
         "phone_tooltip": "Falls wir Sie zu ihrer Bestellung kontaktieren müssen",
@@ -814,7 +816,9 @@
         "address1_label": "Straße + Hausnummer"
       },
       "payment": {
-        "offsite_gateway_review_page_redirect_hint": "Nachdem Sie Ihre Bestellung überprüft haben, werden Sie zu {{ gateway_label }} weitergeleitet, um Ihren Kauf abzuschließen."
+        "offsite_gateway_review_page_redirect_hint": "Nachdem Sie Ihre Bestellung überprüft haben, werden Sie zu {{ gateway_label }} weitergeleitet, um Ihren Kauf abzuschließen.",
+        "offsite_gateway_redirect_hint": "Sie werden zu {{ gateway_label }} weitergeleitet, um Ihren Kauf abzuschließen.",
+        "offsite_gateway_redirect_hint_no_button_label": "Sie werden zu {{ gateway_label }} weitergeleitet, um Ihren Kauf abzuschließen."
       },
       "field_errors": {
         "address_address1_blank": "Geben Sie eine Adresse ein",
