@@ -249,7 +249,12 @@
         /* 3. Hold the tick a beat, THEN update + open the cart drawer */
         setTimeout(function () {
           drawer = document.querySelector('cart-drawer');
-          if (drawer && typeof drawer.renderContents === 'function' && state.sections) {
+          var hasDrawerHTML = state.sections && state.sections['cart-drawer'];
+          if (drawer && typeof drawer.renderContents === 'function' && hasDrawerHTML) {
+            /* Cart was empty at page load -> <cart-drawer> still has is-empty,
+               which makes open() look for .drawer__inner-empty (gone once items
+               exist) and crash on a blank drawer. Clear it like Dawn does. */
+            drawer.classList.remove('is-empty');
             drawer.setActiveElement && drawer.setActiveElement(btn);
             drawer.renderContents(state); /* updates content AND opens the drawer */
           } else if (drawer && typeof drawer.open === 'function') {
