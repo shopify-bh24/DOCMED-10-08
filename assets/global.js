@@ -1763,13 +1763,15 @@ class DesktopWebiMenu extends HTMLElement {
   }
   onFocusOut(event) {
     event.stopPropagation();
-    if (this.contains(event.target) && (!this.querySelector('#menu-drawer').contains(event.target))) {
+    const menuDrawer = this.querySelector('#menu-drawer');
+    const inDrawer = menuDrawer ? menuDrawer.contains(event.target) : false;
+    if (this.contains(event.target) && !inDrawer) {
       if (this.classList.contains('open')) {
         this.classList.remove('open');
         this.closeLi();
       }
       else this.classList.add('open');
-    } else if (!this.querySelector('#menu-drawer').contains(event.target)) {
+    } else if (!inDrawer) {
       this.classList.remove('open');
       this.closeLi();
     }
@@ -1967,6 +1969,107 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+
+/* ------------------------------------------------------------------ *
+ * Quick-add (FBT-style) animation for product-card "+" buttons.
+ *
+ * Lives here (a real <script src>) instead of only inline in
+ * card-product.liquid, because cards can be injected via AJAX
+ * (product-info data-original-section="ajax-card-product"), and inline
+ * <script> tags inside AJAX-injected HTML never execute. A single
+ * document-level, capture-phase, delegated listener guarantees every
+ * ".fbt-quick-add" click is handled — server-rendered or AJAX — and that
+ * preventDefault runs BEFORE the form can submit (no blank /cart/add page).
+ *
+ * Guarded by window.__quickAddFbtInit so it never double-binds with the
+ * inline copy: whichever runs first wins, the other bails.
+ * ------------------------------------------------------------------ */
+(function () {
+  if (window.__quickAddFbtInit) return;
+  window.__quickAddFbtInit = true;
+
+  var checkSvg = '<svg viewBox="0 0 14 14" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1.5,7 5,11 12.5,3"/></svg>';
+
+  function qaSectionIds(drawer) {
+    if (drawer && typeof drawer.getSectionsToRender === 'function') {
+      try {
+        var ids = drawer.getSectionsToRender().map(function (s) { return s.id; }).filter(Boolean);
+        if (ids.length) return ids;
+      } catch (e) {}
+    }
+    return ['cart-drawer', 'cart-icon-bubble'];
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.fbt-quick-add[data-quick-add-variant]');
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    if (btn.disabled) return;
+    btn.disabled = true;
+
+    var originalHTML = btn.innerHTML;
+    var drawer = document.querySelector('cart-drawer');
+    var sectionIds = qaSectionIds(drawer);
+
+    /* 1. spinner (built on demand, kept out of the markup) */
+    var spinner = document.createElement('span');
+    spinner.className = 'fbt-qa-spinner fbt-qa-spinner--active';
+    spinner.setAttribute('aria-hidden', 'true');
+    spinner.innerHTML = '<span class="fbt-spin"></span>';
+    btn.appendChild(spinner);
+    btn.classList.add('fbt-loading');
+
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+      body: JSON.stringify({
+        id: parseInt(btn.getAttribute('data-quick-add-variant'), 10),
+        quantity: 1,
+        sections: sectionIds,
+        sections_url: window.location.pathname
+      })
+    })
+      .then(function (r) { if (!r.ok) throw new Error('cart/add failed'); return r.json(); })
+      .then(function (state) {
+        /* 2. spinner -> green tick */
+        btn.classList.remove('fbt-loading');
+        btn.classList.add('fbt-quick-add--done');
+        btn.innerHTML = checkSvg;
+
+        /* 3. hold the tick a beat, then update + open the cart drawer */
+        setTimeout(function () {
+          drawer = document.querySelector('cart-drawer');
+          var hasDrawerHTML = state.sections && state.sections['cart-drawer'];
+          if (drawer && typeof drawer.renderContents === 'function' && hasDrawerHTML) {
+            /* If the cart was empty at page load, <cart-drawer> still has the
+               is-empty class -> open() looks for .drawer__inner-empty (gone once
+               items exist) and crashes / shows a blank drawer. Clear it like
+               Dawn's product-form does in its .finally. */
+            drawer.classList.remove('is-empty');
+            drawer.setActiveElement && drawer.setActiveElement(btn);
+            drawer.renderContents(state);
+          } else if (drawer && typeof drawer.open === 'function') {
+            drawer.open(btn);
+          }
+        }, 450);
+
+        /* 4. revert back to + */
+        setTimeout(function () {
+          btn.classList.remove('fbt-quick-add--done');
+          btn.innerHTML = originalHTML;
+          btn.disabled = false;
+        }, 1600);
+      })
+      .catch(function (err) {
+        console.error('[quick-add]', err);
+        btn.classList.remove('fbt-loading');
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+      });
+  }, true);
+})();
 
 
 // Quantity update in main product

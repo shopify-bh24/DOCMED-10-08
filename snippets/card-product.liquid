@@ -135,6 +135,15 @@
     position: relative;
     overflow: hidden;
   }
+  /* The button stays disabled through the whole add animation; keep it vivid.
+     base.css fades disabled buttons to opacity:0.5, which greyed out both the
+     spinner and the green tick. Only override during the animation, so a
+     statically disabled (sold-out) button still looks disabled. */
+  .fbt-quick-add.fbt-loading,
+  .fbt-quick-add.fbt-quick-add--done {
+    opacity: 1 !important;
+    cursor: wait;
+  }
   /* While loading, remove the + entirely so only the spinner shows */
   .fbt-quick-add.fbt-loading .button-icon-wrapper {
     display: none;
@@ -173,13 +182,12 @@
     }
   }
 
-  /* On success the quick-add "+" turns green with a white tick — matching the FBT button. */
-  .fbt-quick-add.added {
+  /* On success the quick-add "+" turns green with a white tick — identical to the FBT button. */
+  .fbt-quick-add.fbt-quick-add--done {
     background: #2e7d32 !important;
-  }
-  .fbt-quick-add.added .button-icon--checkmark,
-  .fbt-quick-add.added .button-icon--checkmark .icon {
     color: #fff !important;
+  }
+  .fbt-quick-add.fbt-quick-add--done svg {
     stroke: #fff !important;
   }
 
@@ -233,6 +241,8 @@
   if (window.__quickAddFbtInit) return;
   window.__quickAddFbtInit = true;
 
+  var checkSvg = '<svg viewBox="0 0 14 14" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1.5,7 5,11 12.5,3"/></svg>';
+
   /* Dawn's CartDrawer.getSectionsToRender() returns { id, selector } objects;
      the IDs we must request from cart/add.js are the .id values. */
   function getSectionIds(drawer) {
@@ -247,14 +257,18 @@
     return ['cart-drawer', 'cart-icon-bubble'];
   }
 
-  /* Delegated so it works for every card, including slider/AJAX-rendered ones. */
+  /* Delegated + capture phase: fires before any stopPropagation in the card and
+     before the form submits, so preventDefault reliably takes over the click.
+     Works for slider / AJAX-rendered cards too. */
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('.fbt-quick-add[data-quick-add-variant]');
     if (!btn) return;
     e.preventDefault();
+    e.stopPropagation();
     if (btn.disabled) return;
     btn.disabled = true;
 
+    var originalHTML = btn.innerHTML;
     var drawer = document.querySelector('cart-drawer');
     var sectionIds = getSectionIds(drawer);
 
@@ -278,15 +292,21 @@
     })
     .then(function (r) { if (!r.ok) throw new Error('cart/add failed'); return r.json(); })
     .then(function (state) {
-      /* 2. Spinner -> green tick */
-      if (spinner) spinner.remove();
+      /* 2. Spinner -> green tick (identical to the FBT button) */
       btn.classList.remove('fbt-loading');
-      btn.classList.add('added');
+      btn.classList.add('fbt-quick-add--done');
+      btn.innerHTML = checkSvg;
 
       /* 3. Hold the tick a beat, THEN update + open the cart drawer */
       setTimeout(function () {
         drawer = document.querySelector('cart-drawer');
-        if (drawer && typeof drawer.renderContents === 'function' && state.sections) {
+        var hasDrawerHTML = state.sections && state.sections['cart-drawer'];
+        if (drawer && typeof drawer.renderContents === 'function' && hasDrawerHTML) {
+          /* If the cart was empty at page load, <cart-drawer> still has the
+             is-empty class -> open() looks for .drawer__inner-empty (gone once
+             items exist) and crashes / shows a blank drawer. Clear it like Dawn's
+             product-form does in its .finally. */
+          drawer.classList.remove('is-empty');
           drawer.setActiveElement && drawer.setActiveElement(btn);
           drawer.renderContents(state);
         } else if (drawer && typeof drawer.open === 'function') {
@@ -296,17 +316,18 @@
 
       /* 4. Revert button back to + */
       setTimeout(function () {
-        btn.classList.remove('added');
+        btn.classList.remove('fbt-quick-add--done');
+        btn.innerHTML = originalHTML;
         btn.disabled = false;
-      }, 1800);
+      }, 1600);
     })
     .catch(function (err) {
       console.error('[quick-add]', err);
-      if (spinner) spinner.remove();
       btn.classList.remove('fbt-loading');
+      btn.innerHTML = originalHTML;
       btn.disabled = false;
     });
-  });
+  }, true);
 })();
 </script>
 
