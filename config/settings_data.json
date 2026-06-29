@@ -12,7 +12,7 @@
     "logo": "shopify://shop_images/DocMed_logo_2.1.png",
     "logo_width": 160,
     "mobile_logo_width": 100,
-    "favicon": "shopify://shop_images/DocMed_icon_f2c5bf47-b76a-424b-b589-d1f76240e0fb.png",
+    "favicon": "shopify://shop_images/Favicon_DocMed.png",
     "type_header_font": "poppins_n4",
     "heading_scale": 100,
     "type_body_font": "manrope_n4",
@@ -246,11 +246,6 @@
       "13768625480086291342": {
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
         "disabled": true,
-        "settings": {}
-      },
-      "6146500278089136509": {
-        "type": "shopify://apps/bm-country-blocker-ip-blocker/blocks/boostmark-blocker/bf9db4b9-be4b-45e1-8127-bbcc07d93e7e",
-        "disabled": false,
         "settings": {}
       }
     },
