@@ -98,13 +98,13 @@
   }
 
   .button-icon--checkmark {
-    color: #22c55e;
+    color: #ffffff;
   }
 
   .button-icon--checkmark .icon {
     width: 13px;
     height: 13px;
-    stroke: #22c55e;
+    stroke: #ffffff;
   }
 
   .button-icon--plus .icon {
@@ -262,6 +262,7 @@
      Works for slider / AJAX-rendered cards too. */
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('.fbt-quick-add[data-quick-add-variant]');
+    checkmark = document.getElementById("checkmark");
     if (!btn) return;
     e.preventDefault();
     e.stopPropagation();
@@ -295,7 +296,10 @@
       /* 2. Spinner -> green tick (identical to the FBT button) */
       btn.classList.remove('fbt-loading');
       btn.classList.add('fbt-quick-add--done');
-      btn.innerHTML = checkSvg;
+      btn.innerHTML = `<span id="checkmark" class="button-icon button-icon--checkmark">
+                                      {% render 'icon-checkmark' %}
+                                    </span>`;
+       {% comment %} checkmark.classList.remove("hidden"); {% endcomment %}
 
       /* 3. Hold the tick a beat, THEN update + open the cart drawer */
       setTimeout(function () {
@@ -309,6 +313,8 @@
           drawer.classList.remove('is-empty');
           drawer.setActiveElement && drawer.setActiveElement(btn);
           drawer.renderContents(state);
+       checkmark.classList.add("hidden");
+
         } else if (drawer && typeof drawer.open === 'function') {
           drawer.open(btn);
         }
@@ -1249,7 +1255,7 @@
                                 >
                                   <span class="button-icon-wrapper">
                                     <span class="button-icon button-icon--plus"> + </span>
-                                    <span class="button-icon button-icon--checkmark hidden">
+                                    <span id="checkmark" class="button-icon button-icon--checkmark hidden">
                                       {% render 'icon-checkmark' %}
                                     </span>
                                   </span>
