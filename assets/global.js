@@ -1727,7 +1727,7 @@ class DesktopWebiMenu extends HTMLElement {
   constructor() {
     super();
     const drop = this.dataset.drop ? this.dataset.drop : 'click';
-    if (drop !== 'mouseover') document.addEventListener('click', this.onFocusOut.bind(this));
+    if (!this.dataset.static) document.addEventListener('click', this.onFocusOut.bind(this));
     this.addEventListener('keydown', this.handleKeyDown.bind(this));
     this.querySelectorAll('li').forEach(ele => {
       ele.addEventListener('keydown', this.handleLiKeyDown.bind(this));
