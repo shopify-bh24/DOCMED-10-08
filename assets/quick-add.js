@@ -15,12 +15,25 @@ if (!customElements.get('quick-add-modal')) {
     }
 
     show(opener) {
+      const plusIcon = opener.querySelector('.button-icon--plus');
+      if (plusIcon) plusIcon.classList.add('hidden');
+      var spinner = document.createElement('span');
+      spinner.className = 'fbt-qa-spinner fbt-qa-spinner--active';
+      spinner.setAttribute('aria-hidden', 'true');
+      spinner.innerHTML = '<span class="fbt-spin"></span>';
+      opener.appendChild(spinner);
+      opener.classList.add('fbt-loading');
+      
       opener.setAttribute('aria-disabled', true);
-      opener.classList.add('loading');
-      opener.querySelector('.loading-overlay__spinner').classList.remove('hidden');
+      // opener.classList.add('loading');
+      // opener.querySelector('.loading-overlay__spinner').classList.remove('hidden');
       fetch(opener.getAttribute('data-product-url'))
         .then((response) => response.text())
         .then((responseText) => {
+        /* 2. Spinner -> green tick (identical to the FBT button) */
+          opener.classList.remove('fbt-loading');
+          opener.classList.add('fbt-quick-add--done');
+          opener.removeChild(spinner);
           const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
           this.productElement = responseHTML.querySelector('section[id^="MainProduct-"]');
           this.preventDuplicatedIDs();
@@ -41,8 +54,10 @@ if (!customElements.get('quick-add-modal')) {
         })
         .finally(() => {
           opener.removeAttribute('aria-disabled');
-          opener.classList.remove('loading');
-          opener.querySelector('.loading-overlay__spinner').classList.add('hidden');
+          opener.classList.remove('fbt-quick-add--done');
+          if (plusIcon) plusIcon.classList.remove('hidden');
+          // opener.classList.remove('loading');
+          // opener.querySelector('.loading-overlay__spinner').classList.add('hidden');
         });
     }
 

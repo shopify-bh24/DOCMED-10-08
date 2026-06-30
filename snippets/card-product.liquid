@@ -21,6 +21,9 @@
   .add-to-cart__submit{
     padding: 0.5rem !important;
   }
+  .add-to-cart__submit .button-icon--plus {
+    font-size: 20px !important;
+  }
 
   .product__availability {
     display: flex;
@@ -183,7 +186,8 @@
   }
 
   /* On success the quick-add "+" turns green with a white tick — identical to the FBT button. */
-  .fbt-quick-add.fbt-quick-add--done {
+  .fbt-quick-add.fbt-quick-add--done,
+  .add-to-cart__submit--done {
     background: #2e7d32 !important;
     color: #fff !important;
   }
@@ -199,11 +203,11 @@
   }
 
   .button.added-to-cart {
-    color: #22c55e !important;
+    color: #ffffff !important;
   }
 
   .button.added-to-cart span {
-    color: #22c55e !important;
+    color: #ffffff !important;
     font-size: 25px !important;
   }
 
@@ -299,7 +303,6 @@
       btn.innerHTML = `<span id="checkmark" class="button-icon button-icon--checkmark">
                                       {% render 'icon-checkmark' %}
                                     </span>`;
-       {% comment %} checkmark.classList.remove("hidden"); {% endcomment %}
 
       /* 3. Hold the tick a beat, THEN update + open the cart drawer */
       setTimeout(function () {
@@ -313,13 +316,12 @@
           drawer.classList.remove('is-empty');
           drawer.setActiveElement && drawer.setActiveElement(btn);
           drawer.renderContents(state);
-       checkmark.classList.add("hidden");
 
         } else if (drawer && typeof drawer.open === 'function') {
           drawer.open(btn);
         }
       }, 450);
-
+ 
       /* 4. Revert button back to + */
       setTimeout(function () {
         btn.classList.remove('fbt-quick-add--done');
@@ -814,7 +816,10 @@
                   {{ card_product.title | escape }}
                 </a>
               </h3>
-              <div class="card-product__sku__container" style="height: 100%; max-height: 100px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;">
+              <div
+                class="card-product__sku__container"
+                style="height: 100%; max-height: 100px; display: flex; flex-direction: column; justify-content: start; margin-bottom: 5px;"
+              >
                 {% if card_product.selected_or_first_available_variant.sku != blank %}
                   <p
                     class="product__sku no-js-hidden card-product__sku"
@@ -1003,7 +1008,12 @@
                       {{ block.shopify_attributes }}
                     >
                       <div class="card_product_Price">
-                        <span class="card_sale_price" {% if card_product.compare_at_price > card_product.price %}style="color: #E60023"{% endif %}>
+                        <span
+                          class="card_sale_price"
+                          {% if card_product.compare_at_price > card_product.price %}
+                            style="color: #E60023"
+                          {% endif %}
+                        >
                           {% if card_product.price_varies %}
                             {{ 'products.product.from' | t }}
                           {% endif %}
@@ -1076,8 +1086,10 @@
                           <button class="wb_select_btn button button--primary">
                             <span>
                               +
-                              {% comment %} {%- render 'icon-plus' -%}
-                              {{- 'products.product.select_option' | t -}} {% endcomment %}
+                              {% comment %}
+                                {%- render 'icon-plus' -%}
+                                {{- 'products.product.select_option' | t -}}
+                              {% endcomment %}
                             </span>
                           </button>
                         {% endunless %}
@@ -1210,7 +1222,10 @@
                                 >
                                   {% render 'icon-close' %}
                                 </button>
-                                <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
+                                <div
+                                  id="QuickAddInfo-{{ card_product.id }}"
+                                  class="quick-add-modal__content-info"
+                                ></div>
                               </div>
                             </quick-add-modal>
                           {%- else -%}
@@ -1251,7 +1266,9 @@
                                   data-quick-add-variant="{{ card_product.selected_or_first_available_variant.id }}"
                                   aria-haspopup="dialog"
                                   class="product-form__submit button button--full-width button--primary fbt-quick-add"
-                                  {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                                  {% if card_product.selected_or_first_available_variant.available == false %}
+                                    disabled
+                                  {% endif %}
                                 >
                                   <span class="button-icon-wrapper">
                                     <span class="button-icon button-icon--plus"> + </span>
@@ -1542,130 +1559,90 @@
                 {%- endfor -%}
               </select>
             {% endcomment %}
-            {% comment %} {% if card_product.variants.size > 1 %}
-              {% liquid
-                assign allVariantDisabled = true
-                for variant in card_product.variants
-                  if variant.available
-                    assign allVariantDisabled = false
-                    break
-                  endif
-                endfor
-              %}
-            {% endif %} {% endcomment %}
-            {% comment %} Cart Button Start {% endcomment %}
-            {% comment %} {% if enable_addtocart %}
-              {% unless card_product.has_only_default_variant or show_variants != true %}
-                {% unless allVariantDisabled %}
-                  <button class="wb_select_btn button button--primary">
-                    <span>
-                      {% comment %} {%- render 'icon-plus' -%}
-                      {{- 'products.product.select_option' | t -}} {% endcomment %}
-                    </span>
-                  </button>
-                {% endunless %}
-                <product-form
-                  class="{% unless allVariantDisabled %} popup_hidden_cart {% endunless %}"
-                  id="ProductInfo-{{ section.id }}-{{ card_product.id }}"
-                >
-                  <div class="product-form__error-message-wrapper" role="alert" hidden>
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      class="icon icon-error"
-                      viewBox="0 0 13 13"
-                    >
-                      <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-                      <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-                      <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                      <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"/>
-                    </svg>
-                    <span class="product-form__error-message"></span>
-                  </div>
-                  {%- assign product_form_id = 'product-form-'
-                    | append: section.id
-                    | append: '-'
-                    | append: card_product.id
-                  -%}
-                  {%- form 'product',
-                    card_product,
-                    id: product_form_id,
-                    class: 'form',
-                    novalidate: 'novalidate',
-                    data-type: 'add-to-cart-form'
-                  -%}
-                    <input
-                      type="hidden"
-                      name="id"
-                      class="product-variant-id"
-                      value="{{ card_product.selected_or_first_available_variant.id }}"
-                      disabled
-                    >
-                    <button
-                      id="{{ product_form_id }}-submit"
-                      type="submit"
-                      name="add"
-                      class="add-to-cart__submit button button--primary"
-                      aria-haspopup="dialog"
-                      aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                      aria-live="polite"
-                      data-sold-out-message="true"
-                      {% unless card_product.selected_or_first_available_variant.available %}
-                        disabled
-                      {% endunless %}
-                    >
-                      {%- if card_product.selected_or_first_available_variant.available -%}
-                        <span>{{ 'products.product.add_to_cart' | t }}</span>
-                      {%- else -%}
-                        <span>{{ 'products.product.sold_out' | t }}</span>
-                      {%- endif -%}
-                      {% comment %} <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span> {% endcomment %}
-                      {%- if horizontal_quick_add -%}
-                        <span class="icon-wrap">{% render 'icon-plus' %}</span>
-                      {%- endif -%}
-                      <div class="loading-overlay__spinner hidden">
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          class="spinner"
-                          viewBox="0 0 66 66"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                        </svg>
-                      </div>
-                    </button>
-                  {%- endform -%}
-                </product-form>
-              {% else %}
-                <div class="no-js-hidden selectedbtn">
-                  {%- liquid
-                    assign quick_product_form_id = 'quick-add-' | append: section_id | append: card_product.id
-                    assign qty_rules = false
-                    if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
-                      assign qty_rules = true
+            {% comment %}
+              {% if card_product.variants.size > 1 %}
+                {% liquid
+                  assign allVariantDisabled = true
+                  for variant in card_product.variants
+                    if variant.available
+                      assign allVariantDisabled = false
+                      break
                     endif
-                  -%}
-                  {%- if card_product.variants.size > 1 or qty_rules -%}
-                    <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
+                  endfor
+                %}
+              {% endif %}
+            {% endcomment %}
+            {% comment %} Cart Button Start {% endcomment %}
+            {% comment %}
+              {% if enable_addtocart %}
+                {% unless card_product.has_only_default_variant or show_variants != true %}
+                  {% unless allVariantDisabled %}
+                    <button class="wb_select_btn button button--primary">
+                      <span>
+                        {% comment %} {%- render 'icon-plus' -%}
+                        {{- 'products.product.select_option' | t -}} {% endcomment %}
+                      </span>
+                    </button>
+                  {% endunless %}
+                  <product-form
+                    class="{% unless allVariantDisabled %} popup_hidden_cart {% endunless %}"
+                    id="ProductInfo-{{ section.id }}-{{ card_product.id }}"
+                  >
+                    <div class="product-form__error-message-wrapper" role="alert" hidden>
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        class="icon icon-error"
+                        viewBox="0 0 13 13"
+                      >
+                        <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                        <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                        <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                        <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"/>
+                      </svg>
+                      <span class="product-form__error-message"></span>
+                    </div>
+                    {%- assign product_form_id = 'product-form-'
+                      | append: section.id
+                      | append: '-'
+                      | append: card_product.id
+                    -%}
+                    {%- form 'product',
+                      card_product,
+                      id: product_form_id,
+                      class: 'form',
+                      novalidate: 'novalidate',
+                      data-type: 'add-to-cart-form'
+                    -%}
+                      <input
+                        type="hidden"
+                        name="id"
+                        class="product-variant-id"
+                        value="{{ card_product.selected_or_first_available_variant.id }}"
+                        disabled
+                      >
                       <button
-                        id="{{ quick_product_form_id }}-submit"
+                        id="{{ product_form_id }}-submit"
                         type="submit"
                         name="add"
-                        class="asdaswqe add-to-cart__submit button button button--primary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
+                        class="add-to-cart__submit button button--primary"
                         aria-haspopup="dialog"
-                        aria-labelledby="{{ quick_product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                        data-product-url="{{ card_product.url }}"
+                        aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                        aria-live="polite"
+                        data-sold-out-message="true"
+                        {% unless card_product.selected_or_first_available_variant.available %}
+                          disabled
+                        {% endunless %}
                       >
-                        {% comment %}
-                          <span>{{ 'products.product.choose_options' | t }}</span>
-                          {%- if horizontal_quick_add -%}
-                            <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-                          {%- endif -%}
-                        {% endcomment %}
-                        <span>
-                          {% render 'icon-plus' %}
-                        </span>
+                        {%- if card_product.selected_or_first_available_variant.available -%}
+                          <span>{{ 'products.product.add_to_cart' | t }}</span>
+                        {%- else -%}
+                          <span>{{ 'products.product.sold_out' | t }}</span>
+                        {%- endif -%}
+                        {% comment %} <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span> {% endcomment %}
+                        {%- if horizontal_quick_add -%}
+                          <span class="icon-wrap">{% render 'icon-plus' %}</span>
+                        {%- endif -%}
                         <div class="loading-overlay__spinner hidden">
                           <svg
                             aria-hidden="true"
@@ -1678,69 +1655,36 @@
                           </svg>
                         </div>
                       </button>
-                    </modal-opener>
-                    <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
-                      <div
-                        role="dialog"
-                        aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
-                        aria-modal="true"
-                        class="quick-add-modal__content global-settings-popup"
-                        tabindex="-1"
-                      >
+                    {%- endform -%}
+                  </product-form>
+                {% else %}
+                  <div class="no-js-hidden selectedbtn">
+                    {%- liquid
+                      assign quick_product_form_id = 'quick-add-' | append: section_id | append: card_product.id
+                      assign qty_rules = false
+                      if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
+                        assign qty_rules = true
+                      endif
+                    -%}
+                    {%- if card_product.variants.size > 1 or qty_rules -%}
+                      <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
                         <button
-                          id="ModalClose-{{ card_product.id }}"
-                          type="button"
-                          class="quick-add-modal__toggle"
-                          aria-label="{{ 'accessibility.close' | t }}"
-                        >
-                          {% render 'icon-close' %}
-                        </button>
-                        <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
-                      </div>
-                    </quick-add-modal>
-                  {%- else -%}
-                    <product-form data-section-id="{{ section.id }}" data-no-drawer="true">
-                      <div class="product-form__error-message-wrapper" role="alert" hidden>
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          class="icon icon-error"
-                          viewBox="0 0 13 13"
-                        >
-                          <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-                          <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-                          <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                          <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"/>
-                        </svg>
-                        <span class="product-form__error-message"></span>
-                      </div>
-                      {%- form 'product',
-                        card_product,
-                        id: product_form_id,
-                        class: 'form',
-                        novalidate: 'novalidate',
-                        data-type: 'add-to-cart-form'
-                      -%}
-                        <input
-                          type="hidden"
-                          name="id"
-                          value="{{ card_product.selected_or_first_available_variant.id }}"
-                          class="product-variant-id"
-                          {% if card_product.selected_or_first_available_variant.available == false %}
-                            disabled
-                          {% endif %}
-                        >
-                        <button
-                          id="ProductSubmitButton-{{ section_id }}"
+                          id="{{ quick_product_form_id }}-submit"
                           type="submit"
                           name="add"
-                          class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--primary{% else %}button--primary{% endif %}"
+                          class="asdaswqe add-to-cart__submit button button button--primary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
+                          aria-haspopup="dialog"
+                          aria-labelledby="{{ quick_product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                          data-product-url="{{ card_product.url }}"
                         >
-                          <span class="button-icon-wrapper">
-                            <span class="button-icon button-icon--plus"> + </span>
-                            <span class="button-icon button-icon--checkmark hidden">
-                              {% render 'icon-checkmark' %}
-                            </span>
+                          {% comment %}
+                            <span>{{ 'products.product.choose_options' | t }}</span>
+                            {%- if horizontal_quick_add -%}
+                              <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                            {%- endif -%}
+                          {% endcomment %}
+                          <span>
+                            {% render 'icon-plus' %}
                           </span>
                           <div class="loading-overlay__spinner hidden">
                             <svg
@@ -1754,12 +1698,89 @@
                             </svg>
                           </div>
                         </button>
-                      {%- endform -%}
-                    </product-form>
-                  {%- endif -%}
-                </div>
-              {% endunless %}
-            {% endif %} {% endcomment %}
+                      </modal-opener>
+                      <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
+                        <div
+                          role="dialog"
+                          aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
+                          aria-modal="true"
+                          class="quick-add-modal__content global-settings-popup"
+                          tabindex="-1"
+                        >
+                          <button
+                            id="ModalClose-{{ card_product.id }}"
+                            type="button"
+                            class="quick-add-modal__toggle"
+                            aria-label="{{ 'accessibility.close' | t }}"
+                          >
+                            {% render 'icon-close' %}
+                          </button>
+                          <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
+                        </div>
+                      </quick-add-modal>
+                    {%- else -%}
+                      <product-form data-section-id="{{ section.id }}" data-no-drawer="true">
+                        <div class="product-form__error-message-wrapper" role="alert" hidden>
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            class="icon icon-error"
+                            viewBox="0 0 13 13"
+                          >
+                            <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                            <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                            <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"/>
+                          </svg>
+                          <span class="product-form__error-message"></span>
+                        </div>
+                        {%- form 'product',
+                          card_product,
+                          id: product_form_id,
+                          class: 'form',
+                          novalidate: 'novalidate',
+                          data-type: 'add-to-cart-form'
+                        -%}
+                          <input
+                            type="hidden"
+                            name="id"
+                            value="{{ card_product.selected_or_first_available_variant.id }}"
+                            class="product-variant-id"
+                            {% if card_product.selected_or_first_available_variant.available == false %}
+                              disabled
+                            {% endif %}
+                          >
+                          <button
+                            id="ProductSubmitButton-{{ section_id }}"
+                            type="submit"
+                            name="add"
+                            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--primary{% else %}button--primary{% endif %}"
+                          >
+                            <span class="button-icon-wrapper">
+                              <span class="button-icon button-icon--plus"> + </span>
+                              <span class="button-icon button-icon--checkmark hidden">
+                                {% render 'icon-checkmark' %}
+                              </span>
+                            </span>
+                            <div class="loading-overlay__spinner hidden">
+                              <svg
+                                aria-hidden="true"
+                                focusable="false"
+                                class="spinner"
+                                viewBox="0 0 66 66"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                              </svg>
+                            </div>
+                          </button>
+                        {%- endform -%}
+                      </product-form>
+                    {%- endif -%}
+                  </div>
+                {% endunless %}
+              {% endif %}
+            {% endcomment %}
             {% comment %} Cart Button End {% endcomment %}
           </div>
         </wb-card-variant>

@@ -667,6 +667,17 @@ wb-card-variant {
   width: 42px;
   height: 42px;
 }
+.wbproduct-container.product-card-wrapper .add-to-cart__submit[aria-disabled='true'],
+.wbproduct-container.product-card-wrapper .add-to-cart__submit.loading,
+.wbproduct-container.product-card-wrapper .fbt-quick-add.fbt-loading,
+.wbproduct-container.product-card-wrapper .fbt-quick-add.fbt-quick-add--done {
+  opacity: 1 !important;
+}
+.wbproduct-container.product-card-wrapper .add-to-cart__submit.add-to-cart__submit--done,
+.wbproduct-container.product-card-wrapper .add-to-cart__submit.added-to-cart {
+  background: #2e7d32 !important;
+  color: #fff !important;
+}
 .blank__image{
   display: flex;
   flex-direction: column;

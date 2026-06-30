@@ -1727,7 +1727,7 @@ class DesktopWebiMenu extends HTMLElement {
   constructor() {
     super();
     const drop = this.dataset.drop ? this.dataset.drop : 'click';
-    document.addEventListener('click', this.onFocusOut.bind(this));
+    if (drop !== 'mouseover') document.addEventListener('click', this.onFocusOut.bind(this));
     this.addEventListener('keydown', this.handleKeyDown.bind(this));
     this.querySelectorAll('li').forEach(ele => {
       ele.addEventListener('keydown', this.handleLiKeyDown.bind(this));
@@ -1763,7 +1763,7 @@ class DesktopWebiMenu extends HTMLElement {
   }
   onFocusOut(event) {
     event.stopPropagation();
-    const menuDrawer = this.querySelector('#menu-drawer');
+    const menuDrawer = this.querySelector('#menu-drawer') || this.querySelector('#menu-drawer-custom');
     const inDrawer = menuDrawer ? menuDrawer.contains(event.target) : false;
     if (this.contains(event.target) && !inDrawer) {
       if (this.classList.contains('open')) {
