@@ -75,19 +75,19 @@
         "qual_cd9W6F": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p><strong>Abgeschlossene kaufmännische Ausbildung (z. B. Industriekaufmann/-frau, Kaufmann/-frau im Groß- und Außenhandel oder vergleichbar) – mindestens erforderlich</strong> </p>"
+            "qual_item": "<p>Abgeschlossenes Studium im Bereich BWL, Marketing, E-Commerce oder eine vergleichbare Qualifikation</p>"
           }
         },
         "qual_czPR6E": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Erste Berufserfahrung im Einkauf oder in der Beschaffung von Vorteil </p>"
+            "qual_item": "<p>Analytisches Denkvermögen und ausgeprägte Performance-Orientierung </p>"
           }
         },
         "qual_Qt7HxQ": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Ein abgeschlossenes betriebswirtschaftliches Studium (Bachelor) ist ein Plus, aber keine Voraussetzung </p>"
+            "qual_item": "<p>Strukturierte, eigenständige und unternehmerische Arbeitsweise </p>"
           }
         },
         "qual_FjY3by": {
@@ -99,37 +99,31 @@
         "qual_iRDJmg": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Gutes Zahlenverständnis und hohe Genauigkeit </p>"
+            "qual_item": "<p>Deutsch auf muttersprachlichem Niveau sowie verhandlungssicheres Englisch</p>"
           }
         },
         "qual_MeETQa": {
           "type": "qual",
           "settings": {
-            "qual_item": "<p>Sicherer Umgang mit MS Office sowie idealerweise Erfahrung mit ERP-Systemen </p>"
-          }
-        },
-        "qual_YBqEDc": {
-          "type": "qual",
-          "settings": {
-            "qual_item": "<p>Deutsch auf muttersprachlichem Niveau sowie gute Englischkenntnisse </p>"
+            "qual_item": "<p>Sicherer Umgang mit MS Office </p>"
           }
         },
         "benefit_CMkpzY": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Eine verantwortungsvolle operative Position mit klar definiertem Aufgabenbereich "
+            "benefit_item": "Eine wachstumsorientierte Position mit strategischem Gestaltungsspielraum "
           }
         },
         "benefit_iVhiWR": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Strukturierte Einarbeitung und feste Prozesse "
+            "benefit_item": "Direkte Zusammenarbeit mit der Geschäftsleitung und kurze Entscheidungswege "
           }
         },
         "benefit_MbtGCY": {
           "type": "benefit",
           "settings": {
-            "benefit_item": "Direkte Zusammenarbeit mit internen Teams"
+            "benefit_item": "Klare Entwicklungsperspektiven innerhalb eines dynamisch wachsenden Unternehmens "
           }
         },
         "benefit_ebwtnQ": {
@@ -166,7 +160,6 @@
         "qual_FjY3by",
         "qual_iRDJmg",
         "qual_MeETQa",
-        "qual_YBqEDc",
         "benefit_CMkpzY",
         "benefit_iVhiWR",
         "benefit_MbtGCY",
